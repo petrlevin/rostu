@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1744830431</id>
+    <Schema>dbo</Schema>
+    <Name>SetDistributiveData</Name>
+    <CreateCommand>CREATE PROCEDURE [dbo].[SetDistributiveData] 
+(
+@on bit=1,
+@forEntityId int = null,
+@forEntityName nvarchar(100)=null
+) 
+AS
+BEGIN
+	IF ((@forEntityId IS NOT NULL) AND (@forEntityName IS NOT NULL))
+	BEGIN
+		RAISERROR (N'В хранимую процедуру SetDistributiveData нельзя передавать оба парметра @forEntityId и @forEntityName ',10,1)
+	END
+	IF (@forEntityName IS NOT NULL) 
+	BEGIN
+		SET @forEntityId = (SELECT TOP 1 e.id FROM [ref].[Entity] e where name= @forEntityName)
+		IF (@forEntityId IS NULL)
+		BEGIN
+			RAISERROR (N'В хранимую процедуру SetDistributiveData передан неверный параметр @forEntityName . Сущности с таким именем не существует',10,1)		
+		END
+	END
+	DECLARE @forObjectId int
+	PRINT @forObjectId
+	IF (@forEntityId IS NOT NULL)
+	BEGIN
+		SET @forObjectId = (SELECT Objects.id FROM sysobjects Objects 
+								INNER JOIN sys.tables Tables ON Tables.object_id = Objects.id 
+								INNER JOIN  [ref].[Entity] Entities ON 
+										(	
+											Objects.Name=Entities.[name] AND 
+											SCHEMA_NAME(Tables.schema_id)= 
+														CASE Entities.idEntityType 
+															WHEN 3	THEN 'ref'
+															WHEN 4	THEN 'tp'
+															WHEN 6 THEN 'doc'
+															WHEN 7 THEN 'tool'
+															ELSE 'doesnotexist'
+														END 
+										)
+
+								WHERE Entities.[id]= @forEntityId)
+		
+	END
+	ELSE
+	BEGIN
+		SET @forObjectId = NULL
+	END
+	
+	
+	
+	DECLARE @on_off varchar(100)
+	IF (@on=1)
+	BEGIN
+		SET @on_off = N'ENABLE'
+	END
+	ELSE
+	BEGIN
+		SET @on_off = N'DISABLE'
+	END
+	DECLARE @entityId int
+	DECLARE @name nvarchar(100)	
+	DECLARE @schema nvarchar(6)
+	DECLARE @trigerName nvarchar(200)
+	DECLARE @sql nvarchar(4000)
+
+	if (@forObjectId IS NULL)
+	BEGIN
+
+		SET @sql = ' DELETE FROM [dbo].[DistributiveDataInfo] '
+		EXEC sp_executesql @sql
+		SET @sql = 'INSERT INTO [dbo].[DistributiveDataInfo]
+				([enabled])
+			VALUES
+				( '+ CAST(@on as varchar(1))+')'
+         EXEC sp_executesql @sql
+		
+	END
+
+	
+	DECLARE triggers CURSOR
+		FOR SELECT      Objects.Name TableName,
+			SCHEMA_NAME(Tables.schema_id),
+            Triggers.name TriggerName
+			FROM      sysobjects Triggers
+				INNER JOIN sysobjects Objects On Triggers.parent_obj = Objects.id
+				INNER JOIN sys.tables Tables On Tables.object_id = Objects.id
+
+			WHERE      Triggers.xtype = 'TR'
+				AND Objects.xtype = 'U' AND Triggers.name LIKE '%_insertDistributiveData'
+				AND Objects.Id = CASE WHEN @forObjectId IS NULL THEN  Objects.Id ELSE @forObjectId END
+			ORDER BY Objects.Name, Triggers.name
+			
+	OPEN triggers
+	FETCH NEXT FROM triggers 
+	INTO  @name, @schema ,@trigerName
+
+	WHILE @@FETCH_STATUS = 0
+	BEGIN
+	    SET @sql = '; '+ @on_off+' TRIGGER ['+@schema+'].['+@trigerName+'] ON ['+ @schema + '].['+@name +']'
+		exec(@sql)
+		FETCH NEXT FROM triggers 
+		INTO  @name, @schema ,@trigerName
+			
+	END
+	CLOSE triggers
+	DEALLOCATE triggers
+	
+END
+</CreateCommand>
+    <idProgrammabilityType>1</idProgrammabilityType>
+    <Order></Order>
+    <idProject>100</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

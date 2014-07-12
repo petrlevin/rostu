@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ml.Activity_Contingent" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ml.Activity_Contingent">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="idActivity" type="xs:int" />
+                <xs:element name="idContingent" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ml.Activity_Contingent" />
+        <xs:field xpath="idActivity" />
+        <xs:field xpath="idContingent" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ml.Activity_Contingent>
+    <idActivity>-1879048164</idActivity>
+    <idContingent>-1879048164</idContingent>
+  </ml.Activity_Contingent>
+  <ml.Activity_Contingent>
+    <idActivity>-1879048162</idActivity>
+    <idContingent>-1879048163</idContingent>
+  </ml.Activity_Contingent>
+</NewDataSet>

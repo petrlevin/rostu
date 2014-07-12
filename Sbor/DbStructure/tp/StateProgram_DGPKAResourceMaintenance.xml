@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.StateProgram_DGPKAResourceMaintenance" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.StateProgram_DGPKAResourceMaintenance">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idMaster" type="xs:int" />
+                <xs:element name="idFinanceSource" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.StateProgram_DGPKAResourceMaintenance" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.StateProgram_DGPKAResourceMaintenance>
+    <id>-1744830438</id>
+    <idOwner>-1744830437</idOwner>
+    <idMaster>-1744830438</idMaster>
+  </tp.StateProgram_DGPKAResourceMaintenance>
+  <tp.StateProgram_DGPKAResourceMaintenance>
+    <id>-1744830437</id>
+    <idOwner>-1744830437</idOwner>
+    <idMaster>-1744830437</idMaster>
+  </tp.StateProgram_DGPKAResourceMaintenance>
+  <tp.StateProgram_DGPKAResourceMaintenance>
+    <id>-1744830436</id>
+    <idOwner>-1744830436</idOwner>
+    <idMaster>-1744830436</idMaster>
+  </tp.StateProgram_DGPKAResourceMaintenance>
+  <tp.StateProgram_DGPKAResourceMaintenance>
+    <id>-1744830435</id>
+    <idOwner>-1744830436</idOwner>
+    <idMaster>-1744830435</idMaster>
+  </tp.StateProgram_DGPKAResourceMaintenance>
+  <tp.StateProgram_DGPKAResourceMaintenance>
+    <id>-1744830433</id>
+    <idOwner>-1744830433</idOwner>
+    <idMaster>-1744830433</idMaster>
+  </tp.StateProgram_DGPKAResourceMaintenance>
+  <tp.StateProgram_DGPKAResourceMaintenance>
+    <id>-1744830432</id>
+    <idOwner>-1744830433</idOwner>
+    <idMaster>-1744830432</idMaster>
+  </tp.StateProgram_DGPKAResourceMaintenance>
+</NewDataSet>

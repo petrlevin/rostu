@@ -1,0 +1,351 @@
+﻿/* Обязательные поля */
+input.x-form-invalid-field, textarea.x-form-invalid-field {
+    background-color: #FDE6C8;
+    background-image: none;
+    border-color: #CC3300;
+}
+
+/*----------------------------------------------------
+    TaskBar
+*/
+
+.ux-taskbar .x-toolbar {
+    background: transparent none;
+    border-color: transparent;
+}
+
+.x-ie6 .ux-taskbar .x-toolbar {
+    border-color: #d3e1f1;
+}
+
+.ux-desktop-windowbar .x-btn-inner,
+.x-nbr .ux-desktop-windowbar .x-btn-icon-text-left button {
+    text-align: left !important;
+}
+
+/*----------------------------------------------------
+    Start Button
+*/
+
+.ux-start-button-icon {
+    background: transparent url('images/rostu-logo.ico')  50% 50% no-repeat !important;
+}
+
+.ux-start-button .x-btn-arrow {
+    display: block;
+    background-image: none;
+}
+
+.ux-taskbar {
+    padding-left: 4px !important;
+}
+
+/*----------------------------------------------------
+    Start Menu
+*/
+
+.ux-start-menu-toolbar .x-btn-inner {
+    text-align: left;
+}
+
+.ux-start-menu-toolbar {
+    padding: 4px !important;
+}
+
+/*----------------------------------------------------
+    Tray Clock
+*/
+
+.ux-desktop-trayclock {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*----------------------------------------------------
+    Various icon classes
+*/
+
+.ux-system {
+    background-image:url(images/system.png) !important;
+}
+
+.ux-reference {
+    background-image:url(images/reference.png) !important;
+}
+
+.ux-document {
+    background-image:url(images/document.png) !important;
+}
+
+.ux-user {
+    background-image:url(images/user.gif ) !important;
+}
+
+.ux-settings {
+    background-image: url(images/gears.gif ) !important;
+}
+
+.ux-logout {
+    background-image: url(images/logout.gif ) !important;
+}
+
+.ux-desktop {
+    background-image:url(images/desktop.png) !important;
+}
+
+.ux-cascade {
+    background-image:url(images/cascade.png) !important;
+}
+
+
+/*----------------------------------------------------
+    Иконки для кнопок
+*/
+
+.icon-page {
+    background-image:url(images/page.png) !important;
+}
+
+.icon-copy {
+    background-image:url(images/copy.png) !important;
+}
+
+.icon-create-version {
+    background-image:url(images/create-version.png) !important;
+}
+
+.icon-dependencies {
+    background-image:url(images/create-version.png) !important;
+}
+
+.icon-create {
+    background-image:url(images/create.png) !important;
+}
+
+.icon-save {
+    background-image:url(images/save.gif) !important;
+}
+
+.icon-delete {
+    background-image:url(images/delete.png) !important;
+}
+
+.icon-delete-multiedit {
+    background-repeat: no-repeat; background-position: 50% 50%;
+    background-image:url(images/delete.png) !important;
+}
+
+.icon-refresh {
+    background-image:url(images/refresh.png) !important;
+}
+
+.icon-folder-open {
+    background-image:url(images/folder-open.gif) !important;
+}
+
+.icon-trigger-dots {
+    background-image:url(images/trigger-dots.gif) !important;
+}
+
+.icon-trigger-type {
+    background-image:url(images/trigger-type.gif) !important;
+}
+
+.icon-trigger-calculator {
+    background-image:url(images/calculator.png) !important;
+}
+
+.icon-mass-edit {
+    background-image:url(images/mass-edit.gif) !important;
+}
+
+.icon-status-change {
+    background-image:url(images/change-status.png) !important;
+}
+
+
+.logs {
+	padding: 5px;
+}
+
+.logs .log-info {
+	height: 18px;
+	padding-left:18px;
+	background:url(images/exclamation.png) no-repeat;
+}
+
+.logs .log-warn {
+	height: 18px;
+	padding-left:18px;
+	background:url(images/warning.png) no-repeat;
+}
+
+.logs .log-error {
+	height: 18px;
+	padding-left:18px;
+	background:url(images/error.png) no-repeat;
+}
+
+.icon_element {
+    background:url(images/elementheader.png) no-repeat;
+}
+
+.icon_list {
+    background:url(images/listheader.png) no-repeat;
+}
+
+.icon_selection {
+    background:url(images/magnifier_zoom_in.png) no-repeat;    
+}
+
+.icon-excel {
+    background:url(images/excel.png) no-repeat;    
+}
+
+.chart-bar {
+    background:url(images/chart-bar.png) no-repeat;    
+}
+
+.icon-import-xml {
+    background:url(images/import-xml.png) no-repeat;    
+}
+
+.icon-export-xml {
+    background:url(images/export-xml.png) no-repeat;    
+}
+
+.icon-createcopy {
+    background:url(images/shared/createcopy.png) no-repeat;    
+}
+
+.floatLeft {
+    float: left;
+}
+
+.x-btn-close-btn {
+
+    width: 32px;
+    height: 32px;
+    background: url(images/form/clear-trigger.gif) no-repeat;
+    
+
+}
+
+
+
+/*
+* Стили для отображения колонки с чекбоксом
+*/
+.x-grid-cell-checkcolumn .x-grid-cell-inner {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    line-height: 14px;
+}
+.x-grid-with-row-lines .x-grid-cell-checkcolumn .x-grid-cell-inner {
+    padding-top: 3px;
+}
+.x-grid-checkheader {
+    height: 14px;
+    background-image: url(images/unchecked.gif);
+    background-position: 50% -2px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.x-grid-checkheader-checked {
+    background-image: url(images/checked.gif);
+}
+
+.x-grid-checkheader-editor .x-form-cb-wrap {
+    text-align: center;
+}
+
+
+/*----------------------------------------------------
+    Выравнивание
+*/
+
+.align-top { vertical-align:top; }
+
+/*----------------------------------------------------
+    Нередактируемые поля
+*/
+.x-form-readonly input[type="text"], .x-form-readonly textarea {
+    color: #111111 !important;
+    background-color: #efefef;
+    background-image: url("images/disabled-text-bg.gif");
+}
+.x-form-readonly input[type="button"] {
+    outline: 5px solid #efefef;
+}
+
+/*
+    */
+.multiedit-operation-load {
+    color: #111111 !important;
+    width: 16px;
+    background: #efefef url("images/grid/grid-loading.gif");
+}
+
+.multiedit-operation-loaded {
+    display: none;
+}
+
+.x-message-box img.x-tool-close {
+    display: none;
+}
+
+.x-tip.x-border-box,
+.x-tip.x-border-box * {    box-sizing: content-box;    -moz-box-sizing: content-box;    -ms-box-sizing: content-box;    -webkit-box-sizing: content-box;}
+
+/*----------------------------------------------------
+    Альтернативные стили для строк грида
+*/
+
+.row-red .x-grid-cell {
+    background-color: #ffe2e2; 
+    color: #900; 
+}
+
+/*
+   Стили для закрываемой кнопки
+*/
+
+.x-btn-close-btn {
+  display: block;
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  background: no-repeat;
+}
+
+.x-btn-close-btn {
+  top: 2px;
+  right: 2px;
+  width: 11px;
+  height: 11px;
+  background-image: url(images/tab/tab-default-close.gif);
+  filter: alpha(opacity = 60);
+  opacity: 0.6;
+}
+
+.x-btn-close-btn-over {
+  filter: alpha(opacity = 100);
+  opacity: 1;
+}
+
+.x-form-download-trigger {
+  background-image: url(images/form/download-trigger.gif);
+}
+
+.x-form-upload-trigger {
+  background-image: url(images/form/upload-trigger.gif);
+}
+
+.x-maximize-tool {
+  background-image: url(images/maximize.png);
+  height: 16px;
+  width: 16px;
+}

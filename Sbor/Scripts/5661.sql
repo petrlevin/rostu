@@ -1,0 +1,1 @@
+﻿update ref.EntityField set isDescription=0 where [idEntity]=-2013265870

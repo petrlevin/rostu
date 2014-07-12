@@ -1,0 +1,1 @@
+﻿alter table tp.SystemGoal_GoalIndicatorValue alter column value numeric(15,5) not null

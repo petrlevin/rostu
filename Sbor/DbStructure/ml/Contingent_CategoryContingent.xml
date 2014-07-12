@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ml.Contingent_CategoryContingent" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ml.Contingent_CategoryContingent">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="idCategoryContingent" type="xs:int" />
+                <xs:element name="idContingent" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ml.Contingent_CategoryContingent" />
+        <xs:field xpath="idCategoryContingent" />
+        <xs:field xpath="idContingent" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ml.Contingent_CategoryContingent>
+    <idCategoryContingent>-1879048163</idCategoryContingent>
+    <idContingent>-1879048164</idContingent>
+  </ml.Contingent_CategoryContingent>
+  <ml.Contingent_CategoryContingent>
+    <idCategoryContingent>-1879048163</idCategoryContingent>
+    <idContingent>-1879048163</idContingent>
+  </ml.Contingent_CategoryContingent>
+  <ml.Contingent_CategoryContingent>
+    <idCategoryContingent>-1879048163</idCategoryContingent>
+    <idContingent>-1879048162</idContingent>
+  </ml.Contingent_CategoryContingent>
+  <ml.Contingent_CategoryContingent>
+    <idCategoryContingent>-1879048163</idCategoryContingent>
+    <idContingent>-1879048158</idContingent>
+  </ml.Contingent_CategoryContingent>
+  <ml.Contingent_CategoryContingent>
+    <idCategoryContingent>-1879048162</idCategoryContingent>
+    <idContingent>-1879048161</idContingent>
+  </ml.Contingent_CategoryContingent>
+  <ml.Contingent_CategoryContingent>
+    <idCategoryContingent>-1879048162</idCategoryContingent>
+    <idContingent>-1879048160</idContingent>
+  </ml.Contingent_CategoryContingent>
+  <ml.Contingent_CategoryContingent>
+    <idCategoryContingent>-1879048162</idCategoryContingent>
+    <idContingent>-1879048159</idContingent>
+  </ml.Contingent_CategoryContingent>
+  <ml.Contingent_CategoryContingent>
+    <idCategoryContingent>-1879048162</idCategoryContingent>
+    <idContingent>-1879048158</idContingent>
+  </ml.Contingent_CategoryContingent>
+</NewDataSet>

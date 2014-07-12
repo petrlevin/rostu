@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.ExpenditureObligations" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.ExpenditureObligations">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="idSBP" type="xs:int" />
+                <xs:element name="idAuthorityOfExpenseObligation" type="xs:int" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.ExpenditureObligations" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.ExpenditureObligations>
+    <id>-1879048164</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idSBP>-1275068396</idSBP>
+    <idAuthorityOfExpenseObligation>-2013265593</idAuthorityOfExpenseObligation>
+    <Caption>РО 001</Caption>
+    <Description>РО 001 - описание</Description>
+    <idRefStatus>1</idRefStatus>
+  </ref.ExpenditureObligations>
+  <ref.ExpenditureObligations>
+    <id>-1879048163</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idSBP>-1275068396</idSBP>
+    <idAuthorityOfExpenseObligation>-2013265483</idAuthorityOfExpenseObligation>
+    <Caption>РО 002</Caption>
+    <Description>описание 001</Description>
+    <idRefStatus>1</idRefStatus>
+  </ref.ExpenditureObligations>
+</NewDataSet>

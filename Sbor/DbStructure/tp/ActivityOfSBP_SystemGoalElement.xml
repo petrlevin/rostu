@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.ActivityOfSBP_SystemGoalElement" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.ActivityOfSBP_SystemGoalElement">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="FromAnotherDocumentSE" type="xs:boolean" />
+                <xs:element name="idSystemGoal" type="xs:int" />
+                <xs:element name="IsMainGoal" type="xs:boolean" />
+                <xs:element name="Code" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="25" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idElementTypeSystemGoal" type="xs:int" minOccurs="0" />
+                <xs:element name="DateStart" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DateEnd" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="idSBP" type="xs:int" minOccurs="0" />
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.ActivityOfSBP_SystemGoalElement" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830435</id>
+    <idOwner>-1744830436</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830437</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>25</Code>
+    <idElementTypeSystemGoal>-1879048161</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830434</id>
+    <idOwner>-1744830436</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830435</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>27</Code>
+    <idElementTypeSystemGoal>-1543503848</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idSBP>-1207959534</idSBP>
+    <idParent>-1744830435</idParent>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830433</id>
+    <idOwner>-1744830435</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830433</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>29</Code>
+    <idElementTypeSystemGoal>-1744830436</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830432</id>
+    <idOwner>-1744830435</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830431</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>31</Code>
+    <idElementTypeSystemGoal>-1543503848</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idSBP>-1207959534</idSBP>
+    <idParent>-1744830433</idParent>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830431</id>
+    <idOwner>-1744830434</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830433</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>29</Code>
+    <idElementTypeSystemGoal>-1744830436</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830430</id>
+    <idOwner>-1744830434</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830430</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>32</Code>
+    <idElementTypeSystemGoal>-1744830437</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idSBP>-1207959534</idSBP>
+    <idParent>-1744830431</idParent>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830428</id>
+    <idOwner>-1744830432</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830420</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>41</Code>
+    <idElementTypeSystemGoal>-1744830436</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830427</id>
+    <idOwner>-1744830432</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830419</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>42</Code>
+    <idElementTypeSystemGoal>-1543503848</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+    <idSBP>-1744830426</idSBP>
+    <idParent>-1744830428</idParent>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830426</id>
+    <idOwner>-1744830431</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830420</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>41</Code>
+    <idElementTypeSystemGoal>-1744830436</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1744830425</id>
+    <idOwner>-1744830431</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830418</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>43</Code>
+    <idElementTypeSystemGoal>-1744830437</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+    <idSBP>-1744830437</idSBP>
+    <idParent>-1744830426</idParent>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1275068394</id>
+    <idOwner>-1543503849</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1543503848</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>24</Code>
+    <idElementTypeSystemGoal>-1543503848</idElementTypeSystemGoal>
+    <DateStart>2013-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-12-31T00:00:00+04:00</DateEnd>
+    <idSBP>-1207959534</idSBP>
+    <idParent>-1275068393</idParent>
+  </tp.ActivityOfSBP_SystemGoalElement>
+  <tp.ActivityOfSBP_SystemGoalElement>
+    <id>-1275068393</id>
+    <idOwner>-1543503849</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830437</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>25</Code>
+    <idElementTypeSystemGoal>-1879048161</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+  </tp.ActivityOfSBP_SystemGoalElement>
+</NewDataSet>

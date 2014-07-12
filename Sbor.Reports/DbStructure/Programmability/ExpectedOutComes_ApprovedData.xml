@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1275068368</id>
+    <Schema>sbor</Schema>
+    <Name>ExpectedOutComes_ApprovedData</Name>
+    <CreateCommand>CREATE FUNCTION [sbor].[ExpectedOutComes_ApprovedData] (@idProgram int, @datestate nvarchar(128), @idVersion int, @idPublicLegalFormation int)
+      RETURNS TABLE
+      AS
+      RETURN
+      (
+--DECLARE @idProgram int, @idPublicLegalFormation int, @idVersion int
+--SET @idPublicLegalFormation = 1
+--SET @idVersion = 1
+--SET @idProgram = 293;
+SELECT	 TAB.Goalindicator
+		,TAB.Viewprog
+		,TAB.UnitDimension
+		,CASE 
+			WHEN IndicatedCumulatively = 1 THEN ValueCumulatively
+			WHEN (IndicatedCumulatively = 0 OR IndicatedCumulatively IS NULL) THEN Value
+		END AS Value  
+FROM 
+(
+SELECT 
+	 CASE 
+		WHEN prg.IdDocType = -1543503843 THEN 'ГОСУДАРСТВЕННОЙ ПРОГРАММЫ'
+		WHEN prg.IdDocType = -1543503841 THEN 'ВЕДОМСТВЕННОЙ ЦЕЛЕВОЙ ПРОГРАММЫ'
+		WHEN prg.IdDocType = -1543503837 THEN 'ДОЛГОСРОЧНОЙ ЦЕЛЕВОЙ ПРОГРАММЫ'
+		WHEN prg.IdDocType = -1543503842 THEN 'ПОДПРОГРАММЫ'
+	 END AS Viewprog
+	,gi.Caption AS Goalindicator
+	,ud.Symbol AS UnitDimension 
+	,gi.IndicatedCumulatively AS IndicatedCumulatively --Флаг 
+    ,Value = (
+      SELECT TOP 1 vgt.Value
+      FROM [reg].ValuesGoalTarget As vgt
+      LEFT JOIN [ref].HierarchyPeriod As hp --период(справочник)
+		  ON hp.Id = vgt.IdHierarchyPeriod --значение целевых показателей(register)
+		  AND vgt.idTerminator is null
+		  AND vgt.idVersion = @idVersion
+		  AND vgt.idPublicLegalFormation = @idPublicLegalFormation	
+		  AND vgt.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,vgt.DateCommit)) 
+		  AND vgt.DateCommit IS NOT NULL 
+		  AND (vgt.DateTerminate &gt; (convert(datetime,@datestate,104)) or vgt.idTerminator is null)--по утвержденным данным
+      WHERE	vgt.idGoalTarget = gt.id
+      AND hp.DateEnd =	aop.DateEnd
+      )
+	  ,ValueCumulatively = 
+	  (
+		
+		SELECT SUM(vgt.Value)
+		FROM [reg].ValuesGoalTarget As vgt
+		WHERE	vgt.idGoalTarget = gt.id
+		AND vgt.idTerminator is null
+		AND vgt.idVersion = @idVersion
+		AND vgt.idPublicLegalFormation = @idPublicLegalFormation
+		AND vgt.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,vgt.DateCommit)) 
+		AND vgt.DateCommit IS NOT NULL 
+		AND (vgt.DateTerminate &gt; (convert(datetime,@datestate,104)) or vgt.idTerminator is null)--по утвержденным данным
+		GROUP BY idGoalTarget
+	  )
+FROM reg.AttributeOfProgram AS aop 
+INNER JOIN reg.SystemGoalElement AS sge 
+	ON aop.IdGoalSystemElement = sge.Id
+	AND aop.IdProgram = @idProgram
+	AND aop.IdPublicLegalFormation = @idPublicLegalFormation
+	AND aop.IdVersion = @idVersion
+	AND aop.IdTerminator is null
+	AND aop.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,aop.DateCommit)) 
+	AND aop.DateCommit IS NOT NULL 
+	AND (aop.DateTerminate &gt; (convert(datetime,@datestate,104)) or aop.idTerminator is null)
+	AND sge.idTerminator is null
+	AND sge.IdPublicLegalFormation = @idPublicLegalFormation
+	AND sge.IdVersion = @idVersion
+	AND sge.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,sge.DateCommit)) 
+	AND sge.DateCommit IS NOT NULL 
+	AND (sge.DateTerminate &gt; (convert(datetime,@datestate,104)) or sge.idTerminator is null)--по утвержденным данным
+INNER JOIN reg.Program AS prg 
+	ON aop.IdProgram = prg.Id
+	AND prg.idTerminator is null
+	AND prg.IdPublicLegalFormation = @idPublicLegalFormation
+	AND prg.IdVersion = @idVersion
+	AND prg.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,prg.DateCommit)) 
+	AND prg.DateCommit IS NOT NULL 
+	AND (prg.DateTerminate &gt; (convert(datetime,@datestate,104)) or prg.idTerminator is null)--по утвержденным данным
+INNER JOIN reg.GoalTarget AS gt 
+	ON sge.Id = gt.IdSystemGoalElement
+	AND gt.IdPublicLegalFormation = @idPublicLegalFormation
+	AND gt.IdVersion = @idVersion
+	AND gt.IdTerminator is null
+	AND gt.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,gt.DateCommit)) 
+	AND gt.DateCommit IS NOT NULL 
+	AND (gt.DateTerminate &gt; (convert(datetime,@datestate,104)) or gt.idTerminator is null)--по утвержденным данным
+INNER JOIN reg.ValuesGoalTarget AS gtv 
+	ON gt.Id = gtv.IdGoalTarget
+	AND gtv.IdValueType = 1
+	AND gtv.IdPublicLegalFormation = @idPublicLegalFormation
+	AND gtv.IdVersion = @idVersion
+	AND gtv.IdTerminator is null
+	AND gtv.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,gtv.DateCommit)) 
+	AND gtv.DateCommit IS NOT NULL 
+	AND (gtv.DateTerminate &gt; (convert(datetime,@datestate,104)) or gtv.idTerminator is null)--по утвержденным данным
+INNER JOIN ref.HierarchyPeriod AS hp 
+	ON gtv.IdHierarchyPeriod = hp.Id
+	AND aop.DateEnd = hp.DateEnd
+INNER JOIN ref.GoalIndicator AS gi  
+	ON gt.IdGoalIndicator = gi.Id
+INNER JOIN ref.UnitDimension  AS ud 
+	ON gi.IdUnitDimension = ud.Id
+) AS TAB
+)</CreateCommand>
+    <idProgrammabilityType>2</idProgrammabilityType>
+    <Order></Order>
+    <idProject>600</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AC6ABFC-88B6-4D89-87DE-C1A18EAABA7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sbor.Reports</RootNamespace>
+    <AssemblyName>Sbor.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutoClient|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AutoClient\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.5.0.0.70\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbEnums\ListTypeOutputProgram.cs" />
+    <Compile Include="DbEnums\SourcesDataReports.cs" />
+    <Compile Include="Entities\Reference\WordCommonReportParams.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\WordCommonReportParamsMap.cs" />
+    <Compile Include="GeneratedCode\Reference\WordCommonReportParams.cs" />
+    <Compile Include="GeneratedCode\Report\BudgetExpenseStructure.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\BudgetExpenseStructureMap.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\WordCommonReportMap.cs" />
+    <Compile Include="GeneratedCode\Report\WordCommonReport.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BudgetExpenseStructure_Columns.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BudgetExpenseStructure_ColumnsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\WordCommonReportParams_InputParamMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\WordCommonReportParams_InputParam.cs" />
+    <Compile Include="PrintForms\DocumentsOfSED\DataSetDoc.cs" />
+    <Compile Include="PrintForms\DocumentsOfSED\DataSetMain.cs" />
+    <Compile Include="PrintForms\DocumentsOfSED\PrimaryPf.cs" />
+    <Compile Include="PrintForms\FinancialAndBusinessActivities\Structures.cs" />
+    <Compile Include="PrintForms\FinancialAndBusinessActivities\FinancialAndBusinessActivitiesPf.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\LongTermGoalProgram_SubProgramPf.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\DataSetAccomplice.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\DataSetActivity.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\DataSetGoalIndicator.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\DataSetHierarchy.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\DataSetResourceMaintenance.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\DateSetString.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\LongTermGoalProgramPf.cs" />
+    <Compile Include="PrintForms\LongTermGoalProgram\DataSetHeader.cs" />
+    <Compile Include="PrintForms\PlanActivity\DSActivity.cs" />
+    <Compile Include="PrintForms\PlanActivity\DSBlankKBK.cs" />
+    <Compile Include="PrintForms\PlanActivity\DSFinancialProvision.cs" />
+    <Compile Include="PrintForms\PlanActivity\DSHeader.cs" />
+    <Compile Include="PrintForms\PlanActivity\PlanActivityTask.cs" />
+    <Compile Include="PrintForms\PlanActivity\PlanActivityTask_DataSet.cs" />
+    <Compile Include="PrintForms\PlanActivity\PlanActivityPf.cs" />
+    <Compile Include="PrintForms\PlanActivity\PlanActivityTask_Service.cs" />
+    <Compile Include="PrintForms\PublicInstitutionEstimate\DataSetPIE.cs" />
+    <Compile Include="PrintForms\PublicInstitutionEstimate\PublicInstitutionEstimatePF.cs" />
+    <Compile Include="PrintForms\RegisterActivity\RegisterActivityPf1.cs" />
+    <Compile Include="PrintForms\RegisterActivity\RegisterActivityPf.cs" />
+    <Compile Include="PrintForms\RegisterActivity\RegisterActivity210fzPf.cs" />
+    <Compile Include="PrintForms\RegisterActivity\DataSet210fz.cs" />
+    <Compile Include="PrintForms\StateProgram\ClTest.cs" />
+    <Compile Include="PrintForms\StateProgram\CoExecuter_sn1.cs" />
+    <Compile Include="PrintForms\StateProgram\GoalTask_sn8.cs" />
+    <Compile Include="PrintForms\StateProgram\Program_sn3.cs" />
+    <Compile Include="PrintForms\StateProgram\StateProgramPF.cs" />
+    <Compile Include="PrintForms\StateProgram\StateUnderProgramPF.cs" />
+    <Compile Include="PrintForms\StateProgram\Task_sn5.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AnalysisBAofDirectAndIndirectCost\AnalysisBAofDirectAndIndirectCost.cs" />
+    <Compile Include="Reports\AnalysisBAofDirectAndIndirectCost\DSHeader.cs" />
+    <Compile Include="Reports\AnalysisBAofDirectAndIndirectCost\DSMain.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\BudgetExpenseStructure_BaseFilter.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\BudgetExpenseLine.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\BudgetExpenseStructure.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\BudgetExpenseStructure_CteQuery.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\BudgetExpenseStructure_OuterQuery.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\BudgetExpenseStructure_CustomFilter.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\IBudgetExpenseStructureFilter.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\TableParts\BudgetExpenseStructure_BaseFilter.cs" />
+    <Compile Include="Reports\BudgetExpenseStructure\TableParts\BudgetExpenseStructure_CustomFilter.cs" />
+    <Compile Include="Reports\ConsolidatedExpenditure\ConsolidatedExpenditure_BaseFilter.cs" />
+    <Compile Include="Reports\ConsolidatedExpenditure\ConsolidatedExpenditure.cs" />
+    <Compile Include="Reports\ConsolidatedExpenditure\DataSet.cs" />
+    <Compile Include="Reports\ConsolidatedRegisterOfServices\ConsolidatedRegisterOfServices.cs" />
+    <Compile Include="Reports\CostGoals\CostGoals.cs" />
+    <Compile Include="Reports\CostGoals\PrimeDataSet.cs" />
+    <Compile Include="Reports\DataSet1.cs" />
+    <Compile Include="Reports\DirectionAndFundingOfDepartment\DirectionAndFundingOfDepartment.cs" />
+    <Compile Include="Reports\DirectionAndFundingOfDepartment\DSHeader.cs" />
+    <Compile Include="Reports\DirectionAndFundingOfDepartment\DSMain.cs" />
+    <Compile Include="Reports\EditionsComparision\ComparisionDetails.cs" />
+    <Compile Include="Reports\EditionsComparision\DatarowReportItem.cs" />
+    <Compile Include="Reports\EditionsComparision\DSComparision.cs" />
+    <Compile Include="Reports\EditionsComparision\EditionsComparision.cs" />
+    <Compile Include="Reports\EditionsComparision\IReportItem.cs" />
+    <Compile Include="Reports\EditionsComparision\MainReportItem.cs" />
+    <Compile Include="Reports\EditionsComparision\ReportResultBuilder.cs" />
+    <Compile Include="Reports\EditionsComparision\TablepartReportItem.cs" />
+    <Compile Include="Reports\EditionsComparision\Test\Framework\ClassToDataTable.cs" />
+    <Compile Include="Reports\EditionsComparision\Test\Framework\TableInfoDumb.cs" />
+    <Compile Include="Reports\EditionsComparision\Test\Framework\TablefiedAttribute.cs" />
+    <Compile Include="Reports\EditionsComparision\Test\Framework\TpHolderFactory.cs" />
+    <Compile Include="Reports\EditionsComparision\Test\TestEditionsComparator.cs" />
+    <Compile Include="Reports\EditionsComparision\Test\Framework\TestTpDataHolder.cs" />
+    <Compile Include="Reports\ForecastConsolidatedIndicators\DSHeader.cs" />
+    <Compile Include="Reports\ForecastConsolidatedIndicators\DSMain.cs" />
+    <Compile Include="Reports\ForecastConsolidatedIndicators\ForecastConsolidatedIndicators.cs" />
+    <Compile Include="Reports\GoalTargetsOfProgramSbp\GoalTargetsOfProgramSbp.cs" />
+    <Compile Include="Reports\GoalTargetsOfProgramSbp\PrimeDataSet.cs" />
+    <Compile Include="Reports\ConsolidatedRegisterOfServices\PrimeDataSet.cs" />
+    <Compile Include="Reports\InterBudgetaryTransfers\InterBudgetaryTransfers.cs" />
+    <Compile Include="Reports\InterBudgetaryTransfers\DataSet.cs" />
+    <Compile Include="Reports\JustificationOfBudget\PrimeDataSet.cs" />
+    <Compile Include="Reports\JustificationOfBudget\JustificationOfBudget.cs" />
+    <Compile Include="Reports\ListProgram\DataSetListProgram.cs" />
+    <Compile Include="Reports\ListProgram\ListProgram.cs" />
+    <Compile Include="Reports\NeedForTheProvisionOfActivitySbpWithinTheStateProgram\NeedForTheProvisionOfActivitySbpWithinTheStateProgram.cs" />
+    <Compile Include="Reports\NeedForTheProvisionOfActivitySbpWithinTheStateProgram\PrimeDataSet.cs" />
+    <Compile Include="Reports\PassportStateProgram\DataSetStateProgPass.cs" />
+    <Compile Include="Reports\PassportStateProgram\PassportStateProgram.cs" />
+    <Compile Include="Reports\RegistryGoal\PrimeDataSet.cs" />
+    <Compile Include="Reports\RegistryGoal\RegistryGoal.cs" />
+    <Compile Include="Reports\Report1\Report1.cs" />
+    <Compile Include="Reports\ResourceMaintenanceOfTheStateProgram\DSHeader.cs" />
+    <Compile Include="Reports\ResourceMaintenanceOfTheStateProgram\DSMain.cs" />
+    <Compile Include="Reports\ResourceMaintenanceOfTheStateProgram\ResourceMaintenanceOfTheStateProgram.cs" />
+    <Compile Include="Reports\StateProgramGoalIndicatorValue\DSHeader.cs" />
+    <Compile Include="Reports\StateProgramGoalIndicatorValue\DSMain.cs" />
+    <Compile Include="Reports\StateProgramGoalIndicatorValue\StateProgramGoalIndicatorValue.cs" />
+    <Compile Include="Reports\SummaryReportOfSelectedIndicators\DataSet.cs" />
+    <Compile Include="Reports\SummaryReportOfSelectedIndicators\SummaryReportOfSelectedIndicators.cs" />
+    <Compile Include="Reports\SystemOfActivitySBP\PrimeDataSet.cs" />
+    <Compile Include="Reports\SystemOfActivitySBP\SystemOfActivitySBP.cs" />
+    <Compile Include="Reports\TestAuditReport\LastUsers.cs" />
+    <Compile Include="Reports\TestAuditReport\TestAuditReport.cs" />
+    <Compile Include="Reports\UserActivityReport\UserAction.cs" />
+    <Compile Include="Reports\UserActivityReport\UserActivityReport.cs" />
+    <Compile Include="Reports\VcpOmStatePrg\DataSetVOSP.cs" />
+    <Compile Include="Reports\VcpOmStatePrg\VcpOmStatePrg.cs" />
+    <Compile Include="GeneratedCode\Report\Report1.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\Report1Map.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Report1_Tp.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Report1_TpMap.cs" />
+    <Compile Include="GeneratedCode\DataContext.cs" />
+    <Compile Include="GeneratedCode\Report\ResourceMaintenanceOfTheStateProgram.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\ResourceMaintenanceOfTheStateProgramMap.cs" />
+    <Compile Include="GeneratedCode\Report\TestAuditReport.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\TestAuditReportMap.cs" />
+    <Compile Include="GeneratedCode\Report\UserActivityReport.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\UserActivityReportMap.cs" />
+    <Compile Include="GeneratedCode\Report\GoalTargetsOfProgramSbp.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\GoalTargetsOfProgramSbpMap.cs" />
+    <Compile Include="GeneratedCode\Report\RegistryGoal.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\RegistryGoalMap.cs" />
+    <Compile Include="GeneratedCode\Report\DirectionAndFundingOfDepartment.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\DirectionAndFundingOfDepartmentMap.cs" />
+    <Compile Include="GeneratedCode\Report\NeedForTheProvisionOfActivitySbpWithinTheStateProgram.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\NeedForTheProvisionOfActivitySbpWithinTheStateProgramMap.cs" />
+    <Compile Include="GeneratedCode\Report\JustificationOfBudget.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\JustificationOfBudgetMap.cs" />
+    <Compile Include="GeneratedCode\Report\CostGoals.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\CostGoalsMap.cs" />
+    <Compile Include="GeneratedCode\Report\EditionsComparision.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\EditionsComparisionMap.cs" />
+    <Compile Include="GeneratedCode\Report\InterBudgetaryTransfers.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\InterBudgetaryTransfersMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\InterBudgetaryTransfers_CustomizableColumns.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\InterBudgetaryTransfers_CustomizableColumnsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BudgetExpenseStructure_BaseFilter.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BudgetExpenseStructure_BaseFilterMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BudgetExpenseStructure_BaseFilter_ExpenseObligationType.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BudgetExpenseStructure_BaseFilter_ExpenseObligationTypeMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\InterBudgetaryTransfers_RuleFilterKBK.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\InterBudgetaryTransfers_RuleFilterKBKMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BudgetExpenseStructure_CustomColumn.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BudgetExpenseStructure_CustomColumnMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BudgetExpenseStructure_CustomFilter.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BudgetExpenseStructure_CustomFilterMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BudgetExpenseStructure_CustomFilter_ExpenseObligationType.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BudgetExpenseStructure_CustomFilter_ExpenseObligationTypeMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\IBT_RuleFilterKBK_ExpenseObligationTypeT.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\IBT_RuleFilterKBK_ExpenseObligationTypeTMap.cs" />
+    <Compile Include="Reports\WordCommonReport\WordCommonReport.cs" />
+    <Compile Include="GeneratedCode\Tool\ReportBatch.cs" />
+    <Compile Include="GeneratedCode\Tool\Mappings\ReportBatchMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ReportBatch_Reports.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ReportBatch_ReportsMap.cs" />
+    <Compile Include="GeneratedCode\Report\AnalysisBAofDirectAndIndirectCost.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\AnalysisBAofDirectAndIndirectCostMap.cs" />
+    <Compile Include="GeneratedCode\Report\ConsolidatedExpenditure.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\ConsolidatedExpenditureMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ConsolidatedExpenditure_PPO.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ConsolidatedExpenditure_PPOMap.cs" />
+    <Compile Include="Services\SborReportsService.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ConsolidatedExpenditure_BaseFilter.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ConsolidatedExpenditure_BaseFilterMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ConsolidatedExpenditure_BaseFilter_ExpenseObligationType.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ConsolidatedExpenditure_BaseFilter_ExpenseObligationTypeMap.cs" />
+    <Compile Include="GeneratedCode\Report\SummaryReportOfSelectedIndicators.cs" />
+    <Compile Include="GeneratedCode\Report\Mappings\SummaryReportOfSelectedIndicatorsMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApp.Common\BaseApp.Common.csproj">
+      <Project>{FC293E62-62F9-4DAC-BE86-2B2000BEA40D}</Project>
+      <Name>BaseApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseApp\BaseApp.csproj">
+      <Project>{D16E12B1-8DC5-4EFD-A31E-2E80209746ED}</Project>
+      <Name>BaseApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Application.Common\Platform.Application.Common.csproj">
+      <Project>{b489597f-7c2f-4470-ba09-c31b8a0797c8}</Project>
+      <Name>Platform.Application.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic.Common\Platform.BusinessLogic.Common.csproj">
+      <Project>{E11D0AB2-A272-417F-8562-6FBC47033C6E}</Project>
+      <Name>Platform.BusinessLogic.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic\Platform.BusinessLogic.csproj">
+      <Project>{7399ba19-e033-40e4-9ec7-34c8eb0b149c}</Project>
+      <Name>Platform.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Common\Platform.Common.csproj">
+      <Project>{cb231957-03de-4efa-9b75-ef6b23e63070}</Project>
+      <Name>Platform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.OpenXMLProcessing\Platform.OpenXMLProcessing.csproj">
+      <Project>{0c7c6671-85f9-4373-997f-70a05c480f4b}</Project>
+      <Name>Platform.OpenXMLProcessing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9EE403B9-8D79-40F6-96B4-A9F6E6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Factoring\Platform.PrimaryEntities.Factoring.csproj">
+      <Project>{00d4b56d-e285-4075-b829-01688f7882fb}</Project>
+      <Name>Platform.PrimaryEntities.Factoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities\Platform.PrimaryEntities.csproj">
+      <Project>{DA11E957-7534-4DE0-AF6A-60F8D04E9CB6}</Project>
+      <Name>Platform.PrimaryEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity.Comon\Platform.Unity.Common.csproj">
+      <Project>{169CC69C-7AD2-4FED-917A-302B9020FA64}</Project>
+      <Name>Platform.Unity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity\Platform.Unity.csproj">
+      <Project>{b8903988-41a8-48f0-b922-4a4d7c333110}</Project>
+      <Name>Platform.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils.Common\Platform.Utils.Common.csproj">
+      <Project>{95B3D83C-FC10-4157-8364-52C513FD21F4}</Project>
+      <Name>Platform.Utils.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils\Platform.Utils.csproj">
+      <Project>{5a67cc4b-b52a-4d6e-8014-18816fe241ff}</Project>
+      <Name>Platform.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sbor\Sbor.csproj">
+      <Project>{92fce518-6fb9-4a91-b199-7ab876d0b7ad}</Project>
+      <Name>Sbor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DbStructure\ml\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\DataContext.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.ConsolidatedExpenditure.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.ConsolidatedExpenditure.TableSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.ConsolidatedRegisterOfServices.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.ConsolidatedRegisterOfServices.TableSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.CostGoals.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.CostGoals.TableSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.EditionsComparision.DSComparision.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.ForecastConsolidatedIndicators.DSHeader.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.ForecastConsolidatedIndicators.DSMain.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.InterBudgetaryTransfers.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.InterBudgetaryTransfers.TableSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.JustificationOfBudget.EmptyDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.JustificationOfBudget.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.JustificationOfBudget.TableSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.JustificationOfBudget.TableSet2.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.NeedForTheProvisionOfActivitySbpWithinTheStateProgram.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.NeedForTheProvisionOfActivitySbpWithinTheStateProgram.TableSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.DocumentsOfSED.DataSetDoc.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.DocumentsOfSED.DataSetMain.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.DocumentsOfSED.PrimaryPf.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PrintForms\DocumentsOfSED\PrimaryPf.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForms\FinancialAndBusinessActivities\FinancialAndBusinessActivitiesPf.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.BudgetLevel.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.PlanActivityInfo.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.PlanActivityPf.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.PlanActivityService.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.PlanActivityTask.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.PlanActivityWork.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.PlanActivity_Activity.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.RegisterActivity.DataSetDoc.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.RegisterActivity.DataSetDoc1.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.RegisterActivity.DataSetMain.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.RegisterActivity.DataSetMain1.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.RegisterActivity.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.RegisterActivity.TableSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.RegistryGoal.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Report.BudgetExpenseStructure.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Report.InterBudgetaryTransfers.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.BudgetExpenseStructure.BudgetExpenseLine.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.BudgetExpenseStructure.ColumnsInfo.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.BudgetExpenseStructure.HeaderInfo.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.DirectionAndFundingOfDepartment.DSHeader.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.DirectionAndFundingOfDepartment.DSMain.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.SummaryReportOfSelectedIndicators.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.SummaryReportOfSelectedIndicators.TableSet.datasource" />
+    <None Include="Reports\DirectionAndFundingOfDepartment\DirectionAndFundingOfDepartment.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\NeedForTheProvisionOfActivitySbpWithinTheStateProgram\NeedForTheProvisionOfActivitySbpWithinTheStateProgram.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\JustificationOfBudget\JustificationOfBudget.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\CostGoals\CostGoals.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\EditionsComparision\EditionsComparision.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\BudgetExpenseStructure\BudgetExpenseStructure.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="PrintForms\PlanActivity\PlanActivityTask.rdlc" />
+    <EmbeddedResource Include="PrintForms\PlanActivity\PlanActivityTask_Service.rdlc" />
+    <EmbeddedResource Include="PrintForms\RegisterActivity\RegisterActivityPf.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForms\RegisterActivity\RegisterActivity210fzPf.rdlc" />
+    <EmbeddedResource Include="PrintForms\RegisterActivity\RegisterActivityPf1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AnalysisBAofDirectAndIndirectCost\AnalysisBAofDirectAndIndirectCost.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ConsolidatedExpenditure\ConsolidatedExpenditure.rdlc" />
+    <EmbeddedResource Include="Reports\InterBudgetaryTransfers\InterBudgetaryTransfers.rdlc" />
+    <EmbeddedResource Include="Reports\ListProgram\ListProgram.rdlc" />
+    <EmbeddedResource Include="Reports\SummaryReportOfSelectedIndicators\SummaryReportOfSelectedIndicators.rdlc" />
+    <EmbeddedResource Include="Reports\TestAuditReport\TestAuditReport.rdlc" />
+    <EmbeddedResource Include="Reports\UserActivityReport\UserActivityReport.rdlc" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.DSBlankKBK.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Report.TestAuditReport.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Report.UserActivityReport.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.GoalTargetsOfProgramSbp.PrimeDataSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.GoalTargetsOfProgramSbp.TableSet.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.ResourceMaintenanceOfTheStateProgram.DSHeader.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.ResourceMaintenanceOfTheStateProgram.DSMain.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.TestAuditReport.LastUsers.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.PassportStateProgram.DataSetStateProgPass.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.VcpOmStatePrg.DataSetVOSP.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.UserActivityReport.CommonInfo.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.UserActivityReport.UserAction.datasource" />
+    <None Include="Reports\GoalTargetsOfProgramSbp\GoalTargetsOfProgramSbp.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\ConsolidatedRegisterOfServices\ConsolidatedRegisterOfServices.rdlc" />
+    <None Include="Reports\PassportStateProgram\PassportStateProgram.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ResourceMaintenanceOfTheStateProgram\ResourceMaintenanceOfTheStateProgram.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ForecastConsolidatedIndicators\ForecastConsolidatedIndicators.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Sbor.Reports.StateProgramGoalIndicatorValue.DSHeader.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.StateProgramGoalIndicatorValue.DSMain.datasource">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\StateProgramGoalIndicatorValue\StateProgramGoalIndicatorValue.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.SystemOfActivitySBP.PrimeDataSet.datasource" />
+    <None Include="Reports\VcpOmStatePrg\VcpOmStatePrg.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.SystemOfActivitySBP.SystemOfActivitySBP.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.SystemOfActivitySBP.SystemOfActivitySBPReport.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.SystemOfActivitySBP.TableSet.datasource" />
+    <None Include="Reports\SystemOfActivitySBP\SystemOfActivitySBP.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PrintForms\PlanActivity\PlanActivityPf.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.FinancialAndBusinessActivities.DSFinInd.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.FinancialAndBusinessActivities.DSPlanIncome.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.FinancialAndBusinessActivities.DSTopOfDoc.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.FinancialAndBusinessActivities.ListCaption.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.DSActivity.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.DSFinancialProvision.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PlanActivity.DSHeader.datasource" />
+    <None Include="PrintForms\PublicInstitutionEstimate\PublicInstitutionEstimatePF.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PublicInstitutionEstimate.DataSetPIE.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.PublicInstitutionEstimate.PublicInstitutionEstimatePF.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.RegistryGoal.PrimeDataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\RegistryGoal\RegistryGoal.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PrintForms\LongTermGoalProgram\LongTermGoalProgram_SubProgramPf.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PrintForms\StateProgram\StateProgramPF.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintForms\StateProgram\StateUnderProgramPF.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.LongTermGoalProgram.DataSetAccomplice.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.LongTermGoalProgram.DataSetActivity.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.LongTermGoalProgram.DataSetGoalIndicator.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.LongTermGoalProgram.DataSetHeader.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.LongTermGoalProgram.DataSetHierarchy.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.LongTermGoalProgram.DataSetResourceMaintenance.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.LongTermGoalProgram.DataSetString.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.StateProgram.CoExecuter_sn11.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.StateProgram.GoalTask_sn8.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.StateProgram.Program_sn31.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.PrintForms.StateProgram.Task_sn51.datasource" />
+    <None Include="Properties\DataSources\Sbor.Reports.Reports.DataSet1.datasource" />
+    <None Include="Reports\Report1\Report1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PrintForms\LongTermGoalProgram\LongTermGoalProgramPf.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Content Include="DbEnums\Entity.xml" />
+    <Content Include="DbEnums\EntityField.xml" />
+    <Content Include="DbStructure\ref\Entity.xml" />
+    <Content Include="DbStructure\ref\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\Filter.xml" />
+    <Content Include="DbStructure\Programmability\VCPOMProg1_23.xml" />
+    <Content Include="DbStructure\rep\VcpOmStatePrg.xml" />
+    <Content Include="DbStructure\rep\GoalTargetsOfProgramSbp.xml" />
+    <Content Include="DbStructure\rep\ResourceMaintenanceOfTheStateProgram.xml" />
+    <Content Include="DbStructure\rep\StateProgramGoalIndicatorValue.xml" />
+    <Content Include="DbStructure\rep\TestAuditReport.xml" />
+    <Content Include="DbStructure\rep\RegistryGoal.xml" />
+    <Content Include="DbStructure\Programmability\ProgramPassport16_20.xml" />
+    <Content Include="DbStructure\rep\PassportStateProgram.xml" />
+    <Content Include="DbStructure\Programmability\VCPOMProg1_23_ApprovedData.xml" />
+    <Content Include="DbStructure\Programmability\ProgramPassport16_20_ApprovedData.xml" />
+    <Content Include="DbStructure\rep\NeedForTheProvisionOfActivitySbpWithinTheStateProgram.xml" />
+    <Content Include="DbStructure\Programmability\SBPHierarchy.xml" />
+    <Content Include="DbStructure\Programmability\NotValidSystemGoal.xml" />
+    <Content Include="DbStructure\Programmability\ExpectedOutComes.xml" />
+    <Content Include="DbStructure\Programmability\ExpectedOutComes_ApprovedData.xml" />
+    <Content Include="DbStructure\Programmability\RegistryGoal_VolumeExpensesImplementation.xml" />
+    <Content Include="DbStructure\Programmability\RegistryGoal_VolumeExpensesImplementation_ApprovedData.xml" />
+    <Content Include="DbStructure\Programmability\VolumeExpensesImplementation_ApprovedData.xml" />
+    <Content Include="DbStructure\Programmability\VolumeExpensesImplementation.xml" />
+    <Content Include="DbStructure\rep\EditionsComparision.xml" />
+    <Content Include="DbStructure\Programmability\ProgramPassportSBP16_20.xml" />
+    <Content Include="DbStructure\Programmability\ProgramPassportSBP16_20_ApprovedData.xml" />
+    <Content Include="DbStructure\rep\ConsolidatedRegisterOfServices.xml" />
+    <Content Include="DbStructure\Programmability\ListTargetedPrograms.xml" />
+    <Content Include="DbStructure\Programmability\ListTargetedPrograms_ApprovedData.xml" />
+    <Content Include="DbStructure\Programmability\ListTargetedProgramsByType.xml" />
+    <Content Include="DbStructure\Programmability\ListTargetedProgramsByType_ApprovedData.xml" />
+    <Content Include="DbStructure\Programmability\ListTargetedProgramsActivityOfSBP.xml" />
+    <Content Include="DbStructure\Programmability\ListTargetedProgramsActivityOfSBP_ApprovedData.xml" />
+    <Content Include="DbStructure\Programmability\ListTargetedProgramsByTypeActivityOfSBP.xml" />
+    <Content Include="DbStructure\Programmability\ListTargetedProgramsByTypeActivityOfSBP_ApprovedData.xml" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1 @@
+﻿ALTER INDEX [Unique_idParentNull] ON ref.Filter DISABLE

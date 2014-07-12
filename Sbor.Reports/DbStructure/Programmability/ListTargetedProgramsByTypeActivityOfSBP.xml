@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1275068341</id>
+    <Schema>sbor</Schema>
+    <Name>ListTargetedProgramsByTypeActivityOfSBP</Name>
+    <CreateCommand>CREATE PROCEDURE [sbor].[ListTargetedProgramsByTypeActivityOfSBP](@idProg int,@AdditionalNeed1 int,@AdditionalNeed2 int, @idFinanceSource int,@idFinanceSource1 int,@FinanceSourceType int,@ValueType int,@ValueType1 int,@YearBudget int,@idVersion int,@PPO int,@DocType1 int, @DocType2 int, @DocType3 int, @DocType4 int )
+AS
+BEGIN
+
+
+DECLARE @t1 table (CaptionProg varchar(512),SBPid int,CaptionSBP varchar(512),IdProgram int,[Year] int,AmountOfCash numeric(20,2),[Level]  varchar(256),sort VARCHAR(MAX),AnalyticalCode varchar(256), Datestart  DATETIME, Dateend DATETIME)
+DECLARE @t2 table (CaptionProg varchar(512),[Level]  varchar(256),sort VARCHAR(MAX),IdProgram int)
+DECLARE @t3 table (CaptionProg varchar(512),IdParent int,IdProgram int)
+DECLARE @t4 table (CaptionProg varchar(512),IdParent int,IdProgram int)
+DECLARE @t5 table (CaptionProg varchar(512),IdParent int,IdProgram int);
+
+
+WITH T(CaptionProg, idProgram, idParent) AS
+(
+		SELECT aop.Caption
+			,aop.idProgram
+			,aop.idParent 
+		FROM reg.Program AS prg
+		INNER JOIN reg.AttributeOfProgram AS aop
+		ON prg.id = aop.idProgram
+		AND prg.id = @idProg
+		AND prg.idTerminator IS NULL
+		AND aop.idTerminator IS NULL
+		AND prg.[idDocType] IN (ISNULL(@DocType1,prg.idDocType), @DocType2, @DocType3, @DocType4)
+		--WHERE   prg.id = @idProg
+      UNION ALL
+      SELECT aop.Caption
+			,aop.idProgram
+			,aop.idParent 
+		FROM reg.Program AS prg
+		INNER JOIN reg.AttributeOfProgram AS aop
+		ON prg.id = aop.idProgram
+		AND prg.idTerminator IS NULL
+		AND aop.idTerminator IS NULL
+		AND prg.[idDocType] IN (ISNULL(@DocType1,prg.idDocType), @DocType2, @DocType3, @DocType4)
+      INNER JOIN T
+      ON AOP.idParent = T.idProgram
+      )
+
+	INSERT INTO  @t5(CaptionProg ,IdParent ,IdProgram)
+	SELECT 
+		 CaptionProg
+		,IdParent
+		,IdProgram
+	FROM T;	  
+
+INSERT INTO  @t3(CaptionProg, IdParent , IdProgram)
+SELECT   prg.Caption 
+		,aop.idParent
+		,prg.id 
+FROM reg.Program AS prg
+	INNER JOIN reg.AttributeOfProgram AS aop
+	ON prg.id = aop.idProgram
+	AND aop.idTerminator IS NULL
+	AND AOP.idVersion = @idVersion
+    AND AOP.idPublicLegalFormation = @PPO
+    AND prg.id IN (ISNULL(@idProg,prg.id))
+	AND prg.[idDocType] IN (ISNULL(@DocType1,prg.idDocType), @DocType2, @DocType3, @DocType4);
+	--AND доп условие того что ГП или ПП ГП, ВЦП и ОМ
+	--Версия итд 
+	--AND AOP.idTerminator IS NULL
+    --AND AOP.idVersion = 1--@idVersion
+    --AND AOP.idPublicLegalFormation = 1--@PPO
+
+
+IF	  ((@DocType1 = -1543503843 AND @DocType2 = -1543503842 AND @idProg IS NOT NULL) 
+	OR (@DocType1 = -1543503843 AND @DocType2 = -1543503842 AND @DocType3 = -1543503841 AND @DocType4 = -1543503839 AND @idProg IS NOT NULL))
+BEGIN
+INSERT INTO @t4(CaptionProg, IdParent , IdProgram)
+
+SELECT	
+		 T5.CaptionProg
+		,CASE 
+			WHEN T6.CaptionProg IS NULL THEN NULL
+			ELSE T5.IdParent
+		 END AS IdParent
+		,T5.IdProgram
+
+FROM @t5 AS T5
+LEFT JOIN @t5 AS T6
+ON T5.IdParent = T6.IdProgram 
+END
+
+ELSE 
+INSERT INTO @t4(CaptionProg, IdParent , IdProgram)
+
+SELECT	
+		 T3.CaptionProg
+		,CASE 
+			WHEN T4.CaptionProg IS NULL THEN NULL
+			ELSE T3.IdParent
+		 END AS IdParent
+		,T3.IdProgram
+
+FROM @t3 AS T3
+LEFT JOIN @t3 AS T4
+ON T3.IdParent = T4.IdProgram ;
+--SELECT * FROM @t4
+
+
+
+ WITH Q (CaptionProg, idProgram, idParent, [Level], sort) AS
+      (
+      SELECT AOP.CaptionProg
+			,AOP.idProgram
+			,AOP.idParent
+			,CAST(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode) AS VARCHAR(MAX))
+			,CASE 
+				WHEN LEN(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode)) = 1 THEN '0000' + CAST(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode) AS VARCHAR(MAX) ) 
+				WHEN LEN(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode)) = 2 THEN '000' + CAST(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode) AS VARCHAR(MAX) ) 
+				WHEN LEN(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode)) = 3 THEN '00' + CAST(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode) AS VARCHAR(MAX) ) 
+			 END --CAST(FORMAT(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode),'D5') AS VARCHAR(MAX) ) 
+      FROM @t4 AS AOP
+      INNER JOIN reg.AttributeOfProgram as ATR
+		ON AOP.IdProgram = ATR.idProgram
+		AND ATR.idTerminator IS NULL
+		AND ATR.idVersion = @idVersion
+		AND ATR.idPublicLegalFormation = @PPO
+	  INNER JOIN ref.AnalyticalCodeStateProgram AS ACSP
+		ON ATR.idAnalyticalCodeStateProgram = ACSP.id
+      WHERE   AOP.idParent IS NULL
+      UNION ALL
+      SELECT 
+			 AOP.CaptionProg
+			,AOP.idProgram
+			,AOP.idParent
+			,CAST([level] AS VARCHAR(MAX))+'.'+CAST((ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode)) AS VARCHAR(MAX))
+			,CASE 
+				WHEN LEN(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode)) = 1 THEN CAST([sort]+'.'+ '0000' + CAST(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode) AS VARCHAR(MAX) ) AS VARCHAR(MAX))
+				WHEN LEN(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode)) = 2 THEN CAST([sort]+'.'+ '000' + CAST(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode) AS VARCHAR(MAX) ) AS VARCHAR(MAX))
+				WHEN LEN(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode)) = 3 THEN CAST([sort]+'.'+ '00' + CAST(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode) AS VARCHAR(MAX) ) AS VARCHAR(MAX))
+			 END--CAST(([sort]+'.'+FORMAT(ROW_NUMBER() OVER(PARTITION BY  AOP.idParent order by ACSP.AnalyticalCode) ,'D5')) AS VARCHAR(MAX))
+      FROM @t4 AS AOP
+	  INNER JOIN reg.AttributeOfProgram as ATR
+		ON AOP.IdProgram = ATR.idProgram
+		AND ATR.idTerminator IS NULL
+		AND ATR.idVersion = @idVersion
+		AND ATR.idPublicLegalFormation = @PPO
+	  INNER JOIN ref.AnalyticalCodeStateProgram AS ACSP
+		ON ATR.idAnalyticalCodeStateProgram = ACSP.id
+      INNER JOIN Q
+      ON AOP.idParent = Q.idProgram
+      )
+
+	  --SELECT * FROM Q
+	  --ORDER BY Q.sort
+
+INSERT INTO  @t2(CaptionProg, [level], sort, IdProgram)
+SELECT 
+			 CaptionProg
+			,level
+			,sort
+			,IdProgram
+			
+FROM Q
+
+--SELECT * FROM @t2
+
+INSERT INTO  @t1(CaptionProg ,SBPid ,CaptionSBP ,IdProgram ,[Year],AmountOfCash,[Level],sort,AnalyticalCode,Datestart,Dateend)
+	SELECT	 DT.Caption + ' «' + prg.CaptionProg + '» на '	+ CAST(YEAR(aop.DateStart) AS VARCHAR(32)) + ' - ' + CAST(YEAR(aop.DateEnd) AS VARCHAR(32)) + ' годы' 	
+			,ST.VSsbp
+			,ST.[Description] 
+			,prg.IdProgram
+			,ST.[Year]
+			,ST.AmountOfCash 
+			,prg.[Level]
+			,prg.sort
+			,acsp.AnalyticalCode
+			,aop.DateStart
+			,aop.DateEnd
+	FROM @t2 AS prg
+	OUTER APPLY  [sbor].[ListTargetedProgramsActivityOfSBP] (prg.IdProgram,	@idFinanceSource, @idFinanceSource1, @FinanceSourceType,  @ValueType, @ValueType1, @YearBudget, @idVersion, @PPO, @AdditionalNeed1, @AdditionalNeed2) AS ST
+	INNER JOIN reg.AttributeOfProgram AS aop 
+		ON aop.idProgram = prg.IdProgram 
+		AND aop.idTerminator IS NULL
+		AND aop.idVersion = @idVersion
+		AND aop.idPublicLegalFormation = @PPO 
+	INNER JOIN ref.AnalyticalCodeStateProgram AS acsp
+		ON aop.idAnalyticalCodeStateProgram = acsp.id
+	INNER JOIN reg.Program AS prog
+		ON prog.id = prg.IdProgram
+	INNER JOIN ref.DocType AS DT
+		ON prog.idDocType = DT.id
+
+SELECT * FROM @t1
+
+
+END</CreateCommand>
+    <idProgrammabilityType>1</idProgrammabilityType>
+    <Order></Order>
+    <idProject>600</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

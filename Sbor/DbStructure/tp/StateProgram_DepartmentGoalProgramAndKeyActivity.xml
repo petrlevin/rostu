@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.StateProgram_DepartmentGoalProgramAndKeyActivity" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.StateProgram_DepartmentGoalProgramAndKeyActivity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idAnalyticalCodeStateProgram" type="xs:int" />
+                <xs:element name="idDocType" type="xs:int" />
+                <xs:element name="idSBP" type="xs:int" />
+                <xs:element name="idResponsibleExecutantType" type="xs:int" />
+                <xs:element name="idSystemGoal" type="xs:int" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idDocument" type="xs:int" minOccurs="0" />
+                <xs:element name="idDocumentEntity" type="xs:int" minOccurs="0" />
+                <xs:element name="DateStart" msdata:ReadOnly="true" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DateEnd" msdata:ReadOnly="true" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="idActiveDocStatus" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+                <xs:element name="idActiveDocument" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+                <xs:element name="ActiveDocumentCaption" msdata:ReadOnly="true" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.StateProgram_DepartmentGoalProgramAndKeyActivity" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+    <id>-1744830438</id>
+    <idOwner>-1744830437</idOwner>
+    <idAnalyticalCodeStateProgram>-1744830436</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503839</idDocType>
+    <idSBP>-1744830429</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830434</idSystemGoal>
+    <Caption>Основное мероприятие под ГП</Caption>
+    <idDocument>-1744830437</idDocument>
+    <idDocumentEntity>-1543503797</idDocumentEntity>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+  </tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+  <tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+    <id>-1744830437</id>
+    <idOwner>-1744830437</idOwner>
+    <idAnalyticalCodeStateProgram>-1744830435</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503841</idDocType>
+    <idSBP>-1744830432</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830435</idSystemGoal>
+    <Caption>Ведом. под ГП</Caption>
+    <idDocument>-1744830436</idDocument>
+    <idDocumentEntity>-1543503797</idDocumentEntity>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483615</idActiveDocStatus>
+    <idActiveDocument>-1744830436</idActiveDocument>
+    <ActiveDocumentCaption>Ведомственная целевая программа № 3 от 26.06.2013</ActiveDocumentCaption>
+  </tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+  <tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+    <id>-1744830436</id>
+    <idOwner>-1744830436</idOwner>
+    <idAnalyticalCodeStateProgram>-1744830434</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503841</idDocType>
+    <idSBP>-1744830437</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830431</idSystemGoal>
+    <Caption>DWG под ПП ГП</Caption>
+    <idDocument>-1744830435</idDocument>
+    <idDocumentEntity>-1543503797</idDocumentEntity>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483615</idActiveDocStatus>
+    <idActiveDocument>-1744830435</idActiveDocument>
+    <ActiveDocumentCaption>Ведомственная целевая программа № 4 от 26.06.2013</ActiveDocumentCaption>
+  </tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+  <tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+    <id>-1744830435</id>
+    <idOwner>-1744830436</idOwner>
+    <idAnalyticalCodeStateProgram>-1744830433</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503839</idDocType>
+    <idSBP>-1744830427</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830430</idSystemGoal>
+    <Caption>Основное мероприятие под ПП ГП</Caption>
+    <idDocument>-1744830434</idDocument>
+    <idDocumentEntity>-1543503797</idDocumentEntity>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483615</idActiveDocStatus>
+    <idActiveDocument>-1744830434</idActiveDocument>
+    <ActiveDocumentCaption>Основное мероприятие № 5 от 26.06.2013</ActiveDocumentCaption>
+  </tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+  <tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+    <id>-1744830433</id>
+    <idOwner>-1744830433</idOwner>
+    <idAnalyticalCodeStateProgram>-1744830430</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503841</idDocType>
+    <idSBP>-1744830426</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830419</idSystemGoal>
+    <Caption>Основное мероприятие</Caption>
+    <idDocument>-1744830432</idDocument>
+    <idDocumentEntity>-1543503797</idDocumentEntity>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483615</idActiveDocStatus>
+    <idActiveDocument>-1744830432</idActiveDocument>
+    <ActiveDocumentCaption>Ведомственная целевая программа № 6 от 27.06.2013</ActiveDocumentCaption>
+  </tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+  <tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+    <id>-1744830432</id>
+    <idOwner>-1744830433</idOwner>
+    <idAnalyticalCodeStateProgram>-1744830429</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503839</idDocType>
+    <idSBP>-1744830437</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830418</idSystemGoal>
+    <Caption>Основное мероприятие_2</Caption>
+    <idDocument>-1744830431</idDocument>
+    <idDocumentEntity>-1543503797</idDocumentEntity>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483615</idActiveDocStatus>
+    <idActiveDocument>-1744830431</idActiveDocument>
+    <ActiveDocumentCaption>Основное мероприятие № 7 от 27.06.2013</ActiveDocumentCaption>
+  </tp.StateProgram_DepartmentGoalProgramAndKeyActivity>
+</NewDataSet>

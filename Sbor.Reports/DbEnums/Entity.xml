@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Entity" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Entity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntityType" type="xs:unsignedByte" />
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isSystem" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Order" type="xs:int" minOccurs="0" />
+                <xs:element name="Ordered" type="xs:boolean" minOccurs="0" />
+                <xs:element name="AllowAttachments" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isVersioning" type="xs:boolean" />
+                <xs:element name="GenerateEntityClass" type="xs:boolean" />
+                <xs:element name="idEntityGroup" type="xs:int" minOccurs="0" />
+                <xs:element name="AllowGenericLinks" type="xs:boolean" />
+                <xs:element name="AllowLinks" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Entity" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Entity>
+    <id>-1610612506</id>
+    <Name>SourcesDataReports</Name>
+    <Caption>Источники данных для отчетов</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>600</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1275068282</id>
+    <Name>ListTypeOutputProgram</Name>
+    <Caption>Тип выводимых программ</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>600</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+</NewDataSet>

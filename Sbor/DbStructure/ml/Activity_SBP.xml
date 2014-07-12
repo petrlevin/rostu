@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ml.Activity_SBP" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ml.Activity_SBP">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="idActivity" type="xs:int" />
+                <xs:element name="idSBP" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ml.Activity_SBP" />
+        <xs:field xpath="idActivity" />
+        <xs:field xpath="idSBP" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ml.Activity_SBP>
+    <idActivity>-1879048164</idActivity>
+    <idSBP>-1207959534</idSBP>
+  </ml.Activity_SBP>
+  <ml.Activity_SBP>
+    <idActivity>-1879048162</idActivity>
+    <idSBP>-1207959534</idSBP>
+  </ml.Activity_SBP>
+</NewDataSet>

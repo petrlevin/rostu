@@ -1,0 +1,33 @@
+/*
+ * RangeMenu Styles
+ */
+
+.ux-rangemenu-icon {
+    display: block;
+    height: 16px;
+    background: no-repeat 5px center;
+}
+
+.ux-rangemenu-gt {
+    background-image: url(images/greater_than.png) !important;
+}
+
+.ux-rangemenu-lt {
+    background-image: url(images/less_than.png) !important;
+}
+
+.ux-rangemenu-eq {
+    background-image: url(images/equals.png) !important;
+}
+
+.ux-rangemenu-ge {
+    background-image: url(images/greater_or_equal.png) !important;
+}
+
+.ux-rangemenu-le {
+    background-image: url(images/less_or_equal.png) !important;
+}
+
+.ux-rangemenu-ne {
+    background-image: url(images/not_equal.png) !important;
+}

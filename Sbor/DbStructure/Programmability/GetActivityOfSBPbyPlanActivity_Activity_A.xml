@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1543503844</id>
+    <Schema>doc</Schema>
+    <Name>GetActivityOfSBPbyPlanActivity_Activity_A</Name>
+    <CreateCommand>
+		create FUNCTION [doc].[GetActivityOfSBPbyPlanActivity_Activity_A](@tpid [int])
+		RETURNS [int]
+		AS
+		BEGIN
+		declare @result int;
+
+		declare @sbp int;
+		declare @sbp_p int;
+		declare @act int;
+		declare @cont int;
+		declare @doc_a int;
+		declare @doc_p int;
+		declare @maxdate datetime;
+
+		select @sbp=d.IdSBP, @act=tp.idActivity, @cont=tp.idContingent, @doc_p=d.id from doc.PlanActivity d
+		join tp.PlanActivity_Activity tp on tp.idOwner=d.id
+		where tp.id=@tpid;
+
+		select @maxdate=max([date]) from reg.ExecutedOperation eo
+		where eo.idEntityOperation=-2013265866 and eo.idRegistratorEntity=-2013265436 and eo.idRegistrator=@doc_p;
+
+		--select eo.id, o.Name, e.id from ref.EntityOperation eo
+		--join ref.Entity as e on e.Name='PlanActivity' and e.id=eo.[idEntity]
+		--join ref.Operation as o on eo.idOperation=o.id and o.name='Process'
+
+		with sbpTree as
+		(
+		select S1.id, S1.idParent, S1.idSBPType
+		from ref.SBP S1
+		where S1.id = @sbp
+		union all
+		select S2.id, S2.idParent, S2.idSBPType
+		from ref.SBP S2
+		inner join sbpTree T on S2.id = T.idParent
+		)
+		select @sbp_p = T.id
+		from sbpTree T
+		where T.idSBPType IN (1,2)
+
+		select top 1 @result=idRegistrator
+		from (
+		select distinct ap.idRegistrator
+		from reg.TaskCollection as tc
+		join reg.TaskVolume tv on tv.idTaskCollection=tc.id and tv.idSBP=@sbp_p --and tv.idTerminator is null
+		join reg.AttributeOfProgram as ap on ap.idProgram = tv.idProgram and ap.idTerminator is null
+		where tc.idActivity=@act and ISNULL(tc.idContingent,0)=ISNULL(@cont,0)
+		and tv.DateCreate &lt;= @maxdate and (tv.DateTerminate is null or tv.DateTerminate &gt; @maxdate)
+	union
+	select distinct ap.idRegistrator
+	from reg.TaskCollection as tc
+	join reg.TaskVolume tv on tv.idTaskCollection=tc.id and tv.idSBP=@sbp_p --and tv.idTerminator is null
+	join reg.AttributeOfProgram as ap on ap.idProgram = tv.idProgram and ap.idTerminator is null
+	where tc.idActivity=@act and ISNULL(tc.idContingent,0)=ISNULL(@cont,0)
+	) as m
+
+	RETURN @result
+	END
+</CreateCommand>
+    <idProgrammabilityType>2</idProgrammabilityType>
+    <Order></Order>
+    <idProject>500</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

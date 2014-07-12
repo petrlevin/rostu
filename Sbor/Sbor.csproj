@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92FCE518-6FB9-4A91-B199-7AB876D0B7AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sbor</RootNamespace>
+    <AssemblyName>Sbor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\SBOR.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutoClient|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AutoClient\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\SBOR.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EFProviderWrapperToolkit">
+      <HintPath>..\packages\CommunityEFProviderWrappers.EFProviderWrapperToolkit.1.0.0\lib\net40-Client\EFProviderWrapperToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EFTracingProvider">
+      <HintPath>..\packages\CommunityEFProviderWrappers.EFTracingProvider.1.0.0\lib\net40-Client\EFTracingProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=5.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.Extended.5.0.0.73\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonControls\CommonControlAddNeed_0242.cs" />
+    <Compile Include="CommonControls\CommonControlAddNeed_0243.cs" />
+    <Compile Include="CommonControls\CommonControlAddNeed_0244.cs" />
+    <Compile Include="CommonControls\Control_7001.cs" />
+    <Compile Include="CommonControls\CommonControl_7004.cs" />
+    <Compile Include="CommonControls\ReferenceCheckStatusBeforeDelete.cs" />
+    <Compile Include="CommonControls\TestAllCommonControl.cs" />
+    <Compile Include="CommonControls\TestAllDocumentCommonControl.cs" />
+    <Compile Include="CommonControls\TestCommonControl2.cs" />
+    <Compile Include="CommonControls\TestFreeCommonControl.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="DataProcessors\ProcessingsActivityOfSBP.cs" />
+    <Compile Include="DataProcessors\RoundDocs.cs" />
+    <Compile Include="DbEnums\AuthorityType.cs" />
+    <Compile Include="DbEnums\ActivityType.cs" />
+    <Compile Include="DbEnums\BalancingIFDBType.cs" />
+    <Compile Include="DbEnums\BlankType.cs" />
+    <Compile Include="DbEnums\BlankValueType.cs" />
+    <Compile Include="DbEnums\ActivityBudgetaryType.cs" />
+    <Compile Include="DbEnums\FilterFieldType.cs" />
+    <Compile Include="DbEnums\IndicatorCalculationValueType.cs" />
+    <Compile Include="DbEnums\DocAUBUPeriodType.cs" />
+    <Compile Include="DbEnums\ExpenseObligationType.cs" />
+    <Compile Include="DbEnums\IndirectCostsDistributionMethod.cs" />
+    <Compile Include="DbEnums\PeriodOption.cs" />
+    <Compile Include="DbEnums\SourcesDataTools.cs" />
+    <Compile Include="DbEnums\ValueType.cs" />
+    <Compile Include="DbEnums\PaidType.cs" />
+    <Compile Include="DbEnums\RegistryKeyActivity.cs" />
+    <Compile Include="DbEnums\IndicatorActivityType.cs" />
+    <Compile Include="DbEnums\FinanceSourceType.cs" />
+    <Compile Include="DbEnums\SBPType.cs" />
+    <Compile Include="DbEnums\TermsOfPerception.cs" />
+    <Compile Include="DbEnums\TypeOfAnalyticalCodeStateProgram.cs" />
+    <Compile Include="DependencyInjection.cs" />
+    <Compile Include="CommonControls\TestCommonControl.cs" />
+    <Compile Include="Entities\Document\ActivityOfSBP\ActivityOfSBP_Control.cs" />
+    <Compile Include="Entities\Document\FinancialAndBusinessActivities\FinancialAndBusinessActivities.cs" />
+    <Compile Include="Entities\Document\FinancialAndBusinessActivities\FinancialAndBusinessActivities_Control.cs" />
+    <Compile Include="Entities\Document\PublicInstitutionEstimate\PublicInstitutionEstimate_Control.cs" />
+    <Compile Include="Entities\Document\PublicInstitutionEstimate\PublicInstitutionEstimate_Operation.cs" />
+    <Compile Include="Entities\Tablepart\BalancingIFDB_Expense.cs" />
+    <Compile Include="Entities\Reference\KBK\BranchCode.cs" />
+    <Compile Include="Entities\Reference\KBK\CodeSubsidy.cs" />
+    <Compile Include="Entities\Reference\KBK\DEK.cs" />
+    <Compile Include="Entities\Reference\KBK\DFK.cs" />
+    <Compile Include="Entities\Reference\KBK\DKR.cs" />
+    <Compile Include="Entities\Reference\KBK\KCSR.cs" />
+    <Compile Include="Entities\Reference\KBK\KFO.cs" />
+    <Compile Include="Entities\Reference\KBK\KOSGU.cs" />
+    <Compile Include="Entities\Reference\KBK\KVR.cs" />
+    <Compile Include="Entities\Reference\KBK\RZPR.cs" />
+    <Compile Include="Entities\Registry\AttributeOfProgram.cs" />
+    <Compile Include="Entities\Registry\AttributeOfSystemGoalElement.cs" />
+    <Compile Include="Entities\Registry\Program.cs" />
+    <Compile Include="Entities\Registry\Program_ResourceMaintenance.cs" />
+    <Compile Include="Entities\Registry\TaskIndicatorQuality.cs" />
+    <Compile Include="Entities\Registry\TaskVolume.cs" />
+    <Compile Include="Entities\Registry\ValuesGoalTarget.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_ActivityDemandAndCapacity_Value.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_Activity.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_ActivityResourceMaintenance.cs" />
+    <Compile Include="Entities\Tablepart\SBP_BlankHistory.cs" />
+    <Compile Include="Entities\Tablepart\FBA_DistributionAdditionalParameter.cs" />
+    <Compile Include="Entities\Tablepart\FBA_DistributionMethods.cs" />
+    <Compile Include="Entities\Tablepart\FBA_IndirectCosts.cs" />
+    <Compile Include="Entities\Tablepart\PublicInstitutionEstimate_Activity.cs" />
+    <Compile Include="Entities\Tablepart\PublicInstitutionEstimate_DistributionAdditionalParam.cs" />
+    <Compile Include="Entities\Tablepart\PublicInstitutionEstimate_DistributionMethod.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_Activity.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_ActivityResourceMaintenance.cs" />
+    <Compile Include="Entities\Tablepart\FBA_ActivitiesDistribution.cs" />
+    <Compile Include="Entities\Tablepart\FBA_Activity.cs" />
+    <Compile Include="Entities\Tablepart\FBA_CostActivities.cs" />
+    <Compile Include="Entities\Tablepart\FBA_CostActivities_value.cs" />
+    <Compile Include="Entities\Tablepart\FBA_IndirectCosts_value.cs" />
+    <Compile Include="Entities\Tablepart\FBA_PlannedVolumeIncome.cs" />
+    <Compile Include="Entities\Tablepart\FBA_PlannedVolumeIncome_value.cs" />
+    <Compile Include="Entities\Tablepart\PlanActivity_KBKOfFinancialProvision.cs" />
+    <Compile Include="Entities\Tablepart\PublicInstitutionEstimate_AloneAndBudgetInstitutionExpense.cs" />
+    <Compile Include="Entities\Tablepart\PublicInstitutionEstimate_Expense.cs" />
+    <Compile Include="Entities\Tablepart\PublicInstitutionEstimate_FounderAUBUExpense.cs" />
+    <Compile Include="Entities\Tablepart\PublicInstitutionEstimate_IndirectExpenses.cs" />
+    <Compile Include="Entities\Tool\ApprovalBalancingIFDB\ApprovalBalancingIFDB.cs" />
+    <Compile Include="Entities\Tool\ApprovalBalancingIFDB\ApprovalBalancingIFDB_Control.cs" />
+    <Compile Include="Entities\Tool\ApprovalBalancingIFDB\ApprovalBalancingIFDB_Operation.cs" />
+    <Compile Include="Entities\Tool\BalanceConfig\BalanceConfig.cs" />
+    <Compile Include="Entities\Tool\BalanceConfig\BalanceConfig_Control.cs" />
+    <Compile Include="Entities\Tool\BalancingIFDB\BalancingIFDB.cs" />
+    <Compile Include="Entities\Tool\BalancingIFDB\BalancingIFDB_Control.cs" />
+    <Compile Include="Entities\Tool\BalancingIFDB\BalancingIFDB_Operation.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\PermissionsInputAdditionalRequirementsMap.cs" />
+    <Compile Include="GeneratedCode\Reference\PermissionsInputAdditionalRequirements.cs" />
+    <Compile Include="Interfaces\IPpoVerDoc.cs" />
+    <Compile Include="Interfaces\IDocOfSbpBudget.cs" />
+    <Compile Include="Interfaces\IHasCaption.cs" />
+    <Compile Include="Interfaces\IHasPeriod.cs" />
+    <Compile Include="Interfaces\ILineCostWithRelations.cs" />
+    <Compile Include="Interfaces\IDenormilizedExpense.cs" />
+    <Compile Include="Interfaces\IAddValue.cs" />
+    <Compile Include="Interfaces\IPlanActivity_ActivityTps.cs" />
+    <Compile Include="Interfaces\Registry\IRegAddValue.cs" />
+    <Compile Include="Interfaces\ITpWithHierarchyPeriod.cs" />
+    <Compile Include="Interfaces\IAddNeed.cs" />
+    <Compile Include="Interfaces\IDocStatusTerminate.cs" />
+    <Compile Include="Interfaces\ITestDocument.cs" />
+    <Compile Include="Entities\Document\LimitBudgetAllocations.cs" />
+    <Compile Include="Entities\Document\ActivityOfSBP\ActivityOfSBP.cs" />
+    <Compile Include="Entities\Document\LongTermGoalProgram.cs" />
+    <Compile Include="Entities\Document\PlanActivity.cs" />
+    <Compile Include="Entities\Document\PublicInstitutionEstimate\PublicInstitutionEstimate.cs" />
+    <Compile Include="Entities\Document\StateProgram.cs" />
+    <Compile Include="Entities\Document\RegisterActivity.cs" />
+    <Compile Include="Entities\Document\DocumentsOfSED.cs" />
+    <Compile Include="Entities\Document\TestDocument.cs" />
+    <Compile Include="Entities\Document\TestDocument3.cs" />
+    <Compile Include="Entities\Reference\Activity.cs" />
+    <Compile Include="Entities\Reference\AnalyticalCodeStateProgram.cs" />
+    <Compile Include="Entities\Reference\AuthorityOfExpenseObligation.cs" />
+    <Compile Include="Entities\Reference\CategoryContingent.cs" />
+    <Compile Include="Entities\Reference\Contingent.cs" />
+    <Compile Include="Entities\Reference\DocType.cs" />
+    <Compile Include="Entities\Reference\ElementTypeSystemGoal.cs" />
+    <Compile Include="Entities\Reference\KBK\FinanceSource.cs" />
+    <Compile Include="Entities\Reference\GoalIndicator.cs" />
+    <Compile Include="Entities\Reference\IndicatorActivity.cs" />
+    <Compile Include="Entities\Reference\KBK\KVSR.cs" />
+    <Compile Include="Entities\Reference\ModelSystemGoal.cs" />
+    <Compile Include="Entities\Reference\RegulatoryAct.cs" />
+    <Compile Include="Entities\Reference\SBP.cs" />
+    <Compile Include="Entities\Reference\SystemGoal.cs" />
+    <Compile Include="Entities\Reference\TypeRegulatoryAct.cs" />
+    <Compile Include="Entities\Registry\EstimatedLine.cs" />
+    <Compile Include="Entities\Registry\GoalTarget.cs" />
+    <Compile Include="Entities\Registry\LimitVolumeAppropriations.cs" />
+    <Compile Include="Entities\Registry\SystemGoalElement.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_ResourceMaintenance.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_SystemGoalElement.cs" />
+    <Compile Include="Entities\Tablepart\Activity_CodeAuthority.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_GoalIndicator_Value.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_ActivityResourceMaintenance_Value.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_IndicatorQualityActivity_Value.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_ResourceMaintenance_Value.cs" />
+    <Compile Include="Entities\Tablepart\ActivityOfSBP_Activity_Value.cs" />
+    <Compile Include="Entities\Tablepart\LimitBudgetAllocations_LimitAllocations.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_ListSubProgram.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_ResourceMaintenance.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_SubProgramResourceMaintenance.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_SubProgramResourceMaintenance_Value.cs" />
+    <Compile Include="Entities\Tablepart\PlanActivity_Activity.cs" />
+    <Compile Include="Entities\Tablepart\PlanActivity_ActivityAUBU.cs" />
+    <Compile Include="Entities\Tablepart\PlanActivity_ActivityVolume.cs" />
+    <Compile Include="Entities\Tablepart\PlanActivity_ActivityVolumeAUBU.cs" />
+    <Compile Include="Entities\Tablepart\PlanActivity_IndicatorQualityActivityValue.cs" />
+    <Compile Include="Entities\Tablepart\PlanActivity_PeriodsOfFinancialProvision.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_DepartmentGoalProgramAndKeyActivity.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_DGPKAResourceMaintenance.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_ListSubProgram.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_ResourceMaintenance.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_SubProgramResourceMaintenance.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_SubProgramResourceMaintenance_Value.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_ResourceMaintenance_Value.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_DGPKAResourceMaintenance_Value.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_ResourceMaintenance_Value.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_IndicatorActivity_Value.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_ActivityResourceMaintenance_Value.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_Activity_Value.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_GoalIndicator_Value.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_GoalIndicator_Value.cs" />
+    <Compile Include="Entities\Tablepart\DocumentsOfSED_GoalIndicatorValue.cs" />
+    <Compile Include="Entities\Tablepart\LongTermGoalProgram_SystemGoalElement.cs" />
+    <Compile Include="Entities\Tablepart\RegulatoryAct_StructuralUnit.cs" />
+    <Compile Include="Entities\Tablepart\SBP_Blank.cs" />
+    <Compile Include="Entities\Tablepart\StateProgram_SystemGoalElement.cs" />
+    <Compile Include="Entities\Tablepart\DocumentsOfSED_ItemsSystemGoal.cs" />
+    <Compile Include="Entities\Tablepart\ElementTypeSystemGoal_Document.cs" />
+    <Compile Include="Entities\Tablepart\SystemGoal_GoalIndicatorValue.cs" />
+    <Compile Include="Entities\Tablepart\TestDocumentTP.cs" />
+    <Compile Include="Entities\Tablepart\TestDocumentTP2.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\TestDocumentMap.cs" />
+    <Compile Include="GeneratedCode\Document\TestDocument.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\TestReg1Map.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\TestReg2Map.cs" />
+    <Compile Include="GeneratedCode\Registry\TestReg1.cs" />
+    <Compile Include="GeneratedCode\Registry\TestReg2.cs" />
+    <Compile Include="Interfaces\ILine.cs" />
+    <Compile Include="Interfaces\IClarificationDoc.cs" />
+    <Compile Include="Interfaces\ISubDocSGE.cs" />
+    <Compile Include="Interfaces\ITpAddValue.cs" />
+    <Compile Include="Interfaces\ITpListSubProgram.cs" />
+    <Compile Include="Interfaces\ITpResourceMaintenance.cs" />
+    <Compile Include="Interfaces\ITpValue.cs" />
+    <Compile Include="Logic\Classes\BlankProperties.cs" />
+    <Compile Include="Logic\Classes\BlankVersioningProperties.cs" />
+    <Compile Include="Logic\Classes\DocSGE\SGModel.cs" />
+    <Compile Include="Logic\EstimatedLineHelper.cs" />
+    <Compile Include="Logic\Classes\FindParamEstimatedLine.cs" />
+    <Compile Include="Logic\CommonMethods.cs" />
+    <Compile Include="Logic\DocSGEMethod.cs" />
+    <Compile Include="Interfaces\IDocSGE.cs" />
+    <Compile Include="Interfaces\ISBP_Blank.cs" />
+    <Compile Include="Interfaces\ILineCost.cs" />
+    <Compile Include="Interfaces\ITpSystemGoalElement.cs" />
+    <Compile Include="Logic\Classes\Hierarchy.cs" />
+    <Compile Include="Logic\Classes\KBK.cs" />
+    <Compile Include="Logic\KBKHelper.cs" />
+    <Compile Include="Logic\Classes\LimitVolumeAppropriationResult.cs" />
+    <Compile Include="Logic\LimitBudgetAllocations_LimitAllocationsHelper.cs" />
+    <Compile Include="Logic\NonDenormalizaedHelper.cs" />
+    <Compile Include="Logic\RegisterMethods.cs" />
+    <Compile Include="Logic\SBP_BlankHelper.cs" />
+    <Compile Include="NavigationPanel\StateProgramCaption.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneratedCode\Reference\TypeRegulatoryAct.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TypeRegulatoryActMap.cs" />
+    <Compile Include="GeneratedCode\Reference\RegulatoryAct.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\RegulatoryActMap.cs" />
+    <Compile Include="GeneratedCode\Reference\KVSR.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\KVSRMap.cs" />
+    <Compile Include="GeneratedCode\Reference\SBP.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\SBPMap.cs" />
+    <Compile Include="GeneratedCode\Reference\AuthorityOfExpenseObligation.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\AuthorityOfExpenseObligationMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\RegulatoryAct_StructuralUnit.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\RegulatoryAct_StructuralUnitMap.cs" />
+    <Compile Include="GeneratedCode\Reference\DocType.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\DocTypeMap.cs" />
+    <Compile Include="GeneratedCode\Reference\ElementTypeSystemGoal.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ElementTypeSystemGoalMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ElementTypeSystemGoal_Document.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ElementTypeSystemGoal_DocumentMap.cs" />
+    <Compile Include="GeneratedCode\Reference\ModelSystemGoal.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ModelSystemGoalMap.cs" />
+    <Compile Include="GeneratedCode\Reference\GoalIndicator.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\GoalIndicatorMap.cs" />
+    <Compile Include="GeneratedCode\Reference\SystemGoal.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\SystemGoalMap.cs" />
+    <Compile Include="GeneratedCode\Reference\FinanceSource.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\FinanceSourceMap.cs" />
+    <Compile Include="GeneratedCode\DataContext.cs" />
+    <Compile Include="GeneratedCode\Reference\UnitDimension.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\UnitDimensionMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Activity.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ActivityMap.cs" />
+    <Compile Include="GeneratedCode\Reference\IndicatorActivity.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\IndicatorActivityMap.cs" />
+    <Compile Include="GeneratedCode\Reference\CategoryContingent.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\CategoryContingentMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Contingent.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ContingentMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Activity_RegulatoryAct.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Activity_RegulatoryActMap.cs" />
+    <Compile Include="GeneratedCode\Document\RegisterActivity.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\RegisterActivityMap.cs" />
+    <Compile Include="GeneratedCode\Document\DocumentsOfSED.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\DocumentsOfSEDMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\DocumentsOfSED_ItemsSystemGoal.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\DocumentsOfSED_ItemsSystemGoalMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\DocumentsOfSED_GoalIndicator.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\DocumentsOfSED_GoalIndicatorMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Activity_CodeAuthority.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Activity_CodeAuthorityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Activity_Indicator.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Activity_IndicatorMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\RegisterActivity_Activity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\RegisterActivity_ActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\SystemGoal_GoalIndicator.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\SystemGoal_GoalIndicatorMap.cs" />
+    <Compile Include="GeneratedCode\Document\StateProgram.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\StateProgramMap.cs" />
+    <Compile Include="GeneratedCode\Reference\ResponsibleExecutantType.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ResponsibleExecutantTypeMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_GoalIndicator.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_GoalIndicatorMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_ResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_ResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_ListSubProgram.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_ListSubProgramMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_SubProgramResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_SubProgramResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_DepartmentGoalProgramAndKeyActivity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_DepartmentGoalProgramAndKeyActivityMap.cs" />
+    <Compile Include="GeneratedCode\Registry\Program.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\ProgramMap.cs" />
+    <Compile Include="GeneratedCode\Registry\AttributeOfProgram.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\AttributeOfProgramMap.cs" />
+    <Compile Include="GeneratedCode\Registry\Program_ResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\Program_ResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Registry\GoalTarget.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\GoalTargetMap.cs" />
+    <Compile Include="GeneratedCode\Registry\ValuesGoalTarget.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\ValuesGoalTargetMap.cs" />
+    <Compile Include="GeneratedCode\Registry\SystemGoalElement.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\SystemGoalElementMap.cs" />
+    <Compile Include="GeneratedCode\Registry\AttributeOfSystemGoalElement.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\AttributeOfSystemGoalElementMap.cs" />
+    <Compile Include="GeneratedCode\Document\ActivityOfSBP.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\ActivityOfSBPMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_SystemGoalElement.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_SystemGoalElementMap.cs" />
+    <Compile Include="GeneratedCode\Document\LongTermGoalProgram.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\LongTermGoalProgramMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_SystemGoalElement.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_SystemGoalElementMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_GoalIndicator.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_GoalIndicatorMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_ResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_ResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_ListSubProgram.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_ListSubProgramMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_SubProgramResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_SubProgramResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_Activity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_ActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_ActivityResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_ActivityResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_IndicatorActivity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_IndicatorActivityMap.cs" />
+    <Compile Include="GeneratedCode\Reference\AnalyticalCodeStateProgram.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\AnalyticalCodeStateProgramMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_SystemGoalElement.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_SystemGoalElementMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_GoalIndicator.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_GoalIndicatorMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_ResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_ResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_Activity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_ActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_ActivityResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_ActivityResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_CoExecutor.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_CoExecutorMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_CoExecutor.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_CoExecutorMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_IndicatorQualityActivity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_IndicatorQualityActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_DGPKAResourceMaintenance.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_DGPKAResourceMaintenanceMap.cs" />
+    <Compile Include="GeneratedCode\Registry\TaskCollection.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\TaskCollectionMap.cs" />
+    <Compile Include="GeneratedCode\Registry\TaskVolume.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\TaskVolumeMap.cs" />
+    <Compile Include="GeneratedCode\Registry\TaskIndicatorQuality.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\TaskIndicatorQualityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_GoalIndicator_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_GoalIndicator_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_ResourceMaintenance_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_ResourceMaintenance_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_SubProgramResourceMaintenance_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_SubProgramResourceMaintenance_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_Activity_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_Activity_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_ActivityResourceMaintenance_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_ActivityResourceMaintenance_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_GoalIndicator_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_GoalIndicator_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_IndicatorQualityActivity_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_IndicatorQualityActivity_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_ResourceMaintenance_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_ResourceMaintenance_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_Activity_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_Activity_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_ActivityResourceMaintenance_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_ActivityResourceMaintenance_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_GoalIndicator_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_GoalIndicator_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_IndicatorActivity_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_IndicatorActivity_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_ResourceMaintenance_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_ResourceMaintenance_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LongTermGoalProgram_SubProgramResourceMaintenance_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LongTermGoalProgram_SubProgramResourceMaintenance_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\StateProgram_DGPKAResourceMaintenance_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\StateProgram_DGPKAResourceMaintenance_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\SBP_Blank.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\SBP_BlankMap.cs" />
+    <Compile Include="GeneratedCode\Reference\KFO.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\KFOMap.cs" />
+    <Compile Include="GeneratedCode\Reference\CodeSubsidy.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\CodeSubsidyMap.cs" />
+    <Compile Include="GeneratedCode\Reference\DFK.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\DFKMap.cs" />
+    <Compile Include="GeneratedCode\Reference\DEK.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\DEKMap.cs" />
+    <Compile Include="GeneratedCode\Reference\DKR.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\DKRMap.cs" />
+    <Compile Include="GeneratedCode\Reference\KOSGU.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\KOSGUMap.cs" />
+    <Compile Include="GeneratedCode\Reference\KCSR.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\KCSRMap.cs" />
+    <Compile Include="GeneratedCode\Reference\RZPR.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\RZPRMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Activity_ExtInfo.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Activity_ExtInfoMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\SBP_PlanningPeriodsInDocumentsAUBU.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\SBP_PlanningPeriodsInDocumentsAUBUMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\SystemGoal_GoalIndicatorValue.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\SystemGoal_GoalIndicatorValueMap.cs" />
+    <Compile Include="Services\DataProcessingService.cs" />
+    <Compile Include="Services\SborBalancingIFDB.cs" />
+    <Compile Include="Services\SborCommonService.cs" />
+    <Compile Include="Services\SborFinancialAndBusinessActivitiesService.cs" />
+    <Compile Include="Services\SborLimitBudgetAllocationsService.cs" />
+    <Compile Include="Services\SborPublicInstitutionEstimateService.cs" />
+    <Compile Include="Services\SborTestService.cs" />
+    <Compile Include="GeneratedCode\Registry\EstimatedLine.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\EstimatedLineMap.cs" />
+    <Compile Include="GeneratedCode\Registry\LimitVolumeAppropriations.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\LimitVolumeAppropriationsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\DocumentsOfSED_GoalIndicatorValue.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\DocumentsOfSED_GoalIndicatorValueMap.cs" />
+    <Compile Include="GeneratedCode\Reference\KVR.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\KVRMap.cs" />
+    <Compile Include="GeneratedCode\Reference\FinancialIndicator.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\FinancialIndicatorMap.cs" />
+    <Compile Include="GeneratedCode\Document\LimitBudgetAllocations.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\LimitBudgetAllocationsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LimitBudgetAllocations_LimitAllocations.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LimitBudgetAllocations_LimitAllocationsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LimitBudgetAllocations_ControlRelation.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LimitBudgetAllocations_ControlRelationMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\LimitBudgetAllocations_ShowChanges.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\LimitBudgetAllocations_ShowChangesMap.cs" />
+    <Compile Include="GeneratedCode\Document\TestDocument2.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\TestDocument2Map.cs" />
+    <Compile Include="GeneratedCode\Tablepart\TestDocumentTP.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\TestDocumentTPMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\TestDocumentTP2.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\TestDocumentTP2Map.cs" />
+    <Compile Include="GeneratedCode\Reference\TestObject.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TestObjectMap.cs" />
+    <Compile Include="GeneratedCode\Document\PlanActivity.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\PlanActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_Activity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_ActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_ActivityVolume.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_ActivityVolumeMap.cs" />
+    <Compile Include="GeneratedCode\Document\PublicInstitutionEstimate.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\PublicInstitutionEstimateMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_Activity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_ActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_Expense.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_ExpenseMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_DistributionMethod.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_DistributionMethodMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_DistributionAdditionalParam.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_DistributionAdditionalParamMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_DistributionActivity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_DistributionActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_IndirectExpenses.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_IndirectExpensesMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_ActivityAUBU.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_ActivityAUBUMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_FounderAUBUExpense.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_FounderAUBUExpenseMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PublicInstitutionEstimate_AloneAndBudgetInstitutionExpense.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PublicInstitutionEstimate_AloneAndBudgetInstitutionExpenseMap.cs" />
+    <Compile Include="GeneratedCode\Document\FinancialAndBusinessActivities.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\FinancialAndBusinessActivitiesMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_PeriodsOfFinancialProvision.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_PeriodsOfFinancialProvisionMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_IndicatorQualityActivity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_IndicatorQualityActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_IndicatorQualityActivityValue.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_IndicatorQualityActivityValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_ActivityAUBU.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_ActivityAUBUMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_ActivityVolumeAUBU.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_ActivityVolumeAUBUMap.cs" />
+    <Compile Include="GeneratedCode\Document\TestDocument3.cs" />
+    <Compile Include="GeneratedCode\Document\Mappings\TestDocument3Map.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_KBKOfFinancialProvision.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_KBKOfFinancialProvisionMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\RegisterActivity_IndicatorActivity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\RegisterActivity_IndicatorActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\RegisterActivity_Performers.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\RegisterActivity_PerformersMap.cs" />
+    <Compile Include="GeneratedCode\Reference\BranchCode.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\BranchCodeMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_ActivityDemandAndCapacity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_ActivityDemandAndCapacityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_ActivityDemandAndCapacity_Value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_ActivityDemandAndCapacity_ValueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_RequirementsForTheTask.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_RequirementsForTheTaskMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\PlanActivity_OrderOfControlTheExecutionTasks.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\PlanActivity_OrderOfControlTheExecutionTasksMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_Activity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_ActivityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_PlannedVolumeIncome.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_PlannedVolumeIncomeMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_PlannedVolumeIncome_value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_PlannedVolumeIncome_valueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_CostActivities.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_CostActivitiesMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_CostActivities_value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_CostActivities_valueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_DistributionMethods.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_DistributionMethodsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_DistributionAdditionalParameter.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_DistributionAdditionalParameterMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_ActivitiesDistribution.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_ActivitiesDistributionMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_IndirectCosts.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_IndirectCostsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_IndirectCosts_value.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_IndirectCosts_valueMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_DepartmentActivityGoal.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_DepartmentActivityGoalMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\FBA_FinancialIndicatorsInstitutions.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\FBA_FinancialIndicatorsInstitutionsMap.cs" />
+    <Compile Include="GeneratedCode\Reference\UserBandWidth.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\UserBandWidthMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\SystemGoal_GoalIndicatorParent.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\SystemGoal_GoalIndicatorParentMap.cs" />
+    <Compile Include="GeneratedCode\Reference\CalculationFormula.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\CalculationFormulaMap.cs" />
+    <Compile Include="GeneratedCode\Reference\IndicatorCalculation.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\IndicatorCalculationMap.cs" />
+    <Compile Include="GeneratedCode\Reference\TemplateJustification.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TemplateJustificationMap.cs" />
+    <Compile Include="GeneratedCode\Reference\ExpenditureObligations.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ExpenditureObligationsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ExpenditureObligations_RegulatoryAct.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ExpenditureObligations_RegulatoryActMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ExpenditureObligations_RegulatoryAct_StructuralUnit.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ExpenditureObligations_RegulatoryAct_StructuralUnitMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalancingIFDB_Program.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalancingIFDB_ProgramMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalancingIFDB_Expense.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalancingIFDB_ExpenseMap.cs" />
+    <Compile Include="GeneratedCode\Tool\BalancingIFDB.cs" />
+    <Compile Include="GeneratedCode\Tool\Mappings\BalancingIFDBMap.cs" />
+    <Compile Include="GeneratedCode\Tool\BalanceConfig.cs" />
+    <Compile Include="GeneratedCode\Tool\Mappings\BalanceConfigMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalanceConfig_FilterRule.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalanceConfig_FilterRuleMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalanceConfig_User.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalanceConfig_UserMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalanceConfig_FilterKBK.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalanceConfig_FilterKBKMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalancingIFDB_EstimatedLine.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalancingIFDB_EstimatedLineMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalancingIFDB_RuleIndex.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalancingIFDB_RuleIndexMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalancingIFDB_SetShowKBK.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalancingIFDB_SetShowKBKMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalancingIFDB_ChangeHistory.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalancingIFDB_ChangeHistoryMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\BalancingIFDB_RuleFilterKBK.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\BalancingIFDB_RuleFilterKBKMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\SBP_BlankHistory.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\SBP_BlankHistoryMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ActivityOfSBP_SBPBlankActual.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ActivityOfSBP_SBPBlankActualMap.cs" />
+    <Compile Include="GeneratedCode\Reference\RuleReferExpenceAsRoByKOSGU.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\RuleReferExpenceAsRoByKOSGUMap.cs" />
+    <Compile Include="GeneratedCode\Tool\ApprovalBalancingIFDB.cs" />
+    <Compile Include="GeneratedCode\Tool\Mappings\ApprovalBalancingIFDBMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\ApprovalBalancingIFDB_Blank.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\ApprovalBalancingIFDB_BlankMap.cs" />
+    <Compile Include="GeneratedCode\Reference\TestFile.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TestFileMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApp.Common\BaseApp.Common.csproj">
+      <Project>{FC293E62-62F9-4DAC-BE86-2B2000BEA40D}</Project>
+      <Name>BaseApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseApp\BaseApp.csproj">
+      <Project>{d16e12b1-8dc5-4efd-a31e-2e80209746ed}</Project>
+      <Name>BaseApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Application.Common\Platform.Application.Common.csproj">
+      <Project>{b489597f-7c2f-4470-ba09-c31b8a0797c8}</Project>
+      <Name>Platform.Application.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic.Common\Platform.BusinessLogic.Common.csproj">
+      <Project>{E11D0AB2-A272-417F-8562-6FBC47033C6E}</Project>
+      <Name>Platform.BusinessLogic.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic\Platform.BusinessLogic.csproj">
+      <Project>{7399ba19-e033-40e4-9ec7-34c8eb0b149c}</Project>
+      <Name>Platform.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Caching.Common\Platform.Caching.Common.csproj">
+      <Project>{64488b5d-2951-402e-aabf-52a478ee51ed}</Project>
+      <Name>Platform.Caching.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.ClientInteraction.Scopes\Platform.ClientInteraction.Scopes.csproj">
+      <Project>{2D56EECD-8CE1-443A-A73F-1F035F5FB02D}</Project>
+      <Name>Platform.ClientInteraction.Scopes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.ClientInteraction\Platform.ClientInteraction.csproj">
+      <Project>{D875C08C-2DAD-4E39-84A8-646F93ADB836}</Project>
+      <Name>Platform.ClientInteraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Common\Platform.Common.csproj">
+      <Project>{CB231957-03DE-4EFA-9B75-EF6B23E63070}</Project>
+      <Name>Platform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9EE403B9-8D79-40F6-96B4-A9F6E6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Factoring\Platform.PrimaryEntities.Factoring.csproj">
+      <Project>{00D4B56D-E285-4075-B829-01688F7882FB}</Project>
+      <Name>Platform.PrimaryEntities.Factoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities\Platform.PrimaryEntities.csproj">
+      <Project>{da11e957-7534-4de0-af6a-60f8d04e9cb6}</Project>
+      <Name>Platform.PrimaryEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity.Comon\Platform.Unity.Common.csproj">
+      <Project>{169CC69C-7AD2-4FED-917A-302B9020FA64}</Project>
+      <Name>Platform.Unity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity\Platform.Unity.csproj">
+      <Project>{B8903988-41A8-48F0-B922-4A4D7C333110}</Project>
+      <Name>Platform.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils.Common\Platform.Utils.Common.csproj">
+      <Project>{95B3D83C-FC10-4157-8364-52C513FD21F4}</Project>
+      <Name>Platform.Utils.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils\Platform.Utils.csproj">
+      <Project>{5a67cc4b-b52a-4d6e-8014-18816fe241ff}</Project>
+      <Name>Platform.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataProcessors\readme.txt" />
+    <Content Include="DbStructure\doc\LimitBudgetAllocations.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\doc\StateProgram.xml" />
+    <Content Include="DbStructure\ref\AnalyticalCodeStateProgram.xml" />
+    <Content Include="DbStructure\ref\DocType.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\Entity.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbEnums\Entity.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbEnums\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\Filter.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\FinanceSource.xml" />
+    <Content Include="DbStructure\ref\KFO.xml" />
+    <Content Include="DbStructure\ref\Index.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ml\Index_EntityField_Indexable.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\AuthorityOfExpenseObligation.xml" />
+    <Content Include="DbStructure\ref\KVSR.xml" />
+    <Content Include="DbStructure\ref\ResponsibleExecutantType.xml" />
+    <Content Include="DbStructure\ref\SBP.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\tp\SBP_Blank.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\2337.sql" />
+    <Content Include="Scripts\2450.sql" />
+    <Content Include="DbStructure\ref\ElementTypeSystemGoal.xml" />
+    <Content Include="DbStructure\ref\GoalIndicator.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\UnitDimension.xml" />
+    <Content Include="DbStructure\doc\DocumentsOfSED.xml" />
+    <Content Include="DbStructure\Programmability\SystemGoalElement_Join_AttributeOfSystemGoalElement.xml" />
+    <Content Include="DbStructure\Programmability\SystemGoalElement_idElementTypeSystemGoal.xml" />
+    <Content Include="DbStructure\Programmability\SystemGoalElement_idSBP.xml" />
+    <Content Include="DbStructure\Programmability\SystemGoalElement_DateStart.xml" />
+    <Content Include="DbStructure\Programmability\SystemGoalElement_DateEnd.xml" />
+    <Content Include="Scripts\2516.sql" />
+    <Content Include="DbStructure\ref\SBP.xml" />
+    <Content Include="DbStructure\tp\SBP_Blank.xml" />
+    <Content Include="DbStructure\Programmability\LongTermGoalProgram_CaptionDocumentRegistratorSubProgram.xml" />
+    <Content Include="DbStructure\Programmability\StateProgram_CaptionDocumentRegistratorSubProgram.xml" />
+    <Content Include="Scripts\2918.sql" />
+    <Content Include="Scripts\2942.sql" />
+    <Content Include="DbStructure\tp\ElementTypeSystemGoal_Document.xml" />
+    <Content Include="DbStructure\ref\ModelSystemGoal.xml" />
+    <Content Include="DbStructure\ref\SystemGoal.xml" />
+    <Content Include="DbStructure\tp\SystemGoal_GoalIndicator.xml" />
+    <Content Include="DbStructure\tp\SystemGoal_GoalIndicatorValue.xml" />
+    <Content Include="DbStructure\Programmability\PlanActivity_GetYearSum.xml" />
+    <Content Include="DbStructure\ref\SystemGoal.xml" />
+    <Content Include="DbStructure\tp\StateProgram_SystemGoalElement.xml" />
+    <Content Include="DbStructure\tp\StateProgram_GoalIndicator.xml" />
+    <Content Include="DbStructure\Programmability\StateUnderProgram1_2.xml" />
+    <Content Include="DbStructure\Programmability\StateUnderProgram3_4.xml" />
+    <Content Include="DbStructure\Programmability\StateUnderProgram5.xml" />
+    <Content Include="DbStructure\Programmability\StateUnderProgram6_7.xml" />
+    <Content Include="DbStructure\Programmability\StateUnderProgram8.xml" />
+    <Content Include="DbStructure\Programmability\StateUnderProgram11_12.xml" />
+    <Content Include="DbStructure\Programmability\StateUnderProgram13_16.xml" />
+    <Content Include="DbStructure\Programmability\StateUnderProgramMainGoal.xml" />
+    <Content Include="DbStructure\doc\TestDocument2.xml" />
+    <Content Include="Scripts\2999.sql" />
+    <Content Include="Scripts\3016.sql" />
+    <Content Include="Scripts\3034.sql" />
+    <Content Include="DbStructure\Programmability\StateProgram1_2.xml" />
+    <Content Include="DbStructure\Programmability\StateProgram5_6.xml" />
+    <Content Include="DbStructure\Programmability\StateProgram8_9.xml" />
+    <Content Include="DbStructure\Programmability\StateProgram17_20.xml" />
+    <Content Include="Scripts\3119.sql" />
+    <Content Include="DbStructure\ref\AAAAAA.xml" />
+    <Content Include="DbStructure\ref\BBBBBB.xml" />
+    <Content Include="DbStructure\ml\AAA_BBB.xml" />
+    <Content Include="Scripts\3185.sql" />
+    <Content Include="Scripts\3186.sql" />
+    <Content Include="DbStructure\doc\LongTermGoalProgram.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_SystemGoalElement.xml" />
+    <Content Include="Scripts\3350.sql" />
+    <Content Include="Scripts\3352.sql" />
+    <Content Include="Scripts\3368.sql" />
+    <Content Include="Scripts\3432.sql" />
+    <Content Include="DbStructure\doc\TestDocument.xml" />
+    <Content Include="DbStructure\tp\TestDocumentTP.xml" />
+    <Content Include="DbStructure\tp\TestDocumentTP2.xml" />
+    <Content Include="DbStructure\ref\TestObject.xml" />
+    <Content Include="Scripts\3464.sql" />
+    <Content Include="Scripts\3538.sql" />
+    <Content Include="DbStructure\Programmability\StateProgram_GetDateForMainGoal.xml" />
+    <Content Include="DbStructure\ref\Activity.xml" />
+    <Content Include="DbStructure\ml\Activity_SBP.xml" />
+    <Content Include="DbStructure\ref\IndicatorActivity.xml" />
+    <Content Include="DbStructure\ref\CategoryContingent.xml" />
+    <Content Include="DbStructure\ref\Contingent.xml" />
+    <Content Include="DbStructure\ml\Contingent_CategoryContingent.xml" />
+    <Content Include="DbStructure\ml\Activity_Contingent.xml" />
+    <Content Include="DbStructure\tp\Activity_Indicator.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_GoalIndicator.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_CoExecutor.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_ResourceMaintenance.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_Activity.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_ActivityResourceMaintenance.xml" />
+    <Content Include="DbStructure\reg\TaskCollection.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_Activity_Value.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_ActivityResourceMaintenance_Value.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_GoalIndicator_Value.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_ResourceMaintenance_Value.xml" />
+    <Content Include="Scripts\3600.sql" />
+    <Content Include="DbStructure\tp\StateProgram_CoExecutor.xml" />
+    <Content Include="DbStructure\tp\StateProgram_ResourceMaintenance.xml" />
+    <Content Include="DbStructure\tp\StateProgram_ListSubProgram.xml" />
+    <Content Include="DbStructure\tp\StateProgram_GoalIndicator_Value.xml" />
+    <Content Include="DbStructure\tp\StateProgram_ResourceMaintenance_Value.xml" />
+    <Content Include="DbStructure\tp\StateProgram_SubProgramResourceMaintenance.xml" />
+    <Content Include="DbStructure\tp\StateProgram_SubProgramResourceMaintenance_Value.xml" />
+    <Content Include="Scripts\3614.sql" />
+    <Content Include="DbStructure\doc\ActivityOfSBP.xml" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_SystemGoalElement.xml" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_GoalIndicator.xml" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_ResourceMaintenance.xml" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_GoalIndicator_Value.xml" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_ResourceMaintenance_Value.xml" />
+    <Content Include="Scripts\3696.sql" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_ActivityResourceMaintenance_Value.xml" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_GoalIndicator_Value.xml" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_ResourceMaintenance_Value.xml" />
+    <Content Include="Scripts\3696.sql" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_ActivityDemandAndCapacity.xml" />
+    <Content Include="Scripts\3706.sql" />
+    <Content Include="DbStructure\tp\ActivityOfSBP_ActivityDemandAndCapacity_Value.xml" />
+    <Content Include="Scripts\3766.sql" />
+    <Content Include="DbStructure\tp\SBP_PlanningPeriodsInDocumentsAUBU.xml" />
+    <Content Include="Scripts\3828.sql" />
+    <Content Include="DbStructure\doc\PublicInstitutionEstimate.xml" />
+    <Content Include="DbStructure\Programmability\PlanActivity_GetDocAUBUPeriodType.xml" />
+    <Content Include="Scripts\3940.sql" />
+    <Content Include="DbStructure\tp\StateProgram_DepartmentGoalProgramAndKeyActivity.xml" />
+    <Content Include="DbStructure\tp\StateProgram_DGPKAResourceMaintenance.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_ListSubProgram.xml" />
+    <Content Include="DbStructure\tp\StateProgram_DGPKAResourceMaintenance_Value.xml" />
+    <Content Include="DbStructure\ref\TypeRegulatoryAct.xml" />
+    <Content Include="DbStructure\ref\RegulatoryAct.xml" />
+    <Content Include="DbStructure\doc\PlanActivity.xml" />
+    <Content Include="DbStructure\tp\Activity_RegulatoryAct.xml" />
+    <Content Include="Scripts\3989.sql" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_SubProgramResourceMaintenance.xml" />
+    <Content Include="DbStructure\tp\LongTermGoalProgram_SubProgramResourceMaintenance_Value.xml" />
+    <Content Include="Scripts\4022.sql" />
+    <Content Include="Scripts\4043.sql" />
+    <Content Include="Scripts\4060.sql" />
+    <Content Include="Scripts\4074.sql" />
+    <Content Include="DbStructure\ref\UserBandWidth.xml" />
+    <Content Include="Scripts\4173.sql" />
+    <Content Include="DbStructure\doc\FinancialAndBusinessActivities.xml" />
+    <Content Include="DbStructure\tp\FBA_Activity.xml" />
+    <Content Include="DbStructure\tp\FBA_DistributionMethods.xml" />
+    <Content Include="DbStructure\tp\FBA_FinancialIndicatorsInstitutions.xml" />
+    <Content Include="DbStructure\ref\FinancialIndicator.xml" />
+    <Content Include="DbStructure\tp\PublicInstitutionEstimate_DistributionMethod.xml" />
+    <Content Include="Scripts\4264.sql" />
+    <Content Include="Scripts\4283.sql" />
+    <Content Include="Scripts\4287.sql" />
+    <Content Include="Scripts\4341.sql" />
+    <Content Include="Scripts\4384.sql" />
+    <Content Include="DbStructure\Programmability\FinancialAndBusinessActivities_GetPublicAvtivityExpense.xml" />
+    <Content Include="Scripts\4415.sql" />
+    <Content Include="Scripts\4425.sql" />
+    <Content Include="DbStructure\Programmability\Program_Join_AttributeOfProgram.xml" />
+    <Content Include="DbStructure\Programmability\Program_Caption.xml" />
+    <Content Include="Scripts\4501.sql" />
+    <Content Include="Scripts\4522.sql" />
+    <Content Include="DbStructure\tp\DocumentsOfSED_ItemsSystemGoal.xml" />
+    <Content Include="Scripts\4620.sql" />
+    <Content Include="Scripts\4738.sql" />
+    <Content Include="DbStructure\ref\CalculationFormula.xml" />
+    <Content Include="DbStructure\ref\IndicatorCalculation.xml" />
+    <Content Include="DbStructure\ml\IndicatorOfCalculationFormula.xml" />
+    <Content Include="DbStructure\tp\RegulatoryAct_StructuralUnit.xml" />
+    <Content Include="DbStructure\ref\ExpenditureObligations.xml" />
+    <Content Include="DbStructure\tp\ExpenditureObligations_RegulatoryAct.xml" />
+    <Content Include="DbStructure\tp\ExpenditureObligations_RegulatoryAct_StructuralUnit.xml" />
+    <Content Include="Scripts\4837.sql" />
+    <Content Include="Scripts\4918.sql" />
+    <Content Include="Scripts\4944.sql" />
+    <Content Include="Scripts\5168.sql" />
+    <Content Include="Scripts\5214.sql" />
+    <Content Include="Scripts\5225.sql" />
+    <Content Include="Scripts\5413.sql" />
+    <Content Include="DbStructure\Programmability\BalancingIFDB_fillData.xml" />
+    <Content Include="Scripts\5640.sql" />
+    <Content Include="Scripts\5660.sql" />
+    <Content Include="Scripts\5661.sql" />
+    <Content Include="DbStructure\Programmability\BalancingIFDB_ApplyRule.xml" />
+    <Content Include="Scripts\5736.sql" />
+    <Content Include="DbStructure\tool\BalancingIFDB.xml" />
+    <Content Include="DbStructure\tool\BalanceConfig.xml" />
+    <Content Include="DbStructure\tp\BalanceConfig_FilterRule.xml" />
+    <Content Include="DbStructure\tp\BalanceConfig_User.xml" />
+    <Content Include="Scripts\5767.sql" />
+    <Content Include="Scripts\5790.sql" />
+    <Content Include="Scripts\5979.sql" />
+    <Content Include="Scripts\6085.sql" />
+    <Content Include="Scripts\6107.sql" />
+    <Content Include="Scripts\6207.sql" />
+    <Content Include="Scripts\6306.sql" />
+    <Content Include="Scripts\6328.sql" />
+    <Content Include="Scripts\6378.sql" />
+    <Content Include="Scripts\6539.sql" />
+    <Content Include="Scripts\6624.sql" />
+    <Content Include="Scripts\6922.sql" />
+    <Content Include="Scripts\7056.sql" />
+    <Content Include="Scripts\7163.sql" />
+    <Content Include="Scripts\7301.sql" />
+    <Content Include="Scripts\7207.sql" />
+    <Content Include="Scripts\7497.sql" />
+    <Content Include="Scripts\readme.txt" />
+    <Content Include="DbStructure\tp\SBP_BlankHistory.xml" />
+    <Content Include="DbStructure\Programmability\LimitBudgetAllocations_GetParents.xml" />
+    <Content Include="DbStructure\Programmability\GetActivityOfSBPbyPlanActivity_Activity.xml" />
+    <Content Include="Scripts\6811.sql" />
+    <Content Include="DbStructure\Programmability\FinancialAndBusinessActivities_GetYearExpenses.xml" />
+    <Content Include="DbStructure\Programmability\FinancialAndBusinessActivities_GetYearExpenses_View.xml" />
+    <Content Include="DbStructure\Programmability\PublicInstitutionEstimate_GetYearExpenses.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\Programmability\PublicInstitutionEstimate_GetYearExpenses_View.xml" />
+    <Content Include="DbStructure\Programmability\PlanActivity_GetYearSums.xml" />
+    <Content Include="DbStructure\Programmability\PlanActivity_GetYearSums_View.xml" />
+    <Content Include="DbStructure\Programmability\LimitBudgetAllocations_GetYearSums.xml" />
+    <Content Include="DbStructure\Programmability\LimitBudgetAllocations_GetYearSums_View.xml" />
+    <Content Include="DbStructure\Programmability\PublicInstitutionEstimate_GetYearIndirectExpenses.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\Programmability\PublicInstitutionEstimate_GetYearIndirectExpenses_View.xml" />
+    <Content Include="DbStructure\Programmability\FinancialAndBusinessActivities_GetMethodYearExpenses.xml" />
+    <Content Include="DbStructure\Programmability\FinancialAndBusinessActivities_GetMethodYearExpenses_View.xml" />
+    <Content Include="DbStructure\ml\Index_EntityField_Included.xml" />
+    <Content Include="DbStructure\Programmability\GetSBPParentGRBSCaptions.xml" />
+    <Content Include="DbStructure\Programmability\GetSBPParentGRBSCaptions_View.xml" />
+    <Content Include="DbStructure\Programmability\GetActivityOfSBPbyPlanActivity_Activity_A.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\Programmability\SystemGoalElements_Join_AttributeOfSystemGoalElement.xml" />
+    <Content Include="DbStructure\Programmability\SystemGoalElements_Join_AttributeOfSystemGoalElement_View.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

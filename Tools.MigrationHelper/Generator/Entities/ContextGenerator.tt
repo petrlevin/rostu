@@ -1,0 +1,60 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="$(SolutionDir)Platform.PrimaryEntities\bin\Debug\Platform.PrimaryEntities.dll"#>
+<#@ assembly name="$(SolutionDir)Tools.MigrationHelper\bin\Debug\Tools.MigrationHelper.exe"#>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Platform.PrimaryEntities.Reference" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.DbEnums" #>
+<#@ import namespace="Platform.PrimaryEntities.DbEnums" #>
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using Microsoft.Practices.Unity;
+<# foreach(var nm in _entityNameSpaces){ #><#= "using " + nm + ";" #><# } #>
+
+namespace <#=_namespace#>
+{
+    public class DataContext : <# if(_previosSolution == null) {#><#= "DbContext" #><# } else { #><#= GetContextNameSpace(_previosSolution) + ".DataContext" #><# } #>
+    {
+        static DataContext()
+        {
+            Database.SetInitializer<DataContext>(null);
+        }
+
+		public DataContext(): base("Name=PlatformDBConnectionString")
+		{
+		}
+
+		public DataContext([Dependency("ConnectionString")] string connectionString)
+            : base(connectionString)
+        {
+            
+        }
+
+		<# foreach(var entity in _entities){ #>
+public DbSet<<#=GetEntityName(entity)#>> <#=GetEntityName(entity)#> { get; set; }
+		<#}#>
+
+		public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
+        {
+            return base.Set<TEntity>();
+        }
+
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+			<# foreach(var entity in _entities){ #>
+modelBuilder.Configurations.Add(new <#=entity.Name#>Map());
+			<#}#> 
+			base.OnModelCreating(modelBuilder);
+		}
+    }
+}
+
+
+<#+public string GetContextNameSpace(int? previosSolution)
+{
+	return ((SolutionProject)previosSolution).ToString().Replace("_", ".");
+}#>
+
+<#+public string GetEntityName(Entity entity)
+{
+	return entity.IdEntityType == (byte)EntityType.Multilink ? entity.Schema + entity.Name : entity.Name;
+}#>

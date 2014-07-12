@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.LongTermGoalProgram_ListSubProgram" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.LongTermGoalProgram_ListSubProgram">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idAnalyticalCodeStateProgram" type="xs:int" minOccurs="0" />
+                <xs:element name="idSBP" type="xs:int" />
+                <xs:element name="idResponsibleExecutantType" type="xs:int" />
+                <xs:element name="idSystemGoal" type="xs:int" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idDocument" type="xs:int" minOccurs="0" />
+                <xs:element name="idDocumentEntity" type="xs:int" minOccurs="0" />
+                <xs:element name="idActualDocStatus" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+                <xs:element name="idActualDocument" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+                <xs:element name="DateStart" msdata:ReadOnly="true" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DateEnd" msdata:ReadOnly="true" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.LongTermGoalProgram_ListSubProgram" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.LongTermGoalProgram_ListSubProgram>
+    <id>-1744830438</id>
+    <idOwner>-1744830437</idOwner>
+    <idAnalyticalCodeStateProgram>-1744830432</idAnalyticalCodeStateProgram>
+    <idSBP>-1744830432</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830432</idSystemGoal>
+    <Caption>ПП ДЦП под ДЦП</Caption>
+    <idDocument>-1744830435</idDocument>
+    <idDocumentEntity>-1543503791</idDocumentEntity>
+    <idActualDocStatus>-2147483615</idActualDocStatus>
+    <idActualDocument>-1744830435</idActualDocument>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+  </tp.LongTermGoalProgram_ListSubProgram>
+</NewDataSet>

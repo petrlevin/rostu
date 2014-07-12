@@ -1,0 +1,177 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="$(SolutionDir)Platform.PrimaryEntities\bin\Debug\Platform.PrimaryEntities.dll"#>
+<#@ assembly name="$(SolutionDir)Tools.MigrationHelper\bin\Debug\Tools.MigrationHelper.exe"#>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Tools.MigrationHelper.EntitySerializer" #>
+<#@ import namespace="Platform.PrimaryEntities.Reference" #>
+<#@ import namespace="Platform.PrimaryEntities.DbEnums" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.DbEnums" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.Interfaces" #>
+<#@ import namespace="System.Linq" #>
+using System;
+using System.Collections.Generic;
+using Platform.BusinessLogic.EntityTypes;
+using System.ComponentModel.DataAnnotations.Schema;
+<# foreach(var str in GetUsings()) {#><#= str #><# } #>
+
+namespace <#=_namespace#>
+{
+	<#= "// Это автоматически сгенерированный класс, изменения будут уничтожены при следующей генерации" #>
+	public partial class <#=GetEntityName()#><#= GetEntityType(_entity.IdEntityType) #> 
+	{
+	<# foreach(EntityField Field in _entity.Fields.Where(w=>w.IdCalculatedFieldType == null)){ #><# if(!string.IsNullOrEmpty(Field.Caption)) {#>
+	<#= "/// <summary>" #>
+		<#= "/// " + Field.Caption #>
+		<#= "/// </summary>"#>
+	<# } #>
+	<#= GetTypeAndName(Field) #>
+
+	<# } #>
+
+		public <#=GetEntityName()#>()
+		{
+<# foreach(var Field in _entity.Fields.Where(w=>(new int[]{ 8, 9, 13, 18}).Contains(w.IdEntityFieldType))){ #>
+			<# if(GetEntity(Field.IdEntityLink) != null && GetEntity(Field.IdEntityLink).GenerateEntityClass) {#>
+			this.<#=FirstToUp(Field.Name)#> = new List<<#=GetType(GetEntity(Field.IdEntityLink))#>>();
+			<# } #>
+<# } #> 
+		}
+	}
+}
+
+<#+ public string GetTypeAndName(EntityField Field)
+{
+	var linkedEntity = GetEntity(Field.IdEntityLink);
+	var fieldName = FirstToUp(Field.Name);
+
+	switch(Field.IdEntityFieldType)
+	{
+		case 1 : return "public bool " + fieldName + "{get; set;}";break;
+		case 2 : return "public string " + fieldName + "{get; set;}";break;
+		case 3 : return "public " + (fieldName == "Id" ? "override Int32 Id " : NullableFieldType("Int32",Field.AllowNull) + fieldName) + "{get; set;}";break;
+		case 4 : return "public " + NullableFieldType("System.Int64",Field.AllowNull) + fieldName + "{get; set;}";break;
+		case 5 : return "public " + NullableFieldType("decimal",Field.AllowNull) + fieldName + "{get; set;}";break;
+		case 6 : return "public " + NullableFieldType("DateTime",Field.AllowNull) + fieldName + "{get; set;}";break;
+
+		case 7 : if(linkedEntity != null)
+					{
+						if(linkedEntity.IdEntityType == (byte)EntityType.Enum)
+							return "public " + NullableFieldType("byte",Field.AllowNull) + fieldName + "{get; set;}" 
+							+ @"
+							[NotMapped] 
+							public virtual " + NullableFieldType(GetType(linkedEntity),Field.AllowNull) + " "+ ModifyName(fieldName) + 
+							@" {
+								get { return ("+ NullableFieldType(GetType(linkedEntity),Field.AllowNull) + ")this."+ fieldName + @"; } 
+								set { this."+ fieldName + " = ("+ NullableFieldType("byte",Field.AllowNull) + @") value; }
+							}";
+
+						return "public " + Override(linkedEntity) + NullableFieldType("int",Field.AllowNull) + fieldName + "{get; set;}" 
+							+ ((_entity.IdEntityType == (byte)EntityType.Tool || _entity.IdEntityType == (byte)EntityType.Document) && linkedEntity.Name == "DocStatus" 
+								?  "" 
+								: " public virtual " + GetType(linkedEntity) + " "+ ModifyName(fieldName) + "{get; set;}");
+						break;
+					}
+					return "";break;
+
+		case 8 : if(linkedEntity != null && linkedEntity.GenerateEntityClass)
+					{return "public virtual ICollection<"+ GetType(linkedEntity) + "> " + fieldName + "{get; set;}";break;}
+					return "";break;
+
+		case 9 : if(linkedEntity != null && linkedEntity.GenerateEntityClass)
+					{return "public virtual ICollection<"+ GetType(linkedEntity) + "> " + fieldName + "{get; set;}";break;}
+					return "";break;
+
+		case 10: return "";break;
+		case 11: return "";break;
+		case 12: return "";break;
+
+		case 13 : if(linkedEntity != null && linkedEntity.GenerateEntityClass)
+					{return "public virtual ICollection<"+ GetType(linkedEntity) + "> " + fieldName + "{get; set;}";break;}
+					return "";break;
+
+		case 14 : return "public " + NullableFieldType("Guid",Field.AllowNull) + fieldName + "{get; set;}";break;
+		case 15: return "public " + NullableFieldType("byte",Field.AllowNull) + fieldName + "{get; set;}";break;
+		case 16: return "public " + NullableFieldType("Int16",Field.AllowNull) + fieldName + "{get; set;}";break;
+		case 17: return "public string " + fieldName + "{get; set;}";break;
+
+		case 18: if(linkedEntity != null)
+					{return "public virtual ICollection<"+ GetType(linkedEntity) + "> " + fieldName + "{get; set;}";break;}
+					return "";break;
+		default : return "/*Ошибка при генерации: тип сущности " + Field.IdEntityFieldType +"*/";break;
+	} 
+} #>
+
+<#+ public string GetEntityType(int IdEntityType)
+{
+	switch(IdEntityType)
+	{
+		case 3 : return " : ReferenceEntity";break;
+		case 4 : return " : TablePartEntity";break;
+		case 5 : return " : MultilinkEntity";break;
+		case 6 : return " : DocumentEntity";break;
+		case 7 : return " : ToolEntity";break;
+		case 8 : return " : RegistryEntity";break;
+		case 9 : return " : ReportEntity";break;
+		default : return "/*Ошибка при генерации: тип сущности " + IdEntityType +"*/";break;
+	}
+} #>
+
+
+
+<#+public string ModifyName(string str)
+{
+	return char.ToUpper(str[2]) + str.Substring(3);
+}#>
+
+<#+public string NullableFieldType(string fieldType, bool isNullable)
+{
+	return isNullable ? fieldType + "? " : fieldType + " ";
+}#>
+
+<#+public Entity GetEntity(int? idEntity)
+{
+	if(idEntity == null)
+		return null;
+	var entity = _entities.FirstOrDefault(w => w.Id == idEntity);
+	return entity;
+}#>
+
+<#+public string FirstToUp(string str)
+{
+	//if(entity.Name == "DocStatus")
+		return char.ToUpper(str[0]) + str.Substring(1);
+	//else
+		//return str;
+}#>
+
+<#+public string Override(Entity entity)
+{
+	if(entity.Name == "DocStatus" && (_entity.IdEntityType == (byte)EntityType.Document || _entity.IdEntityType == (byte)EntityType.Tool))
+		return "override ";
+	else
+		return "";
+}#>
+
+<#+public string GetEntityName()
+{
+	return _entity.IdEntityType == (byte)EntityType.Multilink ? _entity.Schema + _entity.Name : _entity.Name;
+}#>
+
+<#+public string GetEntityName(Entity entity)
+{
+	return entity.IdEntityType == (byte)EntityType.Multilink ? entity.Schema + entity.Name : entity.Name;
+}#>
+
+<#+public string GetType(Entity entity)
+{
+	if(entity.IdProject != (int)SolutionProject.Tools_MigrationHelper)
+		return string.Format( "{0}.{1}.{2}", GetProjectName(entity.IdProject), (entity.EntityType == EntityType.Enum ? "DbEnums" : entity.EntityType.ToString()), GetEntityName(entity));
+	if(entity.IdProject == (int)SolutionProject.Tools_MigrationHelper)
+		return GetEntityName(entity);
+	return "";
+}#>
+
+<#+public string GetProjectName(int idProject)
+{
+	return ((SolutionProject) idProject).ToString().Replace('_','.');
+}#>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.StateProgram_GoalIndicator" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.StateProgram_GoalIndicator">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idMaster" type="xs:int" />
+                <xs:element name="idGoalIndicator" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.StateProgram_GoalIndicator" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.StateProgram_GoalIndicator>
+    <id>-1207959527</id>
+    <idOwner>-1207959532</idOwner>
+    <idMaster>-1207959525</idMaster>
+    <idGoalIndicator>-1207959533</idGoalIndicator>
+  </tp.StateProgram_GoalIndicator>
+  <tp.StateProgram_GoalIndicator>
+    <id>-1207959525</id>
+    <idOwner>-1207959530</idOwner>
+    <idMaster>-1207959521</idMaster>
+    <idGoalIndicator>-1207959533</idGoalIndicator>
+  </tp.StateProgram_GoalIndicator>
+</NewDataSet>

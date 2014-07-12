@@ -1,0 +1,1 @@
+﻿UPDATE [ref].[EntityField] SET [idForeignKeyType] = '2' WHERE [id]=-2147481615;

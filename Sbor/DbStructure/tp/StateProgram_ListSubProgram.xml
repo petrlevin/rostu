@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.StateProgram_ListSubProgram" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.StateProgram_ListSubProgram">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idAnalyticalCodeStateProgram" type="xs:int" />
+                <xs:element name="idDocType" type="xs:int" />
+                <xs:element name="idSBP" type="xs:int" />
+                <xs:element name="idResponsibleExecutantType" type="xs:int" />
+                <xs:element name="idSystemGoal" type="xs:int" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idDocument" type="xs:int" minOccurs="0" />
+                <xs:element name="idDocumentEntity" type="xs:int" minOccurs="0" />
+                <xs:element name="ActiveDocumentCaption" msdata:ReadOnly="true" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DateStart" msdata:ReadOnly="true" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DateEnd" msdata:ReadOnly="true" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="idActiveDocStatus" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+                <xs:element name="idActiveDocument" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.StateProgram_ListSubProgram" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.StateProgram_ListSubProgram>
+    <id>-1744830437</id>
+    <idOwner>-1744830437</idOwner>
+    <idAnalyticalCodeStateProgram>-1207959526</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503842</idDocType>
+    <idSBP>-1879048162</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830433</idSystemGoal>
+    <Caption>Подпрограмма ГП</Caption>
+    <idDocument>-1744830436</idDocument>
+    <idDocumentEntity>-1543503815</idDocumentEntity>
+    <ActiveDocumentCaption>Подпрограмма ГП № 4 от 26.06.2013</ActiveDocumentCaption>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483615</idActiveDocStatus>
+    <idActiveDocument>-1744830436</idActiveDocument>
+  </tp.StateProgram_ListSubProgram>
+  <tp.StateProgram_ListSubProgram>
+    <id>-1744830436</id>
+    <idOwner>-1744830437</idOwner>
+    <idAnalyticalCodeStateProgram>-1744830437</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503837</idDocType>
+    <idSBP>-1744830433</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830436</idSystemGoal>
+    <Caption>ДЦП по ГП</Caption>
+    <idDocument>-1744830437</idDocument>
+    <idDocumentEntity>-1543503791</idDocumentEntity>
+    <ActiveDocumentCaption>Долгосрочная целевая программа № 11 от 26.06.2013</ActiveDocumentCaption>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483615</idActiveDocStatus>
+    <idActiveDocument>-1744830437</idActiveDocument>
+  </tp.StateProgram_ListSubProgram>
+  <tp.StateProgram_ListSubProgram>
+    <id>-1744830434</id>
+    <idOwner>-1744830434</idOwner>
+    <idAnalyticalCodeStateProgram>-1207959532</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503842</idDocType>
+    <idSBP>-1744830428</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1744830420</idSystemGoal>
+    <Caption>SubProgramCode</Caption>
+    <idDocument>-1744830433</idDocument>
+    <idDocumentEntity>-1543503815</idDocumentEntity>
+    <ActiveDocumentCaption>Подпрограмма ГП № 6 от 27.06.2013</ActiveDocumentCaption>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483608</idActiveDocStatus>
+    <idActiveDocument>-1744830433</idActiveDocument>
+  </tp.StateProgram_ListSubProgram>
+  <tp.StateProgram_ListSubProgram>
+    <id>-1207959532</id>
+    <idOwner>-1207959532</idOwner>
+    <idAnalyticalCodeStateProgram>-1207959526</idAnalyticalCodeStateProgram>
+    <idDocType>-1543503842</idDocType>
+    <idSBP>-1207959534</idSBP>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSystemGoal>-1207959529</idSystemGoal>
+    <Caption>Подпрограмма ГП</Caption>
+    <idDocument>-1207959530</idDocument>
+    <idDocumentEntity>-1543503815</idDocumentEntity>
+    <ActiveDocumentCaption>Подпрограмма ГП № 2 от 14.06.2013</ActiveDocumentCaption>
+    <DateStart>2013-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-12-31T00:00:00+04:00</DateEnd>
+    <idActiveDocStatus>-2147483615</idActiveDocStatus>
+    <idActiveDocument>-1207959530</idActiveDocument>
+  </tp.StateProgram_ListSubProgram>
+</NewDataSet>

@@ -1,0 +1,1305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Entity" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Entity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntityType" type="xs:unsignedByte" />
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isSystem" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Order" type="xs:int" minOccurs="0" />
+                <xs:element name="Ordered" type="xs:boolean" minOccurs="0" />
+                <xs:element name="AllowAttachments" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isVersioning" type="xs:boolean" />
+                <xs:element name="GenerateEntityClass" type="xs:boolean" />
+                <xs:element name="idEntityGroup" type="xs:int" minOccurs="0" />
+                <xs:element name="AllowGenericLinks" type="xs:boolean" />
+                <xs:element name="AllowLinks" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Entity" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Entity>
+    <id>-1342177253</id>
+    <Name>WordCommonReportParams</Name>
+    <Caption>Переменные отчетов</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>40</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939297</id>
+    <Name>Report1_Tp</Name>
+    <Caption>ТЧ для отчета №1</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612486</id>
+    <Name>ConsolidatedExpenditure_PPO</Name>
+    <Caption>ТЧ отчета Публично-правовые образования</Caption>
+    <Description>ТЧ отчета Публично-правовые образования</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612484</id>
+    <Name>ConsolidatedExpenditure_BaseFilter</Name>
+    <Caption>Правила фильтрации</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612470</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_ExpenseObligationType</Name>
+    <Caption>Типы РО</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503502</id>
+    <Name>InterBudgetaryTransfers_CustomizableColumns</Name>
+    <Caption>Настраиваемые колонки</Caption>
+    <Description>Межбюджетные трансферты ТЧ Настраиваемые колонки</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503500</id>
+    <Name>InterBudgetaryTransfers_RuleFilterKBK</Name>
+    <Caption>Правила фильтрации колонок</Caption>
+    <Description>Межбюджетные трансферты ТЧ Правила фильтрации колонок</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503485</id>
+    <Name>IBT_RuleFilterKBK_ExpenseObligationTypeT</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - Типы РО (ТЧ)</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с  Типы РО
+в отчете Межбюджетные трансферты (временная ТЧ)</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1342177252</id>
+    <Name>WordCommonReportParams_InputParam</Name>
+    <Caption>Входные параметры</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959402</id>
+    <Name>BudgetExpenseStructure_Columns</Name>
+    <Caption>Перечень выводимых колонок</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959400</id>
+    <Name>BudgetExpenseStructure_BaseFilter</Name>
+    <Caption>Правила фильтрации</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959385</id>
+    <Name>BudgetExpenseStructure_BaseFilter_ExpenseObligationType</Name>
+    <Caption>Типы РО</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959383</id>
+    <Name>BudgetExpenseStructure_CustomColumn</Name>
+    <Caption>Наименование колонок</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959382</id>
+    <Name>BudgetExpenseStructure_CustomFilter</Name>
+    <Caption>Правила фильтрации колонок</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959381</id>
+    <Name>BudgetExpenseStructure_CustomFilter_ExpenseObligationType</Name>
+    <Caption>Типы РО</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959366</id>
+    <Name>ReportBatch_Reports</Name>
+    <Caption>Состав пакета отчетов</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959365</id>
+    <Name>ReportBatch_BatchHistory</Name>
+    <Caption>История формирования пакетов</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265419</id>
+    <Name>ResourceMaintenanceOfTheStateProgram_FinanceSource</Name>
+    <Caption>Источники финансирования</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>50</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013264950</id>
+    <Name>AnalysisBAofDirectAndIndirectCost_SBP</Name>
+    <Caption>ГРБС</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013264949</id>
+    <Name>AnalysisBAofDirectAndIndirectCost_ActivityType</Name>
+    <Caption>Типы мероприятий</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939296</id>
+    <Name>Report1_FinanceSource</Name>
+    <Caption>Report1_FinanceSource</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612483</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_DKR</Name>
+    <Caption>МЛ ДКР</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612482</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_DFK</Name>
+    <Caption>МЛ ДФК</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612481</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_DEK</Name>
+    <Caption>МЛ ДЭК</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612480</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_FinanceSource</Name>
+    <Caption>МЛ Источники финансирования</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612479</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_KVR</Name>
+    <Caption>МЛ КВР</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612478</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_KVSR</Name>
+    <Caption>МЛ КВСР</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612477</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_CodeSubsidy</Name>
+    <Caption>МЛ Коды субсидий</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612476</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_KOSGU</Name>
+    <Caption>МЛ КОСГУ</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612475</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_KFO</Name>
+    <Caption>МЛ КФО</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612474</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_KCSR</Name>
+    <Caption>МЛ КЦСР</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612473</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_BranchCode</Name>
+    <Caption>МЛ Отраслевые коды</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612472</id>
+    <Name>ConsolidatedExpenditure_BaseFilter_RZPR</Name>
+    <Caption>МЛ РзПР</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503519</id>
+    <Name>JustificationOfBudget_ListRemovedField</Name>
+    <Caption>Обоснование бюджетных ассигнований -  Перечень выводимых полей</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503518</id>
+    <Name>JustificationOfBudget_RZPR</Name>
+    <Caption>Обоснование бюджетных ассигнований -  РзПР</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503517</id>
+    <Name>JustificationOfBudget_KCSR</Name>
+    <Caption>Обоснование бюджетных ассигнований -  КЦСР</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503516</id>
+    <Name>JustificationOfBudget_KVR</Name>
+    <Caption>Обоснование бюджетных ассигнований -  КВР</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503515</id>
+    <Name>JustificationOfBudget_KOSGU</Name>
+    <Caption>Обоснование бюджетных ассигнований -  КОСГУ</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503514</id>
+    <Name>JustificationOfBudget_AuthorityOfExpenseObligation</Name>
+    <Caption>Обоснование бюджетных ассигнований -  Полномочия расходных обязательств</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503503</id>
+    <Name>InterBudgetaryTransfers_BudgetLevel</Name>
+    <Caption>Межбюджетные трансферты - Уровни бюджета </Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503499</id>
+    <Name>IBT_RuleFilterKBK_BranchCodes</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - Отраслевые коды</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с Отраслевые коды
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503498</id>
+    <Name>IBT_RuleFilterKBK_CodeSubsidys</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - Коды субсидий</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с Коды субсидий
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503497</id>
+    <Name>IBT_RuleFilterKBK_DEK</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - ДЭК</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с ДЭК
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503496</id>
+    <Name>IBT_RuleFilterKBK_DFK</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - ДФК</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с ДФК
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503495</id>
+    <Name>IBT_RuleFilterKBK_DKR</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - ДКР</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с ДКР
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503494</id>
+    <Name>IBT_RuleFilterKBK_ExpenseObligationType</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - Типы РО</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с  Типы РО
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503493</id>
+    <Name>IBT_RuleFilterKBK_FinanceSources</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - Источники финансирования</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с Источники финансирования
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503492</id>
+    <Name>IBT_RuleFilterKBK_KCSRs</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - КЦСР</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с КЦСР
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503491</id>
+    <Name>IBT_RuleFilterKBK_KFOs</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - КФО</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с КФО
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503490</id>
+    <Name>IBT_RuleFilterKBK_KOSGUs</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - КОСГУ</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с КОСГУ
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503489</id>
+    <Name>IBT_RuleFilterKBK_KVRs</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - КВР</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с КВР
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503488</id>
+    <Name>IBT_RuleFilterKBK_KVSRs</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - КВСР/КАДБ/КАИФ</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с КВСР/КАДБ/КАИФ
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503487</id>
+    <Name>IBT_RuleFilterKBK_RZPRs</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок - РзПР</Caption>
+    <Description>связь ТЧ Правила фильтрации колонок с РзПР
+в отчете Межбюджетные трансферты</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1275068385</id>
+    <Name>RegistryGoal_ElementTypeSystemGoal</Name>
+    <Caption>Типы элементов СЦ</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959367</id>
+    <Name>ReportBatch</Name>
+    <Caption>Пакетная отчетность</Caption>
+    <Description></Description>
+    <idEntityType>7</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>true</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265420</id>
+    <Name>ResourceMaintenanceOfTheStateProgram</Name>
+    <Caption>Ресурсное обеспечение реализации государственной программы</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>50</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>false</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265417</id>
+    <Name>DirectionAndFundingOfDepartment</Name>
+    <Caption>Направления и объемы финансирования деятельности ведомства</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>100</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013264951</id>
+    <Name>AnalysisBAofDirectAndIndirectCost</Name>
+    <Caption>Анализ объема бюджетных ассигнований в разрезе прямых и косвенных расходов</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>160</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048028</id>
+    <Name>StateProgramGoalIndicatorValue</Name>
+    <Caption>Сведения о составе и значениях целевых показателей государственной программы</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>40</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>false</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048026</id>
+    <Name>ForecastConsolidatedIndicators</Name>
+    <Caption>Прогноз сводных показателей государственных заданий в рамках ГП</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>70</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048017</id>
+    <Name>EditionsComparision</Name>
+    <Caption>Сравнение редакций</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939298</id>
+    <Name>Report1</Name>
+    <Caption>Отчет №1</Caption>
+    <Description>Тестовый отчет</Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1744830437</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939279</id>
+    <Name>TestAuditReport</Name>
+    <Caption>Тестовый отчет по аудиту</Caption>
+    <Description>Пример использования контекста БД аудита</Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1744830437</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612499</id>
+    <Name>ConsolidatedRegisterOfServices</Name>
+    <Caption>Сводный реестр услуг (работ)</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>140</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>false</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612488</id>
+    <Name>ConsolidatedExpenditure</Name>
+    <Caption>Консолидированные расходы</Caption>
+    <Description>Данная форма предназначена для получения из системы отчетной формы «Консолидированные расходы». Отчетная форма строится на один год и только по кодам РзПР и КОСГУ, остальные коды формируются и выводятся как 000, т.е. код расхода по бюджетной классификации = 000 РзПР 0000000 000 КОСГУ (КАБС РзПР КЦСР КВР КОСГУ).</Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1610612711</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>false</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503631</id>
+    <Name>SystemOfActivitySBP</Name>
+    <Caption>Система мероприятий деятельности ведомства</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>60</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>false</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503629</id>
+    <Name>GoalTargetsOfProgramSbp</Name>
+    <Caption>Целевые показатели ведомственной целевой программы</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>90</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503522</id>
+    <Name>NeedForTheProvisionOfActivitySbpWithinTheStateProgram</Name>
+    <Caption>Потребность в оказании услуг (выполнении работ) учреждениями в рамках государственной программы</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>110</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503520</id>
+    <Name>JustificationOfBudget</Name>
+    <Caption>Обоснование бюджетных ассигнований</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>105</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503512</id>
+    <Name>CostGoals</Name>
+    <Caption>Стоимость целей</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503504</id>
+    <Name>InterBudgetaryTransfers</Name>
+    <Caption>Межбюджетные трансферты</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>155</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503483</id>
+    <Name>SummaryReportOfSelectedIndicators</Name>
+    <Caption>Сводный отчет отдельных показателей</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>170</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048155</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1342177255</id>
+    <Name>WordCommonReport</Name>
+    <Caption>Универсальный отчет по шаблонам в WORD</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1275068394</id>
+    <Name>RegistryGoal</Name>
+    <Caption>Реестр целей (задач)</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>10</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1275068389</id>
+    <Name>VcpOmStatePrg</Name>
+    <Caption>Перечень ведомственных целевых программ  и основных мероприятий государственной программы</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>30</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1275068387</id>
+    <Name>PassportStateProgram</Name>
+    <Caption>Паспорт программы</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>95</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1275068383</id>
+    <Name>ListProgram</Name>
+    <Caption>Перечень целевых программ </Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959508</id>
+    <Name>UserActivityReport</Name>
+    <Caption>Действия пользователя</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959403</id>
+    <Name>BudgetExpenseStructure</Name>
+    <Caption>Структура расходов бюджета</Caption>
+    <Description></Description>
+    <idEntityType>9</idEntityType>
+    <idProject>600</idProject>
+    <isSystem>false</isSystem>
+    <Order>150</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-2013265889</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>false</AllowLinks>
+  </ref.Entity>
+</NewDataSet>

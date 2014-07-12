@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project>
+  <property name="connectionstring" value="Data Source=.;Initial Catalog=platform3;Integrated Security=false;User=bis;Password=;Timeout=3000"  unless="${property::exists('connectionstring')}"/>
+  <property name="sourcepath" value="Z:\Platform3\trunk2"  unless="${property::exists('sourcepath')}"/>
+  <property name="devid" value="6" unless="${property::exists('devid')}" />
+  <property name="outputdir" value="Z:\Platform3\trunk2" unless="${property::exists('outputdir')}" />
+  <property name="enabledistributivedata" value="false" unless="${property::exists('enabledistributivedata')}" />
+</project>

@@ -1,0 +1,101 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Platform.PrimaryEntities.Reference" #>
+<#@ import namespace="Platform.PrimaryEntities.DbEnums" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.DbEnums" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.Interfaces" #>
+<#@ import namespace="System.Linq" #>
+using System;
+using System.Collections.Generic;
+using Platform.BusinessLogic.EntityTypes;
+using Platform.BusinessLogic.Common.Interfaces;
+using Platform.BusinessLogic.Interfaces;
+using Platform.PrimaryEntities.Reference;
+using System.Xml.Linq;
+using System.ComponentModel.DataAnnotations.Schema;
+using Platform.Application.Common;
+using Platform.Utils.Common;
+<#=GetUseBaseAppInterfaces()#>
+
+<# foreach(var str in GetUsings()) {#><#= str #><# } #>
+
+
+namespace <#=_namespace#>
+{
+	<#= "// Это автоматически сгенерированный класс, изменения будут уничтожены при следующей генерации" #>
+	<#= "/// <summary>" #>
+	<#= "/// " + _entity.Caption #>
+	<#= "/// </summary>"#>
+	public partial class <#=GeneratorHelper.GetEntityName(_entity)#><#= GetEntityType(_entity) #><#= GetIStatus() #> <#=GetIVersioning()#> <#=GetIHasRegistrator()#> <#=GetIHasTerminator()#> <#=GetIHierarhy()#> <#=GetIRegistryWithOperation()#> <#=GetIRegistryWithTermOperation()#>
+	{
+	<# if(_entity.Fields.All(a => a.Name.ToLower() != "id")) {#>
+	<#= GetPrivateId() #><# } #>
+
+	<# foreach(EntityField Field in _entity.Fields.Where(w=>(w.IdCalculatedFieldType == null || w.IdCalculatedFieldType == (byte)CalculatedFieldType.DbComputed) && w.IdEntityFieldType != (byte)EntityFieldType.Multilink)){ #><# if(!string.IsNullOrEmpty(Field.Caption)) {#>
+	<#= "/// <summary>" #>
+		<#= "/// " + Field.Caption #>
+		<#= "/// </summary>"#>
+	<# } #>
+	<#= GetProperty(Field) #>
+
+	<# } #>
+<# foreach(var str in GetTpChildCollection()){ #>
+		<#= str #>
+<#}#>
+
+<# foreach(var str in  GetMultiLinkRelationship()) {#>
+<#= str #>
+			<#}#>
+
+		/// <summary>
+		/// Конструктор по-умолчанию
+		/// </summary>
+		public <#=GeneratorHelper.GetEntityName(_entity)#>()
+		{
+		}
+
+		/// <summary>
+		/// Идентификатор типа сущности
+		/// </summary>
+		public override int EntityId
+		{
+			get { return <#= _entity.Id #>; }
+		}
+
+		/// <summary>
+		/// Идентификатор типа сущности
+		/// </summary>
+		public static int EntityIdStatic
+		{
+			get { return <#= _entity.Id #>; }
+		}
+
+		/// <summary>
+		/// Русское наименование типа сущности
+		/// </summary>
+		public override string EntityCaption
+		{
+			get { return "<#= _entity.Caption.Replace("\"", "\\\"") #>"; }
+		}
+
+		<#=DocumentCaptionOverride() #>
+
+		<#=PropertyAccessExpressions() #>
+
+		/// <summary>
+		/// Регистрация идентфикатора сущности
+		/// </summary>
+		public class EntityIdRegistrator:IBeforeAplicationStart
+		{
+			/// <summary>
+			/// Зарегистрировать
+			/// </summary>
+			public void Execute()
+			{
+				Platform.BusinessLogic.EntityIds.Add(GetType().DeclaringType,<#= _entity.Id #>);
+			}
+		}
+
+
+	}
+}

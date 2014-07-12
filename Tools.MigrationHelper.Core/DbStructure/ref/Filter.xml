@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Filter" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Filter">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Disabled" type="xs:boolean" minOccurs="0" />
+                <xs:element name="idEntityField" type="xs:int" />
+                <xs:element name="idLogicOperator" type="xs:unsignedByte" />
+                <xs:element name="Not" type="xs:boolean" />
+                <xs:element name="idLeftEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="idComparisionOperator" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="RightValue" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="256" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRightEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="RightSqlExpression" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="WithParents" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Filter" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Filter>
+    <id>-2147483615</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2147483596</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2147483614</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2147483596</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <idRightEntityField>-2147483597</idRightEntityField>
+    <idParent>-2147483615</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2147483613</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2147483596</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483597</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <idRightEntityField>-2147483602</idRightEntityField>
+    <idParent>-2147483615</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2147483612</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2080374739</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select [idEntityLink] from ref.EntityField where id = {idEntityField} and  idEntityFieldType&lt;&gt;8
+union all
+select c.idEntityLink from [ref].[EntityField] a
+	inner join ref.Entity b on b.[id]=a.[idEntityLink]
+	inner join ref.EntityField c on c.[idEntity]=b.[id] and c.idEntityLink is not null and c.idEntityLink&lt;&gt;a.[idEntity]
+where a.id = {idEntityField} and a.idEntityFieldType=8</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2147483611</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2080374736</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightSqlExpression>select [idEntity] from ref.EntityField where id = {idEntityField}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2147483610</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2080374732</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2080374742</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <idRightEntityField>-2080374742</idRightEntityField>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2080374752</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2080374690</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013264566</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265877</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013264560</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013264566</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+</NewDataSet>

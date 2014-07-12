@@ -1,0 +1,224 @@
+﻿<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <ProductVersion>10.0.1600.22</ProductVersion>
+  <SchemaVersion>9.0.2.10</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <Database>
+    <Name>Sbor SASOlap.database</Name>
+    <FullPath>Sbor SASOlap.database</FullPath>
+  </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Финансовый.cube</Name>
+      <FullPath>Финансовый.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Финансовый.partitions</Name>
+          <FullPath>Финансовый.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Натуральный.cube</Name>
+      <FullPath>Натуральный.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Натуральный.partitions</Name>
+          <FullPath>Натуральный.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Целевые показатели.cube</Name>
+      <FullPath>Целевые показатели.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Целевые показатели.partitions</Name>
+          <FullPath>Целевые показатели.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Показатели качества задач.cube</Name>
+      <FullPath>Показатели качества задач.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Показатели качества задач.partitions</Name>
+          <FullPath>Показатели качества задач.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Объединенный.cube</Name>
+      <FullPath>Объединенный.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Объединенный.partitions</Name>
+          <FullPath>Объединенный.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Периоды.dim</Name>
+      <FullPath>Периоды.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Код субсидии.dim</Name>
+      <FullPath>Код субсидии.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>РЗПР.dim</Name>
+      <FullPath>РЗПР.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>КАБС.dim</Name>
+      <FullPath>КАБС.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>КФО.dim</Name>
+      <FullPath>КФО.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Источник финансирования.dim</Name>
+      <FullPath>Источник финансирования.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Программы.dim</Name>
+      <FullPath>Программы.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ДКР.dim</Name>
+      <FullPath>ДКР.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ДЭК.dim</Name>
+      <FullPath>ДЭК.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ДФК.dim</Name>
+      <FullPath>ДФК.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Тип РО.dim</Name>
+      <FullPath>Тип РО.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Код РО.dim</Name>
+      <FullPath>Код РО.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>СБП.dim</Name>
+      <FullPath>СБП.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Даты утверждения - финансовый.dim</Name>
+      <FullPath>Даты утверждения - финансовый.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Даты утверждения - натуральный.dim</Name>
+      <FullPath>Даты утверждения - натуральный.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Целевой показатель.dim</Name>
+      <FullPath>Целевой показатель.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Показатели мероприятий.dim</Name>
+      <FullPath>Показатели мероприятий.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ППО.dim</Name>
+      <FullPath>ППО.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Версии.dim</Name>
+      <FullPath>Версии.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Косвенный расход.dim</Name>
+      <FullPath>Косвенный расход.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Средства АУ БУ.dim</Name>
+      <FullPath>Средства АУ БУ.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>КОСГУ.dim</Name>
+      <FullPath>КОСГУ.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Отраслевые коды.dim</Name>
+      <FullPath>Отраслевые коды.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Бюджет.dim</Name>
+      <FullPath>Бюджет.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Наборы Задач.dim</Name>
+      <FullPath>Наборы Задач.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>КЦСР.dim</Name>
+      <FullPath>КЦСР.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>КВР.dim</Name>
+      <FullPath>КВР.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Показатели объема.dim</Name>
+      <FullPath>Показатели объема.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Цели.dim</Name>
+      <FullPath>Цели.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Территории.dim</Name>
+      <FullPath>Территории.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Дата утверждения - целевые показатели.dim</Name>
+      <FullPath>Дата утверждения - целевые показатели.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Дата утверждения - показатели качества задач.dim</Name>
+      <FullPath>Дата утверждения - показатели качества задач.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>sbordb.ds</Name>
+      <FullPath>sbordb.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>dsvmain.dsv</Name>
+      <FullPath>dsvmain.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>sbordb</Id>
+            <Name>sbordb</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI10.1;Data Source=.\sql2012;Persist Security Info=True;User ID=;Initial Catalog=irkutsk</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>sbordb</Id>
+            <Name>sbordb</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

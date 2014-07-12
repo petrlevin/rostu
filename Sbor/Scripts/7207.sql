@@ -1,0 +1,1 @@
+﻿insert into enm.EntityFieldType (id, Caption,Description, Name) values (27,'Ссылка на общие файлы','Поле для ссылки на общие файлы','FileLink')

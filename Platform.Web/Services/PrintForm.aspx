@@ -1,0 +1,1 @@
+﻿<%@ Page Title="" Language="C#" EnableSessionState="ReadOnly" MasterPageFile="~/Services/ReportViewerBase.master" AutoEventWireup="true" CodeBehind="PrintForm.aspx.cs" Inherits="Platform.Web.Services.PrintForm" %>

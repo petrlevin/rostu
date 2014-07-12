@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Filter" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Filter">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Disabled" type="xs:boolean" minOccurs="0" />
+                <xs:element name="idEntityField" type="xs:int" />
+                <xs:element name="idLogicOperator" type="xs:unsignedByte" />
+                <xs:element name="Not" type="xs:boolean" />
+                <xs:element name="idLeftEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="idComparisionOperator" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="RightValue" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="256" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRightEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="RightSqlExpression" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="WithParents" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Filter" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Filter>
+    <id>-2013265832</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260244</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265831</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260244</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879047996</idLeftEntityField>
+    <idComparisionOperator>7</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-2013265832</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265830</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260244</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503633</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1543503843, -1543503842</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-2013265832</idParent>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265828</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260224</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265827</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260224</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879047996</idLeftEntityField>
+    <idComparisionOperator>7</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-2013265828</idParent>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265826</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260224</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503633</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1543503841, -1543503840, -1543503839</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-2013265828</idParent>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265785</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013255803</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048136</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>'383','384','385'</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265784</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013255798</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157002</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155820</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 2, 3, 4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048123</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046952</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048122</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046952</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1744830274</idLeftEntityField>
+    <idComparisionOperator>7</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1879048123</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048120</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046952</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503633</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>-1543503843</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1879048123</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048119</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046951</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1677721563</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>2,4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048107</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046938</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503639</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select
+	p.id
+from
+	reg.Program as p
+where
+	p.DateTerminate IS NULL
+	and p.idDocType = -1543503843 -- Государственная программа
+	and p.idPublicLegalFormation = {idPublicLegalFormation}
+	and p.idVersion = {idVersion}</RightSqlExpression>
+    <Description>Выбор из регистра «Программы». Выводить в форму выбора наименование программ, по которым есть НЕ аннулированные проводки в регистре с типом = «Государственная программа», у которых ППО=Настроечная форма.ППО и Версия = Настроечная форма.Версия</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048103</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046880</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048102</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046878</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048101</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046880</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483612</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>6</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1879048103</idParent>
+    <Description>тип = "Документ"</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048100</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046880</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483545</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>-1543503845</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1879048103</idParent>
+    <Description>группа = Документы планирования</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048098</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046878</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483612</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>6</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1879048102</idParent>
+    <Description>тип = "Документ"</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048097</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046878</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483545</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>-1543503845</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1879048102</idParent>
+    <Description>группа = Документы планирования</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612662</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610535</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048107</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.HierarchyPeriod
+where idParent is null</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612661</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610534</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048138</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1879047933, -1879047934, -1879047932</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612660</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610533</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 2, 3, 4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612657</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610536</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048162</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.PublicLegalFormation
+where (id = {idCurrentPPO})
+or (idParent = {idCurrentPPO} and idBudgetLevel = -1879048159 and (select idBudgetLevel from ref.PublicLegalFormation where id = {idCurrentPPO}) = -1879048162)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612656</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610521</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048162</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select * from dbo.GetChildrens((select idPublicLegalFormation from rep.ConsolidatedExpenditure where id = {idOwner}),-1879048161,1)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612654</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610517</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1677721571</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1610610521</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612653</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610518</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048127</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.Budget
+Where idPublicLegalFormation = {idPublicLegalFormation} and Year in (
+select ref.HierarchyPeriod.Year from rep.ConsolidatedExpenditure 
+inner join ref.HierarchyPeriod on ref.HierarchyPeriod.id = rep.ConsolidatedExpenditure.idHierarchyPeriod
+where rep.ConsolidatedExpenditure.id = {idOwner}
+)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612651</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610517</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1677721563</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1610612654</idParent>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503725</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543502028</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503639</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id
+from reg.Program as p
+where p.id in (select idProgram from reg.AttributeOfProgram where idTerminator is null)
+and idDocType in (-1543503839, -1543503840, -1543503841)
+</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503723</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543502017</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503639</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from reg.Program as p where p.id in (select idProgram from reg.AttributeOfProgram where idTerminator is null) and idDocType = -1543503841</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503721</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500978</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503639</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id
+from reg.Program as p
+where p.id in (select idProgram from reg.AttributeOfProgram where idTerminator is null)
+and idDocType in (-1543503843)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503719</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500967</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503717</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500965</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610612</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select l.id from ref.ListRemovedFields as l
+join ref.Entity as e on e.id=l.[idEntity]
+where e.name in ('RzPr','KCSR','KVR','KOSGU')</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503715</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500905</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 2, 3, 4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503714</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500904</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 2, 3, 4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503712</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500902</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 2, 3, 4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503704</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500879</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048134</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>'10^3 руб', 'руб', '10^6 руб'</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503703</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500878</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 2, 3, 4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503701</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500806</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543500859</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543500863</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503699</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500869</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048159</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1879048160,-1879048159,-1879048157,-1879048156</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503697</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500964</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610612</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1610612708,-1610612707,-1610612706,-1610612705</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503695</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500776</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 2, 3, 4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503694</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500777</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048134</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>'10^3 руб', 'руб', '10^6 руб'</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1275068394</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1275068344</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503639</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT [id]
+  FROM [reg].[Program]
+WHERE idDocType = -1543503843</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1275068392</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1275068369</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT [id]
+  FROM [enm].[SourcesDataReports]
+WHERE id in (1,5)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1275068390</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1275068332</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503639</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT [id]
+  FROM [reg].[Program]
+WHERE idDocType in( -1543503843,-1543503842,-1543503841,-1543503837)
+		AND idTerminator IS NULL</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1275068388</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1275068317</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT [id]
+  FROM [enm].[SourcesDataReports]
+WHERE id IN (0,2,3,4)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1275068386</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1275068314</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT [id]
+  FROM [enm].[SourcesDataReports]
+WHERE id IN (0,2,3,4)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1275068384</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1275068306</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503639</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>	SELECT [id]  FROM [reg].[Program]  WHERE 
+						(   (idDocType in( -1543503843 ) AND {idListTypeOutputProgram} =1) 
+						OR (idDocType in( -1543503842 ) AND {idListTypeOutputProgram} =2)
+						OR (idDocType in( -1543503841 ) AND {idListTypeOutputProgram} =3)
+						OR (idDocType in( -1543503839 ) AND {idListTypeOutputProgram} =4)
+						OR (idDocType in( -1543503841,-1543503839 ) AND {idListTypeOutputProgram} =5)
+						OR (idDocType in( -1543503843 ) AND {idListTypeOutputProgram} =6)
+						OR (idDocType in( -1543503843 ) AND {idListTypeOutputProgram} =7))
+						AND idTerminator IS NULL</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1275068383</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1275068304</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT [id]
+  FROM [enm].[SourcesDataReports]
+WHERE id IN (0,2,3,4)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959397</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207958142</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048134</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>'10^3 руб', 'руб', '10^6 руб'</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959396</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207958140</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610665</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 2, 3, 4, 7</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959395</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207958134</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483615</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>'FinanceSource','KFO','KVSR','RZPR','KCSR','KVR','KOSGU','DFK','DKR','DEK','CodeSubsidy','BranchCode', 'ExpenseObligationType'</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959393</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207958058</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207958029</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207958062</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959391</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207957991</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265715</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1543503843, -1543503842, -1543503841</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+</NewDataSet>

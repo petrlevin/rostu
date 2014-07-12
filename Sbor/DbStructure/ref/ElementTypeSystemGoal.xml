@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.ElementTypeSystemGoal" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.ElementTypeSystemGoal">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.ElementTypeSystemGoal" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.ElementTypeSystemGoal>
+    <id>-2013265889</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Тип СЦ: Стратегия СЭР</Caption>
+    <Description>Стратегия СЭР</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1879048163</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Тип СЦ: ГП, ДЦП и подпограмма ДЦП</Caption>
+    <Description>Государственная программа, Долгосрочная целевая программа, Подпрограмма ГП, Подпрограмма ДЦП</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1879048161</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Тип СЦ: ГП</Caption>
+    <Description>Государственная программа</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1879048160</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Тип СЦ: ДЦП</Caption>
+    <Description>Долгосрочная целевая программа</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1879048159</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Тип СЦ: пДЦП</Caption>
+    <Description>Подпрограмма ДЦП</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1879048158</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Тип СЦ: Программа СЭР</Caption>
+    <Description>Программа СЭР</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1744830437</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Основное мероприятие</Caption>
+    <Description>Основное мероприятие</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1744830436</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Подпрограмма ГП</Caption>
+    <Description>Подпрограмма ГП</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1543503848</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Ведомственная</Caption>
+    <Description>Ведомственная целевая программа</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1207959533</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Для ССЭР</Caption>
+    <Description>Стратегия СЭР</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1207959532</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Для ГП</Caption>
+    <Description>Государственная программа</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+  <ref.ElementTypeSystemGoal>
+    <id>-1207959531</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Caption>Для ПП ГП</Caption>
+    <Description>Подпрограмма ГП</Description>
+    <idRefStatus>2</idRefStatus>
+  </ref.ElementTypeSystemGoal>
+</NewDataSet>

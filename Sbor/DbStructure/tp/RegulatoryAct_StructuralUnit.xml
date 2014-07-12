@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.RegulatoryAct_StructuralUnit" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.RegulatoryAct_StructuralUnit">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="Article" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="20" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Part" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="20" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Item" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="20" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="SubItem" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="20" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Paragraph" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="20" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.RegulatoryAct_StructuralUnit" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.RegulatoryAct_StructuralUnit>
+    <id>-1879048164</id>
+    <idOwner>-1879048162</idOwner>
+    <Article>001</Article>
+    <Part>001</Part>
+    <Item>001</Item>
+    <SubItem>001</SubItem>
+    <Paragraph>001</Paragraph>
+    <Caption>ст.001 ч.001 п.001 п.п.001 абз.001</Caption>
+  </tp.RegulatoryAct_StructuralUnit>
+  <tp.RegulatoryAct_StructuralUnit>
+    <id>-1879048163</id>
+    <idOwner>-1879048162</idOwner>
+    <Article>2</Article>
+    <Part>2</Part>
+    <Item>2</Item>
+    <SubItem>2</SubItem>
+    <Paragraph>2</Paragraph>
+    <Caption>ст.2 ч.2 п.2 п.п.2 абз.2</Caption>
+  </tp.RegulatoryAct_StructuralUnit>
+  <tp.RegulatoryAct_StructuralUnit>
+    <id>-1879048162</id>
+    <idOwner>-1879048162</idOwner>
+    <Article>3</Article>
+    <Part>3</Part>
+    <Item>3</Item>
+    <SubItem>3</SubItem>
+    <Paragraph>3</Paragraph>
+    <Caption>ст.3 ч.3 п.3 п.п.3 абз.3</Caption>
+  </tp.RegulatoryAct_StructuralUnit>
+  <tp.RegulatoryAct_StructuralUnit>
+    <id>-1879048161</id>
+    <idOwner>-1879048164</idOwner>
+    <Article>5</Article>
+    <Part>5</Part>
+    <Item>5</Item>
+    <SubItem></SubItem>
+    <Paragraph></Paragraph>
+    <Caption>ст.5 ч.5 п.5</Caption>
+  </tp.RegulatoryAct_StructuralUnit>
+  <tp.RegulatoryAct_StructuralUnit>
+    <id>-1879048160</id>
+    <idOwner>-1879048164</idOwner>
+    <Article>10</Article>
+    <Part>10</Part>
+    <Item></Item>
+    <SubItem></SubItem>
+    <Paragraph></Paragraph>
+    <Caption>ст.10 ч.10</Caption>
+  </tp.RegulatoryAct_StructuralUnit>
+</NewDataSet>

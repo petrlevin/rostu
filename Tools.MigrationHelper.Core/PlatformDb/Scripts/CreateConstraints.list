@@ -1,0 +1,17 @@
+﻿ALTER TABLE [ref].[Entity]       WITH CHECK ADD  CONSTRAINT [FK_idEntityType_Entity_EntityType] FOREIGN KEY([idEntityType]) REFERENCES [enm].[EntityType] ([id])
+ALTER TABLE [ref].[EntityField]  WITH CHECK ADD  CONSTRAINT [FK_idEntity_EntityField_Entity] FOREIGN KEY([idEntity]) REFERENCES [ref].[Entity] ([id]) ON DELETE CASCADE
+ALTER TABLE [ref].[EntityField]  WITH CHECK ADD  CONSTRAINT [FK_idEntityFieldType_EntityField_EntityFieldType] FOREIGN KEY([idEntityFieldType]) REFERENCES [enm].[EntityFieldType] ([id])
+ALTER TABLE [ref].[EntityField]  WITH CHECK ADD  CONSTRAINT [FK_idEntityLink_EntityField_Entity] FOREIGN KEY([idEntityLink]) REFERENCES [ref].[Entity] ([id])
+ALTER TABLE [ref].[EntityField]  WITH CHECK ADD  CONSTRAINT [FK_idForeignKeyType_EntityField_ForeignKeyType] FOREIGN KEY([idForeignKeyType]) REFERENCES [enm].[ForeignKeyType] ([id])
+ALTER TABLE [ref].[EntityField]  WITH CHECK ADD  CONSTRAINT [FK_idCalculatedFieldType_EntityField_CalculatedFieldType] FOREIGN KEY([idCalculatedFieldType]) REFERENCES [enm].[CalculatedFieldType] ([id])
+ALTER TABLE [ref].[EntityField]  WITH CHECK ADD  CONSTRAINT [FK_ididFieldDefaultValueType_EntityField_FieldDefaultValueType] FOREIGN KEY([idFieldDefaultValueType]) REFERENCES [enm].[FieldDefaultValueType] ([id])
+ALTER TABLE [ref].[Programmability]  WITH CHECK ADD  CONSTRAINT [FK_idProgrammabilityType_Programmability_ProgrammabilityType] FOREIGN KEY([idProgrammabilityType]) REFERENCES [enm].[ProgrammabilityType] ([id])
+
+ALTER TABLE [ref].[Filter]  WITH CHECK ADD  CONSTRAINT [FK_idEntityField_Filter_EntityField] FOREIGN KEY([idEntityField]) REFERENCES [ref].[EntityField] ([id])
+ALTER TABLE [ref].[Filter]  WITH CHECK ADD  CONSTRAINT [FK_idLogicOperator_Filter_LogicOperator] FOREIGN KEY([idLogicOperator]) REFERENCES [enm].[LogicOperator] ([id])
+ALTER TABLE [ref].[Filter]  WITH CHECK ADD  CONSTRAINT [FK_idLeftEntityField_Filter_EntityField] FOREIGN KEY([idLeftEntityField]) REFERENCES [ref].[EntityField] ([id])
+ALTER TABLE [ref].[Filter]  WITH CHECK ADD  CONSTRAINT [FK_idComparisionOperator_Filter_ComparisionOperator] FOREIGN KEY([idComparisionOperator]) REFERENCES [enm].[ComparisionOperator] ([id])
+ALTER TABLE [ref].[Filter]  WITH CHECK ADD  CONSTRAINT [FK_idRightEntityField_Filter_EntityField] FOREIGN KEY([idRightEntityField]) REFERENCES [ref].[EntityField] ([id])
+ALTER TABLE [ref].[Filter]  WITH CHECK ADD  CONSTRAINT [FK_idParent_Filter_Filter] FOREIGN KEY([idParent]) REFERENCES [ref].[Filter] ([id])
+
+ALTER TABLE [ref].[EntityGroup]  WITH CHECK ADD  CONSTRAINT [FK_idParent_EntityGroup_EntityGroup] FOREIGN KEY([idParent]) REFERENCES [ref].[EntityGroup] ([id])

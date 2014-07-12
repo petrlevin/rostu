@@ -1,0 +1,85 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4d299ae7-223e-4181-a8b5-442605727150" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Объединенный</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Финансовый</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ef333654-671b-4434-974e-7e09188123a4">
+          <ID>Финансовый</ID>
+          <Name>Финансовый</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8398d8ea-1ad0-47bf-815b-6a519a23deae">
+            <DataSourceViewID>dsvmain</DataSourceViewID>
+            <TableID>Финансовый</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Показатели Качества Задач</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2c4ea71c-485c-4f81-818e-456dfbac7872">
+          <ID>Показатели Качества Задач</ID>
+          <Name>Показатели Качества Задач</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f7554cd6-b6d7-4067-9662-01648ff6a91a">
+            <DataSourceViewID>dsvmain</DataSourceViewID>
+            <TableID>Показатели_x0020_качества_x0020_задач</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Целевые Показатели</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="57c05bc8-d488-472e-ad0e-89bf40f2b574">
+          <ID>Целевые Показатели</ID>
+          <Name>Целевые Показатели</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4dd8c932-f3fd-4b5e-827d-68f1a1b679c1">
+            <DataSourceViewID>dsvmain</DataSourceViewID>
+            <TableID>Целевые_x0020_показатели</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Натуральный</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d364f122-7528-49de-a7c6-0128fc6d0408">
+          <ID>Натуральный</ID>
+          <Name>Натуральный</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="365a37c0-bab4-4f1d-a03e-d8181f36021e">
+            <DataSourceViewID>dsvmain</DataSourceViewID>
+            <TableID>Натуральный</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

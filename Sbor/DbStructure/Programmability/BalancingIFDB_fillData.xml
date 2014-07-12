@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-2013265869</id>
+    <Schema>tool</Schema>
+    <Name>BalancingIFDB_fillData</Name>
+    <CreateCommand>CREATE PROCEDURE [tool].[BalancingIFDB_fillData]
+	@idTool int
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	--declare @idTool int
+	--select @idTool = id from tool.BalancingIFDB
+
+	;----------
+
+	delete tp.BalancingIFDB_Program where idOwner = @idTool
+	update tp.BalancingIFDB_RuleIndex set isApplied = 0 from  tp.BalancingIFDB_RuleIndex where idOwner = @idTool 
+	
+	;----------
+
+	declare @idBudget int
+	declare @idVersion int
+	declare @idPublicLegalFormation int
+	declare @idValueType int
+	declare @budgetYear int
+	declare @idProgramEntity int
+	declare @idDocTypeEntity int
+	declare @idTaskCollectionEntity int
+	declare @idRule int
+	declare @idRuleEntity int
+	declare @idBalancingIFDBType int
+	declare @groupField nvarchar(max)
+
+	select 
+		@idBudget = idBudget,
+		@idVersion = idVersion,
+		@idPublicLegalFormation = idPublicLegalFormation,
+		@idValueType =
+			case idSourcesDataTools
+				when 1 then 4 -- Смета казенного учреждения(PublicInstitutionEstimate) -&gt; Обосновано(Justified)
+				when 2 then 9 -- Деятельность ведомства(ActivityOfSBP) -&gt; Обосновано ГРБС(JustifiedGRBS)
+				else null
+			end,
+		@idRule = idBalanceConfig_FilterRule,
+		@idBalancingIFDBType = idBalancingIFDBType
+	from 
+		tool.BalancingIFDB 
+	where 
+		id = @idTool
+
+	select @budgetYear = [Year] from ref.Budget where id = @idBudget
+
+	select @idProgramEntity = id from ref.Entity where Name = 'Program'
+	select @idDocTypeEntity = id from ref.Entity where Name = 'DocType'
+	select @idTaskCollectionEntity = id from ref.Entity where Name = 'TaskCollection'
+	select @idRuleEntity = id from ref.Entity where Name = 'BalanceConfig_FilterRule'
+
+	select
+		@groupField = dbo.Concatenate(ef.Name, ',')
+	from 
+		tp.BalancingIFDB_SetShowKBK as t
+		inner join ref.EntityField as ef on ef.id = t.idEntityField
+	where
+		idOwner = @idTool
+		
+	if (isnull(@groupField,'') = '')
+	begin
+		select 
+			@groupField = dbo.Concatenate(Name, ',') 
+		from 
+			ref.EntityField 
+		where 
+			[idEntity] in (
+				select id from ref.Entity where Name = 'BalancingIFDB_Expense'
+			)
+			and idEntityFieldType = 7
+			and Name not in ('id','idOwner','idMaster')
+	end
+
+	;----------
+
+	declare @hier table (
+		idProgram int,
+		idParent int,
+		[Level] int,
+		rn NVARCHAR(4000),
+		Caption NVARCHAR(max),
+		idDocType int
+	);
+
+	WITH cteEx AS (
+		select
+			pa.idProgram,
+			null as idParent,
+			0 AS [Level],
+			CAST(ROW_NUMBER() OVER (
+				PARTITION BY 
+					pa.idParent
+				ORDER BY
+					pa.Caption 
+			)+100000 AS NVARCHAR(max)) AS rn,
+			pa.Caption,
+			p.idDocType
+		from
+			reg.AttributeOfProgram as pa
+			inner join reg.Program as p on p.id = pa.idProgram
+		where
+			pa.idTerminator is null
+			and p.idDocType = -1543503843 -- Государственная программа
+			and pa.idPublicLegalFormation = @idPublicLegalFormation
+			and pa.idVersion = @idVersion
+			
+		UNION ALL
+
+		select
+			child.idProgram,
+			child.idParent,
+			par.[Level] + 1 AS [Level],
+			par.rn + '.' + CAST(ROW_NUMBER() OVER (
+				PARTITION BY 
+					child.idParent 
+				ORDER BY 
+					child.Caption
+			)+100000 AS NVARCHAR(max)) AS rn,
+			child.Caption,
+			p.idDocType
+		from
+			reg.AttributeOfProgram as child
+			inner join reg.Program as p on p.id = child.idProgram
+			inner join cteEx par ON par.idProgram = child.idParent
+		where
+			child.idTerminator is null
+			and child.idPublicLegalFormation = @idPublicLegalFormation
+			and child.idVersion = @idVersion
+	)
+
+	insert into @hier 
+	select 
+		cteEx.idProgram,
+		cteEx.idParent,
+		cteEx.[Level],
+		cteEx.rn,
+		cteEx.Caption,
+		cteEx.idDocType
+	from 
+		cteEx
+
+	;----------
+
+	declare @task table (
+		idProgram int,
+		idSBP int,
+		idTaskCollection int,
+		[year] int
+	)
+
+	insert into @task
+	select distinct
+		tv.idProgram,
+		tv.idSBP,
+		tv.idTaskCollection,
+		year(hp.DateStart) as [year]
+	from 
+		reg.TaskVolume as tv
+		inner join ref.HierarchyPeriod as hp on hp.id = tv.idHierarchyPeriod
+	where
+		tv.idPublicLegalFormation = @idPublicLegalFormation
+		and tv.idVersion = @idVersion
+		and tv.idValueType = 1 -- Plan  План
+		and	tv.idTerminator is null
+		and tv.idProgram is not null
+		and tv.idTaskCollection is not null
+		and year(hp.DateStart) between @budgetYear and @budgetYear+2
+		
+	;----------
+	
+	declare @entityName nvarchar(200)
+	set @entityName = 'BalanceConfig_FilterKBK'
+
+	declare @sql_text nvarchar(max)
+
+	select
+		@sql_text = [dbo].[Concatenate](txt, ' ')
+	from
+		(
+			select
+				'insert into #filters ' +
+				case
+					when fspr.id is null then
+						'select distinct '+
+						'	t.id'+e.Name+' as idRule, '''+mlf.Name+''' as nameFld, t.'+mlf.Name+' as idSpr, f.idFilterFieldType_'+spr.Name+' as idType ' +
+						'from ' +
+						'	tp.'+e.Name+' as f ' +
+						'inner join ml.'+ml.Name+' as t on t.id'+e.Name+' = f.id '		
+					else
+						'select distinct '+
+						'	t.id'+e.Name+' as idRule, '''+mlf.Name+''' as nameFld, s.id, f.idFilterFieldType_'+spr.Name+' as idType ' +
+						'from ' +
+						'	tp.'+e.Name+' as f ' +
+						'   inner join ml.'+ml.Name+' as t on t.id'+e.Name+' = f.id ' +
+						'   cross apply [dbo].[GetChildrens](t.'+mlf.Name+', '+cast(fspr.id as nvarchar(100))+', 1) as s '		
+				end +   'where ' +
+						' f.idMaster = '+cast(@idRule as nvarchar(100))+' ' as txt
+			from 
+				ref.Entity as e
+				inner join ref.EntityField as ef on ef.[idEntity] = e.id
+				inner join ref.Entity as ml on ml.id = ef.idEntityLink
+				inner join ref.EntityField as mlf on mlf.[idEntity] = ml.id and mlf.Name != 'id'+e.Name
+				left join ref.Entity as spr on spr.id = mlf.idEntityLink
+				left join ref.EntityField as fspr on fspr.[idEntity] = spr.id and fspr.Name = 'idParent'
+			where
+				e.Name = @entityName
+				and ef.idEntityFieldType = 8
+		) as z
+
+	create table #filters (
+		idRule int,
+		nameFld nvarchar(1000),
+		idSpr int,
+		idType int
+	)
+
+	exec (@sql_text)
+
+	;----------
+
+	declare @isFilterKBK bit
+	set @isFilterKBK = 0
+	select top 1 @isFilterKBK = 1 from #filters
+
+	;----------
+
+	create table #lvalines (
+		id int
+	)
+
+	if (@isFilterKBK = 1)
+	begin
+		select
+			@sql_text = 
+				'insert into #lvalines ' + [dbo].[Concatenate](expression, ' union ')
+		from
+			(
+				select top 10000
+					idRule,
+					'select distinct ' +
+					'	lva.id ' +
+					'from ' +
+					'	reg.EstimatedLine as el '+
+					'	inner join reg.LimitVolumeAppropriations as lva on lva.idEstimatedLine = el.id '+
+					'where ' +
+					'	(' + [dbo].[Concatenate](expression, ' and ') + ') ' as expression,
+					sum(cnt) as cnt
+				from
+					(
+						select top 10000
+							f.idRule,
+							count(f.idSpr) as cnt,
+							f.nameFld +
+								case
+									when count(f.idSpr) = 1 then
+										case f.idType when 2 then ' != ' else ' = '	end + cast(min(f.idSpr) as nvarchar(100))
+									else
+										case f.idType when 2 then ' not in ' else ' in ' end + '(' + [dbo].[Concatenate](cast(f.idSpr as nvarchar(100)),',') + ')'
+								end as expression
+						from
+							#filters as f
+						group by
+							f.idRule,
+							f.nameFld,
+							f.idType
+						having
+							count(f.idSpr) &gt; 0
+						order by
+							idRule,
+							cnt
+					) as x
+				group by
+					idRule
+				order by
+					cnt
+			) as z
+			
+		exec (@sql_text)
+	end
+
+	;----------
+
+	declare @lva table (
+		idTaskCollection int,
+		idSBP int,
+		isAdditionalNeed bit,
+		idEstimatedLine int,
+		idAuthorityOfExpenseObligation int,
+		idOKATO int,
+		[year] int,
+		idHierarchyPeriod int,
+		value numeric(25,2)
+	)
+
+	insert into @lva
+	select
+		lva.idTaskCollection,
+		case @idValueType when 4 then sbp.idParent else sbp.id end as idSBP,
+		isnull(lva.HasAdditionalNeed,0) as isAdditionalNeed,
+		lva.idEstimatedLine,
+		lva.idAuthorityOfExpenseObligation,
+		lva.idOKATO,
+		year(hp.DateStart) as [year],
+		lva.idHierarchyPeriod,
+		sum(lva.Value) as Value
+	from
+		reg.LimitVolumeAppropriations as lva
+		inner join ref.HierarchyPeriod as hp on hp.id = lva.idHierarchyPeriod
+		inner join reg.EstimatedLine as el on el.id = lva.idEstimatedLine
+		inner join ref.SBP as sbp on sbp.id = el.idSBP
+		left join #lvalines as f on f.id = lva.id
+	where 
+		lva.idPublicLegalFormation = @idPublicLegalFormation
+		and lva.idBudget = @idBudget
+		and lva.idVersion = @idVersion
+		and lva.idTaskCollection is not null
+		and lva.idValueType = @idValueType
+		and (@idValueType != 4 or (
+			sbp.idSBPType = 3 -- TreasuryEstablishment Казенное учреждение, ОГВ (ОМСУ), структурное подразделение
+			and sbp.IdParent is not null
+		))
+		and year(hp.DateStart) between @budgetYear and @budgetYear+2
+		and (@isFilterKBK = 0 or f.id is not null)
+	group by
+		lva.idTaskCollection,
+		case @idValueType when 4 then sbp.idParent else sbp.id end,
+		isnull(lva.HasAdditionalNeed,0),
+		lva.idEstimatedLine,
+		lva.idAuthorityOfExpenseObligation,
+		lva.idOKATO,
+		year(hp.DateStart),
+		lva.idHierarchyPeriod
+	having
+		sum(lva.Value) != 0
+		
+	;----------
+
+	CREATE TABLE #data (
+		idProgram int,
+		idParent int,
+		rn NVARCHAR(max),
+		idTaskCollection int,
+		isAdditionalNeed bit,
+		idEstimatedLine int,
+		idAuthorityOfExpenseObligation int,
+		idOKATO int,
+		[year] int,
+		idHierarchyPeriod int,
+		value numeric(25,2)
+	)
+
+	insert into #data
+	select
+		task.idProgram,
+		hier.idParent,
+		hier.rn,
+		lva.idTaskCollection,
+		lva.isAdditionalNeed,
+		lva.idEstimatedLine,
+		lva.idAuthorityOfExpenseObligation,
+		lva.idOKATO,
+		lva.[year],
+		lva.idHierarchyPeriod,
+		sum(lva.value) as value
+	from
+		@lva as lva
+		inner join @task as task on
+			task.idTaskCollection =  lva.idTaskCollection
+			and task.idSBP = lva.idSBP
+			and task.[year] = lva.[year]
+		inner join @hier as hier on 
+			hier.idProgram = task.idProgram
+	group by
+		task.idProgram,
+		hier.idParent,
+		hier.rn,
+		lva.idTaskCollection,
+		lva.isAdditionalNeed,
+		lva.idEstimatedLine,
+		lva.idAuthorityOfExpenseObligation,
+		lva.idOKATO,
+		lva.[year],
+		lva.idHierarchyPeriod
+
+	;----------
+
+	if (@idBalancingIFDBType = 2)
+		begin --  это для Тип формируемого инструмента = "Балансировка ПОБА и Деятельности ведомства"
+
+			insert into tp.BalancingIFDB_Program (
+				idOwner,
+				idProgramOrActivity,
+				idProgramOrActivityEntity,
+				idType,
+				idTypeEntity,
+				OFG,
+				PFG1,
+				PFG2,
+				AdditionalOFG,
+				AdditionalPFG1,
+				AdditionalPFG2,
+				ChangeOFG,
+				ChangePFG1,
+				ChangePFG2,
+				ChangeAdditionalOFG,
+				ChangeAdditionalPFG1,
+				ChangeAdditionalPFG2
+			)
+			select
+				@idTool as idOwner,
+				hier.idProgram as idProgramOrActivity,
+				@idProgramEntity as idProgramOrActivityEntity,
+				hier.idDocType as idType,
+				@idDocTypeEntity as idTypeEntity,
+				sum(data.OFG)  as OFG,
+				sum(data.PFG1) as PFG1,
+				sum(data.PFG2) as PFG2,
+				sum(data.AdditionalOFG)  as AdditionalOFG,
+				sum(data.AdditionalPFG1) as AdditionalPFG1,
+				sum(data.AdditionalPFG2) as AdditionalPFG2,
+				sum(data.OFG)  as ChangeOFG,
+				sum(data.PFG1) as ChangePFG1,
+				sum(data.PFG2) as ChangePFG2,
+				sum(data.AdditionalOFG)  as ChangeAdditionalOFG,
+				sum(data.AdditionalPFG1) as ChangeAdditionalPFG1,
+				sum(data.AdditionalPFG2) as ChangeAdditionalPFG2
+			from
+				(
+					select 
+						rn, 
+						sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+0 then value else null end) as OFG,
+						sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+1 then value else null end) as PFG1,
+						sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+2 then value else null end) as PFG2,
+						sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+0 then value else null end) as AdditionalOFG,
+						sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+1 then value else null end) as AdditionalPFG1,
+						sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+2 then value else null end) as AdditionalPFG2
+					from 
+						#data 
+					group by 
+						rn
+				) as data
+				inner join @hier as hier on hier.rn = substring(data.rn,1,len(hier.rn))
+			group by
+				hier.idProgram,
+				hier.idDocType
+
+			update t set idParent = t1.id
+			from
+				tp.BalancingIFDB_Program as t
+				inner join @hier as h on h.idProgram = t.idProgramOrActivity
+				inner join tp.BalancingIFDB_Program as t1 on t1.idProgramOrActivity = h.idParent 
+			where
+				t.idOwner = @idTool
+				and t1.idOwner = @idTool
+				and t.idProgramOrActivityEntity = @idProgramEntity
+				and t1.idProgramOrActivityEntity = @idProgramEntity
+
+			;----------
+
+			insert into tp.BalancingIFDB_Program (
+				idOwner,
+				idParent,
+				idProgramOrActivity,
+				idProgramOrActivityEntity,
+				idType,
+				idTypeEntity,
+				OFG,
+				PFG1,
+				PFG2,
+				AdditionalOFG,
+				AdditionalPFG1,
+				AdditionalPFG2,
+				ChangeOFG,
+				ChangePFG1,
+				ChangePFG2,
+				ChangeAdditionalOFG,
+				ChangeAdditionalPFG1,
+				ChangeAdditionalPFG2
+			)
+			select
+				@idTool as idOwner,
+				par.id as idParent,
+				data.idTaskCollection as idProgramOrActivity,
+				@idTaskCollectionEntity as idProgramOrActivityEntity,
+				null as idType,
+				null as idTypeEntity,
+				sum(data.OFG)  as OFG,
+				sum(data.PFG1) as PFG1,
+				sum(data.PFG2) as PFG2,
+				sum(data.AdditionalOFG)  as AdditionalOFG,
+				sum(data.AdditionalPFG1) as AdditionalPFG1,
+				sum(data.AdditionalPFG2) as AdditionalPFG2,
+				sum(data.OFG)  as ChangeOFG,
+				sum(data.PFG1) as ChangePFG1,
+				sum(data.PFG2) as ChangePFG2,
+				sum(data.AdditionalOFG)  as ChangeAdditionalOFG,
+				sum(data.AdditionalPFG1) as ChangeAdditionalPFG1,
+				sum(data.AdditionalPFG2) as ChangeAdditionalPFG2
+			from
+				(
+					select
+						idProgram, 
+						idTaskCollection, 
+						sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+0 then value else null end) as OFG,
+						sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+1 then value else null end) as PFG1,
+						sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+2 then value else null end) as PFG2,
+						sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+0 then value else null end) as AdditionalOFG,
+						sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+1 then value else null end) as AdditionalPFG1,
+						sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+2 then value else null end) as AdditionalPFG2
+					from 
+						#data 
+					group by 
+						idProgram, 
+						idTaskCollection
+				) as data
+				inner join tp.BalancingIFDB_Program as par on
+					par.idOwner = @idTool
+					and par.idProgramOrActivity = data.idProgram 
+					and par.idProgramOrActivityEntity = @idProgramEntity 
+			group by
+				par.id,
+				data.idTaskCollection
+				
+		end --  это для Тип формируемого инструмента = "Балансировка ПОБА и Деятельности ведомства"
+	else
+		begin --  это для Тип формируемого инструмента = "Балансировка ПОБА"
+		
+			insert into tp.BalancingIFDB_Program (
+				idOwner,
+				idProgramOrActivity,
+				idProgramOrActivityEntity,
+				idType,
+				idTypeEntity,
+				OFG,
+				PFG1,
+				PFG2,
+				AdditionalOFG,
+				AdditionalPFG1,
+				AdditionalPFG2,
+				ChangeOFG,
+				ChangePFG1,
+				ChangePFG2,
+				ChangeAdditionalOFG,
+				ChangeAdditionalPFG1,
+				ChangeAdditionalPFG2
+			)
+			select
+				@idTool as idOwner,
+				@idRule as idProgramOrActivity,
+				@idRuleEntity as idProgramOrActivityEntity,
+				null as idType,
+				null as idTypeEntity,
+				sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+0 then value else null end) as OFG,
+				sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+1 then value else null end) as PFG1,
+				sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+2 then value else null end) as PFG2,
+				sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+0 then value else null end) as AdditionalOFG,
+				sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+1 then value else null end) as AdditionalPFG1,
+				sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+2 then value else null end) as AdditionalPFG2,
+				sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+0 then value else null end) as ChangeOFG,
+				sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+1 then value else null end) as ChangePFG1,
+				sum(case when isAdditionalNeed = 0 and  [year] = @budgetYear+2 then value else null end) as ChangePFG2,
+				sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+0 then value else null end) as ChangeAdditionalOFG,
+				sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+1 then value else null end) as ChangeAdditionalPFG1,
+				sum(case when isAdditionalNeed = 1 and  [year] = @budgetYear+2 then value else null end) as ChangeAdditionalPFG2
+			from
+				#data
+		
+		end --  это для Тип формируемого инструмента = "Балансировка ПОБА"
+		
+	;----------
+
+	CREATE TABLE #kvrs (idRoot int, idKVR int)
+
+	if (@idBalancingIFDBType != 2)
+		begin --  это для Тип формируемого инструмента = "Балансировка ПОБА"
+			with ctekvr as (
+				select 
+					s.id as idRoot, s.id as idKVR 
+				from 
+					ref.KVR as s 
+				where 
+					s.idParent is null
+					
+				union all
+				
+				select 
+					p.idRoot, s.id as idKVR 
+				from 
+					ctekvr as p	
+					inner join ref.KVR as s on s.idParent = p.idKVR
+			)
+			insert into #kvrs
+			select distinct * from ctekvr
+		end
+
+	;----------
+
+	declare @sql nvarchar(max)
+
+	declare @yearstr nvarchar(10)
+	declare @toolstr nvarchar(10)
+	set @yearstr = cast(@budgetYear as nvarchar(max))
+	set @toolstr = cast(@idTool as nvarchar(max))
+		
+	;----------
+
+	set @sql = '
+	insert into tp.BalancingIFDB_Expense (
+		idOwner,
+		idMaster,
+		'+@groupField+',
+		OFG,
+		PFG1,
+		PFG2,
+		AdditionalOFG,
+		AdditionalPFG1,
+		AdditionalPFG2,
+		ChangeOFG,
+		ChangePFG1,
+		ChangePFG2,
+		ChangeAdditionalOFG,
+		ChangeAdditionalPFG1,
+		ChangeAdditionalPFG2
+	)
+	select
+		'+@toolstr+' as idOwner,
+		mast.id as idMaster,
+		'+case when @idBalancingIFDBType = 2 then @groupField else replace(@groupField,'idKVR','idRoot as idKVR') end +',
+		sum(case when isAdditionalNeed = 0 and  [year] = '+@yearstr+'+0 then data.value else null end) as OFG,
+		sum(case when isAdditionalNeed = 0 and  [year] = '+@yearstr+'+1 then data.value else null end) as PFG1,
+		sum(case when isAdditionalNeed = 0 and  [year] = '+@yearstr+'+2 then data.value else null end) as PFG2,
+		sum(case when isAdditionalNeed = 1 and  [year] = '+@yearstr+'+0 then data.value else null end) as AdditionalOFG,
+		sum(case when isAdditionalNeed = 1 and  [year] = '+@yearstr+'+1 then data.value else null end) as AdditionalPFG1,
+		sum(case when isAdditionalNeed = 1 and  [year] = '+@yearstr+'+2 then data.value else null end) as AdditionalPFG2,
+		sum(case when isAdditionalNeed = 0 and  [year] = '+@yearstr+'+0 then data.value else null end) as ChangeOFG,
+		sum(case when isAdditionalNeed = 0 and  [year] = '+@yearstr+'+1 then data.value else null end) as ChangePFG1,
+		sum(case when isAdditionalNeed = 0 and  [year] = '+@yearstr+'+2 then data.value else null end) as ChangePFG2,
+		sum(case when isAdditionalNeed = 1 and  [year] = '+@yearstr+'+0 then data.value else null end) as ChangeAdditionalOFG,
+		sum(case when isAdditionalNeed = 1 and  [year] = '+@yearstr+'+1 then data.value else null end) as ChangeAdditionalPFG1,
+		sum(case when isAdditionalNeed = 1 and  [year] = '+@yearstr+'+2 then data.value else null end) as ChangeAdditionalPFG2
+	from
+		#data as data
+		inner join reg.EstimatedLine as el on el.id = data.idEstimatedLine'
+	+
+	case 
+		when @idBalancingIFDBType = 2 then
+			'
+				inner join tp.BalancingIFDB_Program as mast on 
+					mast.idOwner = '+@toolstr+'
+					and mast.idProgramOrActivity = data.idTaskCollection
+					and mast.idProgramOrActivityEntity = '+cast(@idTaskCollectionEntity as nvarchar(max))+'
+				inner join tp.BalancingIFDB_Program as par on
+					par.id = mast.idParent
+					and par.idProgramOrActivity = data.idProgram
+			'
+		else
+			'
+				left join #kvrs as kvr on kvr.idKVR = el.idKVR
+				inner join tp.BalancingIFDB_Program as mast on mast.idOwner = '+@toolstr+'
+			'
+	end
+	+
+	'
+	group by
+		'+case when @idBalancingIFDBType = 2 then @groupField else replace(@groupField,'idKVR','idRoot') end +',
+		mast.id
+	'
+
+	EXEC sp_executeSql @sql
+
+	;----------
+
+	set @sql = '
+	insert into tp.BalancingIFDB_EstimatedLine (
+		idOwner,
+		idMaster,
+		idEstimatedLine,
+		idTaskCollection,
+		idHierarchyPeriod,
+		OldValue,
+		NewValue,
+		isAdditionalNeed,
+		idAuthorityOfExpenseObligation,
+		idOKATO
+	)
+	select
+		'+@toolstr+' as idOwner,
+		t.id as idMaster,
+		data.idEstimatedLine,
+		data.idTaskCollection,
+		data.idHierarchyPeriod,
+		data.value as OldValue,
+		data.value as NewValue,
+		data.isAdditionalNeed,
+		data.idAuthorityOfExpenseObligation,
+		data.idOKATO
+	from
+		#data as data
+		inner join reg.EstimatedLine as el on el.id = data.idEstimatedLine'
+	+
+	case 
+		when @idBalancingIFDBType = 2 then
+			'
+				inner join tp.BalancingIFDB_Program as mast on 
+					mast.idOwner = '+@toolstr+'
+					and mast.idProgramOrActivity = data.idTaskCollection
+					and mast.idProgramOrActivityEntity = '+cast(@idTaskCollectionEntity as nvarchar(max))+'
+				inner join tp.BalancingIFDB_Program as par on
+					par.id = mast.idParent
+					and par.idProgramOrActivity = data.idProgram
+			'
+		else
+			'
+				left join #kvrs as kvr on kvr.idKVR = el.idKVR
+				/* inner join tp.BalancingIFDB_Program as mast on mast.idOwner = '+@toolstr+' */
+			'
+	end
+	+
+	'
+		inner join tp.BalancingIFDB_Expense as t on
+			/* t.idMaster = mast.id */
+			' +
+			case 
+				when @idBalancingIFDBType = 2 then
+					't.idMaster = mast.id'
+				else
+					't.idOwner = '+@toolstr
+			end + '
+			and (t.idExpenseObligationType is null or t.idExpenseObligationType = el.idExpenseObligationType)
+			and (t.idFinanceSource is null or t.idFinanceSource = el.idFinanceSource)
+			and (t.idKFO is null or t.idKFO = el.idKFO)
+			and (t.idKVSR is null or t.idKVSR = el.idKVSR)
+			and (t.idRZPR is null or t.idRZPR = el.idRZPR)
+			and (t.idKCSR is null or t.idKCSR = el.idKCSR)
+			and (t.idKVR is null or t.idKVR = ' + case when @idBalancingIFDBType = 2 then 'el.idKVR' else 'kvr.idRoot' end + ')
+			and (t.idKOSGU is null or t.idKOSGU = el.idKOSGU)
+			and (t.idDFK is null or t.idDFK = el.idDFK)
+			and (t.idDKR is null or t.idDKR = el.idDKR)
+			and (t.idDEK is null or t.idDEK = el.idDEK)
+			and (t.idCodeSubsidy is null or t.idCodeSubsidy = el.idCodeSubsidy)
+			and (t.idBranchCode is null or t.idBranchCode = el.idBranchCode)	
+			and (t.idAuthorityOfExpenseObligation is null or t.idAuthorityOfExpenseObligation = data.idAuthorityOfExpenseObligation)
+			and (t.idOKATO is null or t.idOKATO = data.idOKATO)	
+	'
+
+	EXEC sp_executeSql @sql
+
+	;----------
+
+	drop table #data
+	drop table #filters
+	drop table #lvalines
+	drop table #kvrs
+
+END
+
+</CreateCommand>
+    <idProgrammabilityType>1</idProgrammabilityType>
+    <Order></Order>
+    <idProject>500</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

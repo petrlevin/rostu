@@ -1,0 +1,3422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.UnitDimension" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.UnitDimension">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="OKEICode" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="3" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Symbol">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="InternationalAbbreviation" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.UnitDimension" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.UnitDimension>
+    <id>-1879048164</id>
+    <OKEICode>003</OKEICode>
+    <Caption>Миллиметр</Caption>
+    <Symbol>мм</Symbol>
+    <InternationalAbbreviation>mm</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048163</id>
+    <OKEICode>004</OKEICode>
+    <Caption>Сантиметр</Caption>
+    <Symbol>см</Symbol>
+    <InternationalAbbreviation>cm</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048162</id>
+    <OKEICode>005</OKEICode>
+    <Caption>Дециметр</Caption>
+    <Symbol>дм</Symbol>
+    <InternationalAbbreviation>dm</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048161</id>
+    <OKEICode>006</OKEICode>
+    <Caption>Метр</Caption>
+    <Symbol>м</Symbol>
+    <InternationalAbbreviation>m</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048160</id>
+    <OKEICode>008</OKEICode>
+    <Caption>Километр; тысяча метров</Caption>
+    <Symbol>км; 10^3 м</Symbol>
+    <InternationalAbbreviation>km</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048159</id>
+    <OKEICode>009</OKEICode>
+    <Caption>Мегаметр; миллион метров</Caption>
+    <Symbol>Мм; 10^6 м</Symbol>
+    <InternationalAbbreviation>Mm</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048158</id>
+    <OKEICode>017</OKEICode>
+    <Caption>Гектометр</Caption>
+    <Symbol>hm</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048157</id>
+    <OKEICode>018</OKEICode>
+    <Caption>Погонный метр</Caption>
+    <Symbol>пог. м</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048156</id>
+    <OKEICode>019</OKEICode>
+    <Caption>Тысяча погонных метров</Caption>
+    <Symbol>10^3 пог. м</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048155</id>
+    <OKEICode>020</OKEICode>
+    <Caption>Условный метр</Caption>
+    <Symbol>усл. м</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048154</id>
+    <OKEICode>039</OKEICode>
+    <Caption>Дюйм (25,4 мм)</Caption>
+    <Symbol>дюйм</Symbol>
+    <InternationalAbbreviation>in</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048153</id>
+    <OKEICode>041</OKEICode>
+    <Caption>Фут (0,3048 м)</Caption>
+    <Symbol>фут</Symbol>
+    <InternationalAbbreviation>ft</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048152</id>
+    <OKEICode>043</OKEICode>
+    <Caption>Ярд (0,9144 м)</Caption>
+    <Symbol>ярд</Symbol>
+    <InternationalAbbreviation>yd</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048151</id>
+    <OKEICode>045</OKEICode>
+    <Caption>Миля (уставная) (1609,344 м)</Caption>
+    <Symbol>mile</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048150</id>
+    <OKEICode>047</OKEICode>
+    <Caption>Морская миля (1852 м)</Caption>
+    <Symbol>миля</Symbol>
+    <InternationalAbbreviation>n mile</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048149</id>
+    <OKEICode>048</OKEICode>
+    <Caption>Тысяча условных метров</Caption>
+    <Symbol>10^3 усл. м</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048148</id>
+    <OKEICode>049</OKEICode>
+    <Caption>Километр условных труб</Caption>
+    <Symbol>км усл. труб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048147</id>
+    <OKEICode>050</OKEICode>
+    <Caption>Квадратный миллиметр</Caption>
+    <Symbol>мм^2</Symbol>
+    <InternationalAbbreviation>mm^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048146</id>
+    <OKEICode>051</OKEICode>
+    <Caption>Квадратный сантиметр</Caption>
+    <Symbol>см^2</Symbol>
+    <InternationalAbbreviation>cm^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048145</id>
+    <OKEICode>053</OKEICode>
+    <Caption>Квадратный дециметр</Caption>
+    <Symbol>дм^2</Symbol>
+    <InternationalAbbreviation>dm^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048144</id>
+    <OKEICode>054</OKEICode>
+    <Caption>Тысяча квадратных дециметров</Caption>
+    <Symbol>10^3 дм^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048143</id>
+    <OKEICode>055</OKEICode>
+    <Caption>Квадратный метр</Caption>
+    <Symbol>м^2</Symbol>
+    <InternationalAbbreviation>m^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048142</id>
+    <OKEICode>056</OKEICode>
+    <Caption>Миллион квадратных дециметров</Caption>
+    <Symbol>10^6 дм^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048141</id>
+    <OKEICode>057</OKEICode>
+    <Caption>Миллион квадратных метров</Caption>
+    <Symbol>10^6 м^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048140</id>
+    <OKEICode>058</OKEICode>
+    <Caption>Тысяча квадратных метров</Caption>
+    <Symbol>10^3 м^2</Symbol>
+    <InternationalAbbreviation>daa</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048139</id>
+    <OKEICode>059</OKEICode>
+    <Caption>Гектар</Caption>
+    <Symbol>га</Symbol>
+    <InternationalAbbreviation>ha</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048138</id>
+    <OKEICode>060</OKEICode>
+    <Caption>Тысяча гектаров</Caption>
+    <Symbol>10^3 га</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048137</id>
+    <OKEICode>061</OKEICode>
+    <Caption>Квадратный километр</Caption>
+    <Symbol>км^2</Symbol>
+    <InternationalAbbreviation>km^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048136</id>
+    <OKEICode>062</OKEICode>
+    <Caption>Условный квадратный метр</Caption>
+    <Symbol>усл. м^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048135</id>
+    <OKEICode>063</OKEICode>
+    <Caption>Тысяча условных квадратных метров</Caption>
+    <Symbol>10^3 усл. м^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048134</id>
+    <OKEICode>064</OKEICode>
+    <Caption>Миллион условных квадратных метров</Caption>
+    <Symbol>10^6 усл. м^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048133</id>
+    <OKEICode>071</OKEICode>
+    <Caption>Квадратный дюйм (645,16 мм2)</Caption>
+    <Symbol>дюйм^2</Symbol>
+    <InternationalAbbreviation>in^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048132</id>
+    <OKEICode>073</OKEICode>
+    <Caption>Квадратный фут (0,092903 м2)</Caption>
+    <Symbol>фут^2</Symbol>
+    <InternationalAbbreviation>ft^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048131</id>
+    <OKEICode>075</OKEICode>
+    <Caption>Квадратный ярд (0,8361274 м2)</Caption>
+    <Symbol>ярд^2</Symbol>
+    <InternationalAbbreviation>yd^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048130</id>
+    <OKEICode>077</OKEICode>
+    <Caption>Акр (4840 квадратных ярдов)</Caption>
+    <Symbol>acre</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048129</id>
+    <OKEICode>079</OKEICode>
+    <Caption>Квадратная миля</Caption>
+    <Symbol>mile^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048128</id>
+    <OKEICode>081</OKEICode>
+    <Caption>Квадратный метр общей площади</Caption>
+    <Symbol>м^2 общ. пл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048127</id>
+    <OKEICode>082</OKEICode>
+    <Caption>Тысяча квадратных метров общей площади</Caption>
+    <Symbol>10^3 м^2 общ. пл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048126</id>
+    <OKEICode>083</OKEICode>
+    <Caption>Миллион квадратных метров общей площади</Caption>
+    <Symbol>10^6 м^2 общ. пл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048125</id>
+    <OKEICode>084</OKEICode>
+    <Caption>Квадратный метр жилой площади</Caption>
+    <Symbol>м^2 жил. пл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048124</id>
+    <OKEICode>085</OKEICode>
+    <Caption>Тысяча квадратных метров жилой площади</Caption>
+    <Symbol>10^3 м^2 жил. пл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048123</id>
+    <OKEICode>086</OKEICode>
+    <Caption>Миллион квадратных метров жилой площади</Caption>
+    <Symbol>10^6 м^2 жил. пл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048122</id>
+    <OKEICode>087</OKEICode>
+    <Caption>Квадратный метр учебно-лабораторных зданий</Caption>
+    <Symbol>м^2 уч. лаб. здан</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048121</id>
+    <OKEICode>088</OKEICode>
+    <Caption>Тысяча квадратных метров учебно-лабораторных зданий</Caption>
+    <Symbol>10^3 м^2 уч. лаб. здан</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048120</id>
+    <OKEICode>089</OKEICode>
+    <Caption>Миллион квадратных метров в двухмилли-метровом исчислении</Caption>
+    <Symbol>10^6 м^2 ^2 мм исч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048119</id>
+    <OKEICode>109</OKEICode>
+    <Caption>Ар (100 м2)</Caption>
+    <Symbol>а</Symbol>
+    <InternationalAbbreviation>a</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048118</id>
+    <OKEICode>110</OKEICode>
+    <Caption>Кубический миллиметр</Caption>
+    <Symbol>мм^3</Symbol>
+    <InternationalAbbreviation>mm^3</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048117</id>
+    <OKEICode>111</OKEICode>
+    <Caption>Кубический сантиметр; миллилитр</Caption>
+    <Symbol>см^3; мл</Symbol>
+    <InternationalAbbreviation>cm^3; ml</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048116</id>
+    <OKEICode>112</OKEICode>
+    <Caption>Литр; кубический дециметр</Caption>
+    <Symbol>л; дм^3</Symbol>
+    <InternationalAbbreviation>I; L; dm^3</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048115</id>
+    <OKEICode>113</OKEICode>
+    <Caption>Кубический метр</Caption>
+    <Symbol>м^3</Symbol>
+    <InternationalAbbreviation>m^3</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048114</id>
+    <OKEICode>114</OKEICode>
+    <Caption>Тысяча кубических метров</Caption>
+    <Symbol>10^3 м^3</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048113</id>
+    <OKEICode>115</OKEICode>
+    <Caption>Миллиард кубических метров</Caption>
+    <Symbol>10^9 м^3</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048112</id>
+    <OKEICode>116</OKEICode>
+    <Caption>Декалитр</Caption>
+    <Symbol>дкл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048111</id>
+    <OKEICode>118</OKEICode>
+    <Caption>Децилитр</Caption>
+    <Symbol>дл</Symbol>
+    <InternationalAbbreviation>dl</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048110</id>
+    <OKEICode>119</OKEICode>
+    <Caption>Тысяча декалитров</Caption>
+    <Symbol>10^3 дкл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048109</id>
+    <OKEICode>120</OKEICode>
+    <Caption>Миллион декалитров</Caption>
+    <Symbol>10^6 дкл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048108</id>
+    <OKEICode>121</OKEICode>
+    <Caption>Плотный кубический метр</Caption>
+    <Symbol>плотн. М^3</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048107</id>
+    <OKEICode>122</OKEICode>
+    <Caption>Гектолитр</Caption>
+    <Symbol>гл</Symbol>
+    <InternationalAbbreviation>hl</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048106</id>
+    <OKEICode>123</OKEICode>
+    <Caption>Условный кубический метр</Caption>
+    <Symbol>усл. м^3</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048105</id>
+    <OKEICode>124</OKEICode>
+    <Caption>Тысяча условных кубических метров</Caption>
+    <Symbol>10^3 усл. м^3</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048104</id>
+    <OKEICode>125</OKEICode>
+    <Caption>Миллион кубических метров переработки газа</Caption>
+    <Symbol>10^6 м^3 пере-раб. газа</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048103</id>
+    <OKEICode>126</OKEICode>
+    <Caption>Мегалитр</Caption>
+    <Symbol>Мл</Symbol>
+    <InternationalAbbreviation>Ml</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048102</id>
+    <OKEICode>127</OKEICode>
+    <Caption>Тысяча плотных кубических метров</Caption>
+    <Symbol>10^3 плотн. м^3</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048101</id>
+    <OKEICode>128</OKEICode>
+    <Caption>Тысяча полулитров</Caption>
+    <Symbol>10^3 пол. л</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048100</id>
+    <OKEICode>129</OKEICode>
+    <Caption>Миллион полулитров</Caption>
+    <Symbol>10^6 пол. л</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048099</id>
+    <OKEICode>130</OKEICode>
+    <Caption>Тысяча литров; 1000 литров</Caption>
+    <Symbol>10^3 л; 1000 л</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048098</id>
+    <OKEICode>131</OKEICode>
+    <Caption>Кубический дюйм (16387,1 мм3)</Caption>
+    <Symbol>дюйм^3</Symbol>
+    <InternationalAbbreviation>in^3</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048097</id>
+    <OKEICode>132</OKEICode>
+    <Caption>Кубический фут (0,02831685 м3)</Caption>
+    <Symbol>фут^3</Symbol>
+    <InternationalAbbreviation>ft^3</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048096</id>
+    <OKEICode>133</OKEICode>
+    <Caption>Кубический ярд (0,764555 м3)</Caption>
+    <Symbol>ярд^3</Symbol>
+    <InternationalAbbreviation>yd^3</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048095</id>
+    <OKEICode>135</OKEICode>
+    <Caption>Жидкостная унция СК (28,413 см3)</Caption>
+    <Symbol>fl oz (UK)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048094</id>
+    <OKEICode>136</OKEICode>
+    <Caption>Джилл СК (0,142065 дм3)</Caption>
+    <Symbol>gill (UK)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048093</id>
+    <OKEICode>137</OKEICode>
+    <Caption>Пинта СК (0,568262 дм3)</Caption>
+    <Symbol>pt (UK)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048092</id>
+    <OKEICode>138</OKEICode>
+    <Caption>Кварта СК (1,136523 дм3)</Caption>
+    <Symbol>qt (UK)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048091</id>
+    <OKEICode>139</OKEICode>
+    <Caption>Галлон СК (4,546092 дм3)</Caption>
+    <Symbol>gal (UK)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048090</id>
+    <OKEICode>140</OKEICode>
+    <Caption>Бушель СК (36,36874 дм3)</Caption>
+    <Symbol>bu (UK)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048089</id>
+    <OKEICode>141</OKEICode>
+    <Caption>Жидкостная унция США (29,5735 см3)</Caption>
+    <Symbol>fl oz (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048088</id>
+    <OKEICode>142</OKEICode>
+    <Caption>Джилл США (11,8294 см3)</Caption>
+    <Symbol>gill (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048087</id>
+    <OKEICode>143</OKEICode>
+    <Caption>Жидкостная пинта США (0,473176 дм3)</Caption>
+    <Symbol>liq pt (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048086</id>
+    <OKEICode>144</OKEICode>
+    <Caption>Жидкостная кварта США (0,946353 дм3)</Caption>
+    <Symbol>liq qt (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048085</id>
+    <OKEICode>145</OKEICode>
+    <Caption>Жидкостный галлон США (3,78541 дм3)</Caption>
+    <Symbol>gal (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048084</id>
+    <OKEICode>146</OKEICode>
+    <Caption>Баррель (нефтяной) США (158,987 дм3)</Caption>
+    <Symbol>barrel (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048083</id>
+    <OKEICode>147</OKEICode>
+    <Caption>Сухая пинта США (0,55061 дм3)</Caption>
+    <Symbol>dry pt (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048082</id>
+    <OKEICode>148</OKEICode>
+    <Caption>Сухая кварта США (1,101221 дм3)</Caption>
+    <Symbol>dry qt (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048081</id>
+    <OKEICode>149</OKEICode>
+    <Caption>Сухой галлон США (4,404884 дм3)</Caption>
+    <Symbol>dry gal (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048080</id>
+    <OKEICode>150</OKEICode>
+    <Caption>Бушель США (35,2391 дм3)</Caption>
+    <Symbol>bu (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048079</id>
+    <OKEICode>151</OKEICode>
+    <Caption>Сухой баррель США (115,627 дм3)</Caption>
+    <Symbol>bbl (US)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048078</id>
+    <OKEICode>152</OKEICode>
+    <Caption>Стандарт</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048077</id>
+    <OKEICode>153</OKEICode>
+    <Caption>Корд (3,63 м3)</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048076</id>
+    <OKEICode>154</OKEICode>
+    <Caption>Тысячи бордфутов (2,36 м3)</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048075</id>
+    <OKEICode>159</OKEICode>
+    <Caption>Миллион кубических метров</Caption>
+    <Symbol>10^6 м^3</Symbol>
+    <InternationalAbbreviation>10^6 m^3</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048074</id>
+    <OKEICode>160</OKEICode>
+    <Caption>Гектограмм</Caption>
+    <Symbol>гг</Symbol>
+    <InternationalAbbreviation>hg</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048073</id>
+    <OKEICode>161</OKEICode>
+    <Caption>Миллиграмм</Caption>
+    <Symbol>мг</Symbol>
+    <InternationalAbbreviation>mg</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048072</id>
+    <OKEICode>162</OKEICode>
+    <Caption>Метрический карат (1 карат = 200 мг = 2 x 10-4 кг)</Caption>
+    <Symbol>кар</Symbol>
+    <InternationalAbbreviation>МС</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048071</id>
+    <OKEICode>163</OKEICode>
+    <Caption>Грамм</Caption>
+    <Symbol>г</Symbol>
+    <InternationalAbbreviation>g</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048070</id>
+    <OKEICode>165</OKEICode>
+    <Caption>Тысяча каратов метрических</Caption>
+    <Symbol>10^3 кар</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048069</id>
+    <OKEICode>166</OKEICode>
+    <Caption>Килограмм</Caption>
+    <Symbol>кг</Symbol>
+    <InternationalAbbreviation>kg</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048068</id>
+    <OKEICode>167</OKEICode>
+    <Caption>Миллион каратов метрических</Caption>
+    <Symbol>10^6 кар</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048067</id>
+    <OKEICode>168</OKEICode>
+    <Caption>Тонна; метрическая тонна (1000 кг)</Caption>
+    <Symbol>т</Symbol>
+    <InternationalAbbreviation>t</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048066</id>
+    <OKEICode>169</OKEICode>
+    <Caption>Тысяча тонн</Caption>
+    <Symbol>10^3 т</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048065</id>
+    <OKEICode>170</OKEICode>
+    <Caption>Килотонна</Caption>
+    <Symbol>10^3 т</Symbol>
+    <InternationalAbbreviation>kt</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048064</id>
+    <OKEICode>171</OKEICode>
+    <Caption>Миллион тонн</Caption>
+    <Symbol>10^6 т</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048063</id>
+    <OKEICode>172</OKEICode>
+    <Caption>Тонна условного топлива</Caption>
+    <Symbol>т усл. топл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048062</id>
+    <OKEICode>173</OKEICode>
+    <Caption>Сантиграмм</Caption>
+    <Symbol>сг</Symbol>
+    <InternationalAbbreviation>cg</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048061</id>
+    <OKEICode>175</OKEICode>
+    <Caption>Тысяча тонн условного топлива</Caption>
+    <Symbol>10^3 т усл. топл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048060</id>
+    <OKEICode>176</OKEICode>
+    <Caption>Миллион тонн условного топлива</Caption>
+    <Symbol>10^6 т усл. топл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048059</id>
+    <OKEICode>177</OKEICode>
+    <Caption>Тысяча тонн единовременного хранения</Caption>
+    <Symbol>10^3 т единовр. хран</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048058</id>
+    <OKEICode>178</OKEICode>
+    <Caption>Тысяча тонн переработки</Caption>
+    <Symbol>10^3 т перераб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048057</id>
+    <OKEICode>179</OKEICode>
+    <Caption>Условная тонна</Caption>
+    <Symbol>усл. т</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048056</id>
+    <OKEICode>181</OKEICode>
+    <Caption>Брутто-регистровая тонна (2,8316 м3)</Caption>
+    <Symbol>БРТ</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048055</id>
+    <OKEICode>182</OKEICode>
+    <Caption>Нетто-регистровая тонна</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048054</id>
+    <OKEICode>183</OKEICode>
+    <Caption>Обмерная (фрахтовая) тонна</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048053</id>
+    <OKEICode>184</OKEICode>
+    <Caption>Водоизмещение</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048052</id>
+    <OKEICode>185</OKEICode>
+    <Caption>Грузоподъемность в метрических тоннах</Caption>
+    <Symbol>т грп</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048051</id>
+    <OKEICode>186</OKEICode>
+    <Caption>Фунт СК, США (0,45359237 кг)</Caption>
+    <Symbol>lb</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048050</id>
+    <OKEICode>187</OKEICode>
+    <Caption>Унция СК, США (28,349523 г)</Caption>
+    <Symbol>oz</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048049</id>
+    <OKEICode>188</OKEICode>
+    <Caption>Драхма СК (1,771745 г)</Caption>
+    <Symbol>dr</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048048</id>
+    <OKEICode>189</OKEICode>
+    <Caption>Гран СК, США (64,798910 мг)</Caption>
+    <Symbol>gn</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048047</id>
+    <OKEICode>190</OKEICode>
+    <Caption>Стоун СК (6,350293 кг)</Caption>
+    <Symbol>st</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048046</id>
+    <OKEICode>191</OKEICode>
+    <Caption>Квартер СК (12,700586 кг)</Caption>
+    <Symbol>qtr</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048045</id>
+    <OKEICode>192</OKEICode>
+    <Caption>Центал СК (45,359237 кг)</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048044</id>
+    <OKEICode>193</OKEICode>
+    <Caption>Центнер США (45,3592 кг)</Caption>
+    <Symbol>cwt</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048043</id>
+    <OKEICode>194</OKEICode>
+    <Caption>Длинный центнер СК (50,802345 кг)</Caption>
+    <Symbol>cwt (UK)</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048042</id>
+    <OKEICode>195</OKEICode>
+    <Caption>Короткая тонна СК, США (0,90718474 т) [2*]</Caption>
+    <Symbol>sht</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048041</id>
+    <OKEICode>196</OKEICode>
+    <Caption>Длинная тонна СК, США (1,0160469 т) [2*]</Caption>
+    <Symbol>lt</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048040</id>
+    <OKEICode>197</OKEICode>
+    <Caption>Скрупул СК, США (1,295982 г)</Caption>
+    <Symbol>scr</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048039</id>
+    <OKEICode>198</OKEICode>
+    <Caption>Пеннивейт СК, США (1,555174 г)</Caption>
+    <Symbol>dwt</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048038</id>
+    <OKEICode>199</OKEICode>
+    <Caption>Драхма СК (3,887935 г)</Caption>
+    <Symbol>drm</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048037</id>
+    <OKEICode>200</OKEICode>
+    <Caption>Драхма США (3,887935 г)</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048036</id>
+    <OKEICode>201</OKEICode>
+    <Caption>Унция СК, США (31,10348 г); тройская унция</Caption>
+    <Symbol>apoz</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048035</id>
+    <OKEICode>202</OKEICode>
+    <Caption>Тройский фунт США (373,242 г)</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048034</id>
+    <OKEICode>206</OKEICode>
+    <Caption>Центнер (метрический) (100 кг); гектокилограмм; квинтал1 (метрический); децитонна</Caption>
+    <Symbol>ц</Symbol>
+    <InternationalAbbreviation>q; 10^2 kg</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048033</id>
+    <OKEICode>207</OKEICode>
+    <Caption>Тысяча центнеров</Caption>
+    <Symbol>10^3 ц</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048032</id>
+    <OKEICode>212</OKEICode>
+    <Caption>Ватт</Caption>
+    <Symbol>Вт</Symbol>
+    <InternationalAbbreviation>W</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048031</id>
+    <OKEICode>213</OKEICode>
+    <Caption>Эффективная мощность (245,7 ватт)</Caption>
+    <Symbol>B.h.p.</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048030</id>
+    <OKEICode>214</OKEICode>
+    <Caption>Киловатт</Caption>
+    <Symbol>кВт</Symbol>
+    <InternationalAbbreviation>kW</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048029</id>
+    <OKEICode>215</OKEICode>
+    <Caption>тысяча киловатт</Caption>
+    <Symbol>10^3 кВт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048028</id>
+    <OKEICode>222</OKEICode>
+    <Caption>Вольт</Caption>
+    <Symbol>В</Symbol>
+    <InternationalAbbreviation>V</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048027</id>
+    <OKEICode>223</OKEICode>
+    <Caption>Киловольт</Caption>
+    <Symbol>кВ</Symbol>
+    <InternationalAbbreviation>kV</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048026</id>
+    <OKEICode>226</OKEICode>
+    <Caption>Вольт-ампер</Caption>
+    <Symbol>В.А</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048025</id>
+    <OKEICode>227</OKEICode>
+    <Caption>Киловольт-ампер</Caption>
+    <Symbol>кВ.А</Symbol>
+    <InternationalAbbreviation>kV.A</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048024</id>
+    <OKEICode>228</OKEICode>
+    <Caption>Мегавольт-ампер (тысяча киловольт-ампер)</Caption>
+    <Symbol>МВ.А</Symbol>
+    <InternationalAbbreviation>MV.A</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048023</id>
+    <OKEICode>230</OKEICode>
+    <Caption>Киловар</Caption>
+    <Symbol>квар</Symbol>
+    <InternationalAbbreviation>kVAR</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048022</id>
+    <OKEICode>231</OKEICode>
+    <Caption>Метр в час</Caption>
+    <Symbol>м/ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048021</id>
+    <OKEICode>232</OKEICode>
+    <Caption>Килокалория</Caption>
+    <Symbol>ккал</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048020</id>
+    <OKEICode>233</OKEICode>
+    <Caption>Гигакалория</Caption>
+    <Symbol>Гкал</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048019</id>
+    <OKEICode>234</OKEICode>
+    <Caption>Тысяча гигакалорий</Caption>
+    <Symbol>10^3 Гкал</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048018</id>
+    <OKEICode>235</OKEICode>
+    <Caption>Миллион гигакалорий</Caption>
+    <Symbol>10^6 Гкал</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048017</id>
+    <OKEICode>236</OKEICode>
+    <Caption>Калория в час</Caption>
+    <Symbol>кал/ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048016</id>
+    <OKEICode>237</OKEICode>
+    <Caption>Килокалория в час</Caption>
+    <Symbol>ккал/ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048015</id>
+    <OKEICode>238</OKEICode>
+    <Caption>Гигакалория в час</Caption>
+    <Symbol>Гкал/ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048014</id>
+    <OKEICode>239</OKEICode>
+    <Caption>Тысяча гигакалорий в час</Caption>
+    <Symbol>10^3 Гкал/ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048013</id>
+    <OKEICode>241</OKEICode>
+    <Caption>Миллион ампер-часов</Caption>
+    <Symbol>10^6 А.ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048012</id>
+    <OKEICode>242</OKEICode>
+    <Caption>Миллион киловольт-ампер</Caption>
+    <Symbol>10^6 кВ.А</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048011</id>
+    <OKEICode>243</OKEICode>
+    <Caption>Ватт-час</Caption>
+    <Symbol>Вт.ч</Symbol>
+    <InternationalAbbreviation>W.h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048010</id>
+    <OKEICode>245</OKEICode>
+    <Caption>Киловатт-час</Caption>
+    <Symbol>кВт.ч</Symbol>
+    <InternationalAbbreviation>kW.h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048009</id>
+    <OKEICode>246</OKEICode>
+    <Caption>Мегаватт-час; 1000 киловатт-часов</Caption>
+    <Symbol>МВт.ч; 10^3 кВт.ч</Symbol>
+    <InternationalAbbreviation>МW.h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048008</id>
+    <OKEICode>247</OKEICode>
+    <Caption>Гигаватт-час (миллион киловатт-часов)</Caption>
+    <Symbol>ГВт.ч</Symbol>
+    <InternationalAbbreviation>GW.h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048007</id>
+    <OKEICode>248</OKEICode>
+    <Caption>Киловольт-ампер реактивный</Caption>
+    <Symbol>кВ.А Р</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048006</id>
+    <OKEICode>249</OKEICode>
+    <Caption>Миллиард киловатт-часов</Caption>
+    <Symbol>10^9 кВт.ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048005</id>
+    <OKEICode>250</OKEICode>
+    <Caption>Тысяча киловольт-ампер реактивных</Caption>
+    <Symbol>10^3 кВ.А Р</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048004</id>
+    <OKEICode>251</OKEICode>
+    <Caption>Лошадиная сила</Caption>
+    <Symbol>л. с</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048003</id>
+    <OKEICode>252</OKEICode>
+    <Caption>Тысяча лошадиных сил</Caption>
+    <Symbol>10^3 л. с</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048002</id>
+    <OKEICode>253</OKEICode>
+    <Caption>Миллион лошадиных сил</Caption>
+    <Symbol>10^6 л. с</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048001</id>
+    <OKEICode>254</OKEICode>
+    <Caption>Бит</Caption>
+    <Symbol>бит</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879048000</id>
+    <OKEICode>255</OKEICode>
+    <Caption>Байт</Caption>
+    <Symbol>бай</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047999</id>
+    <OKEICode>256</OKEICode>
+    <Caption>Килобайт</Caption>
+    <Symbol>кбайт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047998</id>
+    <OKEICode>257</OKEICode>
+    <Caption>Мегабайт</Caption>
+    <Symbol>Мбайт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047997</id>
+    <OKEICode>258</OKEICode>
+    <Caption>Бод</Caption>
+    <Symbol>бод</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047996</id>
+    <OKEICode>260</OKEICode>
+    <Caption>Ампер</Caption>
+    <Symbol>А</Symbol>
+    <InternationalAbbreviation>A</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047995</id>
+    <OKEICode>263</OKEICode>
+    <Caption>Ампер-час (3,6 кКл)</Caption>
+    <Symbol>А.ч</Symbol>
+    <InternationalAbbreviation>A.h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047994</id>
+    <OKEICode>264</OKEICode>
+    <Caption>Тысяча ампер-часов</Caption>
+    <Symbol>10^3 А.ч</Symbol>
+    <InternationalAbbreviation>10^3 A.h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047993</id>
+    <OKEICode>270</OKEICode>
+    <Caption>Кулон</Caption>
+    <Symbol>Кл</Symbol>
+    <InternationalAbbreviation>C</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047992</id>
+    <OKEICode>271</OKEICode>
+    <Caption>Джоуль</Caption>
+    <Symbol>Дж</Symbol>
+    <InternationalAbbreviation>J</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047991</id>
+    <OKEICode>273</OKEICode>
+    <Caption>Килоджоуль</Caption>
+    <Symbol>кДж</Symbol>
+    <InternationalAbbreviation>kJ</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047990</id>
+    <OKEICode>274</OKEICode>
+    <Caption>Ом</Caption>
+    <Symbol>Ом</Symbol>
+    <InternationalAbbreviation>&lt;омега&gt;</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047989</id>
+    <OKEICode>275</OKEICode>
+    <Caption>Британская тепловая единица (1,055 кДж)</Caption>
+    <Symbol>Btu</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047988</id>
+    <OKEICode>280</OKEICode>
+    <Caption>Градус Цельсия</Caption>
+    <Symbol>град. C</Symbol>
+    <InternationalAbbreviation>град. C</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047987</id>
+    <OKEICode>281</OKEICode>
+    <Caption>Градус Фаренгейта</Caption>
+    <Symbol>град. F</Symbol>
+    <InternationalAbbreviation>град. F</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047986</id>
+    <OKEICode>282</OKEICode>
+    <Caption>Кандела</Caption>
+    <Symbol>кд</Symbol>
+    <InternationalAbbreviation>cd</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047985</id>
+    <OKEICode>283</OKEICode>
+    <Caption>Люкс</Caption>
+    <Symbol>лк</Symbol>
+    <InternationalAbbreviation>lx</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047984</id>
+    <OKEICode>284</OKEICode>
+    <Caption>Люмен</Caption>
+    <Symbol>лм</Symbol>
+    <InternationalAbbreviation>lm</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047983</id>
+    <OKEICode>287</OKEICode>
+    <Caption>Генри</Caption>
+    <Symbol>Гн</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047982</id>
+    <OKEICode>288</OKEICode>
+    <Caption>Кельвин</Caption>
+    <Symbol>K</Symbol>
+    <InternationalAbbreviation>K</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047981</id>
+    <OKEICode>289</OKEICode>
+    <Caption>Ньютон</Caption>
+    <Symbol>Н</Symbol>
+    <InternationalAbbreviation>N</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047980</id>
+    <OKEICode>290</OKEICode>
+    <Caption>Герц</Caption>
+    <Symbol>Гц</Symbol>
+    <InternationalAbbreviation>Hz</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047979</id>
+    <OKEICode>291</OKEICode>
+    <Caption>Килогерц</Caption>
+    <Symbol>кГц</Symbol>
+    <InternationalAbbreviation>kHz</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047978</id>
+    <OKEICode>292</OKEICode>
+    <Caption>Мегагерц</Caption>
+    <Symbol>МГц</Symbol>
+    <InternationalAbbreviation>MHz</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047977</id>
+    <OKEICode>294</OKEICode>
+    <Caption>Паскаль</Caption>
+    <Symbol>Па</Symbol>
+    <InternationalAbbreviation>Pa</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047976</id>
+    <OKEICode>296</OKEICode>
+    <Caption>Сименс</Caption>
+    <Symbol>См</Symbol>
+    <InternationalAbbreviation>S</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047975</id>
+    <OKEICode>297</OKEICode>
+    <Caption>Килопаскаль</Caption>
+    <Symbol>кПа</Symbol>
+    <InternationalAbbreviation>kPa</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047974</id>
+    <OKEICode>298</OKEICode>
+    <Caption>Мегапаскаль</Caption>
+    <Symbol>МПа</Symbol>
+    <InternationalAbbreviation>MPa</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047973</id>
+    <OKEICode>300</OKEICode>
+    <Caption>Физическая атмосфера (101325 Па)</Caption>
+    <Symbol>атм</Symbol>
+    <InternationalAbbreviation>atm</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047972</id>
+    <OKEICode>301</OKEICode>
+    <Caption>Техническая атмосфера (98066,5 Па)</Caption>
+    <Symbol>ат</Symbol>
+    <InternationalAbbreviation>at</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047971</id>
+    <OKEICode>302</OKEICode>
+    <Caption>Гигабеккерель</Caption>
+    <Symbol>ГБк</Symbol>
+    <InternationalAbbreviation>GBq</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047970</id>
+    <OKEICode>304</OKEICode>
+    <Caption>Милликюри</Caption>
+    <Symbol>мКи</Symbol>
+    <InternationalAbbreviation>mCi</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047969</id>
+    <OKEICode>305</OKEICode>
+    <Caption>Кюри</Caption>
+    <Symbol>Ки</Symbol>
+    <InternationalAbbreviation>Ci</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047968</id>
+    <OKEICode>306</OKEICode>
+    <Caption>Грамм делящихся изотопов</Caption>
+    <Symbol>г Д/И</Symbol>
+    <InternationalAbbreviation>g fissile isotopes</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047967</id>
+    <OKEICode>308</OKEICode>
+    <Caption>Миллибар</Caption>
+    <Symbol>мб</Symbol>
+    <InternationalAbbreviation>mbar</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047966</id>
+    <OKEICode>309</OKEICode>
+    <Caption>Бар</Caption>
+    <Symbol>бар</Symbol>
+    <InternationalAbbreviation>bar</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047965</id>
+    <OKEICode>310</OKEICode>
+    <Caption>Гектобар</Caption>
+    <Symbol>гб</Symbol>
+    <InternationalAbbreviation>hbar</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047964</id>
+    <OKEICode>312</OKEICode>
+    <Caption>Килобар</Caption>
+    <Symbol>кб</Symbol>
+    <InternationalAbbreviation>kbar</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047963</id>
+    <OKEICode>313</OKEICode>
+    <Caption>Тесла</Caption>
+    <Symbol>Тл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047962</id>
+    <OKEICode>314</OKEICode>
+    <Caption>Фарад</Caption>
+    <Symbol>Ф</Symbol>
+    <InternationalAbbreviation>F</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047961</id>
+    <OKEICode>316</OKEICode>
+    <Caption>Килограмм на кубический метр</Caption>
+    <Symbol>кг/м^3</Symbol>
+    <InternationalAbbreviation>kg/m^3</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047960</id>
+    <OKEICode>317</OKEICode>
+    <Caption>Килограмм на квадратный сантиметр</Caption>
+    <Symbol>кг/см^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047959</id>
+    <OKEICode>323</OKEICode>
+    <Caption>Беккерель</Caption>
+    <Symbol>Бк</Symbol>
+    <InternationalAbbreviation>Bq</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047958</id>
+    <OKEICode>324</OKEICode>
+    <Caption>Вебер</Caption>
+    <Symbol>Вб</Symbol>
+    <InternationalAbbreviation>Wb</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047957</id>
+    <OKEICode>327</OKEICode>
+    <Caption>Узел (миля/ч)</Caption>
+    <Symbol>уз</Symbol>
+    <InternationalAbbreviation>kn</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047956</id>
+    <OKEICode>328</OKEICode>
+    <Caption>Метр в секунду</Caption>
+    <Symbol>м/с</Symbol>
+    <InternationalAbbreviation>m/s</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047955</id>
+    <OKEICode>330</OKEICode>
+    <Caption>Оборот в секунду</Caption>
+    <Symbol>об/с</Symbol>
+    <InternationalAbbreviation>r/s</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047954</id>
+    <OKEICode>331</OKEICode>
+    <Caption>Оборот в минуту</Caption>
+    <Symbol>об/мин</Symbol>
+    <InternationalAbbreviation>r/min</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047953</id>
+    <OKEICode>333</OKEICode>
+    <Caption>Километр в час</Caption>
+    <Symbol>км/ч</Symbol>
+    <InternationalAbbreviation>km/h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047952</id>
+    <OKEICode>335</OKEICode>
+    <Caption>Метр на секунду в квадрате</Caption>
+    <Symbol>м/с^2</Symbol>
+    <InternationalAbbreviation>m/s^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047951</id>
+    <OKEICode>337</OKEICode>
+    <Caption>Миллиметр водяного столба</Caption>
+    <Symbol>мм вод. ст</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047950</id>
+    <OKEICode>338</OKEICode>
+    <Caption>Миллиметр ртутного столба</Caption>
+    <Symbol>мм рт. ст</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047949</id>
+    <OKEICode>339</OKEICode>
+    <Caption>Сантиметр водяного столба</Caption>
+    <Symbol>см вод. ст</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047948</id>
+    <OKEICode>349</OKEICode>
+    <Caption>Кулон на килограмм</Caption>
+    <Symbol>Кл/кг</Symbol>
+    <InternationalAbbreviation>C/kg</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047947</id>
+    <OKEICode>352</OKEICode>
+    <Caption>Микросекунда</Caption>
+    <Symbol>мкс</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047946</id>
+    <OKEICode>353</OKEICode>
+    <Caption>Миллисекунда</Caption>
+    <Symbol>млс</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047945</id>
+    <OKEICode>354</OKEICode>
+    <Caption>Секунда</Caption>
+    <Symbol>с</Symbol>
+    <InternationalAbbreviation>s</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047944</id>
+    <OKEICode>355</OKEICode>
+    <Caption>Минута</Caption>
+    <Symbol>мин</Symbol>
+    <InternationalAbbreviation>min</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047943</id>
+    <OKEICode>356</OKEICode>
+    <Caption>Час</Caption>
+    <Symbol>ч</Symbol>
+    <InternationalAbbreviation>h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047942</id>
+    <OKEICode>359</OKEICode>
+    <Caption>Сутки</Caption>
+    <Symbol>сут; дн</Symbol>
+    <InternationalAbbreviation>d</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047941</id>
+    <OKEICode>360</OKEICode>
+    <Caption>Неделя</Caption>
+    <Symbol>нед</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047940</id>
+    <OKEICode>361</OKEICode>
+    <Caption>Декада</Caption>
+    <Symbol>дек</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047939</id>
+    <OKEICode>362</OKEICode>
+    <Caption>Месяц</Caption>
+    <Symbol>мес</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047938</id>
+    <OKEICode>364</OKEICode>
+    <Caption>Квартал</Caption>
+    <Symbol>кварт</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047937</id>
+    <OKEICode>365</OKEICode>
+    <Caption>Полугодие</Caption>
+    <Symbol>полгода</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047936</id>
+    <OKEICode>366</OKEICode>
+    <Caption>Год</Caption>
+    <Symbol>г; лет</Symbol>
+    <InternationalAbbreviation>a</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047935</id>
+    <OKEICode>368</OKEICode>
+    <Caption>Десятилетие</Caption>
+    <Symbol>деслет</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047934</id>
+    <OKEICode>383</OKEICode>
+    <Caption>Рубль</Caption>
+    <Symbol>руб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047933</id>
+    <OKEICode>384</OKEICode>
+    <Caption>Тысяча рублей</Caption>
+    <Symbol>10^3 руб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047932</id>
+    <OKEICode>385</OKEICode>
+    <Caption>Миллион рублей</Caption>
+    <Symbol>10^6 руб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047931</id>
+    <OKEICode>386</OKEICode>
+    <Caption>Миллиард рублей</Caption>
+    <Symbol>10^9 руб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047930</id>
+    <OKEICode>387</OKEICode>
+    <Caption>Триллион рублей</Caption>
+    <Symbol>101^2 руб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047929</id>
+    <OKEICode>388</OKEICode>
+    <Caption>Квадрильон рублей</Caption>
+    <Symbol>10^15 руб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047928</id>
+    <OKEICode>414</OKEICode>
+    <Caption>Пассажиро-километр</Caption>
+    <Symbol>пасс.км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047927</id>
+    <OKEICode>421</OKEICode>
+    <Caption>Пассажирское место (пассажирских мест)</Caption>
+    <Symbol>пасс. мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047926</id>
+    <OKEICode>423</OKEICode>
+    <Caption>Тысяча пассажиро-километров</Caption>
+    <Symbol>10^3 пасс.км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047925</id>
+    <OKEICode>424</OKEICode>
+    <Caption>Миллион пассажиро-километров</Caption>
+    <Symbol>10^6 пасс. км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047924</id>
+    <OKEICode>427</OKEICode>
+    <Caption>Пассажиропоток</Caption>
+    <Symbol>пасс.поток</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047923</id>
+    <OKEICode>449</OKEICode>
+    <Caption>Тонно-километр</Caption>
+    <Symbol>т.км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047922</id>
+    <OKEICode>450</OKEICode>
+    <Caption>Тысяча тонно-километров</Caption>
+    <Symbol>10^3 т.км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047921</id>
+    <OKEICode>451</OKEICode>
+    <Caption>Миллион тонно-километров</Caption>
+    <Symbol>10^6 т. км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047920</id>
+    <OKEICode>479</OKEICode>
+    <Caption>Тысяча наборов</Caption>
+    <Symbol>10^3 набор</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047919</id>
+    <OKEICode>499</OKEICode>
+    <Caption>Килограмм в секунду</Caption>
+    <Symbol>кг/с</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047918</id>
+    <OKEICode>510</OKEICode>
+    <Caption>Грамм на киловатт-час</Caption>
+    <Symbol>г/кВт.ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047917</id>
+    <OKEICode>511</OKEICode>
+    <Caption>Килограмм на гигакалорию</Caption>
+    <Symbol>кг/Гкал</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047916</id>
+    <OKEICode>512</OKEICode>
+    <Caption>Тонно-номер</Caption>
+    <Symbol>т.ном</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047915</id>
+    <OKEICode>513</OKEICode>
+    <Caption>Автотонна</Caption>
+    <Symbol>авто т</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047914</id>
+    <OKEICode>514</OKEICode>
+    <Caption>Тонна тяги</Caption>
+    <Symbol>т.тяги</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047913</id>
+    <OKEICode>515</OKEICode>
+    <Caption>Дедвейт-тонна</Caption>
+    <Symbol>дедвейт.т</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047912</id>
+    <OKEICode>516</OKEICode>
+    <Caption>Тонно-танид</Caption>
+    <Symbol>т.танид</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047911</id>
+    <OKEICode>531</OKEICode>
+    <Caption>Человек на квадратный метр</Caption>
+    <Symbol>чел/м^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047910</id>
+    <OKEICode>532</OKEICode>
+    <Caption>Человек на квадратный километр</Caption>
+    <Symbol>чел/км^2</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047909</id>
+    <OKEICode>533</OKEICode>
+    <Caption>Тонна пара в час</Caption>
+    <Symbol>т пар/ч</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047908</id>
+    <OKEICode>534</OKEICode>
+    <Caption>Тонна в час</Caption>
+    <Symbol>т/ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047907</id>
+    <OKEICode>535</OKEICode>
+    <Caption>Тонна в сутки</Caption>
+    <Symbol>т/сут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047906</id>
+    <OKEICode>536</OKEICode>
+    <Caption>Тонна в смену</Caption>
+    <Symbol>т/смен</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047905</id>
+    <OKEICode>537</OKEICode>
+    <Caption>Тысяча тонн в сезон</Caption>
+    <Symbol>10^3 т/сез</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047904</id>
+    <OKEICode>538</OKEICode>
+    <Caption>Тысяча тонн в год</Caption>
+    <Symbol>10^3 т/год</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047903</id>
+    <OKEICode>539</OKEICode>
+    <Caption>Человеко-час</Caption>
+    <Symbol>чел.ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047902</id>
+    <OKEICode>540</OKEICode>
+    <Caption>Человеко-день</Caption>
+    <Symbol>чел.дн</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047901</id>
+    <OKEICode>541</OKEICode>
+    <Caption>Тысяча человеко-дней</Caption>
+    <Symbol>10^3 чел.дн</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047900</id>
+    <OKEICode>542</OKEICode>
+    <Caption>Тысяча человеко-часов</Caption>
+    <Symbol>10^3 чел.ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047899</id>
+    <OKEICode>543</OKEICode>
+    <Caption>Тысяча условных банок в смену</Caption>
+    <Symbol>10^3 усл. банк/смен</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047898</id>
+    <OKEICode>544</OKEICode>
+    <Caption>Миллион единиц в год</Caption>
+    <Symbol>10^6 ед/год</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047897</id>
+    <OKEICode>545</OKEICode>
+    <Caption>Посещение в смену</Caption>
+    <Symbol>посещ/смен</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047896</id>
+    <OKEICode>546</OKEICode>
+    <Caption>Тысяча посещений в смену</Caption>
+    <Symbol>10^3 посещ/смен</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047895</id>
+    <OKEICode>547</OKEICode>
+    <Caption>Пара в смену</Caption>
+    <Symbol>пар/смен</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047894</id>
+    <OKEICode>548</OKEICode>
+    <Caption>Тысяча пар в смену</Caption>
+    <Symbol>10^3 пар/смен</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047893</id>
+    <OKEICode>550</OKEICode>
+    <Caption>Миллион тонн в год</Caption>
+    <Symbol>10^6 т/год</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047892</id>
+    <OKEICode>552</OKEICode>
+    <Caption>Тонна переработки в сутки</Caption>
+    <Symbol>т перераб/сут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047891</id>
+    <OKEICode>553</OKEICode>
+    <Caption>Тысяча тонн переработки в сутки</Caption>
+    <Symbol>10^3 т перераб/сут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047890</id>
+    <OKEICode>554</OKEICode>
+    <Caption>Центнер переработки в сутки</Caption>
+    <Symbol>ц перераб/сут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047889</id>
+    <OKEICode>555</OKEICode>
+    <Caption>Тысяча центнеров переработки в сутки</Caption>
+    <Symbol>10^3 ц перераб/сут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047888</id>
+    <OKEICode>556</OKEICode>
+    <Caption>Тысяча голов в год</Caption>
+    <Symbol>10^3 гол/год</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047887</id>
+    <OKEICode>557</OKEICode>
+    <Caption>Миллион голов в год</Caption>
+    <Symbol>10^6 гол/год</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047886</id>
+    <OKEICode>558</OKEICode>
+    <Caption>Тысяча птицемест</Caption>
+    <Symbol>10^3 птицемест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047885</id>
+    <OKEICode>559</OKEICode>
+    <Caption>Тысяча кур-несушек</Caption>
+    <Symbol>10^3 кур. несуш</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047884</id>
+    <OKEICode>560</OKEICode>
+    <Caption>Минимальная заработная плата</Caption>
+    <Symbol>мин. заработн. плат</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047883</id>
+    <OKEICode>561</OKEICode>
+    <Caption>Тысяча тонн пара в час</Caption>
+    <Symbol>10^3 т пар/ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047882</id>
+    <OKEICode>562</OKEICode>
+    <Caption>Тысяча прядильных веретен</Caption>
+    <Symbol>10^3 пряд.верет</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047881</id>
+    <OKEICode>563</OKEICode>
+    <Caption>Тысяча прядильных мест</Caption>
+    <Symbol>10^3 пряд.мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047880</id>
+    <OKEICode>596</OKEICode>
+    <Caption>Кубический метр в секунду</Caption>
+    <Symbol>м^3/с</Symbol>
+    <InternationalAbbreviation>m^3/s</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047879</id>
+    <OKEICode>598</OKEICode>
+    <Caption>Кубический метр в час</Caption>
+    <Symbol>м^3/ч</Symbol>
+    <InternationalAbbreviation>m^3/h</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047878</id>
+    <OKEICode>599</OKEICode>
+    <Caption>Тысяча кубических метров в сутки</Caption>
+    <Symbol>10^3 м^3/сут</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047877</id>
+    <OKEICode>616</OKEICode>
+    <Caption>Бобина</Caption>
+    <Symbol>боб</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047876</id>
+    <OKEICode>625</OKEICode>
+    <Caption>Лист</Caption>
+    <Symbol>л.</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047875</id>
+    <OKEICode>626</OKEICode>
+    <Caption>Сто листов</Caption>
+    <Symbol>100 л.</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047874</id>
+    <OKEICode>630</OKEICode>
+    <Caption>Тысяча стандартных условных кирпичей</Caption>
+    <Symbol>тыс станд. усл. кирп</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047873</id>
+    <OKEICode>638</OKEICode>
+    <Caption>Гросс (144 шт.)</Caption>
+    <Symbol>gr; 144</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047872</id>
+    <OKEICode>639</OKEICode>
+    <Caption>Доза</Caption>
+    <Symbol>доз</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047871</id>
+    <OKEICode>640</OKEICode>
+    <Caption>Тысяча доз</Caption>
+    <Symbol>10^3 доз</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047870</id>
+    <OKEICode>641</OKEICode>
+    <Caption>Дюжина (12 шт.)</Caption>
+    <Symbol>дюжина</Symbol>
+    <InternationalAbbreviation>Doz; 1^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047869</id>
+    <OKEICode>642</OKEICode>
+    <Caption>Единица</Caption>
+    <Symbol>ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047868</id>
+    <OKEICode>643</OKEICode>
+    <Caption>Тысяча единиц</Caption>
+    <Symbol>10^3 ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047867</id>
+    <OKEICode>644</OKEICode>
+    <Caption>Миллион единиц</Caption>
+    <Symbol>10^6 ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047866</id>
+    <OKEICode>657</OKEICode>
+    <Caption>Изделие</Caption>
+    <Symbol>изд</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047865</id>
+    <OKEICode>661</OKEICode>
+    <Caption>Канал</Caption>
+    <Symbol>канал</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047864</id>
+    <OKEICode>673</OKEICode>
+    <Caption>Тысяча комплектов</Caption>
+    <Symbol>10^3 компл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047863</id>
+    <OKEICode>683</OKEICode>
+    <Caption>Сто ящиков</Caption>
+    <Symbol>100 ящ.</Symbol>
+    <InternationalAbbreviation>Hbx</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047862</id>
+    <OKEICode>698</OKEICode>
+    <Caption>Место</Caption>
+    <Symbol>мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047861</id>
+    <OKEICode>699</OKEICode>
+    <Caption>Тысяча мест</Caption>
+    <Symbol>10^3 мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047860</id>
+    <OKEICode>704</OKEICode>
+    <Caption>Набор</Caption>
+    <Symbol>набор</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047859</id>
+    <OKEICode>709</OKEICode>
+    <Caption>Тысяча номеров</Caption>
+    <Symbol>10^3 ном</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047858</id>
+    <OKEICode>715</OKEICode>
+    <Caption>Пара (2 шт.)</Caption>
+    <Symbol>пар</Symbol>
+    <InternationalAbbreviation>pr; ^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047857</id>
+    <OKEICode>724</OKEICode>
+    <Caption>Тысяча гектаров порций</Caption>
+    <Symbol>10^3 га порц</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047856</id>
+    <OKEICode>729</OKEICode>
+    <Caption>Тысяча пачек</Caption>
+    <Symbol>10^3 пач</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047855</id>
+    <OKEICode>730</OKEICode>
+    <Caption>Два десятка</Caption>
+    <Symbol>^20</Symbol>
+    <InternationalAbbreviation>^20</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047853</id>
+    <OKEICode>731</OKEICode>
+    <Caption>Большой гросс (12 гроссов)</Caption>
+    <Symbol>1728</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047852</id>
+    <OKEICode>732</OKEICode>
+    <Caption>Десять пар</Caption>
+    <Symbol>10 пар</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047851</id>
+    <OKEICode>733</OKEICode>
+    <Caption>Дюжина пар</Caption>
+    <Symbol>дюжина пар</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047850</id>
+    <OKEICode>734</OKEICode>
+    <Caption>Посылка</Caption>
+    <Symbol>посыл</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047849</id>
+    <OKEICode>735</OKEICode>
+    <Caption>Часть</Caption>
+    <Symbol>часть</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047848</id>
+    <OKEICode>736</OKEICode>
+    <Caption>Рулон</Caption>
+    <Symbol>рул</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047847</id>
+    <OKEICode>737</OKEICode>
+    <Caption>Дюжина рулонов</Caption>
+    <Symbol>дюжина рул</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047846</id>
+    <OKEICode>738</OKEICode>
+    <Caption>Короткий стандарт (7200 единиц)</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047845</id>
+    <OKEICode>740</OKEICode>
+    <Caption>Дюжина штук</Caption>
+    <Symbol>дюжина шт</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047844</id>
+    <OKEICode>744</OKEICode>
+    <Caption>Процент</Caption>
+    <Symbol>%</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047843</id>
+    <OKEICode>745</OKEICode>
+    <Caption>Элемент</Caption>
+    <Symbol>элем</Symbol>
+    <InternationalAbbreviation>CI</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047842</id>
+    <OKEICode>746</OKEICode>
+    <Caption>Промилле (0,1 процента)</Caption>
+    <Symbol>промилле</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047841</id>
+    <OKEICode>751</OKEICode>
+    <Caption>Тысяча рулонов</Caption>
+    <Symbol>10^3 рул</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047840</id>
+    <OKEICode>761</OKEICode>
+    <Caption>Тысяча станов</Caption>
+    <Symbol>10^3 стан</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047839</id>
+    <OKEICode>762</OKEICode>
+    <Caption>Станция</Caption>
+    <Symbol>станц</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047838</id>
+    <OKEICode>775</OKEICode>
+    <Caption>Тысяча тюбиков</Caption>
+    <Symbol>10^3 тюбик</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047837</id>
+    <OKEICode>776</OKEICode>
+    <Caption>Тысяча условных тубов</Caption>
+    <Symbol>10^3 усл.туб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047836</id>
+    <OKEICode>778</OKEICode>
+    <Caption>Упаковка</Caption>
+    <Symbol>упак</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047835</id>
+    <OKEICode>779</OKEICode>
+    <Caption>Миллион упаковок</Caption>
+    <Symbol>10^6 упак</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047834</id>
+    <OKEICode>780</OKEICode>
+    <Caption>Дюжина упаковок</Caption>
+    <Symbol>дюжина упак</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047833</id>
+    <OKEICode>781</OKEICode>
+    <Caption>Сто упаковок</Caption>
+    <Symbol>100 упак</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047832</id>
+    <OKEICode>782</OKEICode>
+    <Caption>Тысяча упаковок</Caption>
+    <Symbol>10^3 упак</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047831</id>
+    <OKEICode>792</OKEICode>
+    <Caption>Человек</Caption>
+    <Symbol>чел</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047830</id>
+    <OKEICode>793</OKEICode>
+    <Caption>Тысяча человек</Caption>
+    <Symbol>10^3 чел</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047829</id>
+    <OKEICode>794</OKEICode>
+    <Caption>Миллион человек</Caption>
+    <Symbol>10^6 чел</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047828</id>
+    <OKEICode>796</OKEICode>
+    <Caption>Штука</Caption>
+    <Symbol>шт</Symbol>
+    <InternationalAbbreviation>pc; 1</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047827</id>
+    <OKEICode>797</OKEICode>
+    <Caption>Сто штук</Caption>
+    <Symbol>100 шт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047826</id>
+    <OKEICode>798</OKEICode>
+    <Caption>Тысяча штук</Caption>
+    <Symbol>тыс. шт; 1000 шт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047825</id>
+    <OKEICode>799</OKEICode>
+    <Caption>Миллион штук</Caption>
+    <Symbol>10^6 шт</Symbol>
+    <InternationalAbbreviation>10^6</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047824</id>
+    <OKEICode>800</OKEICode>
+    <Caption>Миллиард штук</Caption>
+    <Symbol>10^9 шт</Symbol>
+    <InternationalAbbreviation>10^9</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047823</id>
+    <OKEICode>801</OKEICode>
+    <Caption>Биллион штук (Европа); триллион штук</Caption>
+    <Symbol>101^2 шт</Symbol>
+    <InternationalAbbreviation>101^2</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047822</id>
+    <OKEICode>802</OKEICode>
+    <Caption>Квинтильон штук (Европа)</Caption>
+    <Symbol>10^18 шт</Symbol>
+    <InternationalAbbreviation>10^18</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047821</id>
+    <OKEICode>808</OKEICode>
+    <Caption>Миллион экземпляров</Caption>
+    <Symbol>10^6 экз</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047820</id>
+    <OKEICode>810</OKEICode>
+    <Caption>Ячейка</Caption>
+    <Symbol>яч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047819</id>
+    <OKEICode>812</OKEICode>
+    <Caption>Ящик</Caption>
+    <Symbol>ящ</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047818</id>
+    <OKEICode>820</OKEICode>
+    <Caption>Крепость спирта по массе</Caption>
+    <Symbol>креп. спирта по массе</Symbol>
+    <InternationalAbbreviation>% mds</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047817</id>
+    <OKEICode>821</OKEICode>
+    <Caption>Крепость спирта по объему</Caption>
+    <Symbol>креп. спирта по объему</Symbol>
+    <InternationalAbbreviation>% vol</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047816</id>
+    <OKEICode>831</OKEICode>
+    <Caption>Литр чистого (100%) спирта</Caption>
+    <Symbol>л 100% спирта</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047815</id>
+    <OKEICode>833</OKEICode>
+    <Caption>Гектолитр чистого (100%) спирта</Caption>
+    <Symbol>Гл 100% спирта</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047814</id>
+    <OKEICode>835</OKEICode>
+    <Caption>Галлон спирта установленной крепости</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047813</id>
+    <OKEICode>836</OKEICode>
+    <Caption>Голова</Caption>
+    <Symbol>гол</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047812</id>
+    <OKEICode>837</OKEICode>
+    <Caption>Тысяча пар</Caption>
+    <Symbol>10^3 пар</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047811</id>
+    <OKEICode>838</OKEICode>
+    <Caption>Миллион пар</Caption>
+    <Symbol>10^6 пар</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047810</id>
+    <OKEICode>839</OKEICode>
+    <Caption>Комплект</Caption>
+    <Symbol>компл</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047809</id>
+    <OKEICode>840</OKEICode>
+    <Caption>Секция</Caption>
+    <Symbol>секц</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047808</id>
+    <OKEICode>841</OKEICode>
+    <Caption>Килограмм пероксида водорода</Caption>
+    <Symbol>кг H2О2</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047807</id>
+    <OKEICode>845</OKEICode>
+    <Caption>Килограмм 90%-го сухого вещества</Caption>
+    <Symbol>кг 90% с/в</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047806</id>
+    <OKEICode>847</OKEICode>
+    <Caption>Тонна 90%-го сухого вещества</Caption>
+    <Symbol>т 90% с/в</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047805</id>
+    <OKEICode>851</OKEICode>
+    <Caption>Международная единица</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047804</id>
+    <OKEICode>852</OKEICode>
+    <Caption>Килограмм оксида калия</Caption>
+    <Symbol>кг К2О</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047803</id>
+    <OKEICode>853</OKEICode>
+    <Caption>Сто международных единиц</Caption>
+    <Symbol>-</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047802</id>
+    <OKEICode>859</OKEICode>
+    <Caption>Килограмм гидроксида калия</Caption>
+    <Symbol>кг КОН</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047801</id>
+    <OKEICode>861</OKEICode>
+    <Caption>Килограмм азота</Caption>
+    <Symbol>кг N</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047800</id>
+    <OKEICode>863</OKEICode>
+    <Caption>Килограмм гидроксида натрия</Caption>
+    <Symbol>кг NaOH</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047799</id>
+    <OKEICode>865</OKEICode>
+    <Caption>Килограмм пятиокиси фосфора</Caption>
+    <Symbol>кг Р2О5</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047798</id>
+    <OKEICode>867</OKEICode>
+    <Caption>Килограмм урана</Caption>
+    <Symbol>кг U</Symbol>
+    <InternationalAbbreviation>-</InternationalAbbreviation>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047797</id>
+    <OKEICode>868</OKEICode>
+    <Caption>Бутылка</Caption>
+    <Symbol>бут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047796</id>
+    <OKEICode>869</OKEICode>
+    <Caption>Тысяча бутылок</Caption>
+    <Symbol>10^3 бут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047795</id>
+    <OKEICode>870</OKEICode>
+    <Caption>Ампула</Caption>
+    <Symbol>ампул</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047794</id>
+    <OKEICode>871</OKEICode>
+    <Caption>Тысяча ампул</Caption>
+    <Symbol>10^3 ампул</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047793</id>
+    <OKEICode>872</OKEICode>
+    <Caption>Флакон</Caption>
+    <Symbol>флак</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047792</id>
+    <OKEICode>873</OKEICode>
+    <Caption>Тысяча флаконов</Caption>
+    <Symbol>10^3 флак</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047791</id>
+    <OKEICode>874</OKEICode>
+    <Caption>Тысяча тубов</Caption>
+    <Symbol>10^3 туб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047790</id>
+    <OKEICode>875</OKEICode>
+    <Caption>Тысяча коробок</Caption>
+    <Symbol>10^3 кор</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047789</id>
+    <OKEICode>876</OKEICode>
+    <Caption>Условная единица</Caption>
+    <Symbol>усл. ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047788</id>
+    <OKEICode>877</OKEICode>
+    <Caption>Тысяча условных единиц</Caption>
+    <Symbol>10^3 усл. ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047787</id>
+    <OKEICode>878</OKEICode>
+    <Caption>Миллион условных единиц</Caption>
+    <Symbol>10^6 усл. ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047786</id>
+    <OKEICode>879</OKEICode>
+    <Caption>Условная штука</Caption>
+    <Symbol>усл. шт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047785</id>
+    <OKEICode>880</OKEICode>
+    <Caption>Тысяча условных штук</Caption>
+    <Symbol>10^3 усл. шт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047784</id>
+    <OKEICode>881</OKEICode>
+    <Caption>Условная банка</Caption>
+    <Symbol>усл. банк</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047783</id>
+    <OKEICode>882</OKEICode>
+    <Caption>Тысяча условных банок</Caption>
+    <Symbol>10^3 усл. банк</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047782</id>
+    <OKEICode>883</OKEICode>
+    <Caption>Миллион условных банок</Caption>
+    <Symbol>10^6 усл. банк</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047781</id>
+    <OKEICode>884</OKEICode>
+    <Caption>Условный кусок</Caption>
+    <Symbol>усл. кус</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047780</id>
+    <OKEICode>885</OKEICode>
+    <Caption>Тысяча условных кусков</Caption>
+    <Symbol>10^3 усл. кус</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047779</id>
+    <OKEICode>886</OKEICode>
+    <Caption>Миллион условных кусков</Caption>
+    <Symbol>10^6 усл. кус</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047778</id>
+    <OKEICode>887</OKEICode>
+    <Caption>Условный ящик</Caption>
+    <Symbol>усл. ящ</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047777</id>
+    <OKEICode>888</OKEICode>
+    <Caption>Тысяча условных ящиков</Caption>
+    <Symbol>10^3 усл. ящ</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047776</id>
+    <OKEICode>889</OKEICode>
+    <Caption>Условная катушка</Caption>
+    <Symbol>усл. кат</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047775</id>
+    <OKEICode>890</OKEICode>
+    <Caption>Тысяча условных катушек</Caption>
+    <Symbol>10^3 усл. кат</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047774</id>
+    <OKEICode>891</OKEICode>
+    <Caption>Условная плитка</Caption>
+    <Symbol>усл. плит</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047773</id>
+    <OKEICode>892</OKEICode>
+    <Caption>Тысяча условных плиток</Caption>
+    <Symbol>10^3 усл. плит</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047772</id>
+    <OKEICode>893</OKEICode>
+    <Caption>Условный кирпич</Caption>
+    <Symbol>усл. кирп</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047771</id>
+    <OKEICode>894</OKEICode>
+    <Caption>Тысяча условных кирпичей</Caption>
+    <Symbol>10^3 усл. кирп</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047770</id>
+    <OKEICode>895</OKEICode>
+    <Caption>Миллион условных кирпичей</Caption>
+    <Symbol>10^6 усл. кирп</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047769</id>
+    <OKEICode>896</OKEICode>
+    <Caption>Семья</Caption>
+    <Symbol>семей</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047768</id>
+    <OKEICode>897</OKEICode>
+    <Caption>Тысяча семей</Caption>
+    <Symbol>10^3 семей</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047767</id>
+    <OKEICode>898</OKEICode>
+    <Caption>Миллион семей</Caption>
+    <Symbol>10^6 семей</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047766</id>
+    <OKEICode>899</OKEICode>
+    <Caption>Домохозяйство</Caption>
+    <Symbol>домхоз</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047765</id>
+    <OKEICode>900</OKEICode>
+    <Caption>Тысяча домохозяйств</Caption>
+    <Symbol>10^3 домхоз</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047764</id>
+    <OKEICode>901</OKEICode>
+    <Caption>Миллион домохозяйств</Caption>
+    <Symbol>10^6 домхоз</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047763</id>
+    <OKEICode>902</OKEICode>
+    <Caption>Ученическое место</Caption>
+    <Symbol>учен. мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047762</id>
+    <OKEICode>903</OKEICode>
+    <Caption>Тысяча ученических мест</Caption>
+    <Symbol>10^3 учен. мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047761</id>
+    <OKEICode>904</OKEICode>
+    <Caption>Рабочее место</Caption>
+    <Symbol>раб. мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047760</id>
+    <OKEICode>905</OKEICode>
+    <Caption>Тысяча рабочих мест</Caption>
+    <Symbol>10^3 раб. мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047759</id>
+    <OKEICode>906</OKEICode>
+    <Caption>Посадочное место</Caption>
+    <Symbol>посад. мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047758</id>
+    <OKEICode>907</OKEICode>
+    <Caption>Тысяча посадочных мест</Caption>
+    <Symbol>10^3 посад. мест</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047757</id>
+    <OKEICode>908</OKEICode>
+    <Caption>Номер</Caption>
+    <Symbol>ном</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047756</id>
+    <OKEICode>909</OKEICode>
+    <Caption>Квартира</Caption>
+    <Symbol>кварт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047755</id>
+    <OKEICode>910</OKEICode>
+    <Caption>Тысяча квартир</Caption>
+    <Symbol>10^3 кварт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047754</id>
+    <OKEICode>911</OKEICode>
+    <Caption>Койка</Caption>
+    <Symbol>коек</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047753</id>
+    <OKEICode>912</OKEICode>
+    <Caption>Тысяча коек</Caption>
+    <Symbol>10^3 коек</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047752</id>
+    <OKEICode>913</OKEICode>
+    <Caption>Том книжного фонда</Caption>
+    <Symbol>том книжн. фонд</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047751</id>
+    <OKEICode>914</OKEICode>
+    <Caption>Тысяча томов книж-ного фонда</Caption>
+    <Symbol>10^3 том. книжн. фонд</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047750</id>
+    <OKEICode>915</OKEICode>
+    <Caption>Условный ремонт</Caption>
+    <Symbol>усл. рем</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047749</id>
+    <OKEICode>916</OKEICode>
+    <Caption>Условный ремонт в год</Caption>
+    <Symbol>усл. рем/год</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047748</id>
+    <OKEICode>917</OKEICode>
+    <Caption>Смена</Caption>
+    <Symbol>смен</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047747</id>
+    <OKEICode>918</OKEICode>
+    <Caption>Лист авторский</Caption>
+    <Symbol>л. авт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047746</id>
+    <OKEICode>920</OKEICode>
+    <Caption>Лист печатный</Caption>
+    <Symbol>л. печ</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047745</id>
+    <OKEICode>921</OKEICode>
+    <Caption>Лист учетно-издательский</Caption>
+    <Symbol>л. уч.-изд</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047744</id>
+    <OKEICode>922</OKEICode>
+    <Caption>Знак</Caption>
+    <Symbol>знак</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047743</id>
+    <OKEICode>923</OKEICode>
+    <Caption>Слово</Caption>
+    <Symbol>слово</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047742</id>
+    <OKEICode>924</OKEICode>
+    <Caption>Символ</Caption>
+    <Symbol>символ</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047741</id>
+    <OKEICode>925</OKEICode>
+    <Caption>Условная труба</Caption>
+    <Symbol>усл. труб</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047740</id>
+    <OKEICode>930</OKEICode>
+    <Caption>Тысяча пластин</Caption>
+    <Symbol>10^3 пласт</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047739</id>
+    <OKEICode>937</OKEICode>
+    <Caption>Миллион доз</Caption>
+    <Symbol>10^6 доз</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047738</id>
+    <OKEICode>949</OKEICode>
+    <Caption>Миллион листов-оттисков</Caption>
+    <Symbol>10^6 лист.оттиск</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047737</id>
+    <OKEICode>950</OKEICode>
+    <Caption>Вагоно(машино)-день</Caption>
+    <Symbol>ваг (маш).дн</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047736</id>
+    <OKEICode>951</OKEICode>
+    <Caption>Тысяча вагоно-(машино)-часов</Caption>
+    <Symbol>10^3 ваг (маш).ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047735</id>
+    <OKEICode>952</OKEICode>
+    <Caption>Тысяча вагоно-(машино)-километров</Caption>
+    <Symbol>10^3 ваг (маш).км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047734</id>
+    <OKEICode>953</OKEICode>
+    <Caption>Тысяча место-километров</Caption>
+    <Symbol>10^3 мест.км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047733</id>
+    <OKEICode>954</OKEICode>
+    <Caption>Вагоно-сутки</Caption>
+    <Symbol>ваг.сут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047732</id>
+    <OKEICode>955</OKEICode>
+    <Caption>Тысяча поездо-часов</Caption>
+    <Symbol>10^3 поезд.ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047731</id>
+    <OKEICode>956</OKEICode>
+    <Caption>Тысяча поездо-километров</Caption>
+    <Symbol>10^3 поезд.км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047730</id>
+    <OKEICode>957</OKEICode>
+    <Caption>Тысяча тонно-миль</Caption>
+    <Symbol>10^3 т.миль</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047729</id>
+    <OKEICode>958</OKEICode>
+    <Caption>Тысяча пассажиро-миль</Caption>
+    <Symbol>10^3 пасс.миль</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047728</id>
+    <OKEICode>959</OKEICode>
+    <Caption>Автомобиле-день</Caption>
+    <Symbol>автомоб.дн</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047727</id>
+    <OKEICode>960</OKEICode>
+    <Caption>Тысяча автомобиле-тонно-дней</Caption>
+    <Symbol>10^3 автомоб.т.дн</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047726</id>
+    <OKEICode>961</OKEICode>
+    <Caption>Тысяча автомобиле-часов</Caption>
+    <Symbol>10^3 автомоб.ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047725</id>
+    <OKEICode>962</OKEICode>
+    <Caption>Тысяча автомобиле-место-дней</Caption>
+    <Symbol>10^3 автомоб.мест. дн</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047724</id>
+    <OKEICode>963</OKEICode>
+    <Caption>Приведенный час</Caption>
+    <Symbol>привед.ч</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047723</id>
+    <OKEICode>964</OKEICode>
+    <Caption>Самолето-километр</Caption>
+    <Symbol>самолет.км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047722</id>
+    <OKEICode>965</OKEICode>
+    <Caption>Тысяча километров</Caption>
+    <Symbol>10^3 км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047721</id>
+    <OKEICode>966</OKEICode>
+    <Caption>Тысяча тоннаже-рейсов</Caption>
+    <Symbol>10^3 тоннаж. рейс</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047720</id>
+    <OKEICode>967</OKEICode>
+    <Caption>Миллион тонно-миль</Caption>
+    <Symbol>10^6 т. миль</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047719</id>
+    <OKEICode>968</OKEICode>
+    <Caption>Миллион пассажиро-миль</Caption>
+    <Symbol>10^6 пасс. миль</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047718</id>
+    <OKEICode>969</OKEICode>
+    <Caption>Миллион тоннаже-миль</Caption>
+    <Symbol>10^6 тоннаж. миль</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047717</id>
+    <OKEICode>970</OKEICode>
+    <Caption>Миллион пассажиро-место-миль</Caption>
+    <Symbol>10^6 пасс. мест. миль</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047716</id>
+    <OKEICode>971</OKEICode>
+    <Caption>Кормо-день</Caption>
+    <Symbol>корм. дн</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047715</id>
+    <OKEICode>972</OKEICode>
+    <Caption>Центнер кормовых единиц</Caption>
+    <Symbol>ц корм ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047714</id>
+    <OKEICode>973</OKEICode>
+    <Caption>Тысяча автомобиле-километров</Caption>
+    <Symbol>10^3 автомоб. км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047713</id>
+    <OKEICode>974</OKEICode>
+    <Caption>Тысяча тоннаже-сут</Caption>
+    <Symbol>10^3 тоннаж. сут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047712</id>
+    <OKEICode>975</OKEICode>
+    <Caption>Суго-сутки</Caption>
+    <Symbol>суго. сут.</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047711</id>
+    <OKEICode>976</OKEICode>
+    <Caption>Штук в 20-футовом эквиваленте (ДФЭ)</Caption>
+    <Symbol>штук в ^20-футовом эквиваленте</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047710</id>
+    <OKEICode>977</OKEICode>
+    <Caption>Канало-километр</Caption>
+    <Symbol>канал. км</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047709</id>
+    <OKEICode>978</OKEICode>
+    <Caption>Канало-концы</Caption>
+    <Symbol>канал. конц</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047708</id>
+    <OKEICode>979</OKEICode>
+    <Caption>Тысяча экземпляров</Caption>
+    <Symbol>10^3 экз</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047707</id>
+    <OKEICode>980</OKEICode>
+    <Caption>Тысяча долларов</Caption>
+    <Symbol>10^3 доллар</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047706</id>
+    <OKEICode>981</OKEICode>
+    <Caption>Тысяча тонн кормовых единиц</Caption>
+    <Symbol>10^3 корм ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047705</id>
+    <OKEICode>982</OKEICode>
+    <Caption>Миллион тонн кормовых единиц</Caption>
+    <Symbol>10^6 корм ед</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+  <ref.UnitDimension>
+    <id>-1879047704</id>
+    <OKEICode>983</OKEICode>
+    <Caption>Судо-сутки</Caption>
+    <Symbol>суд.сут</Symbol>
+    <idRefStatus>2</idRefStatus>
+  </ref.UnitDimension>
+</NewDataSet>

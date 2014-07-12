@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<ArrayOfTest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Test>
+
+        <Title>У полей типа "Ссылка" должны быть заполнены свойства: idEntityLink</Title>
+        <SqlCommand>SELECT {0} FROM [ref].[EntityField] WHERE idEntityFieldType = 7 AND idEntityLink IS NULL</SqlCommand>
+    </Test>
+    <Test>
+        <Title>У полей типа "ТЧ" и "ВТЧ" должны быть заполнены свойства: idEntityLink и idOwnerField</Title>
+        <SqlCommand>select {0} from ref.EntityField where idEntityFieldType in (9,18) and (idEntityLink is null or idOwnerField is null)</SqlCommand>
+    </Test>
+    <Test>
+      <Title>У полей типа "Мультиссылка" свойство idEntityLink должно указывать на сущность мультиссылки (а не на противоположную сущность)</Title>
+      <SqlCommand>
+        select {0}
+        from
+          ref.EntityField
+          inner join ref.Entity linkedEntity on ref.EntityField.idEntityLink = linkedEntity.id
+        where
+          idEntityFieldType = 8 -- мультиссылка
+          and linkedEntity.idEntityType &lt;&gt; 5  -- не мультиссылка
+      </SqlCommand>
+    </Test>
+</ArrayOfTest>

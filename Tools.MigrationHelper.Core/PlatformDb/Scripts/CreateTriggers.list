@@ -1,0 +1,12 @@
+﻿CREATE TRIGGER [ref].[EntityIUD] ON [ref].[Entity]  AFTER  INSERT, DELETE, UPDATE AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Triggers].[EntityIUD];
+CREATE TRIGGER [ref].[EntityLogicIUD] ON [ref].[Entity]  AFTER  INSERT, DELETE, UPDATE AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Triggers].[EntityLogicIUD];
+CREATE TRIGGER [ref].[EntityFieldIUD] ON [ref].[EntityField]  AFTER  INSERT, DELETE, UPDATE AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Triggers].[EntityFieldIUD];
+CREATE TRIGGER [ref].[EntityFieldLogicIUD] ON [ref].[EntityField]  AFTER  INSERT, DELETE, UPDATE AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Triggers].[EntityFieldLogicIUD];
+CREATE TRIGGER [ref].[ProgrammabilityIUD] ON [ref].[Programmability]  AFTER  INSERT, DELETE, UPDATE AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Triggers].[ProgrammabilityIUD];
+CREATE TRIGGER [ref].[IndexUD] ON [ref].[Index]  AFTER  DELETE, UPDATE AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Triggers].[IndexUD];
+exec sp_settriggerorder @triggername='[ref].[EntityIUD]', @order='First', @stmttype='INSERT';
+exec sp_settriggerorder @triggername='[ref].[EntityIUD]', @order='First', @stmttype='UPDATE';
+exec sp_settriggerorder @triggername='[ref].[EntityIUD]', @order='First', @stmttype='DELETE';
+exec sp_settriggerorder @triggername='[ref].[EntityFieldIUD]', @order='First', @stmttype='INSERT';
+exec sp_settriggerorder @triggername='[ref].[EntityFieldIUD]', @order='First', @stmttype='UPDATE';
+exec sp_settriggerorder @triggername='[ref].[EntityFieldIUD]', @order='First', @stmttype='DELETE';

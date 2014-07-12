@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-2013265878</id>
+    <Schema>doc</Schema>
+    <Name>StateProgram_CaptionDocumentRegistratorSubProgram</Name>
+    <CreateCommand>CREATE FUNCTION doc.StateProgram_CaptionDocumentRegistratorSubProgram(
+	@idDoc        int,      -- идентификатор документа (idOwner из ТЧ)
+	@idSBP        int,      -- ТЧ.Ответственный исполнитель
+	@idDocType    int,      -- тут может быть null, если нужно взять из документа
+	@idSystemGoal int       -- ТЧ.Основная цель 
+)
+RETURNS nvarchar(max)
+AS
+BEGIN
+	DECLARE @res nvarchar(max)
+
+	;
+
+	WITH hier AS (
+		SELECT
+			id, idParent
+		FROM
+			doc.StateProgram
+		WHERE
+			id = @idDoc 
+			
+		UNION ALL
+			
+		SELECT
+			d.id, d.idParent
+		FROM
+			hier AS r
+			INNER JOIN doc.StateProgram AS d ON d.id = r.idParent
+	)
+
+	SELECT TOP 1
+		@res = dbo.GetCaption(rap.idRegistratorEntity, rap.idRegistrator)
+	FROM
+		doc.StateProgram AS d
+		INNER JOIN reg.Program AS rp ON rp.idVersion = d.idVersion AND rp.idDocType = @idDocType AND ISNULL(rp.idSBP,0) = ISNULL(@idSBP,0)
+		INNER JOIN reg.AttributeOfProgram AS rap ON rap.idProgram = rp.id
+		INNER JOIN reg.SystemGoalElement AS rsge ON rsge.id = rap.idGoalSystemElement
+		INNER JOIN reg.Program AS rp_prnt ON rp_prnt.id = rap.idParent
+	WHERE
+		d.id = @idDoc
+		AND rap.idTerminator IS NULL
+		AND rsge.idSystemGoal = @idSystemGoal
+		AND rp_prnt.idRegistratorEntity = (SELECT TOP 1 id FROM ref.Entity AS e WHERE e.Name = 'StateProgram')
+		AND rp_prnt.idRegistrator = (SELECT TOP 1 id FROM hier WHERE idParent IS NULL AND id != @idDoc)
+
+
+	RETURN @res
+END</CreateCommand>
+    <idProgrammabilityType>2</idProgrammabilityType>
+    <Order></Order>
+    <idProject>500</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

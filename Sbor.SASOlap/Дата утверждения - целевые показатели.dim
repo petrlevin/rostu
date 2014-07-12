@@ -1,0 +1,156 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7ef2d06c-92df-4c21-9b8c-159a3bee4ada" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Дата утверждения - целевые показатели</ID>
+  <Name>Дата утверждения - целевые показатели</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1827" scrolltop="-6403" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="4974" y="15531" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Дата утверждения (целевые показатели)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Дата утверждения (целевые показатели)" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1827</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6403</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="d0e956b5-cf45-49fe-827c-5d665f396445">
+    <DataSourceViewID>dsvmain</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="9ef37a83-a230-4675-80e7-c957c43123c1">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <UnknownMemberName>-</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="bfb5c965-729c-496b-bbf9-d625ce5e221d">
+      <ID>Дата утверждения</ID>
+      <Name>Дата утверждения</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3119c1cd-ae7e-47ae-aaea-8a3c006ace8f">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="046e43fd-abb0-4d72-b07f-85acd72f82af">
+            <TableID>Дата_x0020_утверждения_x0020__x0028_целевые_x0020_показатели_x0029_</TableID>
+            <ColumnID>DateCommit</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="68406c6e-4b49-49c7-93ae-12561ab07c0a">
+          <AttributeID>Год утверждения</AttributeID>
+          <Name>Год утверждения</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3d1a4e19-f8c6-4aee-81ff-ea32e0e62058">
+          <AttributeID>Месяц утверждения</AttributeID>
+          <Name>Месяц утверждения</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d1daedba-e6d2-4c6b-a62c-9faf72d0db55">
+          <AttributeID>День утверждения</AttributeID>
+          <Name>День утверждения</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="b84236a7-bf7b-4865-a082-60343a5f55cf">
+      <ID>Год утверждения</ID>
+      <Name>Год утверждения</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a18efaa1-0bc9-4021-96eb-9bfbed768741">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ba3885de-2990-4d35-a963-bc8d7b309ced">
+            <TableID>Дата_x0020_утверждения_x0020__x0028_целевые_x0020_показатели_x0029_</TableID>
+            <ColumnID>y</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="fee308ba-638d-49ba-9ab0-e7c5fda443d7">
+      <ID>Месяц утверждения</ID>
+      <Name>Месяц утверждения</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="022f15fe-0514-4ed8-a082-0e50a95eb3d3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e810b0b3-0a16-438a-a155-1e91e5f980ce">
+            <TableID>Дата_x0020_утверждения_x0020__x0028_целевые_x0020_показатели_x0029_</TableID>
+            <ColumnID>m</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="0a669742-d3df-495f-8d56-98dc094b6dd7">
+      <ID>День утверждения</ID>
+      <Name>День утверждения</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d5a8fcb8-c682-47b3-8124-17f158139350">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="164f3215-9b3b-40cb-90c3-a6640fac9f85">
+            <TableID>Дата_x0020_утверждения_x0020__x0028_целевые_x0020_показатели_x0029_</TableID>
+            <ColumnID>d</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+  </Attributes>
+</Dimension>

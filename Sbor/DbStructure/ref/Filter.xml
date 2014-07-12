@@ -1,0 +1,3877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Filter" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Filter">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Disabled" type="xs:boolean" minOccurs="0" />
+                <xs:element name="idEntityField" type="xs:int" />
+                <xs:element name="idLogicOperator" type="xs:unsignedByte" />
+                <xs:element name="Not" type="xs:boolean" />
+                <xs:element name="idLeftEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="idComparisionOperator" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="RightValue" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="256" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRightEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="RightSqlExpression" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="WithParents" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Filter" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Filter>
+    <id>-2147483608</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503745</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503714</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503819</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265889</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265623</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265626</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013265629</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265887</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265648</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265714</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>-1677721568</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265885</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265636</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265685</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	sg.id
+from
+	ref.SystemGoal as sg
+	inner join (
+		select
+			spr.id, 
+			spr.idParent
+		from 
+			doc.DocumentsOfSED as d
+			inner join ref.SystemGoal as spr on
+				d.idPublicLegalFormation = spr.idPublicLegalFormation
+				AND d.idDocType = spr.idDocType_CommitDoc
+				AND d.DateStart &lt;= spr.DateStart 
+				AND d.DateEnd &gt;= spr.DateEnd 
+		where
+			d.id = {idOwner}
+	) as sel on sel.id = sg.id or sel.idParent = sg.id</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265883</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265707</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265714</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1677721568, -1543503815, -1543503797, -1543503791</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265882</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265687</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1,2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265870</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265747</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265848</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select 
+	sbp.id 
+from 
+	ref.SBP as sbp
+where 
+	CHARINDEX(
+		',' + CAST(sbp.idSBPType as nvarchar(3)) + ',',
+		case {idSBPType}
+			when 2 then ',1,'   /* Manager -&gt; GeneralManager */
+			when 3 then ',1,2,' /* TreasuryEstablishment -&gt; GeneralManager, Manager */
+			when 4 then ',3,'   /* BudgetEstablishment -&gt; TreasuryEstablishment */
+			when 5 then ',3,'   /* IndependentEstablishment -&gt; TreasuryEstablishment */
+			else '-'
+		end
+	) &gt; 0
+	and sbp.isFounder = 
+		case {idSBPType}
+			when 4 then 1 /* BudgetEstablishment -&gt; isFounder = true */
+			when 5 then 1 /* IndependentEstablishment -&gt; isFounder = true */
+			else 0
+		end
+</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265868</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260501</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260502</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013265609</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265866</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265670</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1,2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265864</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503482</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265715</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select 
+	t.idDocType 
+from 
+	tp.ElementTypeSystemGoal_Document as t
+	inner join ref.DocType as dt on dt.id = t.idDocType  
+where 
+	t.idOwner = {idElementTypeSystemGoal}
+	/* Государственная программа', Долгосрочная целевая программа, 'Деятельность ведомства */
+	and dt.[idEntity] in (-1543503815,-1543503797,-1543503791)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265863</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265669</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265715</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select idDocType from tp.ElementTypeSystemGoal_Document where idOwner = {idElementTypeSystemGoal}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265861</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013262540</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013263552</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select
+	blank.id 
+from 
+	enm.BlankType as blank,
+	ref.SBP as sbp
+where
+	sbp.id = {idOwner}
+	and (
+		/* Главный распорядитель БС -&gt; Доведение ГРБС, Доведение РБС, Доведение КУ, Формирование КУ */
+		(sbp.idSBPType = 1 and blank.id in (1,2,4,6,7)) 
+		/* Распорядитель БС -&gt; Доведение КУ, Формирование КУ */
+		OR (sbp.idSBPType = 2 and blank.id in (4,6)) 
+		/* Казенное учреждение и Учредитель = Истина -&gt; Доведение АУ/БУ, Формирование АУ/БУ */
+		OR (sbp.idSBPType = 3 /* SBORIII-401 and sbp.IsFounder = 1 */ and blank.id in (3,5)) 
+	)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265859</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265683</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265685</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select
+	id
+from
+	ref.SystemGoal
+where
+	idPublicLegalFormation = {idPublicLegalFormation}
+	and (
+		{idElementTypeSystemGoal} is null
+		or idElementTypeSystemGoal in (
+			select 
+				p.idElementTypeSystemGoal 
+			from 
+				ref.ModelSystemGoal as s
+				inner join ref.ModelSystemGoal as p on p.id = s.idParent
+			where
+				s.idRefStatus = 2
+				and s.idElementTypeSystemGoal = {idElementTypeSystemGoal}
+		)
+	)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265858</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013265671</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265712</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select
+	id
+from
+	ref.ElementTypeSystemGoal
+where
+	idPublicLegalFormation = {idPublicLegalFormation}
+	and (
+		{idParent} is null
+		or id in (
+			select distinct 
+				s.idElementTypeSystemGoal 
+			from
+				ref.SystemGoal as sg
+				inner join ref.ModelSystemGoal as p on p.idElementTypeSystemGoal = sg.idElementTypeSystemGoal and p.idRefStatus = 2
+				inner join ref.ModelSystemGoal as s on s.idParent = p.id and s.idRefStatus = 2
+			where
+				sg.id = {idParent}
+				and sg.idPublicLegalFormation = {idPublicLegalFormation}
+		)
+	)
+</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265856</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260464</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260467</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013265623</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265852</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260364</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>3, 4, 5</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265850</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260336</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048107</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select hp.id
+from
+	ref.HierarchyPeriod as hp
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	hp.DateStart = DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900  ,DATEADD(day,-1,0))
+or	hp.DateStart = DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900+1,DATEADD(day,-1,0))
+or	hp.DateStart = DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900+2,DATEADD(day,-1,0))</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265849</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260324</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048107</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select hp.id
+from
+	ref.HierarchyPeriod as hp
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	hp.DateStart = DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900  ,DATEADD(day,-1,0))
+or	hp.DateStart = DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900+1,DATEADD(day,-1,0))
+or	hp.DateStart = DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900+2,DATEADD(day,-1,0))</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265847</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260289</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260352</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013260290</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265846</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260288</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260343</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013260290</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265845</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260287</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260337</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013260288</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265844</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260285</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260325</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013260286</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265843</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260283</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260292</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013260284</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265841</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260268</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503838</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>0, 1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265840</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260255</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260260</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013260256</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265838</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260304</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503231</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265823</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260127</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013260166</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013260129</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265821</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013259083</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259101</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013259085</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265820</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013259084</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259104</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013259085</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265818</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013259060</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259074</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013260127</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265817</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013259048</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483606</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select 
+	ef.id
+from 
+	ref.Entity as e
+	inner join ref.EntityField as ef on ef.[idEntity] = e.id
+	inner join ref.Entity as efl on efl.id = ef.idEntityLink
+where 
+	e.Name = 'BalancingIFDB_Expense'
+	and efl.idEntityType in (
+		1, /* Enum Перечисление */
+		3  /* Reference Справочник */
+	)
+</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265816</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013259021</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259035</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013259051</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265815</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013259041</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259044</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013259060</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265813</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013258010</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259111</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	r.id
+from
+	tp.BalanceConfig_FilterRule as r
+	inner join tool.BalanceConfig as t on t.id = r.idOwner
+	inner join tp.BalanceConfig_User as u on u.idMaster = r.id
+where
+	t.idDocStatus = -2147483613 /* Approved Утвержден */
+	and u.idUser = {idUser}
+	
+</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265811</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013258007</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259036</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013259056</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265809</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256907</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610646</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idBranchCode
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265808</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256905</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503230</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idCodeSubsidy
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265807</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256903</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503215</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idDEK
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265806</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256901</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503223</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idDFK
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}
+</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265805</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256899</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503207</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idDKR
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265804</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256897</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013261544</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightSqlExpression>select distinct
+	el.idExpenseObligationType
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265803</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256895</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503843</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightSqlExpression>select distinct
+	el.idFinanceSource
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265802</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256893</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503192</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idKCSR
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265801</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256891</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503240</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightSqlExpression>select distinct
+	el.idKFO
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265800</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256889</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503199</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idKOSGU
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}
+</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265799</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256887</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048012</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idKVR
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265798</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256885</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265862</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightSqlExpression>select distinct
+	el.idKVSR
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265797</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256883</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503184</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	el.idRZPR
+from
+	tp.BalancingIFDB_EstimatedLine as t
+	inner join reg.EstimatedLine as el on el.id = t.idEstimatedLine
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265795</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256869</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013263552</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 7</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265794</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256852</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description>Группа И</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265793</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256852</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259019</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>-2147483614</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-2013265794</idParent>
+    <Description>Статус = "Проект"</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265792</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256852</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>true</Not>
+    <idLeftEntityField>-2013260139</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select idBalancingIFDB from ml.ApprovalBalancingIFDB_BalancingIFDB where idApprovalBalancingIFDB = {id}</RightSqlExpression>
+    <idParent>-2013265794</idParent>
+    <Description>еще не включен в сводный инструмент</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265790</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256852</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013259121</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2013256844</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-2013265794</idParent>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265788</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256822</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265889</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	t.idOKATO
+from
+	tp.BalancingIFDB_EstimatedLine as t
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-2013265787</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013256821</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265738</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct
+	t.idAuthorityOfExpenseObligation
+from
+	tp.BalancingIFDB_EstimatedLine as t
+where
+	t.idOwner = {idOwner}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>true</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157023</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155850</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155942</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155851</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157022</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155849</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155936</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155852</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157021</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155848</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155919</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155849</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157020</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155846</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155907</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155847</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157019</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155845</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155900</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155847</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157018</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155844</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155884</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155847</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157017</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155843</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155867</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155844</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157015</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155955</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT a.id FROM ref.Activity a
+LEFT JOIN ml.Activity_SBP as1 ON as1.idActivity = a.id
+LEFT JOIN ref.SBP s ON s.id = as1.idSBP
+WHERE s.id IN (SELECT id from dbo.GetParents((SELECT faba.idSBP FROM doc.FinancialAndBusinessActivities faba WHERE faba.id = {idOwner}),'-2013265747','SBP','idParent',0))</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157014</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155970</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select 4
+union
+select 5</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157012</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155899</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155957</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155901</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157010</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155949</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1946155957</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1946155950</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1946157007</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157007</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155949</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157006</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155949</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>true</Not>
+    <idLeftEntityField>-1946155956</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT TOP 1 k.IsIncludedInBudget FROM ref.KFO k
+WHERE id = {idKFO}</RightSqlExpression>
+    <idParent>-1946157007</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157004</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946155954</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503806</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT ac.idContingent FROM ml.Activity_Contingent ac
+WHERE ac.idActivity = {idActivity}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048152</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879048015</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048020</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id 
+from ref.AnalyticalCodeStateProgram
+where
+	({idTypeOfAnalyticalCodeStateProgram} = 1			/* Тип = Государственная программа */
+		AND 1=0											/* Вышестоящий = нет допустимых значений */
+	) OR 
+	({idTypeOfAnalyticalCodeStateProgram} = 2			/* Тип = Подпрограмма ГП */
+		AND idTypeOfAnalyticalCodeStateProgram IN (1)	/* Вышестоящий = Государственная программа */
+	) OR
+	({idTypeOfAnalyticalCodeStateProgram} = 3			/* Тип = Основное мероприятие */
+		AND idTypeOfAnalyticalCodeStateProgram IN (1,2) /* Вышестоящий = Государственная программа или Подпрограмма ГП */
+	)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048140</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260358</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select a.idActivity
+from 
+	ml.Activity_SBP as a
+where
+	 a.idSBP =
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											select pa.idSBP
+											from doc.PlanActivity as pa
+											where pa.id = {idOwner} )
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+		
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+
+union
+
+select tc.idActivity 
+from
+	reg.TaskVolume as tv 
+	inner join reg.TaskCollection as tc on tv.idTaskCollection = tc.id
+	inner join ref.HierarchyPeriod as hp on tv.idHierarchyPeriod = hp.id
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	tv.idTerminator is null
+	and tv.idVersion = pa.idVersion
+	and tv.idSBP = 
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											select pa.idSBP
+											from doc.PlanActivity as pa
+											where pa.id = {idOwner} )
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+	
+	
+	and (		hp.DateStart &gt;= DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900  ,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+1,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+2,0)
+			)
+	and -- ШапкаДокумента.ППО.ГМЗ = ложь
+		0 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048138</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260359</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ia.id
+from 
+	ref.IndicatorActivity as ia
+	inner join tp.Activity_Indicator as a_i on ia.id=a_i.idIndicatorActivity
+where
+	ia.idIndicatorActivityType = 1 --enm.IndicatorActivityType.id=1  - Показатель объема
+	and a_i.idOwner = {idActivity}
+	and a_i.idSBP =
+		( -- Ведомство = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											 select pa.idSBP
+											 from doc.PlanActivity as pa
+											 where pa.id = {idOwner}
+											) 
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+		
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+
+union
+
+select tv.idIndicatorActivity_Volume
+from
+	reg.TaskVolume as tv 
+	inner join reg.TaskCollection as tc on tv.idTaskCollection = tc.id
+	inner join ref.HierarchyPeriod as hp on tv.idHierarchyPeriod = hp.id
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	tv.idTerminator is null
+	and tv.idVersion = pa.idVersion
+	and tv.idSBP = 
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											select pa.idSBP
+											from doc.PlanActivity as pa
+											where pa.id = {idOwner} )
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+	
+	and tc.idActivity = {idActivity}
+	and (tc.idContingent = {idContingent} or (tc.idContingent is null and  {idContingent} is null))
+	and (		hp.DateStart &gt;= DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900  ,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+1,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+2,0)
+			)
+	and -- ШапкаДокумента.ППО.ГМЗ = ложь
+		0 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048136</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260360</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503806</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ac.idContingent
+from 
+	ml.Activity_Contingent as ac
+where
+	ac.idActivity = {idActivity}
+	--======================================
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+	and 1 = 1 -- если установлен флажок "Установлен отбор"
+
+union
+
+select c.id
+from
+	ref.Contingent as c
+where
+	c.idRefStatus = 2 -- В работе
+	and c.idPublicLegalFormation = ( select pa.idPublicLegalFormation from doc.PlanActivity as pa where pa.id = {idOwner} )
+	--======================================
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+	and 0 = 1 -- если НЕ установлен флажок "Установлен отбор"
+
+union
+
+select tc.idContingent
+from
+	reg.TaskVolume as tv 
+	inner join reg.TaskCollection as tc on tv.idTaskCollection = tc.id
+	inner join ref.HierarchyPeriod as hp on tv.idHierarchyPeriod = hp.id
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	tv.idTerminator is null
+	and tv.idVersion = pa.idVersion
+	and tv.idSBP = 
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											select pa.idSBP
+											from doc.PlanActivity as pa
+											where pa.id = {idOwner} )
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+			
+	and tc.idActivity = {idActivity}
+	and (		hp.DateStart &gt;= DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900  ,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+1,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+2,0)
+			)
+	--======================================
+	and -- ШапкаДокумента.ППО.ГМЗ = ложь
+		0 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048134</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260351</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048107</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select hp.id
+from
+	ref.HierarchyPeriod as hp
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	hp.DateStart = DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900  ,DATEADD(day,-1,0))
+or	hp.DateStart = DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900+1,DATEADD(day,-1,0))
+or	hp.DateStart = DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd = DATEADD(year,(budg.Year+1)-1900+2,DATEADD(day,-1,0))</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048133</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260331</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select a.idActivity
+from 
+	ml.Activity_SBP as a
+where
+	 a.idSBP =
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											select pa.idSBP
+											from doc.PlanActivity as pa
+											where pa.id = {idOwner} )
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+		
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+
+union
+
+select tc.idActivity 
+from
+	reg.TaskVolume as tv 
+	inner join reg.TaskCollection as tc on tv.idTaskCollection = tc.id
+	inner join ref.HierarchyPeriod as hp on tv.idHierarchyPeriod = hp.id
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	tv.idTerminator is null
+	and tv.idVersion = pa.idVersion
+	and tv.idSBP = 
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											select pa.idSBP
+											from doc.PlanActivity as pa
+											where pa.id = {idOwner} )
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+	
+	
+	and (		hp.DateStart &gt;= DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900  ,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+1,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+2,0)
+			)
+	and -- ШапкаДокумента.ППО.ГМЗ = ложь
+		0 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048132</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260330</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503806</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ac.idContingent
+from 
+	ml.Activity_Contingent as ac
+where
+	ac.idActivity = {idActivity}
+	--======================================
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+	and 1 = 1 -- если установлен флажок "Установлен отбор"
+
+union
+
+select c.id
+from
+	ref.Contingent as c
+where
+	c.idRefStatus = 2 -- В работе
+	and c.idPublicLegalFormation = ( select pa.idPublicLegalFormation from doc.PlanActivity as pa where pa.id = {idOwner} )
+	--======================================
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+	and 0 = 1 -- если НЕ установлен флажок "Установлен отбор"
+
+union
+
+select tc.idContingent
+from
+	reg.TaskVolume as tv 
+	inner join reg.TaskCollection as tc on tv.idTaskCollection = tc.id
+	inner join ref.HierarchyPeriod as hp on tv.idHierarchyPeriod = hp.id
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	tv.idTerminator is null
+	and tv.idVersion = pa.idVersion
+	and tv.idSBP = 
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											select pa.idSBP
+											from doc.PlanActivity as pa
+											where pa.id = {idOwner} )
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+			
+	and tc.idActivity = {idActivity}
+	and (		hp.DateStart &gt;= DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900  ,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+1,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+2,0)
+			)
+	--======================================
+	and -- ШапкаДокумента.ППО.ГМЗ = ложь
+		0 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048131</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260329</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ia.id
+from 
+	ref.IndicatorActivity as ia
+	inner join tp.Activity_Indicator as a_i on ia.id=a_i.idIndicatorActivity
+where
+	ia.idIndicatorActivityType = 1 --enm.IndicatorActivityType.id=1  - Показатель объема
+	and a_i.idOwner = {idActivity}
+	and a_i.idSBP =
+		( -- Ведомство = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											 select pa.idSBP
+											 from doc.PlanActivity as pa
+											 where pa.id = {idOwner}
+											) 
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+		
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+
+union
+
+select tv.idIndicatorActivity_Volume
+from
+	reg.TaskVolume as tv 
+	inner join reg.TaskCollection as tc on tv.idTaskCollection = tc.id
+	inner join ref.HierarchyPeriod as hp on tv.idHierarchyPeriod = hp.id
+	inner join doc.PlanActivity as pa on {idOwner} = pa.id
+	inner join ref.Budget as budg on pa.idBudget = budg.id
+	
+where
+	tv.idTerminator is null
+	and tv.idVersion = pa.idVersion
+	and tv.idSBP = 
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(	(	-- Шапка Документа.Учреждение
+											select pa.idSBP
+											from doc.PlanActivity as pa
+											where pa.id = {idOwner} )
+											,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+	
+	and tc.idActivity = {idActivity}
+	and (tc.idContingent = {idContingent} or (tc.idContingent is null and  {idContingent} is null))
+	and (		hp.DateStart &gt;= DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900  ,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+1,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+2,0)
+			)
+	and -- ШапкаДокумента.ППО.ГМЗ = ложь
+		0 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048127</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260342</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ia.id
+from 
+	ref.IndicatorActivity as ia
+	inner join tp.Activity_Indicator as a_i on ia.id=a_i.idIndicatorActivity
+	inner join tp.PlanActivity_Activity as paa1 on paa1.id = {idMaster}
+	inner join doc.PlanActivity as pa1 on {idOwner} = pa1.id
+where
+	ia.idIndicatorActivityType = 0 --enm.IndicatorActivityType.id=0  - Показатель качества
+	and a_i.idOwner = paa1.idActivity
+	and ia.idSBP =
+		( -- Ведомство = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(pa1.idSBP,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+		
+	and -- ШапкаДокумента.ППО.ГМЗ = Истина
+		1 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )
+
+union
+
+select tiq.idIndicatorActivity_Quality
+from
+	reg.TaskIndicatorQuality as tiq
+	inner join reg.TaskCollection as tc on tiq.idTaskCollection = tc.id
+	inner join ref.HierarchyPeriod as hp on tiq.idHierarchyPeriod = hp.id
+	inner join doc.PlanActivity as pa2 on {idOwner} = pa2.id
+	inner join tp.PlanActivity_Activity as paa2 on paa2.id = {idMaster}
+	inner join ref.Budget as budg on pa2.idBudget = budg.id
+	
+where
+	tiq.idTerminator is null
+	and tiq.idVersion = pa2.idVersion
+	and tiq.idSBP = 
+		( -- СБП = первый предок с типом «ГРБС» или «РБС» для ШапкаДокумента.Учреждение
+			select TOP 1 sbp.id
+			from
+				ref.SBP as sbp
+				inner join dbo.GetParents(pa2.idSBP ,default,'SBP','idParent',default) as allParents on allParents.id = sbp.id
+			where 
+				(sbp.idSBPType = 1 -- Главный распорядитель
+				or sbp.idSBPType = 2) -- Распорядитель БС
+			ORDER BY distance ASC)
+	
+	and tc.idActivity = paa2.idActivity
+	and (tc.idContingent = paa2.idContingent or (tc.idContingent is null and  paa2.idContingent is null))
+	and (		hp.DateStart &gt;= DATEADD(year,budg.Year-1900  ,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900  ,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+1,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+1,0)
+			or	hp.DateStart &gt;= DATEADD(year,budg.Year-1900+2,0) and hp.DateEnd &lt; DATEADD(year,(budg.Year+1)-1900+2,0)
+			)
+	and -- ШапкаДокумента.ППО.ГМЗ = ложь
+		0 = (	select plf.UsedGMZ
+				from
+					doc.PlanActivity as pa
+					inner join ref.PublicLegalFormation as plf on pa.idPublicLegalFormation = plf.id
+				where
+					pa.id = {idOwner} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048117</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046928</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048116</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046927</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select idActivity
+from ml.Activity_SBP
+where idSBP={idSBP}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048114</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046891</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265674</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select su.id
+from tp.ExpenditureObligations_RegulatoryAct as ra
+inner join tp.RegulatoryAct_StructuralUnit as su on ra.idRegulatoryAct = su.idOwner
+where ra.id = {idMaster}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048112</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046890</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879046892</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1879046898</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048105</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1879046904</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description>только элементы с типом «Главный распорядитель бюджетных средств»</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1811939296</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1811939240</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483585</idLeftEntityField>
+    <idComparisionOperator>5</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1811939239</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612709</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503737</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612701</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503737</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265847</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503743</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1610612709</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612695</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503728</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ia.id
+from 
+	ref.IndicatorActivity as ia
+	inner join tp.Activity_Indicator as a_i on ia.id=a_i.idIndicatorActivity
+where
+	ia.idIndicatorActivityType = 1 -- Показатель объема
+	and a_i.idOwner = {idActivity}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612693</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503727</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503806</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ac.idContingent
+from 
+	ml.Activity_Contingent as ac
+where
+	ac.idActivity = {idActivity}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612691</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610653</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610650</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503724</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612690</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610654</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610651</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503724</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612688</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610649</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ia.id
+from 
+	ref.IndicatorActivity as ia
+	inner join tp.Activity_Indicator as a_i on ia.id=a_i.idIndicatorActivity
+	inner join tp.RegisterActivity_Activity as RAA on a_i.idOwner = RAA.idActivity
+where
+	ia.idIndicatorActivityType = 0 -- Показатель качества
+	and RAA.idOwner = {idOwner}
+	and RAA.id = {IdMaster}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612686</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503729</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.Activity A
+inner join ml.Activity_SBP A_SBP on A.id = A_SBP.idActivity
+where 
+((
+idActivityType in (0, 1) and 
+ {idOwner} = (select doc.id from doc.RegisterActivity as doc where doc.id = {idOwner} and doc.idDocType = -1543503849) 
+)or(
+idActivityType = 0 and 
+{idOwner} = (select id from doc.RegisterActivity where id = {idOwner} and idDocType = -1543503848)
+) or (
+idActivityType in (3, 7) and 
+{idOwner} = (select id from doc.RegisterActivity where id = {idOwner} and idDocType = -1543503847) 
+)) 
+and 
+A_SBP.idSBP = ISNULL((select top 1 idSBP from doc.RegisterActivity where id = {idOwner}), A_SBP.idSBP)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612682</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610648</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265771</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select DISTINCT sbp.idOrganization from ref.SBP as sbp											
+inner join dbo.GetChildrens( 	(-- Шапка Документа.Учреждение
+											select RA.idSBP
+											from doc.RegisterActivity as RA
+											where RA.id ={idOwner} ), -2013265747, 1) as Childrens on sbp.id= Childrens.id
+where {idOwner} = (select id from doc.RegisterActivity where id = {idOwner} and (idDocType = -1543503849 or idDocType = -1543503847))												
+
+Union all 											
+
+select sbp.idOrganization from ref.SBP as sbp
+where
+{idOwner} = (select id from doc.RegisterActivity where id = {idOwner} and idDocType = -1543503848)
+and (
+(
+(sbp.idSBPType = 1 -- Главный распорядитель
+or sbp.idSBPType = 2) -- Распорядитель БС
+ and  
+{IdMaster}  = (select id from tp.RegisterActivity_Activity where id = {IdMaster} and idRegistryKeyActivity = 0)
+)
+or 
+(
+sbp.idPublicLegalFormation = (select idPublicLegalFormation from doc.RegisterActivity where id = {idOwner})
+and
+{IdMaster}  = (select id from tp.RegisterActivity_Activity where id = {IdMaster}  and idRegistryKeyActivity = 1)
+)
+or 
+(
+{IdMaster}  = (select id from tp.RegisterActivity_Activity where id = {IdMaster}  and idRegistryKeyActivity = 2)
+)
+)
+</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612680</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503725</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503726</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>0</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612678</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610601</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503240</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.kfo
+where (ValidityTo &gt; GetDate() or ValidityTo = NULL )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612677</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610600</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265862</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.KVSR
+where (ValidityTo &gt; GetDate() or ValidityTo = NULL )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612676</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610599</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503184</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.RZPR
+where not id in (select distinct  idParent as id from ref.RZPR where idParent is not null) 
+and (ValidityTo &gt; GetDate() or ValidityFrom = NULL and ValidityTo = NULL )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612675</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610598</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503192</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.KCSR
+where not id in (select distinct  idParent as id from ref.KCSR where idParent is not null) 
+and (ValidityTo &gt; GetDate() or (ValidityFrom is NULL and ValidityTo is NULL) )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612674</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610597</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048012</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.KVR
+where not id in (select distinct  idParent as id from ref.KVR where idParent is not null) 
+and (ValidityTo &gt; GetDate() or (ValidityFrom is NULL and ValidityTo is NULL) )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612673</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610596</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503199</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.KOSGU
+where not id in (select distinct  idParent as id from ref.KOSGU where idParent is not null) 
+and (ValidityTo &gt; GetDate() or (ValidityFrom is NULL and ValidityTo is NULL) )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612672</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610595</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503223</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.DFK
+where not id in (select distinct  idParent as id from ref.DFK where idParent is not null) 
+and (ValidityTo &gt; GetDate() or (ValidityFrom is NULL and ValidityTo is NULL) )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612671</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610594</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503207</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.DKR
+where not id in (select distinct  idParent as id from ref.DKR where idParent is not null) 
+and (ValidityTo &gt; GetDate() or (ValidityFrom is NULL and ValidityTo is NULL) )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612670</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610593</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503215</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.DEK
+where not id in (select distinct  idParent as id from ref.DEK where idParent is not null) 
+and (ValidityTo &gt; GetDate() or (ValidityFrom is NULL and ValidityTo is NULL) )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612669</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610592</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503230</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.CodeSubsidy
+where not id in (select distinct  idParent as id from ref.CodeSubsidy where idParent is not null) 
+and (ValidityTo &gt; GetDate() or (ValidityFrom is NULL and ValidityTo is NULL) )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612668</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610591</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1610610646</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.BranchCode
+where not id in (select distinct  idParent as id from ref.BranchCode where idParent is not null) 
+and (ValidityTo &gt; GetDate() or (ValidityFrom is NULL and ValidityTo is NULL) )</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612666</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610586</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1610612664</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1610610566</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207959522</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select * from [doc].[LimitBudgetAllocations_GetParents]({id})
+
+</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503848</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503786</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503715</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503819</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503847</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503778</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503712</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503819</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503845</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503742</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265714</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>-1543503828</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503841</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503592</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265715</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.DocType where [idEntity]=-1543503797 and id&lt;&gt;-1543503839</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503838</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503435</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503449</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503436</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503837</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503433</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503446</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503436</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503836</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503432</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503441</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503433</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503835</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503431</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503439</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503433</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503834</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503285</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503297</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503432</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503833</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503284</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503298</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503433</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503832</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503283</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503294</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503434</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503830</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503281</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503296</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503435</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503829</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503279</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503291</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503505</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503828</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503278</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503289</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503503</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503827</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503277</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503288</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503501</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503826</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503276</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503293</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503485</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503825</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503275</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503292</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503484</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503824</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503274</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503290</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503483</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503823</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503273</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503301</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503380</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503822</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503272</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503300</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503378</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503821</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503271</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503299</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503376</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503820</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503270</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503287</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503374</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503818</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503812</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503816</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503715</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503799</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503746</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.IndicatorActivity where idSBP is null or idSBP = {idSBP}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503792</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503819</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503788</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503704</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048020</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.AnalyticalCodeStateProgram where  idTypeOfAnalyticalCodeStateProgram = 1</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503786</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503280</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503295</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503431</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503785</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503479</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503784</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503554</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503783</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503692</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503775</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503423</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select acsbp.idActivity
+from ml.Activity_SBP as acsbp
+inner join doc.ActivityOfSBP as d on acsbp.idSBP = d.idSBP
+where d.id={idOwner}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503773</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503457</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265685</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>
+		select
+		spr.id
+		from
+		doc.ActivityOfSBP as d
+		inner join ref.SystemGoal as spr on
+		d.idPublicLegalFormation = spr.idPublicLegalFormation
+		AND d.DateStart &lt;= spr.DateStart
+		AND d.DateEnd &gt;= spr.DateEnd
+		AND (d.idSBP = spr.idSBP)
+		where
+		d.id = {idOwner}
+		and
+		((exists (select idSystemGoal from tp.ActivityOfSBP_SystemGoalElement where idOwner=d.id and IsMainGoal=1) and
+		spr.idParent in (select idSystemGoal from tp.ActivityOfSBP_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		AND (d.idDocType = spr.idDocType_CommitDoc)
+		)
+		or
+		(not exists (select idSystemGoal from tp.ActivityOfSBP_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		AND (d.idDocType = spr.idDocType_CommitDoc or d.idDocType = spr.idDocType_ImplementDoc)))
+		and spr.idParent not in (
+		select
+		spr.id
+		from
+		doc.ActivityOfSBP as d
+		inner join ref.SystemGoal as spr on
+		d.idPublicLegalFormation = spr.idPublicLegalFormation
+		AND d.DateStart &lt;= spr.DateStart
+		AND d.DateEnd &gt;= spr.DateEnd
+		AND (d.idSBP = spr.idSBP)
+		where
+		d.id = {idOwner}
+		and
+		((exists (select idSystemGoal from tp.ActivityOfSBP_SystemGoalElement where idOwner=d.id and IsMainGoal=1) and
+		spr.idParent in (select idSystemGoal from tp.ActivityOfSBP_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		AND (d.idDocType = spr.idDocType_CommitDoc))
+		or
+		(not exists (select idSystemGoal from tp.ActivityOfSBP_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		AND (d.idDocType = spr.idDocType_CommitDoc or d.idDocType = spr.idDocType_ImplementDoc)))
+		)
+	</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503771</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503681</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265685</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>
+		select
+		spr.id 
+		from
+		doc.StateProgram as d
+		inner join ref.SystemGoal as spr on
+		d.idPublicLegalFormation = spr.idPublicLegalFormation
+		AND d.DateStart &lt;= spr.DateStart
+		AND d.DateEnd &gt;= spr.DateEnd
+		where
+		d.id = {idOwner}
+		and
+		((exists (select idSystemGoal from tp.StateProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1) and
+		spr.idParent in (select idSystemGoal from tp.StateProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		AND (d.idDocType = spr.idDocType_CommitDoc)
+		)
+		or
+		(not exists (select idSystemGoal from tp.StateProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		AND (d.idSBP = spr.idSBP or spr.idSBP is null)
+		AND (d.idDocType = spr.idDocType_CommitDoc or d.idDocType = spr.idDocType_ImplementDoc)))
+		and spr.idParent not in (
+		select
+		spr.id
+		from
+		doc.StateProgram as d
+		inner join ref.SystemGoal as spr on
+		d.idPublicLegalFormation = spr.idPublicLegalFormation
+		AND d.DateStart &lt;= spr.DateStart
+		AND d.DateEnd &gt;= spr.DateEnd
+		where
+		d.id = {idOwner}
+		and
+		((exists (select idSystemGoal from tp.StateProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1) and
+		spr.idParent in (select idSystemGoal from tp.StateProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		AND (d.idDocType = spr.idDocType_CommitDoc))
+		or
+		(not exists (select idSystemGoal from tp.StateProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		AND (d.idSBP = spr.idSBP or spr.idSBP is null)
+		AND (d.idDocType = spr.idDocType_CommitDoc or d.idDocType = spr.idDocType_ImplementDoc)))
+		)
+	</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503770</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503541</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265685</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>
+		  select
+		  spr.id
+		  from
+		  doc.LongTermGoalProgram as d
+		  inner join ref.SystemGoal as spr on
+		  d.idPublicLegalFormation = spr.idPublicLegalFormation
+		  AND d.DateStart &lt;= spr.DateStart
+		  AND d.DateEnd &gt;= spr.DateEnd
+		  where
+		  d.id = {idOwner}
+		  and
+		  ((exists (select idSystemGoal from tp.LongTermGoalProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1) and
+		  spr.idParent in (select idSystemGoal from tp.LongTermGoalProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		  AND (d.idDocType = spr.idDocType_CommitDoc)
+		  )
+		  or
+		  (not exists (select idSystemGoal from tp.LongTermGoalProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		  AND (d.idSBP = spr.idSBP or spr.idSBP is null)
+		  AND (d.idDocType = spr.idDocType_CommitDoc or d.idDocType = spr.idDocType_ImplementDoc)))
+		  and spr.idParent not in (
+		  select
+		  spr.id
+		  from
+		  doc.LongTermGoalProgram as d
+		  inner join ref.SystemGoal as spr on
+		  d.idPublicLegalFormation = spr.idPublicLegalFormation
+		  AND d.DateStart &lt;= spr.DateStart
+		  AND d.DateEnd &gt;= spr.DateEnd
+		  where
+		  d.id = {idOwner}
+		  and
+		  ((exists (select idSystemGoal from tp.LongTermGoalProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1) and
+		  spr.idParent in (select idSystemGoal from tp.LongTermGoalProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		  AND (d.idDocType = spr.idDocType_CommitDoc))
+		  or
+		  (not exists (select idSystemGoal from tp.LongTermGoalProgram_SystemGoalElement where idOwner=d.id and IsMainGoal=1)
+		  AND (d.idSBP = spr.idSBP or spr.idSBP is null)
+		  AND (d.idDocType = spr.idDocType_CommitDoc or d.idDocType = spr.idDocType_ImplementDoc)))
+		  )
+	  </RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503769</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503376</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503656</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503377</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503768</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503663</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265848</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select sbp.id
+from tp.StateProgram_CoExecutor as coe
+inner join ref.SBP as sbp on sbp.id=coe.idSBP
+where coe.idOwner={idOwner} and (sbp.idSBPType = 1 or sbp.idSBPType = 2)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503766</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503672</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503764</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503665</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048020</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select acsp.id
+from ref.AnalyticalCodeStateProgram as acsp
+inner join doc.StateProgram as d on d.id={idOwner} 
+and acsp.idParent = d.idAnalyticalCodeStateProgram
+where acsp.idTypeOfAnalyticalCodeStateProgram = 2</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503763</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503664</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265715</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1543503837, -1543503842</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503762</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503661</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265685</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select 
+	spr.id
+from 
+	ref.SystemGoal as spr
+	inner join
+	(
+		select 
+			idSystemGoal
+		from 
+			tp.StateProgram_SystemGoalElement
+		where 
+			idOwner = {idOwner} and
+			id not in (
+				select idParent
+				from   tp.StateProgram_SystemGoalElement
+				where  idOwner = {idOwner} and idParent is not null
+			)
+	) as tsge on tsge.idSystemGoal = spr.id
+	inner join doc.StateProgram as d on d.id = {idOwner}
+where 
+	spr.idDocType_CommitDoc = d.idDocType 
+	and spr.idDocType_ImplementDoc = {idDocType}
+	and (spr.idSBP = {idSBP} or spr.idSBP is null)
+
+union
+
+select 
+	spr.id
+from 
+	ref.SystemGoal as spr
+	inner join doc.StateProgram as d on d.id = {idOwner}
+where 
+	spr.idDocType_CommitDoc = {idDocType} 
+	and (spr.idSBP = {idSBP} or spr.idSBP is null)
+	and spr.idParent in (
+		select 
+			sg1.id
+		from 
+			ref.SystemGoal as sg1
+			inner join (
+				select 
+					idSystemGoal
+				from 
+					tp.StateProgram_SystemGoalElement
+				where
+					idOwner = {idOwner}
+					and id not in (
+						select idParent
+						from   tp.StateProgram_SystemGoalElement
+						where  idOwner = {idOwner} and idParent is not null
+					)
+			) as tsge1 on tsge1.idSystemGoal = sg1.id
+		where
+			sg1.idDocType_ImplementDoc = d.idDocType 
+			or sg1.idDocType_ImplementDoc IS NULL
+	)
+	</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503761</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503651</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048020</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select acsp.id
+from ref.AnalyticalCodeStateProgram as acsp
+inner join doc.StateProgram as d on d.id={idOwner} 
+and acsp.idParent = d.idAnalyticalCodeStateProgram
+where acsp.idTypeOfAnalyticalCodeStateProgram = 3</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503760</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503647</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265685</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select 
+	spr.id
+from 
+	ref.SystemGoal as spr
+	inner join
+	(
+		select 
+			idSystemGoal
+		from 
+			tp.StateProgram_SystemGoalElement
+		where 
+			idOwner = {idOwner} and
+			id not in (
+				select idParent
+				from   tp.StateProgram_SystemGoalElement
+				where  idOwner = {idOwner} and idParent is not null
+			)
+	) as tsge on tsge.idSystemGoal = spr.id
+	inner join doc.StateProgram as d on d.id = {idOwner}
+where 
+	spr.idDocType_CommitDoc = d.idDocType 
+	and spr.idDocType_ImplementDoc = {idDocType}
+	and (spr.idSBP = {idSBP} or spr.idSBP is null)
+
+union
+
+select 
+	spr.id
+from 
+	ref.SystemGoal as spr
+	inner join doc.StateProgram as d on d.id = {idOwner}
+where 
+	spr.idDocType_CommitDoc = {idDocType} 
+	and (spr.idSBP = {idSBP} or spr.idSBP is null)
+	and spr.idParent in (
+		select 
+			sg1.id
+		from 
+			ref.SystemGoal as sg1
+			inner join (
+				select 
+					idSystemGoal
+				from 
+					tp.StateProgram_SystemGoalElement
+				where
+					idOwner = {idOwner}
+					and id not in (
+						select idParent
+						from   tp.StateProgram_SystemGoalElement
+						where  idOwner = {idOwner} and idParent is not null
+					)
+			) as tsge1 on tsge1.idSystemGoal = sg1.id
+		where
+			sg1.idDocType_ImplementDoc = d.idDocType 
+			or sg1.idDocType_ImplementDoc IS NULL
+	)
+	</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503759</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503649</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265848</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select sbp.id
+from tp.StateProgram_CoExecutor as coe
+inner join ref.SBP as sbp on sbp.id=coe.idSBP
+where coe.idOwner={idOwner} and (sbp.idSBPType = 1 or sbp.idSBPType = 2)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503758</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503650</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265715</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>-1543503841, -1543503839</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503756</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503442</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ia.id
+from ref.Activity as a
+inner join doc.ActivityOfSBP as d on d.id={idOwner}
+inner join ml.Activity_SBP as mas on a.id = mas.idActivity and mas.idSBP=d.idSBP
+inner join tp.Activity_Indicator as tai on tai.idOwner=a.id
+inner join ref.IndicatorActivity as ia on tai.idIndicatorActivity=ia.id 
+where a.id={idActivity} and ia.idIndicatorActivityType=1</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503755</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503445</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265848</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select sbp.id
+from doc.ActivityOfSBP as d 
+inner join ref.SBP as sbp on d.idSBP=sbp.id or (d.idSBP=sbp.idParent and sbp.idSBPType=2)
+where d.id={idOwner} </RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503754</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503443</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503806</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select mac.idContingent
+from ml.Activity_Contingent as mac 
+where mac.idActivity={idActivity}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503753</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503438</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ia.id
+from ref.Activity as a
+inner join doc.ActivityOfSBP as d on d.id={idOwner}
+inner join tp.ActivityOfSBP_Activity as ta on a.id=ta.idActivity and  ta.id =  {idMaster} 
+inner join ml.Activity_SBP as mas on a.id = mas.idActivity and mas.idSBP=d.idSBP
+inner join tp.Activity_Indicator as tai on tai.idOwner=a.id
+inner join ref.IndicatorActivity as ia on tai.idIndicatorActivity=ia.id 
+where ia.idIndicatorActivityType=0</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503752</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503518</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1879048020</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select acsp.id
+from ref.AnalyticalCodeStateProgram as acsp
+inner join doc.LongTermGoalProgram as d on d.id={idOwner} 
+and acsp.idParent = d.idAnalyticalCodeStateProgram
+where acsp.idTypeOfAnalyticalCodeStateProgram = 3
+</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503751</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503516</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265848</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select sbp.id
+from tp.LongTermGoalProgram_CoExecutor as coe
+inner join ref.SBP as sbp on sbp.id=coe.idSBP
+where coe.idOwner={idOwner} and (sbp.idSBPType = 1 or sbp.idSBPType = 2)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503750</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503514</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265685</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select 
+	spr.id
+from 
+	ref.SystemGoal as spr
+	inner join
+	(
+		select 
+			idSystemGoal
+		from 
+			tp.LongTermGoalProgram_SystemGoalElement
+		where 
+			idOwner = {idOwner} and
+			id not in (
+				select idParent
+				from   tp.LongTermGoalProgram_SystemGoalElement
+				where  idOwner = {idOwner} and idParent is not null
+			)
+	) as tsge on tsge.idSystemGoal = spr.id
+	inner join doc.LongTermGoalProgram as d on d.id = {idOwner}
+where 
+	spr.idDocType_CommitDoc = d.idDocType 
+	and spr.idDocType_ImplementDoc = -1543503835
+	and (spr.idSBP = {idSBP} or spr.idSBP is null)
+
+union
+
+select 
+	spr.id
+from 
+	ref.SystemGoal as spr
+	inner join doc.LongTermGoalProgram as d on d.id = {idOwner}
+where 
+	spr.idDocType_CommitDoc = -1543503835
+	and (spr.idSBP = {idSBP} or spr.idSBP is null)
+	and spr.idParent in (
+		select 
+			sg1.id
+		from 
+			ref.SystemGoal as sg1
+			inner join (
+				select 
+					idSystemGoal
+				from 
+					tp.LongTermGoalProgram_SystemGoalElement
+				where
+					idOwner = {idOwner}
+					and id not in (
+						select idParent
+						from   tp.LongTermGoalProgram_SystemGoalElement
+						where  idOwner = {idOwner} and idParent is not null
+					)
+			) as tsge1 on tsge1.idSystemGoal = sg1.id
+		where
+			sg1.idDocType_ImplementDoc = d.idDocType 
+			or sg1.idDocType_ImplementDoc IS NULL
+	)
+	</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503749</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503525</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265749</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1, 2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503747</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503422</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select acsbp.idActivity
+from ml.Activity_SBP as acsbp
+where acsbp.idSBP = {idSBP}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503746</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503495</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503806</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select mac.idContingent
+from ml.Activity_Contingent as mac 
+where mac.idActivity={idActivity}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503745</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503494</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select ia.id
+from ref.Activity as a
+inner join ml.Activity_SBP as mas on a.id = mas.idActivity 
+inner join tp.Activity_Indicator as tai on tai.idOwner=a.id
+inner join ref.IndicatorActivity as ia on tai.idIndicatorActivity=ia.id 
+where a.id={idActivity} and ia.idIndicatorActivityType=1 and mas.idSBP={idSBP}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503744</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503497</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265848</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select idSBP
+from tp.LongTermGoalProgram_CoExecutor 
+where idOwner = {idOwner}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503742</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503374</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503642</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503375</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503741</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503505</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503529</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503506</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503740</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503380</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503655</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503381</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503738</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503485</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503498</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503506</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503736</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503484</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503491</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503485</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503734</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503501</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503509</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503502</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503732</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503486</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select 
+	ia.id
+from 
+	tp.LongTermGoalProgram_Activity as tpa 
+	inner join tp.Activity_Indicator as tai on tai.idOwner=tpa.idActivity
+	inner join ref.IndicatorActivity as ia on tai.idIndicatorActivity=ia.id
+where 
+	tpa.idOwner = {idOwner} 
+	and tpa.id = {idMaster}
+	and ia.idIndicatorActivityType=0
+	and tai.idSBP=tpa.idSBP</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503731</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503483</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503487</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543503485</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503729</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503752</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265738</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.AuthorityOfExpenseObligation where idParent in (select id from ref.AuthorityOfExpenseObligation where idParent is null)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503727</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543502053</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503464</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1543502055</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503709</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500896</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503199</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id 
+from ref.KOSGU as a
+where a.id not in (select idParent from ref.KOSGU where idParent is not null)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503708</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500897</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265738</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>
+select id 
+from ref.AuthorityOfExpenseObligation as a
+where a.Caption like 'РС-А-%'
+and a.id not in (select idParent from ref.AuthorityOfExpenseObligation where idParent is not null)</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503706</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543500888</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265738</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select aeo.id
+from tp.ActivityOfSBP_Activity as tp_a 
+join tp.Activity_CodeAuthority as a_ca on a_ca.idOwner=tp_a.idActivity
+join ref.AuthorityOfExpenseObligation as aeo on aeo.id=a_ca.idAuthorityOfExpenseObligation or aeo.idParent=a_ca.idAuthorityOfExpenseObligation
+where tp_a.id={idMaster}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1275068396</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1275068350</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265693</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>SELECT SGGI.[idGoalIndicator]
+  FROM [tp].[SystemGoal_GoalIndicator] AS SGGI
+WHERE SGGI.idOwner = (	
+						SELECT TOP 1 idParent 
+						FROM ref.SystemGoal AS SG 
+						WHERE SG.id  = {idOwner}
+					)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959533</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959518</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1677721563</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>2</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959457</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959407</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1677721571</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207959410</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959450</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959384</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select TC.idActivity from reg.TaskVolume TV
+left join reg.TaskCollection TC on (TC.id = TV.idTaskCollection)
+inner join ref.HierarchyPeriod HP on (HP.id = TV.idHierarchyPeriod) 
+inner join doc.PublicInstitutionEstimate PE on (PE.id = {idOwner})
+where TV.idPublicLegalFormation = PE.idPublicLegalFormation
+and TV.idTerminator is null
+and TV.idVersion = PE.idVersion
+and TV.idSBP = PE.idSBP
+and Year(HP.DateStart) &gt;= (select top 1 B.[year] from ref.Budget B where B.id = PE.idBudget )
+and Year(HP.DateStart) &lt;= (select top 1 ( B.[year] + 2) from ref.Budget B where B.id = PE.idBudget )
+and ( TV.ActivityAUBU is null or TV.ActivityAUBU = 0 )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959449</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959382</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503806</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select TC.idContingent from reg.TaskVolume TV
+left join reg.TaskCollection TC on (TC.id = TV.idTaskCollection)
+inner join ref.HierarchyPeriod HP on (HP.id = TV.idHierarchyPeriod) 
+inner join doc.PublicInstitutionEstimate PE on (PE.id = {idOwner}) 
+where TV.idPublicLegalFormation = PE.idPublicLegalFormation
+and TV.idTerminator is null
+and TV.idVersion = PE.idVersion
+and TV.idSBP = PE.idSBP
+and Year(HP.DateStart) &gt;= (select top 1 B.[year] from ref.Budget B where B.id = PE.idBudget )
+and Year(HP.DateStart) &lt;= (select top 1 ( B.[year] + 2) from ref.Budget B where B.id = PE.idBudget )
+and ( TV.ActivityAUBU is null or TV.ActivityAUBU = 0 )
+and TC.idActivity = {idActivity}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959447</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959380</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select TV.idIndicatorActivity_Volume  from reg.TaskVolume TV
+left join reg.TaskCollection TC on (TC.id = TV.idTaskCollection)
+inner join ref.HierarchyPeriod HP on (HP.id = TV.idHierarchyPeriod) 
+inner join doc.PublicInstitutionEstimate P on (P.id = {idOwner} )
+where TV.idPublicLegalFormation = P.idPublicLegalFormation
+and TV.idTerminator is null
+and TV.idVersion = P.idVersion
+and TV.idSBP = P.idSBP
+and Year(HP.DateStart) &gt;= (select top 1 B.[year] from ref.Budget B where B.id = P.idBudget )
+and Year(HP.DateStart) &lt;= (select top 1 ( B.[year] + 2) from ref.Budget B where B.id = P.idBudget )
+and ( TV.ActivityAUBU is null or TV.ActivityAUBU = 0 )
+and TC.idActivity = {idActivity}
+and ( {idContingent} Is Null Or TC.idContingent = {idContingent} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959445</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959511</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265848</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>Select id
+  From ref.SBP
+  Where ( ValidityFrom Is Null Or ValidityFrom &lt;= {Date} )
+  And ( ValidityTo Is Null Or ValidityTo &gt; {Date} )
+  And idSBPType in (1,2)</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959428</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959403</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265848</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>Select id from ref.SBP
+Where idSBPType = 3 And
+ ( ValidityFrom Is Null Or ValidityFrom &lt;= {Date} ) And
+ ( ValidityTo Is Null Or ValidityTo &gt; {Date} )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959426</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959290</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207959335</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207959291</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959425</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959289</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959424</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959288</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207959315</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207959291</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959422</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959292</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207959359</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207959389</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959420</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959285</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207959266</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207959287</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959419</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959286</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207959283</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207959287</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959414</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959289</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207959329</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207959291</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <idParent>-1207959425</idParent>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959412</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959299</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503829</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select TC.idActivity from reg.TaskVolume TV  
+left join reg.TaskCollection TC on (TC.id = TV.idTaskCollection)  
+inner join ref.HierarchyPeriod HP on (HP.id = TV.idHierarchyPeriod)   
+inner join doc.PublicInstitutionEstimate PE on (PE.id = {idOwner})  
+where TV.idPublicLegalFormation = PE.idPublicLegalFormation  and 
+TV.idTerminator is null  and 
+TV.idVersion = PE.idVersion  and 
+TV.idSBP = PE.idSBP  and 
+Year(HP.DateStart) &gt;= (select top 1 B.[year] from ref.Budget B where B.id = PE.idBudget )  and 
+Year(HP.DateStart) &lt;= (select top 1 ( B.[year] + 2) from ref.Budget B where B.id = PE.idBudget )  and
+ ( TV.ActivityAUBU  = 1 )</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959411</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959297</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503806</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select TC.idContingent from reg.TaskVolume TV  
+left join reg.TaskCollection TC on (TC.id = TV.idTaskCollection)  
+inner join ref.HierarchyPeriod HP on (HP.id = TV.idHierarchyPeriod)   
+inner join doc.PublicInstitutionEstimate PE on (PE.id = {idOwner})
+where TV.idPublicLegalFormation = PE.idPublicLegalFormation  and 
+TV.idTerminator is null  and 
+TV.idVersion = PE.idVersion  and 
+TV.idSBP =  PE.idSBP  and 
+Year(HP.DateStart) &gt;= (select top 1 B.[year] from ref.Budget B where B.id = PE.idBudget )  and 
+Year(HP.DateStart) &lt;= (select top 1 ( B.[year] + 2) from ref.Budget B where B.id = PE.idBudget )  and 
+( TV.ActivityAUBU = 1 ) and
+TC.idActivity = {idActivity}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959410</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959294</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503817</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select TV.idIndicatorActivity_Volume  
+from reg.TaskVolume TV  
+left join reg.TaskCollection TC on (TC.id = TV.idTaskCollection)  
+inner join ref.HierarchyPeriod HP on (HP.id = TV.idHierarchyPeriod)   
+inner join doc.PublicInstitutionEstimate P on (P.id = {idOwner} )  
+where TV.idPublicLegalFormation = P.idPublicLegalFormation  and 
+TV.idTerminator is null  and 
+TV.idVersion = P.idVersion  and 
+TV.idSBP = P.idSBP  and 
+Year(HP.DateStart) &gt;= (select top 1 B.[year] from ref.Budget B where B.id = P.idBudget )  and 
+Year(HP.DateStart) &lt;= (select top 1 ( B.[year] + 2) from ref.Budget B where B.id = P.idBudget )  and 
+( TV.ActivityAUBU = 1 ) and
+TC.idActivity = {idActivity} and
+(  {idContingent} is null or TC.idContingent = {idContingent} ) </RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959408</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959328</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1207959387</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-1207959371</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959406</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959343</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265738</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct 
+	s.id 
+from 
+	ref.AuthorityOfExpenseObligation as s
+	inner join tp.Activity_CodeAuthority as t on t.idAuthorityOfExpenseObligation = s.id or t.idAuthorityOfExpenseObligation = s.idParent
+	inner join tp.PublicInstitutionEstimate_Activity as a on a.idActivity = t.idOwner
+where
+	a.id = {idMaster}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959405</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959267</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2013265738</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select distinct 
+	s.id 
+from 
+	ref.AuthorityOfExpenseObligation as s
+	inner join tp.Activity_CodeAuthority as t on t.idAuthorityOfExpenseObligation = s.id or t.idAuthorityOfExpenseObligation = s.idParent
+	inner join tp.PublicInstitutionEstimate_ActivityAUBU as a on a.idActivity = t.idOwner
+where
+	a.id = {idMaster}</RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959403</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959473</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503231</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959401</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959356</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503231</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959400</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959312</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503231</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1207959399</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1207959280</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-1543503231</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue>1</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+</NewDataSet>

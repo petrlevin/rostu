@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="Platform.Web.index1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+	
+    <!--ExtCSS-->
+    <link rel='stylesheet' type='text/css' href='resources/ext-all.css' />
+    <link rel='stylesheet' type='text/css' href='Resources/GridFilters.css'>
+    <link rel='stylesheet' type='text/css' href='Resources/RangeMenu.css'>
+    <link rel='stylesheet' type='text/css' href='resources/platform.css' />
+
+    <!-- <script type="text/javascript" charset="utf-8" src="ext\platform.js"></script> -->
+    <!-- <script type="text/javascript" charset="utf-8" src="ext\platform-dev.js"></script> -->
+    <!-- <script type="text/javascript" charset="utf-8" src="ext\ext-dev.js"></script> -->
+    <!-- <script type="text/javascript" charset="utf-8" src="ext\ext-all.js"></script> -->
+    <!-- <script type="text/javascript" charset="utf-8" src="app\Application.js"></script> -->
+    
+    <asp:contentplaceholder id="Scripts" runat="server" />
+    
+    <script type="text/javascript" charset="utf-8" src="ext\ext-lang-ru.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ext\ext-ux-lang-ru.js"></script>
+    <script type="text/javascript" src="rpc"></script>
+    
+    <link rel="shortcut icon" href="resources/images/favicon.ico" />
+</head>
+<body>
+	<!-- Fields required for history management -->
+	<form id="history-form" class="x-hidden">
+    <input type="hidden" id="x-history-field" value="" />
+    <iframe id="x-history-frame"></iframe>
+	</form>
+</body>
+</html>
+

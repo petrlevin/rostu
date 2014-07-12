@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Activity" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Activity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="Code" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="20" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idActivityType" type="xs:unsignedByte" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="FullCaption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="OrganSetPrice" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+                <xs:element name="idPaidType" type="xs:unsignedByte" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Activity" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Activity>
+    <id>-1879048164</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Code>1</Code>
+    <idActivityType>6</idActivityType>
+    <Caption>Воинская служба</Caption>
+    <FullCaption>Воинская служба</FullCaption>
+    <OrganSetPrice></OrganSetPrice>
+    <idRefStatus>2</idRefStatus>
+  </ref.Activity>
+  <ref.Activity>
+    <id>-1879048162</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Code>2</Code>
+    <idActivityType>3</idActivityType>
+    <Caption>Публичное обязательство 001</Caption>
+    <FullCaption>Публичное обязательство 001</FullCaption>
+    <OrganSetPrice></OrganSetPrice>
+    <idRefStatus>2</idRefStatus>
+  </ref.Activity>
+</NewDataSet>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.FBA_FinancialIndicatorsInstitutions" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.FBA_FinancialIndicatorsInstitutions">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idFinancialIndicator" type="xs:int" />
+                <xs:element name="idFinancialIndicatorCaption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Value" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.FBA_FinancialIndicatorsInstitutions" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.FBA_FinancialIndicatorsInstitutions>
+    <id>-1946157027</id>
+    <idOwner>-1946157027</idOwner>
+    <idFinancialIndicator>-1946157027</idFinancialIndicator>
+    <idFinancialIndicatorCaption>sdfsd</idFinancialIndicatorCaption>
+  </tp.FBA_FinancialIndicatorsInstitutions>
+  <tp.FBA_FinancialIndicatorsInstitutions>
+    <id>-1811939300</id>
+    <idOwner>-1811939300</idOwner>
+    <idFinancialIndicator>-1946157027</idFinancialIndicator>
+    <idFinancialIndicatorCaption>sdfsd</idFinancialIndicatorCaption>
+  </tp.FBA_FinancialIndicatorsInstitutions>
+  <tp.FBA_FinancialIndicatorsInstitutions>
+    <id>-1811939299</id>
+    <idOwner>-1811939299</idOwner>
+    <idFinancialIndicator>-1946157027</idFinancialIndicator>
+    <idFinancialIndicatorCaption>sdfsd</idFinancialIndicatorCaption>
+  </tp.FBA_FinancialIndicatorsInstitutions>
+</NewDataSet>

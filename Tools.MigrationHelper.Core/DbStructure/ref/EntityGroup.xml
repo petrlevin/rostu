@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.EntityGroup" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.EntityGroup">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Order" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.EntityGroup" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.EntityGroup>
+    <id>-2013265889</id>
+    <Caption>Планирование</Caption>
+    <Description></Description>
+    <Order>100</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1879048163</id>
+    <Caption>Системные</Caption>
+    <Description></Description>
+    <Order>10</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1879048162</id>
+    <Caption>Административные</Caption>
+    <Description></Description>
+    <Order>20</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1879048161</id>
+    <Caption>Общие</Caption>
+    <Description></Description>
+    <Order>30</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1879048160</id>
+    <Caption>Система целеполагания</Caption>
+    <Description></Description>
+    <Order>40</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1879048159</id>
+    <Caption>Нормативные правовые акты</Caption>
+    <Description></Description>
+    <Order>60</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1879048158</id>
+    <Caption>Расходные обязательства</Caption>
+    <Description></Description>
+    <Order>70</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1879048155</id>
+    <Caption>Планирование</Caption>
+    <Description>Планирование (отчеты)</Description>
+    <Order>10</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1811939300</id>
+    <idParent>-1879048163</idParent>
+    <Caption>Формы</Caption>
+    <Description></Description>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1744830437</id>
+    <Caption>Тесты разработчиков</Caption>
+    <Description></Description>
+    <Order>90</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1610612711</id>
+    <Caption>Консолидация</Caption>
+    <Description>Консолидация (отчеты)</Description>
+    <Order>110</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1543503849</id>
+    <Caption>Мероприятия</Caption>
+    <Description></Description>
+    <Order>50</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1543503847</id>
+    <Caption>Коды бюджетной классификации</Caption>
+    <Description></Description>
+    <Order>80</Order>
+  </ref.EntityGroup>
+  <ref.EntityGroup>
+    <id>-1543503845</id>
+    <Caption>Документы планирования</Caption>
+    <Description></Description>
+    <Order>100</Order>
+  </ref.EntityGroup>
+</NewDataSet>

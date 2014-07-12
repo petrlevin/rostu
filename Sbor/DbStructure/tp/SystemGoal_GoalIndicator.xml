@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.SystemGoal_GoalIndicator" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.SystemGoal_GoalIndicator">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idGoalIndicator" type="xs:int" />
+                <xs:element name="idVersion" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.SystemGoal_GoalIndicator" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.SystemGoal_GoalIndicator>
+    <id>-1879048159</id>
+    <idOwner>-1879048154</idOwner>
+    <idGoalIndicator>-1879048163</idGoalIndicator>
+    <idVersion>1</idVersion>
+  </tp.SystemGoal_GoalIndicator>
+  <tp.SystemGoal_GoalIndicator>
+    <id>-1879048158</id>
+    <idOwner>-1879048153</idOwner>
+    <idGoalIndicator>-1879048163</idGoalIndicator>
+    <idVersion>1</idVersion>
+  </tp.SystemGoal_GoalIndicator>
+  <tp.SystemGoal_GoalIndicator>
+    <id>-1879048154</id>
+    <idOwner>-1879048149</idOwner>
+    <idGoalIndicator>-1879048163</idGoalIndicator>
+    <idVersion>1</idVersion>
+  </tp.SystemGoal_GoalIndicator>
+  <tp.SystemGoal_GoalIndicator>
+    <id>-1744830437</id>
+    <idOwner>-1744830427</idOwner>
+    <idGoalIndicator>-2013265890</idGoalIndicator>
+    <idVersion>1</idVersion>
+  </tp.SystemGoal_GoalIndicator>
+  <tp.SystemGoal_GoalIndicator>
+    <id>-1543503848</id>
+    <idOwner>-1543503848</idOwner>
+    <idGoalIndicator>-1207959533</idGoalIndicator>
+    <idVersion>1</idVersion>
+  </tp.SystemGoal_GoalIndicator>
+  <tp.SystemGoal_GoalIndicator>
+    <id>-1207959531</id>
+    <idOwner>-1207959531</idOwner>
+    <idGoalIndicator>-1207959533</idGoalIndicator>
+    <idVersion>1</idVersion>
+  </tp.SystemGoal_GoalIndicator>
+  <tp.SystemGoal_GoalIndicator>
+    <id>-1207959530</id>
+    <idOwner>-1207959530</idOwner>
+    <idGoalIndicator>-1207959533</idGoalIndicator>
+    <idVersion>1</idVersion>
+  </tp.SystemGoal_GoalIndicator>
+  <tp.SystemGoal_GoalIndicator>
+    <id>-1207959529</id>
+    <idOwner>-1207959529</idOwner>
+    <idGoalIndicator>-1207959533</idGoalIndicator>
+    <idVersion>1</idVersion>
+  </tp.SystemGoal_GoalIndicator>
+</NewDataSet>

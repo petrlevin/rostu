@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1879048161</id>
+    <Schema>doc</Schema>
+    <Name>PlanActivity_GetDocAUBUPeriodType</Name>
+    <CreateCommand>-- Возвращает значение вычисляемого поля для "План деятельности"."Тип периода ОФГ","Тип периода ПФГ-2", Тип периода ПФГ-2
+CREATE FUNCTION [doc].[PlanActivity_GetDocAUBUPeriodType](
+	@idSBP		int,				-- ШапкаДокумента.Учреждение
+	@idBudget	int,				-- ШапкаДокумента.Бюджет
+	@field nvarchar(4)				-- 'OFG','PFG1','PFG2'
+)
+RETURNS TinyInt
+AS
+BEGIN
+	declare @result  Tinyint
+	
+	select TOP 1 @result=
+		CASE @field
+			WHEN 'OFG' THEN pp.idDocAUBUPeriodType_OFG
+			WHEN 'PFG1' THEN pp.idDocAUBUPeriodType_PFG1
+			WHEN 'PFG2' THEN pp.idDocAUBUPeriodType_PFG2
+			ELSE NULL
+		END
+	from
+		ref.SBP as sbp
+		inner join tp.SBP_PlanningPeriodsInDocumentsAUBU as pp on sbp.idParent=pp.idOwner and pp.idBudget = @idBudget
+	where
+		sbp.id = @idSBP
+		and sbp.idSBPType in (4,5) -- 4	Бюджетное учреждение, 5	Автономное учреждение
+			
+	RETURN @result
+END</CreateCommand>
+    <idProgrammabilityType>2</idProgrammabilityType>
+    <Order></Order>
+    <idProject>500</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

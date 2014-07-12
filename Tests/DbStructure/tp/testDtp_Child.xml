@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.testDtp_Child" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.testDtp_Child">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idMaster" type="xs:int" minOccurs="0" />
+                <xs:element name="idHierarchyPeriod" type="xs:int" minOccurs="0" />
+                <xs:element name="Value1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Value2" type="xs:int" minOccurs="0" />
+                <xs:element name="Value3" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.testDtp_Child" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.testDtp_Child>
+    <id>-1811939288</id>
+    <idOwner>1</idOwner>
+    <idMaster>-1811939296</idMaster>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value1>1.00</Value1>
+  </tp.testDtp_Child>
+</NewDataSet>

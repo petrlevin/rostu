@@ -1,0 +1,165 @@
+﻿<project default ="deploydb">
+  <property name="generatecode" value="true" unless="${property::exists('generatecode')}" />
+  <property name="deleteuntouchedxml" value="true" unless="${property::exists('deleteuntouchedxml')}" />
+  <include buildfile="mh.xml"/>
+
+  <if test="${property::exists('basenumber')}">
+    <property name="basenumber" value="${property::get-value('basenumber')}"></property>
+    <property name="datasvnuri" value ="http://dv:1000/svn/sbor3data/branches/Platform${property::get-value('basenumber')}/"></property>
+    <property name="distibutivedataspath" value ="C:\distr_dataPlatform${property::get-value('basenumber')}"></property>
+  </if>
+  <if test="${not property::exists('basenumber')}">
+    <property name="datasvnuri" value ="http://dv:1000/svn/sbor3data/trunk/"></property>
+    <property name="distibutivedataspath" value ="C:\distr_data"></property>
+  </if>
+  
+<!--  Стартовая ревизия, влияет только на поставки из транка-->
+  <property name="startrevision" value="5700" />
+<!--  Ревизия с котрой можно обновиться, если не указана используется startrevision-->
+  <property name="minrevision" value="" unless="${property::exists('minrevision')}" />
+
+
+  <property name="build.dir" value="${directory::get-current-directory()}"/>
+  <property name="binDebugContribTask" value="${path::combine(build.dir, 'bin/Debug/NAnt.Contrib.Tasks.dll')}"/>
+  <property name="contribTask" value="${path::combine(build.dir, 'NAnt.Contrib.Tasks.dll')}"/>
+
+  <if test="${file::exists(binDebugContribTask)}">
+    <loadtasks assembly= "${binDebugContribTask}"/>
+  </if>
+  <if test="${not file::exists(binDebugContribTask)}">
+    <loadtasks assembly= "${contribTask}"/>
+  </if>
+  
+  
+<!--  Вызов тасков-->
+  <target name ="check">
+    <check connectionstring ="${connectionstring}" />
+  </target>
+
+  <target name ="deploydb">
+    <deployplatformdb connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+    <deployappdb connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+    <if test="${property::get-value('devid')!='0'}">
+      <if test="${property::get-value('enabledistributivedata')=='true'}">
+        <enabledistributivedata connectionstring ="${connectionstring}" />
+      </if>
+      <setcudcontrols connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" />
+      <setfreecontrols connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" />
+    </if>
+  </target>
+
+  <target name="createdistibutivedatas">
+    <UpgradeSvnWorkingCopy sourcepath="${sourcepath}"/>
+    <if test="${property::exists('basenumber')}">
+      <createdistibutivedatas sourcepath="${sourcepath}"  targeturi="${datasvnuri}" startrevision="${startrevision}" targetpath ="${distibutivedataspath}" basenumber="${basenumber}" />
+    </if>
+    <if test="${not property::exists('basenumber')}">
+      <createdistibutivedatas sourcepath="${sourcepath}"  targeturi="${datasvnuri}" startrevision="${startrevision}" targetpath ="${distibutivedataspath}"/>
+    </if>
+  </target>
+
+  <target name ="deployappdb">
+    <deployappdb connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+  </target>
+
+  <target name ="updatedb">
+    <updatedb connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" targetpath="${targetpath}"/>
+  </target>
+
+  <target name ="update">
+    <if test="${property::exists('targetpath')}">
+      <update connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" targetpath="${targetpath}"/>
+    </if>
+    <if test="${not property::exists('targetpath')}">
+      <update connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" targetpath=""/>
+    </if>
+  </target>
+
+  <target name ="updatedbtest">
+    <updatedbtest connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" startrevision="${startrevision}" endrevision="${endrevision}"/>
+  </target>
+
+  <target name ="deployplatformdb">
+    <deployplatformdb connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+  </target>
+
+  <target name ="deployassembly">
+    <deployassembly action="${action}" connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+  </target>
+
+  <target name ="deletetestdata">
+    <deletetestdata sourcepath="${sourcepath}"/>
+  </target>
+
+  <target name ="CheckDatabase">
+    <CheckDatabase connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+  </target>
+
+  <target name ="generateefclasses">
+      <generatecode connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+  </target>
+
+  <target name ="tofs">
+    <check connectionstring ="${connectionstring}" />
+    <checkdistributivedata connectionstring ="${connectionstring}" />
+    <tofs connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" deleteuntouchedxml="${deleteuntouchedxml}"/>
+    <if test="${property::get-value('generatecode')=='true'}">
+      <generatecode connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+    </if>
+  </target>
+
+  <target name ="checkdistributivedata">
+    <checkdistributivedata connectionstring ="${connectionstring}" />
+  </target>
+
+  <target name ="generatecode">
+    <generatecode connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+  </target>
+
+  <target name ="generateview">
+    <generateview connectionstring ="${connectionstring}" sourcepath="${sourcepath}"/>
+  </target>
+
+  <target name ="setcontrols">
+    <setcudcontrols connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" />
+    <setfreecontrols connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}" />
+  </target>
+
+  <target name ="createdistributive">
+    <UpgradeSvnWorkingCopy sourcepath="${sourcepath}"/>
+    <if test="${property::exists('basenumber')}">
+      <createdistibutivedatas sourcepath="${sourcepath}"  targeturi="${datasvnuri}" startrevision="${startrevision}" targetpath ="${distibutivedataspath}" basenumber="${basenumber}"/>
+    </if>
+    <if test="${not property::exists('basenumber')}">
+      <createdistibutivedatas sourcepath="${sourcepath}"  targeturi="${datasvnuri}" startrevision="${startrevision}" targetpath ="${distibutivedataspath}" />
+    </if>
+    <if test="${property::get-value('outputdir')==''}">
+      <echo>Не указана папка для создания дистрибутива</echo>
+    </if>
+    <if test="${property::get-value('outputdir')!=''}">
+      <if test="${property::exists('endrevision')}">
+        <createdistributive  devid="${devid}" sourcepath="${sourcepath}" outputdir="${outputdir}" startrevision="${startrevision}" endrevision="${endrevision}" distrdata="${distibutivedataspath}" minrevision="${minrevision}"/>
+      </if>
+      <if test="${not property::exists('endrevision')}">
+        <createdistributive  devid="${devid}" sourcepath="${sourcepath}" outputdir="${outputdir}" startrevision="${startrevision}" distrdata="${distibutivedataspath}" minrevision="${minrevision}" />
+      </if>
+    </if>
+  </target>
+
+  <target name ="createupdatesource">
+    <if test="${property::get-value('outputdir')==''}">
+      <echo>Не указана папка для создания дистрибутива</echo>
+    </if>
+    <if test="${property::get-value('outputdir')!=''}">
+      <createupdatesource devid="${devid}" sourcepath="${sourcepath}" startrevision="${startrevision}" endrevision="${endrevision}" outputdir="${outputdir}"/>
+    </if>
+  </target>
+  
+   <target name ="TeamCityUpdateTest">
+     <TeamCityUpdateTest connectionstring ="${connectionstring}" devid="${devid}" sourcepath="${sourcepath}"/>
+   </target>
+  
+   <target name ="UpgradeSvnWorkingCopy">
+     <UpgradeSvnWorkingCopy sourcepath="${sourcepath}"/>
+   </target>
+</project>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.GoalIndicator" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.GoalIndicator">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="Code">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="25" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idUnitDimension" type="xs:int" />
+                <xs:element name="idTermsOfPerception" type="xs:unsignedByte" />
+                <xs:element name="idSBP" type="xs:int" minOccurs="0" />
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+                <xs:element name="idCalculationFormula" type="xs:int" minOccurs="0" />
+                <xs:element name="idRegulatoryAct" type="xs:int" minOccurs="0" />
+                <xs:element name="IndicatedCumulatively" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.GoalIndicator" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.GoalIndicator>
+    <id>-2013265890</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Code>1</Code>
+    <Caption>indicator 1</Caption>
+    <idUnitDimension>-1879047844</idUnitDimension>
+    <idTermsOfPerception>3</idTermsOfPerception>
+    <idRefStatus>2</idRefStatus>
+  </ref.GoalIndicator>
+  <ref.GoalIndicator>
+    <id>-1879048163</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Code>2</Code>
+    <Caption>Байт в байт</Caption>
+    <idUnitDimension>-1879048000</idUnitDimension>
+    <idTermsOfPerception>3</idTermsOfPerception>
+    <idSBP>-1207959534</idSBP>
+    <idRefStatus>2</idRefStatus>
+  </ref.GoalIndicator>
+  <ref.GoalIndicator>
+    <id>-1207959533</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Code>3</Code>
+    <Caption>Обкатка</Caption>
+    <idUnitDimension>-1879047728</idUnitDimension>
+    <idTermsOfPerception>2</idTermsOfPerception>
+    <idRefStatus>2</idRefStatus>
+  </ref.GoalIndicator>
+</NewDataSet>

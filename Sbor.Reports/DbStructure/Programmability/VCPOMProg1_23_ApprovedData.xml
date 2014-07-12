@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1275068378</id>
+    <Schema>sbor</Schema>
+    <Name>VCPOMProg1_23_ApprovedData</Name>
+    <CreateCommand>CREATE FUNCTION [sbor].[VCPOMProg1_23_ApprovedData] (@id int,@datestate nvarchar(128),@idVersion int,@PPO int)
+RETURNS TABLE
+AS
+RETURN
+(
+SELECT 
+
+	 CASE 
+		WHEN VCPOMResult.Id IS NULL THEN OverMark.Id
+		ELSE  VCPOMResult.Id 
+	 END	AS Id--индетификатор документа
+	,CASE 
+		WHEN VCPOMResult.[Type] IS NULL THEN OverMark.[Type]
+		ELSE  VCPOMResult.[Type] 
+	 END AS [Type] --Тип (ВЦП и ОМ)
+	,CASE 
+		WHEN VCPOMResult.Number IS NULL THEN CAST(OverMark.Number AS int)
+		ELSE CAST(VCPOMResult.Number AS INT)
+	 END AS Number
+	,CASE 
+		WHEN VCPOMResult.Numberssp IS NULL THEN OverMark.Numberssp
+		ELSE VCPOMResult.Numberssp
+	 END  AS  Numberssp--номер подпрограммы
+	,CASE 
+		WHEN VCPOMResult.Numberinprog IS NULL THEN OverMark.Numberinprog
+		ELSE VCPOMResult.Numberinprog
+	 END  AS Numberinprog--номер в подпрограмме 
+	,CASE 
+		WHEN VCPOMResult.Numberintypessp IS NULL THEN OverMark.Numberintypessp
+		ELSE VCPOMResult.Numberintypessp
+	 END AS Numberintypessp--номер в типе подпрограммы
+	,CASE 
+		WHEN VCPOMResult.Substatep IS NULL THEN OverMark.Substatep
+		ELSE VCPOMResult.Substatep
+	 END AS Substatep--Наименование подпрограммы ГП
+	,CASE 
+		WHEN VCPOMResult.Statep IS NULL THEN OverMark.Statep
+		ELSE VCPOMResult.Statep
+	 END  AS Statep--Наименование ГП
+	,CASE 
+		WHEN VCPOMResult.Captionvcpom  IS NULL THEN OverMark.Captionvcpom
+		ELSE VCPOMResult.Captionvcpom
+	 END AS Captionvcpom --Наименование ВЦП и ОМ
+	,CASE 
+		WHEN VCPOMResult.Executive  IS NULL THEN OverMark.Executive
+		ELSE VCPOMResult.Executive
+	 END AS Executive --ответственный исполнитель
+	,CASE 
+		WHEN VCPOMResult.Datestartsub   IS NULL THEN OverMark.Datestartsub
+		ELSE VCPOMResult.Datestartsub
+	 END AS Datestartsub --дата начала Подпрограммы ГП   
+	,CASE 
+		WHEN VCPOMResult.Dateendsub   IS NULL THEN OverMark.Dateendsub
+		ELSE VCPOMResult.Dateendsub
+	 END AS Dateendsub--дата окончания Подпрограммы ГП
+	,VCPOMResult.Goalindicator AS Goalindicator --наименование целевых показателей основной цели 
+	,VCPOMResult.Unitd --единица измерения целевого показателя
+	,VCPOMResult.Value 
+	,CASE 
+		WHEN VCPOMResult.Datestart   IS NULL THEN OverMark.Datestart
+		ELSE VCPOMResult.Datestart
+	 END  AS Datestart --дата начала ГП   
+	,CASE 
+		WHEN VCPOMResult.Dateend   IS NULL THEN OverMark.Dateend
+		ELSE VCPOMResult.Dateend
+	 END AS Dateend--дата окончания ГП
+	,CASE 
+		WHEN VCPOMResult.Datestartvcpom   IS NULL THEN OverMark.Datestartvcpom
+		ELSE VCPOMResult.Datestartvcpom
+	 END AS Datestartvcpom--дата начала ВЦП и ОМ   
+	,CASE 
+		WHEN VCPOMResult.Dateendvcpom   IS NULL THEN OverMark.Dateendvcpom
+		ELSE VCPOMResult.Dateendvcpom
+	 END AS Dateendvcpom
+	,OverMark.SuperiorGoalIndicator AS SuperiorGoalIndicator
+FROM
+(
+SELECT
+	 Id  AS Id--индетификатор документа
+	,[Type] --Тип (ВЦП и ОМ)
+	,Numberssp --номер подпрограммы
+	,Numberinprog --номер в подпрограмме 
+	,Numberintypessp --номер в типе подпрограммы
+	,Substatep --Наименование подпрограммы ГП
+	,ROW_NUMBER() OVER(PARTITION BY  VCPOMMark.id order by VCPOMMark.Goalindicator ) AS Number
+	,Statep --Наименование ГП
+	,Captionvcpom --Наименование ВЦП и ОМ
+	,Executive --ответственный исполнитель
+	,Datestartsub --дата начала Подпрограммы ГП   
+	,Dateendsub--дата окончания Подпрограммы ГП
+	,Goalindicator --наименование целевых показателей основной цели 
+	,Unitd --единица измерения целевого показателя
+	,CASE 
+			WHEN IndicatedCumulatively = 1 THEN ValueCumulatively
+			WHEN (IndicatedCumulatively = 0 OR IndicatedCumulatively IS NULL) THEN Value
+		END AS Value
+	,ValueCumulatively--сумма за все года
+	,Datestart --дата начала ГП   
+	,Dateend--дата окончания ГП
+	,Datestartvcpom--дата начала ВЦП и ОМ   
+	,Dateendvcpom--дата окончания ВЦП и ОМ
+ 
+FROM
+(
+SELECT 
+	 tbl1.idvcp AS Id --индетификатор документа
+	,CASE
+		  WHEN tbl1.[Type] = 'Ведомственная целевая программа' THEN 'ВЦП'
+		  ELSE tbl1.[Type] --
+     END AS [Type] --Тип (ВЦП и ОМ)
+	,CAST(tbl1.Numberssp AS INT) AS Numberssp --номер подпрограммы
+	,CAST(tbl1.Numberinprog AS INT) AS Numberinprog --номер в подпрограмме 
+	,CAST(tbl1.Numberintypessp AS INT) AS Numberintypessp --номер в типе подпрограммы
+	,tbl1.Substatep AS Substatep --Наименование подпрограммы ГП
+	,tbl1.Statep AS Statep --Наименование ГП
+	,tbl1.Captionvcpom AS Captionvcpom --Наименование ВЦП и ОМ
+	,org.Caption AS Executive --ответственный исполнитель
+	,tbl1.Datestartsub AS Datestartsub --дата начала Подпрограммы ГП   
+	,tbl1.Dateendsub AS Dateendsub--дата окончания Подпрограммы ГП
+	,gi.Caption AS Goalindicator --наименование целевых показателей основной цели 
+	,gi.IndicatedCumulatively AS IndicatedCumulatively --Флаг 
+	,ud.Symbol AS Unitd --единица измерения целевого показателя
+	--,vgt.Value AS Value --значение целевого показателя с самой поздней датой из всех значений с типом "План" 
+	,Value =	(
+					SELECT top 1  vgt.Value
+					FROM [reg].ValuesGoalTarget As vgt
+					LEFT JOIN [ref].HierarchyPeriod As hp --период(справочник)
+					ON hp.Id = vgt.IdHierarchyPeriod --значение целевых показателей(register)
+					AND vgt.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,vgt.DateCommit)) AND vgt.DateCommit IS NOT NULL AND (vgt.DateTerminate &gt; (convert(datetime,@datestate,104)) or vgt.idTerminator is null)--по утвержденным данным			
+					AND vgt.idTerminator is null
+					AND vgt.idVersion = @idVersion
+					AND vgt.idPublicLegalFormation = @PPO
+					WHERE	vgt.idGoalTarget = gt.id 
+							AND hp.DateEnd =	(
+														SELECT TOP 1 MAX(php.DateEnd) 
+														FROM 															
+															[reg].ValuesGoalTarget As pvgt --значение целевых показателей(register)
+														LEFT JOIN 
+															[ref].HierarchyPeriod As php --период(справочник)
+															ON php.Id = pvgt.IdHierarchyPeriod
+															AND pvgt.idTerminator is null
+															AND pvgt.idVersion = @idVersion
+															AND pvgt.idPublicLegalFormation = @PPO
+															AND pvgt.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,pvgt.DateCommit)) AND pvgt.DateCommit IS NOT NULL AND (pvgt.DateTerminate &gt; (convert(datetime,@datestate,104)) or pvgt.idTerminator is null)--по утвержденным данным
+														GROUP BY idGoalTarget , idValueType
+															HAVING  idGoalTarget = gt.id AND pvgt.idValueType = 1	
+												)
+				)
+	--,hp.DateEnd AS Datevalue --Дата периода
+	,tbl1.Datestart AS Datestart --дата начала ГП
+	,ValueCumulatively = 
+	  (
+		
+		SELECT SUM(vgt.Value)
+		FROM [reg].ValuesGoalTarget As vgt
+		WHERE	vgt.idGoalTarget = gt.id
+		AND vgt.idTerminator is null
+		AND vgt.idVersion = @idVersion
+		AND vgt.idPublicLegalFormation = @PPO
+		GROUP BY idGoalTarget
+		
+	  )   
+	,tbl1.Dateend AS Dateend--дата окончания ГП
+	,tbl1.Datestartvcpom AS Datestartvcpom--дата начала ВЦП и ОМ   
+	,tbl1.Dateendvcpom AS Dateendvcpom--дата окончания ВЦП и ОМ
+	--,VSgi.Caption AS SuperiorGoalIndicator--Целевые показатели выше стоящей цели   
+FROM
+(
+SELECT 
+	 tbl.Id AS Id --индетификатор документа
+	,tbl.Numberssp AS Numberssp --номер подпрограммы
+	,tbl.Statep AS Statep --Наименование ГП
+	,tbl.Datestart AS Datestart --дата начала ГП   
+	,tbl.Dateend AS Dateend --дата окончания ГП
+	,tbl.Substatep AS Substatep --Наименование подпрограммы ГП
+	,tbl.Datestartsub As Datestartsub --дата начала Подпрограммы ГП  
+	,tbl.Dateendsub AS Dateendsub --дата окончания Подпрограммы ГП
+	,vcpom.Caption AS Captionvcpom --Наименование ВЦП и ОМ
+	,vcpom.DateStart AS Datestartvcpom --дата начала ВЦП и ОМ   
+	,vcpom.DateEnd AS Dateendvcpom--дата окончания ВЦП и ОМ   
+	,vcpom.idProgram  AS idvcp--id ВЦП и ОМ
+	,dt.Caption AS [Type] --Тип (ВЦП и ОМ)
+	,ROW_NUMBER() OVER(PARTITION BY  vcpom.idParent order by dt.Caption, VCPAnCode.AnalyticalCode ) AS Numberinprog --номер в подпрограмме 
+	,RANK() OVER(PARTITION BY  tbl.Id,prgvcpom.idDocType order by prgvcpom.caption ) AS Numberintypessp --номер в типе подпрограммы
+	,vcpom.idGoalSystemElement AS idGoalSystemElement
+	,prgvcpom.idSBP AS idSBP
+FROM
+		((SELECT 
+				 prg.Caption AS Statep
+				,aop.Caption AS Substatep
+				,aop.idProgram AS Id
+				,ROW_NUMBER() OVER(PARTITION BY  aop.idParent order by AnCode.AnalyticalCode) AS Numberssp
+				,statepAtr.DateStart AS Datestart
+				,statepAtr.DateEnd AS Dateend
+				,aop.DateStart AS Datestartsub
+				,aop.DateEnd AS Dateendsub
+				
+		FROM 
+			[reg].[Program] AS prg 
+		INNER JOIN 
+			[reg].[AttributeOfProgram] AS statepAtr -- атрибуты ГП
+			ON statepAtr.idProgram = prg.id 
+			AND statepAtr.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,statepAtr.DateCommit)) AND statepAtr.DateCommit IS NOT NULL AND (statepAtr.DateTerminate &gt; (convert(datetime,@datestate,104)) or statepAtr.idTerminator is null)--по утвержденным данным
+			AND prg.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,prg.DateCommit)) AND prg.DateCommit IS NOT NULL AND (prg.DateTerminate &gt; (convert(datetime,@datestate,104)) or prg.idTerminator is null)--по утвержденным данным			
+			AND prg.idVersion = @idVersion
+			AND prg.idPublicLegalFormation = @PPO
+		INNER JOIN 
+			[reg].[AttributeOfProgram] AS aop --атрибуты подпрограмм
+			ON 
+			aop.idParent = prg.id and aop.idParent = @id
+			AND aop.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,aop.DateCommit)) AND aop.DateCommit IS NOT NULL AND (aop.DateTerminate &gt; (convert(datetime,@datestate,104)) or aop.idTerminator is null)--по утвержденным данным
+			AND aop.idVersion = @idVersion
+			AND aop.idPublicLegalFormation = @PPO
+			LEFT JOIN [ref].[AnalyticalCodeStateProgram] AS AnCode
+			ON AnCode.id = aop.idAnalyticalCodeStateProgram
+			) AS tbl--id prog = параметр id программа
+		LEFT JOIN 
+			[reg].[AttributeOfProgram] AS vcpom --вцп и основные мероприятия
+			ON  tbl.Id = vcpom.idParent  AND vcpom.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,vcpom.DateCommit)) AND vcpom.DateCommit IS NOT NULL AND (vcpom.DateTerminate &gt; (convert(datetime,@datestate,104)) or vcpom.idTerminator is null)--по утвержденным данным
+			AND vcpom.idVersion = @idVersion
+			AND vcpom.idPublicLegalFormation = @PPO
+		LEFT JOIN [ref].[AnalyticalCodeStateProgram] AS VCPAnCode
+			ON VCPAnCode.id = vcpom.idAnalyticalCodeStateProgram
+		LEFT JOIN 
+			[reg].[Program] AS prgvcpom
+			ON   prgvcpom.id = vcpom.idProgram AND (prgvcpom.idDocType = -1543503839 OR prgvcpom.idDocType = -1543503841)--вцп и основные мероприятия
+			AND prgvcpom.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,prgvcpom.DateCommit)) AND prgvcpom.DateCommit IS NOT NULL AND (prgvcpom.DateTerminate &gt; (convert(datetime,@datestate,104)) or prgvcpom.idTerminator is null)--по утвержденным данным
+			AND prgvcpom.idVersion = @idVersion
+			AND prgvcpom.idPublicLegalFormation = @PPO
+		LEFT JOIN [ref].DocType As dt
+			ON dt.id = prgvcpom.idDocType		
+		)
+) AS tbl1			
+		LEFT JOIN [reg].SystemGoalElement As sge --регистр Элемент сц
+			ON tbl1.idGoalSystemElement = sge.id
+			AND sge.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,sge.DateCommit)) AND sge.DateCommit IS NOT NULL AND (sge.DateTerminate &gt; (convert(datetime,@datestate,104)) or sge.idTerminator is null)--по утвержденным данным
+			AND sge.idVersion = @idVersion
+			AND sge.idPublicLegalFormation = @PPO
+		LEFT JOIN [ref].SystemGoal As sg --справочник система целеполагания
+			ON sg.id = sge.IdSystemGoal
+		LEFT JOIN [reg].GoalTarget As gt --регистр целевые показатели
+			ON gt.IdSystemGoalElement = sge.id
+			AND gt.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,gt.DateCommit)) AND gt.DateCommit IS NOT NULL AND (gt.DateTerminate &gt; (convert(datetime,@datestate,104)) or gt.idTerminator is null)--по утвержденным данным
+      AND gt.idVersion = @idVersion
+      AND gt.idPublicLegalFormation = @PPO
+      LEFT JOIN [ref].GoalIndicator As gi --наименование показателя(справочник)
+      ON gi.Id = gt.IdGoalIndicator
+      LEFT JOIN [ref].SBP As sbp --наименование сбп(справочник)
+      ON sbp.Id = tbl1.idSBP
+      LEFT JOIN [ref].Organization As org --наименование организации(справочник)
+      ON org.Id = sbp.idOrganization
+      LEFT JOIN [ref].UnitDimension As ud --наименование системные измерения(справочник)
+      ON ud.Id = gi.idUnitDimension
+      )AS VCPOMMark
+      ) AS VCPOMResult
+
+
+      FULL OUTER JOIN
+
+
+      (
+      SELECT
+      tbl1.idvcp AS Id --индетификатор документа
+      ,CAST(ROW_NUMBER() OVER(PARTITION BY  tbl1.idvcp order by VSgi.Caption) AS INT) AS number
+      ,CASE
+      WHEN tbl1.[Type] = 'Ведомственная целевая программа' THEN 'ВЦП'
+      ELSE tbl1.[Type] --
+      END AS [Type] --Тип (ВЦП и ОМ)
+      ,CAST(tbl1.Numberssp AS INT) AS Numberssp --номер подпрограммы
+      ,CAST(tbl1.Numberinprog AS INT) AS Numberinprog --номер в подпрограмме
+      ,CAST(tbl1.Numberintypessp AS INT) AS Numberintypessp --номер в типе подпрограммы
+      ,tbl1.Substatep AS Substatep --Наименование подпрограммы ГП
+      ,tbl1.Statep AS Statep --Наименование ГП
+      ,tbl1.Captionvcpom AS Captionvcpom --Наименование ВЦП и ОМ
+      ,org.Caption AS Executive --ответственный исполнитель
+      ,tbl1.Datestartsub AS Datestartsub --дата начала Подпрограммы ГП
+      ,tbl1.Dateendsub AS Dateendsub--дата окончания Подпрограммы ГП
+      ,tbl1.Datestart AS Datestart --дата начала ГП
+      ,tbl1.Dateend AS Dateend--дата окончания ГП
+      ,tbl1.Datestartvcpom AS Datestartvcpom--дата начала ВЦП и ОМ
+      ,tbl1.Dateendvcpom AS Dateendvcpom--дата окончания ВЦП и ОМ
+      ,VSgi.Caption AS SuperiorGoalIndicator--Целевые показатели выше стоящей цели
+      FROM
+      (
+      SELECT
+      tbl.Id AS Id --индетификатор документа
+      ,tbl.Numberssp AS Numberssp --номер подпрограммы
+      ,tbl.Statep AS Statep --Наименование ГП
+      ,tbl.Datestart AS Datestart --дата начала ГП
+      ,tbl.Dateend AS Dateend --дата окончания ГП
+      ,tbl.Substatep AS Substatep --Наименование подпрограммы ГП
+      ,tbl.Datestartsub As Datestartsub --дата начала Подпрограммы ГП
+      ,tbl.Dateendsub AS Dateendsub --дата окончания Подпрограммы ГП
+      ,vcpom.Caption AS Captionvcpom --Наименование ВЦП и ОМ
+      ,vcpom.DateStart AS Datestartvcpom --дата начала ВЦП и ОМ
+      ,vcpom.DateEnd AS Dateendvcpom--дата окончания ВЦП и ОМ
+      ,vcpom.idProgram AS idvcp--id ВЦП и ОМ
+      ,dt.Caption AS [Type] --Тип (ВЦП и ОМ)
+      ,ROW_NUMBER() OVER(PARTITION BY  vcpom.idParent order by dt.Caption, VCPAnCode.AnalyticalCode ) AS Numberinprog --номер в подпрограмме
+      ,RANK() OVER(PARTITION BY  tbl.Id,prgvcpom.idDocType order by prgvcpom.caption ) AS Numberintypessp --номер в типе подпрограммы
+      ,vcpom.idGoalSystemElement AS idGoalSystemElement
+      ,prgvcpom.idSBP AS idSBP
+      FROM
+      ((SELECT
+      prg.Caption AS Statep
+      ,aop.Caption AS Substatep
+      ,aop.idProgram AS Id
+      ,ROW_NUMBER() OVER(PARTITION BY  aop.idParent order by AnCode.AnalyticalCode) AS Numberssp
+      ,statepAtr.DateStart AS Datestart
+      ,statepAtr.DateEnd AS Dateend
+      ,aop.DateStart AS Datestartsub
+      ,aop.DateEnd AS Dateendsub
+
+      FROM
+      [reg].[Program] AS prg
+      INNER JOIN
+      [reg].[AttributeOfProgram] AS statepAtr -- атрибуты ГП
+      ON statepAtr.idProgram = prg.id
+      AND statepAtr.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,statepAtr.DateCommit)) AND statepAtr.DateCommit IS NOT NULL AND (statepAtr.DateTerminate &gt; (convert(datetime,@datestate,104)) or statepAtr.idTerminator is null)--по утвержденным данным
+			AND prg.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,prg.DateCommit)) AND prg.DateCommit IS NOT NULL AND (prg.DateTerminate &gt; (convert(datetime,@datestate,104)) or prg.idTerminator is null)--по утвержденным данным			
+			AND prg.idVersion = @idVersion
+			AND prg.idPublicLegalFormation = @PPO
+			AND statepAtr.idVersion = @idVersion
+			AND statepAtr.idPublicLegalFormation = @PPO
+
+
+		INNER JOIN 
+			[reg].[AttributeOfProgram] AS aop --атрибуты подпрограмм
+			ON 
+			aop.idParent = prg.id and aop.idParent = @id
+			AND aop.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,aop.DateCommit)) AND aop.DateCommit IS NOT NULL AND (aop.DateTerminate &gt; (convert(datetime,@datestate,104)) or aop.idTerminator is null)--по утвержденным данным
+			AND aop.idVersion = @idVersion
+			AND aop.idPublicLegalFormation = @PPO
+			LEFT JOIN [ref].[AnalyticalCodeStateProgram] AS AnCode
+			ON AnCode.id = aop.idAnalyticalCodeStateProgram
+
+			) AS tbl--id prog = параметр id программа
+		LEFT JOIN 
+			[reg].[AttributeOfProgram] AS vcpom --вцп и основные мероприятия
+			ON  tbl.Id = vcpom.idParent
+			AND vcpom.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,vcpom.DateCommit)) AND vcpom.DateCommit IS NOT NULL AND (vcpom.DateTerminate &gt; (convert(datetime,@datestate,104)) or vcpom.idTerminator is null)--по утвержденным данным
+			AND vcpom.idVersion = @idVersion
+			AND vcpom.idPublicLegalFormation = @PPO
+
+		LEFT JOIN [ref].[AnalyticalCodeStateProgram] AS VCPAnCode
+			ON VCPAnCode.id = vcpom.idAnalyticalCodeStateProgram
+
+		LEFT JOIN 
+			[reg].[Program] AS prgvcpom
+			ON   prgvcpom.id = vcpom.idProgram AND (prgvcpom.idDocType = -1543503839 OR prgvcpom.idDocType = -1543503841)--вцп и основные мероприятия
+			AND prgvcpom.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,prgvcpom.DateCommit)) AND prgvcpom.DateCommit IS NOT NULL AND (prgvcpom.DateTerminate &gt; (convert(datetime,@datestate,104)) or prgvcpom.idTerminator is null)--по утвержденным данным
+			AND prgvcpom.idVersion = @idVersion
+			AND prgvcpom.idPublicLegalFormation = @PPO
+		LEFT JOIN [ref].DocType As dt
+			ON dt.id = prgvcpom.idDocType		
+		)
+) AS tbl1			
+		LEFT JOIN [reg].SystemGoalElement As sge --регистр Элемент сц
+			ON tbl1.idGoalSystemElement = sge.id
+			AND sge.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,sge.DateCommit)) AND sge.DateCommit IS NOT NULL AND (sge.DateTerminate &gt; (convert(datetime,@datestate,104)) or sge.idTerminator is null)--по утвержденным данным
+			AND sge.idVersion = @idVersion
+			AND sge.idPublicLegalFormation = @PPO
+		LEFT JOIN [ref].SystemGoal As sg --справочник система целеполагания
+			ON sg.id = sge.IdSystemGoal
+		LEFT JOIN [ref].SBP As sbp --наименование сбп(справочник)
+			ON sbp.Id = tbl1.idSBP
+		LEFT JOIN [ref].Organization As org --наименование организации(справочник)
+			ON org.Id = sbp.idOrganization
+        INNER JOIN [tp].SystemGoal_GoalIndicatorParent AS sggip
+			ON sggip.idOwner = sge.idSystemGoal
+		LEFT JOIN [ref].GoalIndicator AS VSgi
+			ON VSgi.id = sggip.idGoalIndicator 	
+) AS OverMark
+
+ON OverMark.Id = VCPOMResult.Id AND OverMark.number = VCPOMResult.Number
+)</CreateCommand>
+    <idProgrammabilityType>2</idProgrammabilityType>
+    <Order></Order>
+    <idProject>600</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

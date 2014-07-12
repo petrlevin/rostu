@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.SystemGoal_GoalIndicatorValue" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.SystemGoal_GoalIndicatorValue">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idHierarchyPeriod" type="xs:int" />
+                <xs:element name="Value" type="xs:decimal" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idMaster" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.SystemGoal_GoalIndicatorValue" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048151</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>1000.00000</Value>
+    <idOwner>-1879048154</idOwner>
+    <idMaster>-1879048159</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048150</id>
+    <idHierarchyPeriod>-1879048160</idHierarchyPeriod>
+    <Value>1500.00000</Value>
+    <idOwner>-1879048154</idOwner>
+    <idMaster>-1879048159</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048149</id>
+    <idHierarchyPeriod>-1879048159</idHierarchyPeriod>
+    <Value>2000.00000</Value>
+    <idOwner>-1879048154</idOwner>
+    <idMaster>-1879048159</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048148</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>1000.00000</Value>
+    <idOwner>-1879048153</idOwner>
+    <idMaster>-1879048158</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048147</id>
+    <idHierarchyPeriod>-1879048160</idHierarchyPeriod>
+    <Value>1500.00000</Value>
+    <idOwner>-1879048153</idOwner>
+    <idMaster>-1879048158</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048146</id>
+    <idHierarchyPeriod>-1879048159</idHierarchyPeriod>
+    <Value>2000.00000</Value>
+    <idOwner>-1879048153</idOwner>
+    <idMaster>-1879048158</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048136</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>1000.00000</Value>
+    <idOwner>-1879048149</idOwner>
+    <idMaster>-1879048154</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048135</id>
+    <idHierarchyPeriod>-1879048160</idHierarchyPeriod>
+    <Value>1500.00000</Value>
+    <idOwner>-1879048149</idOwner>
+    <idMaster>-1879048154</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1879048134</id>
+    <idHierarchyPeriod>-1879048159</idHierarchyPeriod>
+    <Value>2000.00000</Value>
+    <idOwner>-1879048149</idOwner>
+    <idMaster>-1879048154</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1744830437</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>3.00000</Value>
+    <idOwner>-1744830427</idOwner>
+    <idMaster>-1744830437</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1543503848</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>121.00000</Value>
+    <idOwner>-1543503848</idOwner>
+    <idMaster>-1543503848</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1207959531</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>100.00000</Value>
+    <idOwner>-1207959531</idOwner>
+    <idMaster>-1207959531</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1207959530</id>
+    <idHierarchyPeriod>-1879048160</idHierarchyPeriod>
+    <Value>100.00000</Value>
+    <idOwner>-1207959531</idOwner>
+    <idMaster>-1207959531</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1207959529</id>
+    <idHierarchyPeriod>-1879048159</idHierarchyPeriod>
+    <Value>100.00000</Value>
+    <idOwner>-1207959531</idOwner>
+    <idMaster>-1207959531</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1207959528</id>
+    <idHierarchyPeriod>-1879048158</idHierarchyPeriod>
+    <Value>100.00000</Value>
+    <idOwner>-1207959531</idOwner>
+    <idMaster>-1207959531</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1207959527</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>100.00000</Value>
+    <idOwner>-1207959530</idOwner>
+    <idMaster>-1207959530</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1207959526</id>
+    <idHierarchyPeriod>-1879048160</idHierarchyPeriod>
+    <Value>100.00000</Value>
+    <idOwner>-1207959530</idOwner>
+    <idMaster>-1207959530</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+  <tp.SystemGoal_GoalIndicatorValue>
+    <id>-1207959525</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>100.00000</Value>
+    <idOwner>-1207959529</idOwner>
+    <idMaster>-1207959529</idMaster>
+  </tp.SystemGoal_GoalIndicatorValue>
+</NewDataSet>

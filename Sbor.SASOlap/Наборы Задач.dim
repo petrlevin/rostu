@@ -1,0 +1,185 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="18dfb92a-d460-40ab-babe-6062c0821522" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Наборы Задач</ID>
+  <Name>Наборы Задач</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1290" scrolltop="-5344" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="4974" y="15531" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Наборы задач" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4075" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000eb0f0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Наборы задач" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1290</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5344</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ebd292da-36c6-4be9-99d6-c4ca8b47bad6">
+    <DataSourceViewID>dsvmain</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="9655dc81-ee7f-4180-afcf-230698774688">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <UnknownMemberName>-</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="92ba92df-df33-4665-96c2-9ce66d1ada87">
+      <ID>Задача</ID>
+      <Name>Задача</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="21c28c9e-4838-4f9d-9a08-bdf52bc5a978">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0a9c2537-e0ca-4d3c-9b69-585d2ad4a309">
+            <TableID>Наборы_x0020_задач</TableID>
+            <ColumnID>id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="638e9fda-5543-480f-935e-bec18cc001cf">
+        <DataType>WChar</DataType>
+        <DataSize>1003</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="78b45d82-9bc5-42a7-9b15-be5f5fb2f242">
+          <TableID>Наборы_x0020_задач</TableID>
+          <ColumnID>FullName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a5c79c3c-79a8-401b-a14b-21427a1d5ae6">
+          <AttributeID>Код мероприятия</AttributeID>
+          <Name>Код мероприятия</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0f2c8d1e-6f08-4b4d-97a1-add91b1e1b46">
+          <AttributeID>Мероприятие</AttributeID>
+          <Name>Мероприятие</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e08beeb6-3ec3-4ac8-add7-78739b06f0c2">
+          <AttributeID>Контингент</AttributeID>
+          <Name>Контингент</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c49c14ea-181b-4d6a-b348-bdf6d5b43b18">
+          <AttributeID>Тип мероприятия</AttributeID>
+          <Name>Тип мероприятия</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+    </Attribute>
+    <Attribute dwd:design-time-name="d07f6efc-100b-4a50-9056-5cc68cedb1c4">
+      <ID>Код мероприятия</ID>
+      <Name>Код мероприятия</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="edfc083d-670d-465e-85e3-348437367919">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4cc75352-a9ba-4dae-ac45-8c270372221e">
+            <TableID>Наборы_x0020_задач</TableID>
+            <ColumnID>activitycode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="ac3d8cea-7d3f-4711-8a28-9631607ea9e6">
+      <ID>Мероприятие</ID>
+      <Name>Мероприятие</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aebd8347-2144-49bb-9be8-973b1f4a59ed">
+          <DataType>WChar</DataType>
+          <DataSize>400</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="546ae13f-ef3b-44e9-b702-74ad9286a6ec">
+            <TableID>Наборы_x0020_задач</TableID>
+            <ColumnID>activitycapt</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="e78114aa-b2e6-42b9-a101-6ddcea7b90ef">
+      <ID>Контингент</ID>
+      <Name>Контингент</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e8b3bb6c-85b9-4855-a2bd-49293025df85">
+          <DataType>WChar</DataType>
+          <DataSize>600</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="603bd155-865b-4696-9a1e-8f84d010845f">
+            <TableID>Наборы_x0020_задач</TableID>
+            <ColumnID>contingentcapt</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="50f96601-5fd6-4343-bae7-fd3d3882f2c1">
+      <ID>Тип мероприятия</ID>
+      <Name>Тип мероприятия</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d567eda-806d-467c-889e-6591814ab4dd">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2210892e-bc62-4eaf-9ec3-e34fadd18d02">
+            <TableID>Наборы_x0020_задач</TableID>
+            <ColumnID>ActivityType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+  </Attributes>
+</Dimension>

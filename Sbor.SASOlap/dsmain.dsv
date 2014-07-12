@@ -1,0 +1,318 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4f7100b6-f025-47b5-b302-8efa7b261a9e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>dsmain</ID>
+  <Name>dsmain</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>sbordb</DataSourceID>
+  <Schema>
+    <xs:schema id="dsmain" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="dsmain" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="5795b2af-eacc-4f4d-a5d0-df071874f618">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="enm_BlankValueType" msprop:FriendlyName="BlankValueType" msprop:DbSchemaName="enm" msprop:DbTableName="BlankValueType" msprop:design-time-name="835f5433-3a1d-4b7e-af15-fb180e7e53d9" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tstamp" msdata:ReadOnly="true" msprop:FriendlyName="tstamp" msprop:DbColumnName="tstamp" msprop:design-time-name="8822458b-06d2-496c-8f23-034fd6f2dcc8" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="id" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="74ed9b11-3eef-4216-9608-effdb5089249" type="xs:unsignedByte" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="7d4bc49f-b194-4540-8c81-e2fc5e9921e7">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Caption" msprop:FriendlyName="Caption" msprop:DbColumnName="Caption" msprop:design-time-name="7286afdd-7115-4ff9-838d-eb5d0a9a7759">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:FriendlyName="Description" msprop:DbColumnName="Description" msprop:design-time-name="06aa2565-f262-482d-92af-125e08304aa2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="enm_DocAUBUPeriodType" msprop:FriendlyName="DocAUBUPeriodType" msprop:DbSchemaName="enm" msprop:DbTableName="DocAUBUPeriodType" msprop:design-time-name="80716e51-c73f-4a97-b514-18d8c49a2d22" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tstamp" msdata:ReadOnly="true" msprop:FriendlyName="tstamp" msprop:DbColumnName="tstamp" msprop:design-time-name="afc47d2c-acbc-4651-8b16-b9bead2b3bae" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="id" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="b0dfc3ce-83c3-40b3-85a2-e5e90a7988f0" type="xs:unsignedByte" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="5567efee-d6b7-4a40-8024-8d00f908851c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Caption" msprop:FriendlyName="Caption" msprop:DbColumnName="Caption" msprop:design-time-name="3c29cbbf-bebc-44ec-ad3d-5f75dbf47758" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:FriendlyName="Description" msprop:DbColumnName="Description" msprop:design-time-name="a7ddb24f-2121-4113-91ab-c751d9131fe9" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="enm_ExpenseObligationType" msprop:FriendlyName="ExpenseObligationType" msprop:DbSchemaName="enm" msprop:DbTableName="ExpenseObligationType" msprop:design-time-name="1fe3a568-5776-490a-9917-2b481b586678" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tstamp" msdata:ReadOnly="true" msprop:FriendlyName="tstamp" msprop:DbColumnName="tstamp" msprop:design-time-name="00bf84c7-72cd-4450-a93a-90473f2a9d72" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="id" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="aca34913-48f9-42ff-b8ff-7670b1a48703" type="xs:unsignedByte" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="5f2da716-5500-462b-a79c-711bdef003e5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Caption" msprop:FriendlyName="Caption" msprop:DbColumnName="Caption" msprop:design-time-name="9edbd67c-2f37-475a-a740-509eacffc098">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:FriendlyName="Description" msprop:DbColumnName="Description" msprop:design-time-name="4dddba78-df8f-423a-b72f-0d3873a0ab0e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="enm_FinanceSourceType" msprop:FriendlyName="FinanceSourceType" msprop:DbSchemaName="enm" msprop:DbTableName="FinanceSourceType" msprop:design-time-name="b6c49bad-327d-4118-87c8-4b2c78f2d8ab" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tstamp" msdata:ReadOnly="true" msprop:FriendlyName="tstamp" msprop:DbColumnName="tstamp" msprop:design-time-name="0a99eb82-51b3-4361-bc48-395de398ea55" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="id" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="ba406f59-b316-4310-840c-95fe2916f2b8" type="xs:unsignedByte" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="8db6ed8a-94f9-4104-8357-c2150a23b1e0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Caption" msprop:FriendlyName="Caption" msprop:DbColumnName="Caption" msprop:design-time-name="629ba0f2-7275-49d9-ac14-76526d3204c5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:FriendlyName="Description" msprop:DbColumnName="Description" msprop:design-time-name="02ba0e6e-1f0c-40bd-b9de-58de90157538" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="enm_IndicatorActivityType" msprop:FriendlyName="IndicatorActivityType" msprop:DbSchemaName="enm" msprop:DbTableName="IndicatorActivityType" msprop:design-time-name="5a3513db-96ae-47e0-8f8b-3c60f387bebf" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tstamp" msdata:ReadOnly="true" msprop:FriendlyName="tstamp" msprop:DbColumnName="tstamp" msprop:design-time-name="5bc88863-c69c-41dc-8f45-a2e2360ddece" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="id" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="00d516a2-f9aa-48dc-b2f4-a7683ca7a42c" type="xs:unsignedByte" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="39aca49d-23c3-4dec-88ec-c5593ed647f1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Caption" msprop:FriendlyName="Caption" msprop:DbColumnName="Caption" msprop:design-time-name="27eae4a6-235f-4980-b7d3-d58794bee7d9" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:FriendlyName="Description" msprop:DbColumnName="Description" msprop:design-time-name="1721a373-fce0-4969-9ffe-d465a6572f67" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="enm_PaidType" msprop:FriendlyName="PaidType" msprop:DbSchemaName="enm" msprop:DbTableName="PaidType" msprop:design-time-name="045f8749-b3bb-43c8-a056-d5574b5b74c9" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tstamp" msdata:ReadOnly="true" msprop:FriendlyName="tstamp" msprop:DbColumnName="tstamp" msprop:design-time-name="5322ed04-1aeb-4e47-8b2e-ba1594f31e25" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="id" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="bdf6a112-bce5-4e5b-bff7-bc158057d700" type="xs:unsignedByte" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="d07d6ef4-2f75-4a67-a806-39fec25cfe04">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Caption" msprop:FriendlyName="Caption" msprop:DbColumnName="Caption" msprop:design-time-name="235e3ee4-c9ef-4f27-ac84-0ec8287f3f7d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:FriendlyName="Description" msprop:DbColumnName="Description" msprop:design-time-name="39379a64-e390-4867-97a3-22db529b86a2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="enm_SBPType" msprop:FriendlyName="SBPType" msprop:DbSchemaName="enm" msprop:DbTableName="SBPType" msprop:design-time-name="9e10168c-247e-4d7b-a8b7-e7125338787c" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tstamp" msdata:ReadOnly="true" msprop:FriendlyName="tstamp" msprop:DbColumnName="tstamp" msprop:design-time-name="fecd06a2-d574-40d1-872a-adc43e0b98e7" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="id" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="e8b6f72f-79aa-4acb-bf5b-cecd295048ef" type="xs:unsignedByte" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="acfa05be-961e-472e-83e2-b1bc438a6f6b">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Caption" msprop:FriendlyName="Caption" msprop:DbColumnName="Caption" msprop:design-time-name="436a8267-90b4-40b6-a579-49b86a053963" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:FriendlyName="Description" msprop:DbColumnName="Description" msprop:design-time-name="d38913b3-b5ba-4bdc-b723-08f976358033" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="enm_TermsOfPerception" msprop:FriendlyName="TermsOfPerception" msprop:DbSchemaName="enm" msprop:DbTableName="TermsOfPerception" msprop:design-time-name="96ab0868-55ff-4ee1-8bfe-875e462892f2" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="tstamp" msdata:ReadOnly="true" msprop:FriendlyName="tstamp" msprop:DbColumnName="tstamp" msprop:design-time-name="4e16c677-a09d-48ee-9bc3-7611c9baa6d1" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="id" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="2414fd1f-855a-421d-b77d-6d3c11efedb2" type="xs:unsignedByte" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="da9f0475-6280-4330-b4fc-c21edbb61768">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Caption" msprop:FriendlyName="Caption" msprop:DbColumnName="Caption" msprop:design-time-name="fba08816-e58e-461c-a785-6d62865a201d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:FriendlyName="Description" msprop:DbColumnName="Description" msprop:design-time-name="594aeafa-7276-4d1f-be63-3f998d64f3aa" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//enm_BlankValueType" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="enm_DocAUBUPeriodType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//enm_DocAUBUPeriodType" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="enm_ExpenseObligationType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//enm_ExpenseObligationType" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="enm_FinanceSourceType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//enm_FinanceSourceType" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="enm_IndicatorActivityType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//enm_IndicatorActivityType" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="enm_PaidType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//enm_PaidType" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="enm_SBPType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//enm_SBPType" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="enm_TermsOfPerception_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//enm_TermsOfPerception" />
+          <xs:field xpath="id" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+  </Schema>
+</DataSourceView>

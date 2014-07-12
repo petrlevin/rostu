@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.ActivityOfSBP_ResourceMaintenance_Value" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.ActivityOfSBP_ResourceMaintenance_Value">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idHierarchyPeriod" type="xs:int" />
+                <xs:element name="Value" type="xs:decimal" minOccurs="0" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idMaster" type="xs:int" />
+                <xs:element name="AdditionalValue" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.ActivityOfSBP_ResourceMaintenance_Value" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.ActivityOfSBP_ResourceMaintenance_Value>
+    <id>-1744830431</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>1.00</Value>
+    <idOwner>-1744830436</idOwner>
+    <idMaster>-1744830431</idMaster>
+  </tp.ActivityOfSBP_ResourceMaintenance_Value>
+  <tp.ActivityOfSBP_ResourceMaintenance_Value>
+    <id>-1744830430</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>0.50</Value>
+    <idOwner>-1744830435</idOwner>
+    <idMaster>-1744830430</idMaster>
+  </tp.ActivityOfSBP_ResourceMaintenance_Value>
+  <tp.ActivityOfSBP_ResourceMaintenance_Value>
+    <id>-1744830429</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>0.50</Value>
+    <idOwner>-1744830434</idOwner>
+    <idMaster>-1744830429</idMaster>
+  </tp.ActivityOfSBP_ResourceMaintenance_Value>
+  <tp.ActivityOfSBP_ResourceMaintenance_Value>
+    <id>-1744830427</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>0.50</Value>
+    <idOwner>-1744830432</idOwner>
+    <idMaster>-1744830427</idMaster>
+  </tp.ActivityOfSBP_ResourceMaintenance_Value>
+  <tp.ActivityOfSBP_ResourceMaintenance_Value>
+    <id>-1744830426</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>0.50</Value>
+    <idOwner>-1744830431</idOwner>
+    <idMaster>-1744830426</idMaster>
+  </tp.ActivityOfSBP_ResourceMaintenance_Value>
+  <tp.ActivityOfSBP_ResourceMaintenance_Value>
+    <id>-1543503849</id>
+    <idHierarchyPeriod>-1879048161</idHierarchyPeriod>
+    <Value>100.00</Value>
+    <idOwner>-1543503849</idOwner>
+    <idMaster>-1543503849</idMaster>
+  </tp.ActivityOfSBP_ResourceMaintenance_Value>
+</NewDataSet>

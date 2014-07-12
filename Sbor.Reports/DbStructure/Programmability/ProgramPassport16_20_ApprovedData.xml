@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1275068376</id>
+    <Schema>sbor</Schema>
+    <Name>ProgramPassport16_20_ApprovedData</Name>
+    <CreateCommand>CREATE FUNCTION [sbor].[ProgramPassport16_20_ApprovedData] (@id int,@idFinanceSource int,@idFinanceSource1 int,@FinanceSourceType int,@ValueType int,@ValueType1 int,@YearBudget int,@idVersion int,@PPO int,@datestate nvarchar(64))
+RETURNS TABLE
+AS
+RETURN
+(
+WITH Q (idProgram,idParent,Id) AS 
+		(
+		SELECT idProgram,idParent,Id = @id
+		FROM reg.AttributeOfProgram as AOP
+		--WHERE AOSGE.idSystemGoalElement_Parent IS NULL
+		WHERE   AOP.idProgram = @id 
+			AND AOP.idTerminator IS NULL
+			AND AOP.idVersion = @idVersion
+			AND AOP.idPublicLegalFormation = @PPO
+			AND AOP.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,AOP.DateCommit)) 
+			AND AOP.DateCommit IS NOT NULL AND (AOP.DateTerminate &gt; (convert(datetime,@datestate,104)) or AOP.idTerminator is null)--по утвержденным данным			
+		UNION ALL 
+		SELECT AOP.idProgram,AOP.idParent,Id = @id
+		FROM reg.AttributeOfProgram as AOP
+		INNER JOIN Q 
+		ON AOP.idParent = Q.idProgram 
+		AND AOP.idTerminator IS NULL
+		AND AOP.idVersion = @idVersion
+		AND AOP.idPublicLegalFormation = @PPO
+		AND AOP.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,AOP.DateCommit)) 
+		AND AOP.DateCommit IS NOT NULL AND (AOP.DateTerminate &gt; (convert(datetime,@datestate,104)) or AOP.idTerminator is null)--по утвержденным данным			
+		)
+SELECT *
+FROM 
+(
+SELECT	 TAB.idTaskCollection
+				,TAB.Id AS IdProgram
+				,YEAR(HP.DateEnd) AS [Year]
+				,CASE 
+					WHEN SUM(LVA.Value) = 0 THEN NULL
+					WHEN SUM(LVA.Value) IS NOT NULL OR SUM(LVA.Value) &lt;&gt; 0 THEN SUM(LVA.Value) 
+				END AS AmountOfCash
+		FROM reg.TaskCollection AS TC
+			INNER JOIN (
+						SELECT DISTINCT --TV.idSystemGoalElement, 
+						TV.idTaskCollection , VSsbp.id AS VSsbp , Q.IdProgram ,Q.Id 
+							FROM Q 
+						INNER JOIN reg.TaskVolume AS TV --объем задач
+							ON Q.idProgram = TV.idProgram 
+							AND TV.idTerminator IS NULL
+							AND TV.idVersion = @idVersion
+							AND TV.idPublicLegalFormation = @PPO
+							AND TV.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,TV.DateCommit)) 
+							AND TV.DateCommit IS NOT NULL AND (TV.DateTerminate &gt; (convert(datetime,@datestate,104)) or TV.idTerminator is null)--по утвержденным данным		
+                        INNER JOIN ref.SBP VSsbp
+							ON VSsbp.idParent = TV.idSBP
+						) AS TAB
+				ON TC.id = TAB.idTaskCollection
+				AND TC.idPublicLegalFormation = @PPO	
+			INNER JOIN reg.LimitVolumeAppropriations AS LVA --Объемы финансовых средств
+				ON LVA.idTaskCollection = TC.id 
+				AND LVA.idValueType IN(isnull(@ValueType,LVA.idValueType),@ValueType1)--AND (LVA.idValueType = isnull(@ValueType,LVA.idValueType) OR LVA.idValueType = isnull(@ValueType1,LVA.idValueType))
+        AND (LVA.HasAdditionalNeed IS NULL OR LVA.HasAdditionalNeed = 0)
+				AND LVA.idVersion = @idVersion
+				AND LVA.idPublicLegalFormation = @PPO
+				AND LVA.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,LVA.DateCommit)) 
+				AND LVA.DateCommit IS NOT NULL --по утвержденным данным
+			INNER JOIN reg.EstimatedLine AS ED --Сметные строки(idFinanceSource источник финансирования)
+				ON ED.id = LVA.idEstimatedLine 
+				AND ED.idSBP = TAB.VSsbp 
+				AND ED.idFinanceSource IN(isnull(@idFinanceSource,ED.idFinanceSource),@idFinanceSource1) --AND (ED.idFinanceSource = isnull(@idFinanceSource,ED.idFinanceSource) OR ED.idFinanceSource = isnull(@idFinanceSource1,ED.idFinanceSource))
+				AND ED.idPublicLegalFormation = @PPO
+			INNER JOIN ref.HierarchyPeriod AS HP 
+				ON HP.id = LVA.idHierarchyPeriod
+			INNER JOIN ref.FinanceSource AS FS
+				ON ED.idFinanceSource = FS.id
+			INNER JOIN enm.FinanceSourceType AS FST
+				ON FS.idFinanceSourceType = FST.id
+				AND FST.id = isnull(@FinanceSourceType ,FST.id)
+			GROUP BY TAB.idTaskCollection, HP.DateEnd, TAB.Id 
+UNION ALL
+--[reg].[Program_ResourceMaintenance]     [idTaskCollection]
+SELECT	 TAB.idTaskCollection
+				,TAB.Id AS IdProgram
+				,YEAR(HP.DateEnd) AS [Year]
+				,CASE 
+					WHEN SUM(VPRM.Value) = 0 THEN NULL
+					WHEN SUM(VPRM.Value) IS NOT NULL OR SUM(VPRM.Value) &lt;&gt; 0 THEN SUM(VPRM.Value) 
+				END AS AmountOfCash
+		FROM reg.Program_ResourceMaintenance AS VPRM
+			INNER JOIN (
+						SELECT DISTINCT PRM.idProgram, PRM.idTaskCollection , Q.Id
+							FROM Q 
+						INNER JOIN reg.Program_ResourceMaintenance AS PRM --объем задач
+							ON Q.idProgram = PRM.idProgram 
+							AND PRM.idTerminator IS NULL
+							AND PRM.idTaskCollection IS NOT NULL
+							AND PRM.idVersion = @idVersion
+							AND PRM.idPublicLegalFormation = @PPO
+							AND PRM.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,PRM.DateCommit)) 
+							AND PRM.DateCommit IS NOT NULL 
+							AND (PRM.DateTerminate &gt; (convert(datetime,@datestate,104)) or PRM.idTerminator is null)--по утвержденным данным		
+                        ) AS TAB
+				ON VPRM.idTaskCollection = TAB.idTaskCollection 
+				AND VPRM.idProgram = TAB.idProgram
+				AND VPRM.idValueType = 1
+        AND (VPRM.IsAdditionalNeed IS NULL OR VPRM.IsAdditionalNeed = 0)
+				AND VPRM.idFinanceSource IN(isnull(@idFinanceSource,VPRM.idFinanceSource),@idFinanceSource1) --AND (VPRM.idFinanceSource = isnull(@idFinanceSource,VPRM.idFinanceSource) OR VPRM.idFinanceSource = isnull(@idFinanceSource1,VPRM.idFinanceSource))
+        AND VPRM.idTerminator is null
+				AND VPRM.idVersion = @idVersion
+				AND VPRM.idPublicLegalFormation = @PPO
+				AND VPRM.DateCommit &lt;= ISNULL((convert(datetime,@datestate,104)),dateadd(d,+1,VPRM.DateCommit)) 
+				AND VPRM.DateCommit IS NOT NULL 
+				AND (VPRM.DateTerminate &gt; (convert(datetime,@datestate,104)) or VPRM.idTerminator is null)--по утвержденным данным	
+			INNER JOIN ref.HierarchyPeriod AS HP 
+				ON HP.id = VPRM.idHierarchyPeriod
+				--AND (YEAR(HP.DateEnd) &lt; @YearBudget OR YEAR(HP.DateEnd) &gt; (@YearBudget + 2))
+			GROUP BY TAB.idTaskCollection, HP.DateEnd, TAB.Id
+) AS TempTabl
+WHERE AmountOfCash IS NOT NULL
+)</CreateCommand>
+    <idProgrammabilityType>2</idProgrammabilityType>
+    <Order></Order>
+    <idProject>600</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

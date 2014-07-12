@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1744830433</id>
+    <Schema>dbo</Schema>
+    <Name>CreateDistributiveDataTrigger</Name>
+    <CreateCommand>
+      CREATE PROCEDURE [dbo].[CreateDistributiveDataTrigger]
+      @entityId int,
+      @name nvarchar(100),
+      @schema nvarchar(6)
+      AS
+      BEGIN
+      IF @schema='ml'
+      BEGIN
+      EXEC [dbo].[CreateDistributiveDataTriggerMultiLink] @entityId, @name
+      RETURN
+      END
+      DECLARE @sql nvarchar(4000)
+      DECLARE @trigerName nvarchar(400)
+      SET @trigerName = @name+'_deleteDistributiveData'
+      IF (EXISTS( SELECT  * from sys.triggers  WHERE name=@trigerName))
+      BEGIN
+      SET @sql = 'DROP TRIGGER ['+@schema +'].['+@trigerName+']'
+      exec(@sql)
+      END
+      IF (NOT EXISTS( SELECT  * from sys.triggers  WHERE name=@trigerName))
+      BEGIN
+
+      SET @sql = '
+      CREATE TRIGGER ['+@schema+'].['+@trigerName+'] ON ['+ @schema + '].['+@name +'] FOR DELETE
+      AS
+      DELETE FROM [ref].[DistributiveData] where [idElementEntity]='+CAST(@entityId as nvarchar(100))+' AND [idElement] IN (SELECT id from DELETED)  '
+
+
+      PRINT @sql
+      exec(@sql)
+      END
+
+      SET @trigerName = @name+'_insertDistributiveData'
+      IF (EXISTS( SELECT  * from sys.triggers  WHERE name=@trigerName))
+      BEGIN
+      SET @sql = 'DROP TRIGGER ['+@schema +'].['+@trigerName+']'
+      exec(@sql)
+      END
+
+      IF (NOT EXISTS( SELECT  * from sys.triggers  WHERE name=@trigerName))
+      BEGIN
+      DECLARE @where nvarchar(4000)
+      DECLARE @word nvarchar(10)
+      SET @where = ''
+      SET @word = 'WHERE'
+      DECLARE @entityField nvarchar(200)
+      DECLARE entitfields CURSOR
+      FOR SELECT ef.Name
+      FROM [ref].[EntityField] ef WHERE ef.[idEntity] = @entityId AND ef.[idEntityFieldType]=7 AND ef.[idEntityLink] =(SELECT id FROM ref.[Entity] WHERE name = 'Entity')
+      OPEN entitfields
+      FETCH NEXT FROM entitfields
+      INTO @entityField
+
+      WHILE @@FETCH_STATUS = 0
+      BEGIN
+      SET @where = @where + @word + ' (( i.['+@entityField+'] IS NULL) OR ( i.['+@entityField+'] IN (SELECT [idElement] FROM [ref].[DistributiveData] WHERE [idElementEntity]=(SELECT [id] FROM [ref].[Entity] where name=''Entity'' )))) '
+      SET @word = 'AND'
+      FETCH NEXT FROM entitfields
+      INTO @entityField
+
+      END
+      CLOSE entitfields
+      DEALLOCATE entitfields
+
+      --
+
+
+
+      SET @sql = '
+      CREATE TRIGGER ['+@schema+'].['+@trigerName+'] ON ['+ @schema + '].['+@name +'] AFTER INSERT
+      AS
+      INSERT INTO [ref].[DistributiveData]
+      (
+      [idElement]
+      ,[idElementEntity]
+      )
+      SELECT [i].id,'+CAST(@entityId as nvarchar(100))+' FROM INSERTED as i
+      ' + @where
+      PRINT @sql
+      exec(@sql)
+      SET @sql = ';
+      DECLARE @enabled bit
+      IF (NOT EXISTS (SELECT * FROM [dbo].[DistributiveDataInfo]))
+      BEGIN
+      SET @enabled = 0
+      END
+      ELSE
+      BEGIN
+      SET @enabled = (SELECT TOP 1 enabled FROM [dbo].[DistributiveDataInfo])
+      END
+      IF (@enabled =0)
+      BEGIN
+      DISABLE TRIGGER ['+@schema+'].['+@trigerName+'] ON ['+ @schema + '].['+@name +']
+      END	'
+      PRINT @sql
+      exec(@sql)
+      END
+      END
+
+    </CreateCommand>
+    <idProgrammabilityType>1</idProgrammabilityType>
+    <Order></Order>
+    <idProject>100</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

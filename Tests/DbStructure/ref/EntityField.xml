@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.EntityField" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.EntityField">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntity" type="xs:int" />
+                <xs:element name="idEntityFieldType" type="xs:unsignedByte" />
+                <xs:element name="idCalculatedFieldType" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="Size" type="xs:short" minOccurs="0" />
+                <xs:element name="Precision" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="Expression" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntityLink" type="xs:int" minOccurs="0" />
+                <xs:element name="idOwnerField" type="xs:int" minOccurs="0" />
+                <xs:element name="idForeignKeyType" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="AllowNull" type="xs:boolean" />
+                <xs:element name="isCaption" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isDescription" type="xs:boolean" minOccurs="0" />
+                <xs:element name="DefaultValue" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idFieldDefaultValueType" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="isSystem" type="xs:boolean" minOccurs="0" />
+                <xs:element name="ReadOnly" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isHidden" type="xs:boolean" />
+                <xs:element name="RegExpValidator" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="600" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Tooltip" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.EntityField" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.EntityField>
+    <id>-1811939237</id>
+    <Name>id</Name>
+    <Caption>Идентификатор</Caption>
+    <idEntity>-1811939287</idEntity>
+    <idEntityFieldType>3</idEntityFieldType>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <isSystem>false</isSystem>
+    <ReadOnly>true</ReadOnly>
+    <isHidden>true</isHidden>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939236</id>
+    <Name>id</Name>
+    <Caption>Идентификатор</Caption>
+    <idEntity>-1811939286</idEntity>
+    <idEntityFieldType>3</idEntityFieldType>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <isSystem>false</isSystem>
+    <ReadOnly>true</ReadOnly>
+    <isHidden>true</isHidden>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939235</id>
+    <Name>idOwner</Name>
+    <Caption>Ссылка на владельца</Caption>
+    <Description></Description>
+    <idEntity>-1811939286</idEntity>
+    <idEntityFieldType>7</idEntityFieldType>
+    <Expression></Expression>
+    <idEntityLink>-1811939287</idEntityLink>
+    <idForeignKeyType>3</idForeignKeyType>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>true</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939234</id>
+    <Name>id</Name>
+    <Caption>Идентификатор</Caption>
+    <idEntity>-1811939285</idEntity>
+    <idEntityFieldType>3</idEntityFieldType>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <isSystem>false</isSystem>
+    <ReadOnly>true</ReadOnly>
+    <isHidden>true</isHidden>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939233</id>
+    <Name>idOwner</Name>
+    <Caption>Ссылка на владельца</Caption>
+    <Description></Description>
+    <idEntity>-1811939285</idEntity>
+    <idEntityFieldType>7</idEntityFieldType>
+    <Expression></Expression>
+    <idEntityLink>-1811939287</idEntityLink>
+    <idForeignKeyType>2</idForeignKeyType>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>true</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939232</id>
+    <Name>idOrganization</Name>
+    <Caption>Организация</Caption>
+    <Description>Ссылочное поле</Description>
+    <idEntity>-1811939286</idEntity>
+    <idEntityFieldType>7</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <idEntityLink>-2013265880</idEntityLink>
+    <idForeignKeyType>2</idForeignKeyType>
+    <AllowNull>false</AllowNull>
+    <isCaption>true</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939231</id>
+    <Name>idMaster</Name>
+    <Caption>Ссылка на родительскую ТЧ</Caption>
+    <Description></Description>
+    <idEntity>-1811939285</idEntity>
+    <idEntityFieldType>7</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <idEntityLink>-1811939286</idEntityLink>
+    <idForeignKeyType>3</idForeignKeyType>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939230</id>
+    <Name>idHierarchyPeriod</Name>
+    <Caption>Период</Caption>
+    <Description></Description>
+    <idEntity>-1811939285</idEntity>
+    <idEntityFieldType>7</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <idEntityLink>-1879048152</idEntityLink>
+    <idForeignKeyType>2</idForeignKeyType>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939229</id>
+    <Name>Value1</Name>
+    <Caption>Средства</Caption>
+    <Description>Первое ресурсное поле, например, денежное.</Description>
+    <idEntity>-1811939285</idEntity>
+    <idEntityFieldType>5</idEntityFieldType>
+    <Size>15</Size>
+    <Precision>2</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939228</id>
+    <Name>Caption</Name>
+    <Caption>Наименование</Caption>
+    <Description></Description>
+    <idEntity>-1811939287</idEntity>
+    <idEntityFieldType>2</idEntityFieldType>
+    <Size>100</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>false</AllowNull>
+    <isCaption>true</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939227</id>
+    <Name>tpParent</Name>
+    <Caption>Родительская ТЧ</Caption>
+    <Description></Description>
+    <idEntity>-1811939287</idEntity>
+    <idEntityFieldType>9</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <idEntityLink>-1811939286</idEntityLink>
+    <idOwnerField>-1811939235</idOwnerField>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939226</id>
+    <Name>tpChild</Name>
+    <Caption>Дочерняя ТЧ</Caption>
+    <Description></Description>
+    <idEntity>-1811939287</idEntity>
+    <idEntityFieldType>9</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <idEntityLink>-1811939285</idEntityLink>
+    <idOwnerField>-1811939233</idOwnerField>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939224</id>
+    <Name>Value2</Name>
+    <Caption>Объем</Caption>
+    <Description></Description>
+    <idEntity>-1811939285</idEntity>
+    <idEntityFieldType>3</idEntityFieldType>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939222</id>
+    <Name>id</Name>
+    <Caption>Идентификатор</Caption>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>3</idEntityFieldType>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <isSystem>false</isSystem>
+    <ReadOnly>true</ReadOnly>
+    <isHidden>true</isHidden>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939221</id>
+    <Name>Boolean</Name>
+    <Caption>Булево</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>1</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939220</id>
+    <Name>Nvarchar</Name>
+    <Caption>Строка</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>2</idEntityFieldType>
+    <Size>20</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939219</id>
+    <Name>Int</Name>
+    <Caption>Целое</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>3</idEntityFieldType>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939217</id>
+    <Name>Numeric</Name>
+    <Caption>Вещественное</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>5</idEntityFieldType>
+    <Size>15</Size>
+    <Precision>2</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939216</id>
+    <Name>DateTime</Name>
+    <Caption>Дата и время</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>6</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939215</id>
+    <Name>idOrganization</Name>
+    <Caption>Ссылка</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>7</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <idEntityLink>-2013265880</idEntityLink>
+    <idForeignKeyType>2</idForeignKeyType>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939214</id>
+    <Name>GenericLink</Name>
+    <Caption>Общая ссылка</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>20</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939213</id>
+    <Name>GenericLinkEntity</Name>
+    <Caption>Ссылка на сущность</Caption>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>7</idEntityFieldType>
+    <idEntityLink>-2147483615</idEntityLink>
+    <idForeignKeyType>2</idForeignKeyType>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <isSystem>true</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939212</id>
+    <Name>Date</Name>
+    <Caption>Дата</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>24</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939210</id>
+    <Name>idCalculatedFieldType</Name>
+    <Caption>Ссылка на перечисление</Caption>
+    <Description></Description>
+    <idEntity>-1811939283</idEntity>
+    <idEntityFieldType>7</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <idEntityLink>-2080374752</idEntityLink>
+    <idForeignKeyType>2</idForeignKeyType>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939207</id>
+    <Name>Value3</Name>
+    <Caption>Коэффициент</Caption>
+    <Description></Description>
+    <idEntity>-1811939285</idEntity>
+    <idEntityFieldType>5</idEntityFieldType>
+    <Size>15</Size>
+    <Precision>2</Precision>
+    <Expression></Expression>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue></DefaultValue>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939206</id>
+    <Name>v1</Name>
+    <Caption>Ресурс 1 - Средства</Caption>
+    <Description></Description>
+    <idEntity>-1811939287</idEntity>
+    <idEntityFieldType>1</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue>0</DefaultValue>
+    <idFieldDefaultValueType>1</idFieldDefaultValueType>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939205</id>
+    <Name>v2</Name>
+    <Caption>Ресурс 2 - Объем</Caption>
+    <Description></Description>
+    <idEntity>-1811939287</idEntity>
+    <idEntityFieldType>1</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue>0</DefaultValue>
+    <idFieldDefaultValueType>1</idFieldDefaultValueType>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-1811939204</id>
+    <Name>v3</Name>
+    <Caption>Ресурс 3 - Коэффициент</Caption>
+    <Description></Description>
+    <idEntity>-1811939287</idEntity>
+    <idEntityFieldType>1</idEntityFieldType>
+    <Size>0</Size>
+    <Precision>0</Precision>
+    <Expression></Expression>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isDescription>false</isDescription>
+    <DefaultValue>0</DefaultValue>
+    <idFieldDefaultValueType>1</idFieldDefaultValueType>
+    <isSystem>false</isSystem>
+    <ReadOnly>false</ReadOnly>
+    <isHidden>false</isHidden>
+    <RegExpValidator></RegExpValidator>
+    <Tooltip></Tooltip>
+  </ref.EntityField>
+</NewDataSet>

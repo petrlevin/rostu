@@ -1,0 +1,73 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="$(SolutionDir)Platform.PrimaryEntities\bin\Debug\Platform.PrimaryEntities.dll"#>
+<#@ assembly name="$(SolutionDir)Tools.MigrationHelper\bin\Debug\Tools.MigrationHelper.exe"#>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Tools.MigrationHelper.EntitySerializer" #>
+<#@ import namespace="Platform.PrimaryEntities.Reference" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.DbEnums" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.Interfaces" #>
+<#@ import namespace="System.Linq" #>
+using System.Data.Entity.ModelConfiguration;
+
+namespace <#=_namespace#>
+{
+    public class <#=_entity.Name#>Map : EntityTypeConfiguration<<#=GetEntityName()#>>
+    {
+        public <#=_entity.Name#>Map()
+        {
+            // Primary Key
+            this.HasKey(t => <# if(_entity.EntityType != EntityType.Multilink) {#> <#= "t.Id" #><# } else { #><#=" new { t." + FirstToUp(_fields[0].Name) + ", t." + FirstToUp(_fields[1].Name) + "}"#><# } #>);
+
+            // Properties
+            // Table & Column Mappings
+            this.ToTable("<#=_entity.Name#>", "<#=_entity.Schema#>");
+			<# foreach(EntityField Field in _fields.Where(w =>w.IdCalculatedFieldType == null && !new int[] { 8, 9, 13, 18}.Contains(w.IdEntityFieldType))){ #>
+            this.Property(t => t.<#= FirstToUp(Field.Name) #>).HasColumnName("<#=Field.Name#>");
+			<#}#>
+
+            // Relationships
+			<# foreach(EntityField Field in _fields.Where(w => w.IdCalculatedFieldType == null && new int[] {7}.Contains(w.IdEntityFieldType) && _entities.Any(a=> a.Id == w.IdEntityLink && a.IdEntityType != 1))){ #>
+            this.<#if(Field.AllowNull){#>HasOptional<#}else{#>HasRequired<#}#>(t => t.<# if(!new int[]{ 8, 9, 13, 18}.Contains(Field.IdEntityFieldType)){ #><#=ModifyName(Field.Name)#><# } else { #><#= Field.Name #><# } #>)
+                .WithMany(<#= GetLinkedFieldName(Field) #>)
+                .HasForeignKey(d => d.<#=FirstToUp(Field.Name)#>);
+			<#}#>
+        }
+    }
+}
+
+<#+public string GetEntityName()
+{
+	return _entity.IdEntityType == (byte)EntityType.Multilink ? _entity.Schema + _entity.Name : _entity.Name;
+}#>
+
+<#+public string FirstCharToUp(string str)
+{
+	return char.ToUpper(str[0]) + str.Substring(1);
+}#>
+
+<#+public string ModifyName(string str)
+{
+	return char.ToUpper(str[2]) + str.Substring(3);
+}#>
+
+<#+public string GetLinkedFieldName(EntityField field)
+{
+	var linkedField = _entities.FirstOrDefault(w=>w.Id == field.IdEntityLink).Fields.FirstOrDefault(f=>f.IdEntityLink == field.IdEntity && f.IdEntityFieldType != 7 && ((f.IdEntityFieldType == 9 && f.IdOwnerField == field.Id) || f.IdEntityFieldType != 9));
+	return linkedField == null ? "" : "t => t." + FirstToUp(linkedField.Name);
+}#>
+
+<#+public Entity GetEntity(int? idEntity)
+{
+	if(idEntity == null)
+		return null;
+	var entity = _entities.FirstOrDefault(w => w.Id == idEntity);
+	return entity;
+}#>
+
+<#+public string FirstToUp(string str)
+{
+	//if(str == "idDocStatus" || str == "id")
+		return FirstCharToUp(str);
+	//else
+		//return str;
+}#>

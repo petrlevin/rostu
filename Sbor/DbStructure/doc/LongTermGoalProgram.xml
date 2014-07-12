@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="doc.LongTermGoalProgram" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="doc.LongTermGoalProgram">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="DateLastEdit" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="idDocStatus" type="xs:int" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="idDocType" type="xs:int" />
+                <xs:element name="idVersion" type="xs:int" />
+                <xs:element name="Number" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="10" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Date" type="xs:dateTime" />
+                <xs:element name="idAnalyticalCodeStateProgram" type="xs:int" minOccurs="0" />
+                <xs:element name="DateStart" type="xs:dateTime" />
+                <xs:element name="DateEnd" type="xs:dateTime" />
+                <xs:element name="DateCommit" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idResponsibleExecutantType" type="xs:int" />
+                <xs:element name="idSBP" type="xs:int" />
+                <xs:element name="HasMasterDoc" type="xs:boolean" minOccurs="0" />
+                <xs:element name="idMasterStateProgram" type="xs:int" minOccurs="0" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="isRequireClarification" type="xs:boolean" />
+                <xs:element name="ReasonClarification" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DateTerminate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ReasonTerminate" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="ReasonCancel" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idMasterLongTermGoalProgram" type="xs:int" minOccurs="0" />
+                <xs:element name="Header">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="HasAdditionalNeed" type="xs:boolean" />
+                <xs:element name="isApproved" msdata:ReadOnly="true" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//doc.LongTermGoalProgram" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <doc.LongTermGoalProgram>
+    <id>-1879048156</id>
+    <DateLastEdit>2013-06-13T14:29:44.933+04:00</DateLastEdit>
+    <idDocStatus>-2147483615</idDocStatus>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503837</idDocType>
+    <idVersion>1</idVersion>
+    <Number>7</Number>
+    <Date>2013-06-05T00:00:00+04:00</Date>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+    <Caption>ДЦП 4.4</Caption>
+    <idResponsibleExecutantType>-1275068397</idResponsibleExecutantType>
+    <idSBP>-1207959534</idSBP>
+    <HasMasterDoc>false</HasMasterDoc>
+    <Description></Description>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonCancel></ReasonCancel>
+    <Header>Долгосрочная целевая программа № 7 от 05.06.2013</Header>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.LongTermGoalProgram>
+  <doc.LongTermGoalProgram>
+    <id>-1879048155</id>
+    <idDocStatus>-2147483615</idDocStatus>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503835</idDocType>
+    <idVersion>1</idVersion>
+    <Number>8</Number>
+    <Date>2013-06-05T00:00:00+04:00</Date>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+    <Caption>пДЦП 4.4.4-1</Caption>
+    <idResponsibleExecutantType>-1275068397</idResponsibleExecutantType>
+    <idSBP>-1207959534</idSBP>
+    <isRequireClarification>false</isRequireClarification>
+    <idMasterLongTermGoalProgram>-1879048156</idMasterLongTermGoalProgram>
+    <Header>Подпрограмма ДЦП № 8 от 05.06.2013</Header>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.LongTermGoalProgram>
+  <doc.LongTermGoalProgram>
+    <id>-1879048152</id>
+    <idDocStatus>-2147483615</idDocStatus>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503835</idDocType>
+    <idVersion>1</idVersion>
+    <Number>10</Number>
+    <Date>2013-06-05T00:00:00+04:00</Date>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+    <Caption>пДЦП 4.4.4-2</Caption>
+    <idResponsibleExecutantType>-1275068397</idResponsibleExecutantType>
+    <idSBP>-1207959534</idSBP>
+    <isRequireClarification>false</isRequireClarification>
+    <idMasterLongTermGoalProgram>-1879048156</idMasterLongTermGoalProgram>
+    <Header>Подпрограмма ДЦП № 10 от 05.06.2013</Header>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.LongTermGoalProgram>
+  <doc.LongTermGoalProgram>
+    <id>-1744830437</id>
+    <DateLastEdit>2013-06-27T16:00:08.827+04:00</DateLastEdit>
+    <idDocStatus>-2147483615</idDocStatus>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503837</idDocType>
+    <idVersion>1</idVersion>
+    <Number>11</Number>
+    <Date>2013-06-26T00:00:00+04:00</Date>
+    <idAnalyticalCodeStateProgram>-1744830437</idAnalyticalCodeStateProgram>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <Caption>ДЦП по ГП</Caption>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSBP>-1744830433</idSBP>
+    <HasMasterDoc>true</HasMasterDoc>
+    <idMasterStateProgram>-1744830437</idMasterStateProgram>
+    <Description></Description>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonTerminate></ReasonTerminate>
+    <ReasonCancel></ReasonCancel>
+    <Header>Долгосрочная целевая программа № 11 от 26.06.2013</Header>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.LongTermGoalProgram>
+  <doc.LongTermGoalProgram>
+    <id>-1744830435</id>
+    <idDocStatus>-2147483615</idDocStatus>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503835</idDocType>
+    <idVersion>1</idVersion>
+    <Number>12</Number>
+    <Date>2013-06-26T00:00:00+04:00</Date>
+    <idAnalyticalCodeStateProgram>-1744830432</idAnalyticalCodeStateProgram>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <Caption>ПП ДЦП под ДЦП</Caption>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSBP>-1744830432</idSBP>
+    <isRequireClarification>false</isRequireClarification>
+    <idMasterLongTermGoalProgram>-1744830437</idMasterLongTermGoalProgram>
+    <Header>Подпрограмма ДЦП № 12 от 26.06.2013</Header>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.LongTermGoalProgram>
+</NewDataSet>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="reg.TaskCollection" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="reg.TaskCollection">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="idActivity" type="xs:int" />
+                <xs:element name="idContingent" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//reg.TaskCollection" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <reg.TaskCollection>
+    <id>-1879048164</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idActivity>-1879048164</idActivity>
+    <idContingent>-1879048164</idContingent>
+  </reg.TaskCollection>
+  <reg.TaskCollection>
+    <id>-1543503840</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idActivity>-1879048164</idActivity>
+  </reg.TaskCollection>
+</NewDataSet>

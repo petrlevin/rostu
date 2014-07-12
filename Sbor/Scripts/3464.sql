@@ -1,0 +1,1 @@
+﻿ALTER TABLE [ref].[Filter] DROP CONSTRAINT [FK_idParent_Filter_Filter]

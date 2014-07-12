@@ -1,0 +1,42 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Platform.PrimaryEntities.Reference" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.DbEnums" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.Interfaces" #>
+<#@ import namespace="System.Linq" #>
+using System.Data.Entity.ModelConfiguration;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace <#=_namespace#>
+{
+    <#= "/// <summary>" #>
+    <#= "/// Класс описывающий маппинг для сущности "+ _entity.Name #>
+    <#= "/// </summary>" #>
+	public class <#=_entity.Name#>Map : EntityTypeConfiguration<<#=GeneratorHelper.GetEntityName(_entity)#>>
+    {
+        <#= "/// <summary>" #>
+        <#= "/// Дефолтный конструктор" #>
+        <#= "/// </summary>" #>
+		public <#=_entity.Name#>Map()
+        {
+            // Primary Key
+            this.HasKey(<#= GetPrimaryKey() #>);
+
+            // Properties
+            // Table & Column Mappings
+            this.ToTable("<#=_entity.Name#>", "<#=_entity.Schema#>");
+			<# foreach(var str in GetProperties()){ #>
+<#= str #>
+			<#}#>
+
+            // Relationships
+			<# foreach(var str in GetRelationship()){ #>
+<#= str #>
+			<#}#>
+<# foreach(var str in  GetMultiLinkRelationship()) {#>
+<#= str #>
+			<#}#>
+
+        }
+    }
+}

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="doc.PublicInstitutionEstimate" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="doc.PublicInstitutionEstimate">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idSBP_BlankActual" type="xs:int" minOccurs="0" />
+                <xs:element name="idSBP_BlankActualAuBu" type="xs:int" minOccurs="0" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="idBudget" type="xs:int" />
+                <xs:element name="idVersion" type="xs:int" />
+                <xs:element name="Number">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="10" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Date" type="xs:dateTime" />
+                <xs:element name="idSBP" type="xs:int" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="ReasonCancel" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="isRequireClarification" type="xs:boolean" />
+                <xs:element name="ReasonClarification" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DateTerminate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ReasonTerminate" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DateCommit" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DateLastEdit" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="isApproved" type="xs:boolean" />
+                <xs:element name="idDocStatus" type="xs:int" />
+                <xs:element name="HasAdditionalNeed" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isRequireCheck" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//doc.PublicInstitutionEstimate" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <doc.PublicInstitutionEstimate>
+    <id>-1207959534</id>
+    <idSBP_BlankActual>-1543503812</idSBP_BlankActual>
+    <idSBP_BlankActualAuBu>-1543503810</idSBP_BlankActualAuBu>
+    <Caption>Смета казенного учреждения № 1 от 26.06.2013</Caption>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idBudget>1</idBudget>
+    <idVersion>1</idVersion>
+    <Number>1</Number>
+    <Date>2013-06-26T00:00:00+04:00</Date>
+    <idSBP>-1207959532</idSBP>
+    <Description></Description>
+    <ReasonCancel></ReasonCancel>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonClarification></ReasonClarification>
+    <ReasonTerminate></ReasonTerminate>
+    <isApproved>false</isApproved>
+    <idDocStatus>-2147483615</idDocStatus>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isRequireCheck>false</isRequireCheck>
+  </doc.PublicInstitutionEstimate>
+</NewDataSet>

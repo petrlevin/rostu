@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="rep.TestAuditReport" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="rep.TestAuditReport">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="isTemporary" type="xs:boolean" minOccurs="0" />
+                <xs:element name="DateFrom" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DateTo" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="idUser" type="xs:int" minOccurs="0" />
+                <xs:element name="ReportProfileCaption" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="500" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idReportProfileType" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="idReportProfileUser" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//rep.TestAuditReport" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <rep.TestAuditReport>
+    <id>-1811939300</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>1</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>2</id>
+    <DateFrom>2013-07-16T00:00:00+04:00</DateFrom>
+    <idUser>-1744830432</idUser>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>3</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>4</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>5</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>6</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>7</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>8</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>9</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>10</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>11</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+  <rep.TestAuditReport>
+    <id>12</id>
+    <idReportProfileType>1</idReportProfileType>
+  </rep.TestAuditReport>
+</NewDataSet>

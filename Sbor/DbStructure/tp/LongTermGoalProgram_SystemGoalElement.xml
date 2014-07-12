@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.LongTermGoalProgram_SystemGoalElement" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.LongTermGoalProgram_SystemGoalElement">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="FromAnotherDocumentSE" type="xs:boolean" />
+                <xs:element name="idSystemGoal" type="xs:int" />
+                <xs:element name="IsMainGoal" type="xs:boolean" />
+                <xs:element name="Code" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="25" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idElementTypeSystemGoal" type="xs:int" minOccurs="0" />
+                <xs:element name="DateStart" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DateEnd" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="idSBP" type="xs:int" minOccurs="0" />
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.LongTermGoalProgram_SystemGoalElement" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1879048149</id>
+    <idOwner>-1879048156</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1879048154</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>10</Code>
+    <idElementTypeSystemGoal>-1879048160</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+    <idParent>-1879048148</idParent>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1879048148</id>
+    <idOwner>-1879048156</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1879048147</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>17</Code>
+    <idElementTypeSystemGoal>-1879048158</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1879048147</id>
+    <idOwner>-1879048155</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1879048154</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>10</Code>
+    <idElementTypeSystemGoal>-1879048160</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1879048146</id>
+    <idOwner>-1879048155</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1879048153</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>11</Code>
+    <idElementTypeSystemGoal>-1879048159</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+    <idParent>-1879048147</idParent>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1879048140</id>
+    <idOwner>-1879048152</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1879048147</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>17</Code>
+    <idElementTypeSystemGoal>-1879048158</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1879048139</id>
+    <idOwner>-1879048152</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1879048154</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>10</Code>
+    <idElementTypeSystemGoal>-1879048160</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+    <idParent>-1879048140</idParent>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1879048138</id>
+    <idOwner>-1879048152</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1879048153</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>11</Code>
+    <idElementTypeSystemGoal>-1879048159</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+    <idParent>-1879048139</idParent>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1879048137</id>
+    <idOwner>-1879048152</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1879048149</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>15</Code>
+    <idElementTypeSystemGoal>-1879048159</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-01T00:00:00+04:00</DateEnd>
+    <idParent>-1879048139</idParent>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1744830437</id>
+    <idOwner>-1744830437</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830437</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>25</Code>
+    <idElementTypeSystemGoal>-1879048161</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1744830436</id>
+    <idOwner>-1744830437</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830436</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>26</Code>
+    <idElementTypeSystemGoal>-1879048160</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idParent>-1744830437</idParent>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1744830434</id>
+    <idOwner>-1744830435</idOwner>
+    <FromAnotherDocumentSE>true</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830436</idSystemGoal>
+    <IsMainGoal>false</IsMainGoal>
+    <Code>26</Code>
+    <idElementTypeSystemGoal>-1879048160</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+  <tp.LongTermGoalProgram_SystemGoalElement>
+    <id>-1744830433</id>
+    <idOwner>-1744830435</idOwner>
+    <FromAnotherDocumentSE>false</FromAnotherDocumentSE>
+    <idSystemGoal>-1744830432</idSystemGoal>
+    <IsMainGoal>true</IsMainGoal>
+    <Code>30</Code>
+    <idElementTypeSystemGoal>-1879048159</idElementTypeSystemGoal>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idParent>-1744830434</idParent>
+  </tp.LongTermGoalProgram_SystemGoalElement>
+</NewDataSet>

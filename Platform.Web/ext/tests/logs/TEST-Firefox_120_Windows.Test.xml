@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="Firefox_120_Windows.Test" errors="0" failures="0" tests="8" time="0.0050000004">
+<testcase classname="Firefox_120_Windows.Test" name="Guid is defined in global scope" time="0.003"/>
+<testcase classname="Firefox_120_Windows.Test" name="Guid.Empty returns Empty guid filled with zeroes" time="0.0"/>
+<testcase classname="Firefox_120_Windows.Test" name="Guid.isEmpty returns true if gets empty guid" time="0.0"/>
+<testcase classname="Firefox_120_Windows.Test" name="Guid.NewGuid generates valid guids" time="0.001"/>
+<testcase classname="Firefox_120_Windows.Test" name="Guid.isValid returns true if Guid is really valid" time="0.0"/>
+<testcase classname="Firefox_120_Windows.Test" name="Guid.Equals returns true if two guids are equal, ignoring case" time="0.0"/>
+<testcase classname="Firefox_120_Windows.Test" name="ExtJS is defined in global scope" time="0.0"/>
+<testcase classname="Firefox_120_Windows.Test" name="ExtJS version is defined" time="0.001"/>
+</testsuite>

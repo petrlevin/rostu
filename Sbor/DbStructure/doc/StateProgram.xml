@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="doc.StateProgram" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="doc.StateProgram">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="idDocType" type="xs:int" />
+                <xs:element name="idVersion" type="xs:int" />
+                <xs:element name="Number" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="10" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Date" type="xs:dateTime" />
+                <xs:element name="idAnalyticalCodeStateProgram" type="xs:int" />
+                <xs:element name="DateStart" type="xs:dateTime" />
+                <xs:element name="DateEnd" type="xs:dateTime" />
+                <xs:element name="DateCommit" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idResponsibleExecutantType" type="xs:int" />
+                <xs:element name="idSBP" type="xs:int" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="isRequireClarification" type="xs:boolean" />
+                <xs:element name="ReasonClarification" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DateTerminate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ReasonTerminate" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idMasterDoc" type="xs:int" minOccurs="0" />
+                <xs:element name="ReasonCancel" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idDocStatus" type="xs:int" />
+                <xs:element name="Header">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DateLastEdit" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="HasAdditionalNeed" type="xs:boolean" />
+                <xs:element name="isApproved" msdata:ReadOnly="true" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//doc.StateProgram" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <doc.StateProgram>
+    <id>-1744830437</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503843</idDocType>
+    <idVersion>1</idVersion>
+    <Number>3</Number>
+    <Date>2013-06-26T00:00:00+04:00</Date>
+    <idAnalyticalCodeStateProgram>-1207959527</idAnalyticalCodeStateProgram>
+    <DateStart>2013-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-12-31T00:00:00+04:00</DateEnd>
+    <Caption>Государственная программа (1)</Caption>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSBP>-1207959534</idSBP>
+    <Description></Description>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonTerminate></ReasonTerminate>
+    <idDocStatus>-2147483615</idDocStatus>
+    <Header>Государственная программа № 3 от 26.06.2013</Header>
+    <DateLastEdit>2013-06-27T00:00:00+04:00</DateLastEdit>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.StateProgram>
+  <doc.StateProgram>
+    <id>-1744830436</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503842</idDocType>
+    <idVersion>1</idVersion>
+    <Number>4</Number>
+    <Date>2013-06-26T00:00:00+04:00</Date>
+    <idAnalyticalCodeStateProgram>-1207959526</idAnalyticalCodeStateProgram>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <Caption>Подпрограмма ГП</Caption>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSBP>-1879048162</idSBP>
+    <Description></Description>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonTerminate></ReasonTerminate>
+    <idMasterDoc>-1744830437</idMasterDoc>
+    <idDocStatus>-2147483615</idDocStatus>
+    <Header>Подпрограмма ГП № 4 от 26.06.2013</Header>
+    <DateLastEdit>2013-06-27T00:00:00+04:00</DateLastEdit>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.StateProgram>
+  <doc.StateProgram>
+    <id>-1744830434</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503843</idDocType>
+    <idVersion>1</idVersion>
+    <Number>5</Number>
+    <Date>2013-06-27T00:00:00+04:00</Date>
+    <idAnalyticalCodeStateProgram>-1275068397</idAnalyticalCodeStateProgram>
+    <DateStart>2013-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-12-31T00:00:00+04:00</DateEnd>
+    <Caption>ГП 123.44.56</Caption>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSBP>-1744830429</idSBP>
+    <Description></Description>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonTerminate></ReasonTerminate>
+    <idDocStatus>-2147483608</idDocStatus>
+    <Header>Государственная программа № 5 от 27.06.2013</Header>
+    <DateLastEdit>2013-06-27T00:00:00+04:00</DateLastEdit>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.StateProgram>
+  <doc.StateProgram>
+    <id>-1744830433</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503842</idDocType>
+    <idVersion>1</idVersion>
+    <Number>6</Number>
+    <Date>2013-06-27T00:00:00+04:00</Date>
+    <idAnalyticalCodeStateProgram>-1207959532</idAnalyticalCodeStateProgram>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+    <Caption>SubProgramCode</Caption>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSBP>-1744830428</idSBP>
+    <Description></Description>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonTerminate></ReasonTerminate>
+    <idMasterDoc>-1744830434</idMasterDoc>
+    <idDocStatus>-2147483608</idDocStatus>
+    <Header>Подпрограмма ГП № 6 от 27.06.2013</Header>
+    <DateLastEdit>2013-06-27T00:00:00+04:00</DateLastEdit>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.StateProgram>
+  <doc.StateProgram>
+    <id>-1207959532</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503843</idDocType>
+    <idVersion>1</idVersion>
+    <Number>1</Number>
+    <Date>2013-06-14T00:00:00+04:00</Date>
+    <idAnalyticalCodeStateProgram>-1207959527</idAnalyticalCodeStateProgram>
+    <DateStart>2012-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <Caption>Государственная программа (1)</Caption>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSBP>-1207959534</idSBP>
+    <Description></Description>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonTerminate></ReasonTerminate>
+    <idDocStatus>-2147483615</idDocStatus>
+    <Header>Государственная программа № 1 от 14.06.2013</Header>
+    <DateLastEdit>2013-06-14T00:00:00+04:00</DateLastEdit>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.StateProgram>
+  <doc.StateProgram>
+    <id>-1207959530</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <idDocType>-1543503842</idDocType>
+    <idVersion>1</idVersion>
+    <Number>2</Number>
+    <Date>2013-06-14T00:00:00+04:00</Date>
+    <idAnalyticalCodeStateProgram>-1207959526</idAnalyticalCodeStateProgram>
+    <DateStart>2013-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-12-31T00:00:00+04:00</DateEnd>
+    <Caption>Подпрограмма ГП</Caption>
+    <idResponsibleExecutantType>-1207959533</idResponsibleExecutantType>
+    <idSBP>-1207959534</idSBP>
+    <Description></Description>
+    <isRequireClarification>false</isRequireClarification>
+    <ReasonTerminate></ReasonTerminate>
+    <idMasterDoc>-1207959532</idMasterDoc>
+    <ReasonCancel></ReasonCancel>
+    <idDocStatus>-2147483615</idDocStatus>
+    <Header>Подпрограмма ГП № 2 от 14.06.2013</Header>
+    <DateLastEdit>2013-06-14T00:00:00+04:00</DateLastEdit>
+    <HasAdditionalNeed>false</HasAdditionalNeed>
+    <isApproved>false</isApproved>
+  </doc.StateProgram>
+</NewDataSet>

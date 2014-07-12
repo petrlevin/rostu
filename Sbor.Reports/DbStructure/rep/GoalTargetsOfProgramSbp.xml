@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="rep.GoalTargetsOfProgramSbp" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="rep.GoalTargetsOfProgramSbp">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="ReportProfileCaption" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="500" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idReportProfileType" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="idReportProfileUser" type="xs:int" minOccurs="0" />
+                <xs:element name="isTemporary" type="xs:boolean" minOccurs="0" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" minOccurs="0" />
+                <xs:element name="DateReport" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="byApproved" type="xs:boolean" minOccurs="0" />
+                <xs:element name="idVersion" type="xs:int" minOccurs="0" />
+                <xs:element name="repeatTableHeader" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Caption" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="150" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgram" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//rep.GoalTargetsOfProgramSbp" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <rep.GoalTargetsOfProgramSbp>
+    <id>-1811939300</id>
+    <idReportProfileType>1</idReportProfileType>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <DateReport>2013-07-25T00:00:00+04:00</DateReport>
+    <byApproved>true</byApproved>
+    <idVersion>1</idVersion>
+    <repeatTableHeader>true</repeatTableHeader>
+    <Caption>ПЛАНИРУЕМЫЕ ЦЕЛЕВЫЕ ПОКАЗАТЕЛИ ВЕДОМСТВЕННОЙ ЦЕЛЕВОЙ ПРОГРАММЫ</Caption>
+  </rep.GoalTargetsOfProgramSbp>
+  <rep.GoalTargetsOfProgramSbp>
+    <id>1</id>
+    <idReportProfileType>1</idReportProfileType>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <DateReport>2013-07-23T00:00:00+04:00</DateReport>
+    <byApproved>true</byApproved>
+    <idVersion>1</idVersion>
+    <repeatTableHeader>true</repeatTableHeader>
+    <Caption>ПЛАНИРУЕМЫЕ ЦЕЛЕВЫЕ ПОКАЗАТЕЛИ ВЕДОМСТВЕННОЙ ЦЕЛЕВОЙ ПРОГРАММЫ</Caption>
+  </rep.GoalTargetsOfProgramSbp>
+  <rep.GoalTargetsOfProgramSbp>
+    <id>2</id>
+    <idReportProfileType>1</idReportProfileType>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <DateReport>2013-07-23T00:00:00+04:00</DateReport>
+    <byApproved>true</byApproved>
+    <idVersion>1</idVersion>
+    <repeatTableHeader>true</repeatTableHeader>
+    <Caption>ПЛАНИРУЕМЫЕ ЦЕЛЕВЫЕ ПОКАЗАТЕЛИ ВЕДОМСТВЕННОЙ ЦЕЛЕВОЙ ПРОГРАММЫ</Caption>
+  </rep.GoalTargetsOfProgramSbp>
+</NewDataSet>

@@ -1,0 +1,9 @@
+﻿CREATE FUNCTION [dbo].[GetCaption] (@idEntity int, @idItem int) RETURNS nvarchar(max) WITH RETURNS NULL ON NULL INPUT AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Functions.GetCaption].[Get];
+CREATE PROCEDURE [dbo].[CreateOrAlterVersioningTrigger] (@idIndex int) AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Procedures.CreateOrAlterVersioningTrigger].[Exec];
+CREATE PROCEDURE [dbo].[CreateOrAlterIndex] (@idIndex int) AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Procedures.CreateOrAlterIndex].[Exec];
+CREATE FUNCTION [dbo].[GetChildrens] (@idItem int, @idParentField int, @includeThis bit) RETURNS TABLE (id int) AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Functions.GetChildrens].[Get];
+CREATE PROCEDURE [dbo].[CreateOrAlterUserDefineTableTypeByIdEntity] (@idEntity int) AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Procedures.CreateOrAlterUserDefineTableType].[ExecByIdEntity];
+CREATE PROCEDURE [dbo].[CreateOrAlterUserDefineTableTypeByTableName] (@tableName nvarchar(100)) AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Procedures.CreateOrAlterUserDefineTableType].[ExecByTableName];
+CREATE PROCEDURE [dbo].[CreateOrAlterReferencesGenericLinksTrigger] (@idEntity int) AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Procedures.CreateOrAlterReferencesGenericLinksTrigger].[Exec];
+CREATE PROCEDURE [dbo].[CreateOrAlterReferencedGenericLinksTrigger] (@idEntity int) AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Procedures.CreateOrAlterReferencedGenericLinksTrigger].[Exec];
+CREATE PROCEDURE [dbo].[CreateOrAlterCheckCycleHierarchyTrigger] (@idEntity int) AS EXTERNAL NAME [BaseApp.DbClr].[BaseApp.DbClr.Procedures.CreateOrAlterCheckCycleHierarchyTrigger].[Exec];

@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Entity" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Entity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntityType" type="xs:unsignedByte" />
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isSystem" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Order" type="xs:int" minOccurs="0" />
+                <xs:element name="Ordered" type="xs:boolean" minOccurs="0" />
+                <xs:element name="AllowAttachments" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isVersioning" type="xs:boolean" />
+                <xs:element name="GenerateEntityClass" type="xs:boolean" />
+                <xs:element name="idEntityGroup" type="xs:int" minOccurs="0" />
+                <xs:element name="AllowGenericLinks" type="xs:boolean" />
+                <xs:element name="AllowLinks" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Entity" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Entity>
+    <id>-2013265884</id>
+    <Name>SBPType</Name>
+    <Caption>Типы СБП</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265875</id>
+    <Name>AuthorityType</Name>
+    <Caption>Виды полномочий</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265866</id>
+    <Name>TermsOfPerception</Name>
+    <Caption>Условия восприятия</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265649</id>
+    <Name>BlankType</Name>
+    <Caption>Типы бланков СБП</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265648</id>
+    <Name>BlankValueType</Name>
+    <Caption>Типы значений в бланках СБП</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265547</id>
+    <Name>ExpenseObligationType</Name>
+    <Caption>Типы РО</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265444</id>
+    <Name>DocAUBUPeriodType</Name>
+    <Caption>Типы периодов в документах АУ/БУ</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265306</id>
+    <Name>SourcesDataTools</Name>
+    <Caption>Источники данных для инструментов</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265193</id>
+    <Name>BalancingIFDBType</Name>
+    <Caption>Тип формируемого инструмента</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265092</id>
+    <Name>FilterFieldType</Name>
+    <Caption>Тип фильтра по полю</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048135</id>
+    <Name>TypeOfAnalyticalCodeStateProgram</Name>
+    <Caption>Типы аналитических кодов государственных программ</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048030</id>
+    <Name>IndirectCostsDistributionMethod</Name>
+    <Caption>Методы распределения косвенных расходов</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612611</id>
+    <Name>ActivityBudgetaryType</Name>
+    <Caption>Виды бюджетной деятельности</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503848</id>
+    <Name>FinanceSourceType</Name>
+    <Caption>Виды источников финансирования</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503845</id>
+    <Name>ActivityType</Name>
+    <Caption>Типы мероприятий</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503844</id>
+    <Name>IndicatorActivityType</Name>
+    <Caption>Типы показателей мероприятий</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503827</id>
+    <Name>RegistryKeyActivity</Name>
+    <Caption>Разделы реестра мероприятий</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503826</id>
+    <Name>PaidType</Name>
+    <Caption>Платность</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503799</id>
+    <Name>ValueType</Name>
+    <Caption>Типы значений в регистрах</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503524</id>
+    <Name>IndicatorCalculationValueType</Name>
+    <Caption>Типы значений показателей расчета</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959405</id>
+    <Name>PeriodOption</Name>
+    <Caption>Варианты периодов</Caption>
+    <idEntityType>1</idEntityType>
+    <idProject>500</idProject>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+  </ref.Entity>
+</NewDataSet>

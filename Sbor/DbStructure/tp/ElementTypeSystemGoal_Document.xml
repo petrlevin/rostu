@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.ElementTypeSystemGoal_Document" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.ElementTypeSystemGoal_Document">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idDocType" type="xs:int" />
+                <xs:element name="isDefault" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.ElementTypeSystemGoal_Document" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1879048163</id>
+    <idOwner>-1879048163</idOwner>
+    <idDocType>-1543503835</idDocType>
+    <isDefault>false</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1879048162</id>
+    <idOwner>-1879048163</idOwner>
+    <idDocType>-1543503837</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1879048161</id>
+    <idOwner>-1879048163</idOwner>
+    <idDocType>-1543503843</idDocType>
+    <isDefault>false</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1879048159</id>
+    <idOwner>-1879048161</idOwner>
+    <idDocType>-1543503843</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1879048158</id>
+    <idOwner>-1879048160</idOwner>
+    <idDocType>-1543503837</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1879048157</id>
+    <idOwner>-1879048159</idOwner>
+    <idDocType>-1543503835</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1879048156</id>
+    <idOwner>-2013265889</idOwner>
+    <idDocType>-1543503845</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1879048155</id>
+    <idOwner>-1879048158</idOwner>
+    <idDocType>-1543503844</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1744830437</id>
+    <idOwner>-1744830437</idOwner>
+    <idDocType>-1543503839</idDocType>
+    <isDefault>false</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1744830436</id>
+    <idOwner>-1744830436</idOwner>
+    <idDocType>-1543503842</idDocType>
+    <isDefault>false</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1543503848</id>
+    <idOwner>-1543503848</idOwner>
+    <idDocType>-1543503841</idDocType>
+    <isDefault>false</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1207959533</id>
+    <idOwner>-1879048163</idOwner>
+    <idDocType>-1543503842</idDocType>
+    <isDefault>false</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1207959531</id>
+    <idOwner>-1207959533</idOwner>
+    <idDocType>-1543503845</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1207959530</id>
+    <idOwner>-1207959532</idOwner>
+    <idDocType>-1543503843</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+  <tp.ElementTypeSystemGoal_Document>
+    <id>-1207959529</id>
+    <idOwner>-1207959531</idOwner>
+    <idDocType>-1543503842</idDocType>
+    <isDefault>true</isDefault>
+  </tp.ElementTypeSystemGoal_Document>
+</NewDataSet>

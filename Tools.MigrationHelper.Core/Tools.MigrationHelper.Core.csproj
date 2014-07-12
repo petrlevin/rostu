@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBC056A3-2EE5-4A00-B66F-645F51DD2734}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tools.MigrationHelper.Core</RootNamespace>
+    <AssemblyName>Tools.MigrationHelper.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutoClient|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AutoClient\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="7zSharp, Version=1.0.3.0, Culture=neutral, PublicKeyToken=aa6a31abd3bf9e52, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\7-Zip\7zSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.sqlserver.batchparser, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=AMD64">
+      <HintPath>..\lib\Microsoft.Smo\microsoft.sqlserver.batchparser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\lib\Microsoft.Smo\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\lib\Microsoft.Smo\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\lib\Microsoft.Smo\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\lib\Microsoft.Smo\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\lib\Microsoft.Smo\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NAnt.Contrib.Tasks">
+      <HintPath>..\lib\nantcontrib\nantcontrib-0.92\bin\NAnt.Contrib.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="NAnt.Core, Version=0.92.4543.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NAnt.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAnt.SourceControlTasks, Version=0.92.4543.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\nantcontrib\nantcontrib-0.92\bin\NAnt.SourceControlTasks.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSvn, Version=1.8003.2572.15298, Culture=neutral, PublicKeyToken=d729672594885a28, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SharpSvn.1.8-x64.1.8003.2572\lib\net20\SharpSvn.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSvn.UI, Version=1.8003.2572.15298, Culture=neutral, PublicKeyToken=33789aa53ca44aa9, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SharpSvn.1.8-x64.1.8003.2572\lib\net20\SharpSvn.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyHelper\AssemblyDeploy.cs" />
+    <Compile Include="Context\DevDbRevision.cs" />
+    <Compile Include="Context\ProgrammabilityContext.cs" />
+    <Compile Include="Context\UpdateRevisions.cs" />
+    <Compile Include="Controls\Assemblies.cs" />
+    <Compile Include="DbManager\DbActions\DbActionBatch.cs" />
+    <Compile Include="DbManager\DbActions\DbAction.cs" />
+    <Compile Include="DbManager\DbActions\DeleteRows.cs" />
+    <Compile Include="DbManager\DbActions\InsertRows.cs" />
+    <Compile Include="DbManager\DbActions\Interfaces\IDbActionBatch.cs" />
+    <Compile Include="DbManager\DbActions\UpdateRows.cs" />
+    <Compile Include="DbManager\DbDataSetCompareHelper.cs" />
+    <Compile Include="DbManager\Extensions\DataRowExtensions.cs" />
+    <Compile Include="DbManager\DbDataSet.cs" />
+    <Compile Include="DbManager\MetadataCompareResult.cs" />
+    <Compile Include="DeleteTestData\DistributivaDatasMultilink.cs" />
+    <Compile Include="DeleteTestData\DistributivaDataMultilinkInfo.cs" />
+    <Compile Include="DeleteTestData\Data.cs" />
+    <Compile Include="DeleteTestData\DistributivaDatas.cs" />
+    <Compile Include="DeleteTestData\DistributivaDataInfo.cs" />
+    <Compile Include="DeleteTestData\Entities.cs" />
+    <Compile Include="DeleteTestData\EntityFieldInfo.cs" />
+    <Compile Include="DeleteTestData\EntityFields.cs" />
+    <Compile Include="DeleteTestData\EntityInfo.cs" />
+    <Compile Include="DeleteTestData\IMetadataInfo.cs" />
+    <Compile Include="DeleteTestData\MetadataInfoExtension.cs" />
+    <Compile Include="DeleteTestData\Metadata`.cs" />
+    <Compile Include="DeleteTestData\MetadataAttribute.cs" />
+    <Compile Include="DeleteTestData\MultilinkData.cs" />
+    <Compile Include="DeleteTestData\XmlDataProcessing.cs" />
+    <Compile Include="DeleteTestData\XmlProcessing.cs" />
+    <Compile Include="DocsByReflection\DocsByReflection.cs" />
+    <Compile Include="DocsByReflection\DocsByReflectionException.cs" />
+    <Compile Include="EnumsProcessing\EnumsFetcher.cs" />
+    <Compile Include="EnumsProcessing\EnumsMerger.cs" />
+    <Compile Include="EnumsProcessing\EnumParser.cs" />
+    <Compile Include="DbManager\Extensions\DataColumnExtensions.cs" />
+    <Compile Include="Extensions\DataTableExtensions.cs" />
+    <Compile Include="Extensions\SqlCommandExtensions.cs" />
+    <Compile Include="Generators\EntityClasses\ContextGenerator.cs">
+      <DependentUpon>ContextGenerator.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Generators\EntityClasses\ContextGeneratorCode.cs" />
+    <Compile Include="Generators\EntityClasses\EntitiesGenerator.cs">
+      <DependentUpon>EntitiesGenerator.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Generators\EntityClasses\EntitiesGeneratorCode.cs" />
+    <Compile Include="Generators\GeneratorHelper.cs" />
+    <Compile Include="Generators\EntityClasses\MapGenerator.cs">
+      <DependentUpon>MapGenerator.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Generators\EntityClasses\MapGeneratorCode.cs" />
+    <Compile Include="Generators\EntityClasses\Generator.cs" />
+    <Compile Include="Generators\PreGenerateEfViews\Generator.cs" />
+    <Compile Include="Helpers\ActionEnum.cs" />
+    <Compile Include="Helpers\CollectionHelper.cs" />
+    <Compile Include="Helpers\Names.cs" />
+    <Compile Include="Helpers\SolutionHelper.cs" />
+    <Compile Include="Helpers\TaskHelper.cs" />
+    <Compile Include="Helpers\TasksEnum.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="RuntimePolicyHelper.cs" />
+    <Compile Include="Tasks\CheckDatabase.cs" />
+    <Compile Include="Tasks\CheckDistributiveDataTask.cs" />
+    <Compile Include="Tasks\CommandTask.cs" />
+    <Compile Include="Tasks\GenerateEFCodeTask.cs" />
+    <Compile Include="Tasks\CreateDistibutiveDatas.cs" />
+    <Compile Include="Tasks\CreateDistributive.cs" />
+    <Compile Include="Tasks\CreateUpdateSource.cs" />
+    <Compile Include="Tasks\DeleteTestData.cs" />
+    <Compile Include="Tasks\AssemblyTask.cs" />
+    <Compile Include="Tasks\EnableDistributiveData.cs" />
+    <Compile Include="Tasks\EnumSerialize.cs" />
+    <Compile Include="Tasks\GenerateEfViewsTask.cs" />
+    <Compile Include="Tasks\RegisterInDI.cs" />
+    <Compile Include="Tasks\DeployAppDb.cs" />
+    <Compile Include="Tasks\DeployBase.cs" />
+    <Compile Include="Tasks\DeployPlatformDb.cs" />
+    <Compile Include="Tasks\MhTask.cs" />
+    <Compile Include="Tasks\Check.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\CheckTask\CheckTaskResource.Designer.cs">
+      <DependentUpon>CheckTaskResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Tasks\CheckTask\Test.cs" />
+    <Compile Include="Tasks\CheckTask\TestAttribute.cs" />
+    <Compile Include="Tasks\DbDeployTask.cs" />
+    <Compile Include="Tasks\SetControlsTask.cs" />
+    <Compile Include="Tasks\SetCUDControls.cs" />
+    <Compile Include="Tasks\SetFreeControls.cs" />
+    <Compile Include="Tasks\SourceTask.cs" />
+    <Compile Include="Tasks\TeamCityUpdateTest.cs" />
+    <Compile Include="Tasks\ToFs.cs" />
+    <Compile Include="Tasks\Update.cs" />
+    <Compile Include="Tasks\UpdateDb.cs" />
+    <Compile Include="Tasks\UpdateDbTest.cs" />
+    <Compile Include="Tasks\UpgradeSvnWorkingCopy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tasks\CheckTask\CheckTaskResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CheckTaskResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DbStructure\Programmability\CreateOrAlterCheckCycleHierarchyTrigger.xml" />
+    <Content Include="DbStructure\Programmability\GetDependence.xml" />
+    <Content Include="DbStructure\ref\Entity.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\EntityGroup.xml" />
+    <Content Include="DbStructure\ref\Filter.xml" />
+    <Content Include="PlatformDb\Scripts\DeleteFailData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\PostUpdateDbScripts\PostUpdateDb.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\PostUpdateScripts\ReCreateView.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\PreUpdateScripts\MigrationUpdRev.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\PreUpdateScripts\PreUpdate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\PreUpdateDbScripts\PreUpdateDb.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\CreateBaseTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\CreateDb.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\DropAssembly.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\EnableSQLNotification.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlatformDb\Scripts\PostUpdateScripts\1.PostUpdate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tasks\CheckTask\Tests.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DbEnums\Entity.xml" />
+    <Content Include="DbEnums\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\Programmability\GetCaption.xml" />
+    <Content Include="DbStructure\Programmability\CreateOrAlterVersioningTrigger.xml" />
+    <Content Include="DbStructure\Programmability\CreateOrAlterIndex.xml" />
+    <Content Include="DbStructure\Programmability\GetChildrens.xml" />
+    <Content Include="DbStructure\Programmability\DeleteTemporaryReportProfiles.xml" />
+    <Content Include="DbStructure\Programmability\CreateOrAlterUserDefineTableTypeByIdEntity.xml" />
+    <Content Include="DbStructure\Programmability\CreateOrAlterUserDefineTableTypeByTableName.xml" />
+    <Content Include="DbStructure\Programmability\CreateOrAlterReferencesGenericLinksTrigger.xml" />
+    <Content Include="DbStructure\Programmability\EntityIUD.xml" />
+    <Content Include="DbStructure\Programmability\EntityLogicIUD.xml" />
+    <Content Include="DbStructure\Programmability\EntityFieldIUD.xml" />
+    <Content Include="DbStructure\Programmability\EntityFieldLogicIUD.xml" />
+    <Content Include="DbStructure\Programmability\ProgrammabilityIUD.xml" />
+    <Content Include="DbStructure\Programmability\IndexUD.xml" />
+    <Content Include="DbStructure\Programmability\CreateOrAlterReferencedGenericLinksTrigger.xml" />
+    <Content Include="DbStructure\reg\ItemsDependencies.xml" />
+    <Content Include="DbStructure\Programmability\SetDistributiveData.xml" />
+    <Content Include="DbStructure\Programmability\CreateDistributiveDataTriggers.xml" />
+    <Content Include="DbStructure\Programmability\CreateDistributiveDataTrigger.xml" />
+    <Content Include="DbStructure\Programmability\CreateDistributiveDataTriggerMultiLink.xml" />
+    <Content Include="DbStructure\Programmability\GetLastVersionId.xml" />
+    <Content Include="DbStructure\Programmability\GetLastVersionCaption.xml" />
+    <Content Include="DbStructure\Programmability\GetDocumentStatusId.xml" />
+    <Content Include="DbStructure\Programmability\GetParents.xml" />
+    <Content Include="DbStructure\Programmability\GetSchema.xml" />
+    <Content Include="DbStructure\Programmability\CreateOrAlterAllowGenericLinks.xml" />
+    <Content Include="DbStructure\Programmability\CreateOrEnableEntityFieldConstraintsForReferenceLinks.xml" />
+    <Content Include="DbStructure\Programmability\DropEntityFieldConstraintsForReferenceLinks.xml" />
+    <Content Include="DbStructure\Programmability\GetEstimatedLineCaption.xml" />
+    <Content Include="DbStructure\Programmability\ReCreateView.xml" />
+    <Content Include="DbStructure\Programmability\GetSBPParentGRBS.xml" />
+    <Content Include="DbStructure\Programmability\GetSBPParentGRBSCaption.xml" />
+    <Content Include="DbStructure\Programmability\GetDescription.xml" />
+    <Content Include="DbStructure\Programmability\GetDocumentVersionIds.xml" />
+    <Content Include="DbStructure\Programmability\GetVersion.xml" />
+    <Content Include="DbStructure\Programmability\SplitString.xml" />
+    <Content Include="DbStructure\Programmability\SplitStringAsInt.xml" />
+    <Content Include="DbStructure\Programmability\GetCaptions.xml" />
+    <Content Include="DbStructure\Programmability\GetCaptionsByField.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Platform.BusinessLogic.Common\Platform.BusinessLogic.Common.csproj">
+      <Project>{e11d0ab2-a272-417f-8562-6fbc47033c6e}</Project>
+      <Name>Platform.BusinessLogic.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic\Platform.BusinessLogic.csproj">
+      <Project>{7399ba19-e033-40e4-9ec7-34c8eb0b149c}</Project>
+      <Name>Platform.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.DbCmd\Platform.DbCmd.csproj">
+      <Project>{389F4C8F-6C9E-4822-8DC8-1C78A77CAAB2}</Project>
+      <Name>Platform.DbCmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9EE403B9-8D79-40F6-96B4-A9F6E6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Factoring\Platform.PrimaryEntities.Factoring.csproj">
+      <Project>{00D4B56D-E285-4075-B829-01688F7882FB}</Project>
+      <Name>Platform.PrimaryEntities.Factoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities\Platform.PrimaryEntities.csproj">
+      <Project>{DA11E957-7534-4DE0-AF6A-60F8D04E9CB6}</Project>
+      <Name>Platform.PrimaryEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity.Comon\Platform.Unity.Common.csproj">
+      <Project>{169CC69C-7AD2-4FED-917A-302B9020FA64}</Project>
+      <Name>Platform.Unity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity\Platform.Unity.csproj">
+      <Project>{B8903988-41A8-48F0-B922-4A4D7C333110}</Project>
+      <Name>Platform.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils\Platform.Utils.csproj">
+      <Project>{5A67CC4B-B52A-4D6E-8014-18816FE241FF}</Project>
+      <Name>Platform.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Generators\EntityClasses\ContextGenerator.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ContextGenerator.cs</LastGenOutput>
+    </None>
+    <None Include="Generators\EntityClasses\EntitiesGenerator.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>EntitiesGenerator.cs</LastGenOutput>
+    </None>
+    <None Include="Generators\EntityClasses\MapGenerator.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>MapGenerator.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PlatformDb\Scripts\Assemblies.list">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlatformDb\Scripts\CreateBaseView.list">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlatformDb\Scripts\CreateCLRFunctions.list">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlatformDb\Scripts\CreateConstraints.list">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlatformDb\Scripts\CreateSchemas.list">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlatformDb\Scripts\CreateTriggers.list">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DbStructure\doc\" />
+    <Folder Include="DbStructure\ml\" />
+    <Folder Include="DbStructure\rep\" />
+    <Folder Include="DbStructure\tool\" />
+    <Folder Include="DbStructure\tp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

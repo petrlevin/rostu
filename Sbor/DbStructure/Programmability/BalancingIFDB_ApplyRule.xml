@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-2013265867</id>
+    <Schema>tool</Schema>
+    <Name>BalancingIFDB_ApplyRule</Name>
+    <CreateCommand>CREATE PROCEDURE [tool].[BalancingIFDB_ApplyRule]
+	@idRule int
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	;----------
+
+	declare @idTool int
+	declare @budgetYear int
+	declare @isIncludeAdditionalNeed bit
+
+	select @idTool = idOwner from tp.BalancingIFDB_RuleIndex where id = @idRule 
+
+	select 
+		@budgetYear = b.[Year] 
+	from 
+		tool.BalancingIFDB as d
+		inner join ref.Budget as b on b.id = d.idBudget
+	where
+		d.id = @idTool 
+
+	set @isIncludeAdditionalNeed = 0
+	select @isIncludeAdditionalNeed = isIncludeAdditionalNeed from tp.BalancingIFDB_RuleIndex where id = @idRule
+
+	;----------
+	
+	declare @entityName nvarchar(200)
+	set @entityName = 'BalancingIFDB_RuleFilterKBK'
+
+	declare @sql_text nvarchar(max)
+
+	select
+		@sql_text = [dbo].[Concatenate](txt, ' ')
+	from
+		(
+			select
+				'insert into #filters ' +
+				case
+					when fspr.id is null then
+						'select distinct '+
+						'	t.id'+e.Name+' as idRule, '''+mlf.Name+''' as nameFld, t.'+mlf.Name+' as idSpr, f.idFilterFieldType_'+spr.Name+' as idType ' +
+						'from ' +
+						'	tp.'+e.Name+' as f ' +
+						'inner join ml.'+ml.Name+' as t on t.id'+e.Name+' = f.id '		
+					else
+						'select distinct '+
+						'	t.id'+e.Name+' as idRule, '''+mlf.Name+''' as nameFld, s.id, f.idFilterFieldType_'+spr.Name+' as idType ' +
+						'from ' +
+						'	tp.'+e.Name+' as f ' +
+						'   inner join ml.'+ml.Name+' as t on t.id'+e.Name+' = f.id ' +
+						'   cross apply [dbo].[GetChildrens](t.'+mlf.Name+', '+cast(fspr.id as nvarchar(100))+', 1) as s '		
+				end +   'where ' +
+						' f.idMaster = '+cast(@idRule as nvarchar(100))+' ' as txt
+			from 
+				ref.Entity as e
+				inner join ref.EntityField as ef on ef.[idEntity] = e.id
+				inner join ref.Entity as ml on ml.id = ef.idEntityLink
+				inner join ref.EntityField as mlf on mlf.[idEntity] = ml.id and mlf.Name != 'id'+e.Name
+				left join ref.Entity as spr on spr.id = mlf.idEntityLink
+				left join ref.EntityField as fspr on fspr.[idEntity] = spr.id and fspr.Name = 'idParent'
+			where
+				e.Name = @entityName
+				and ef.idEntityFieldType = 8
+		) as z
+
+	create table #filters (
+		idRule int,
+		nameFld nvarchar(1000),
+		idSpr int,
+		idType int
+	)
+
+	exec (@sql_text)
+
+	;----------
+
+	declare @isFilterKBK bit
+	set @isFilterKBK = 0
+	select top 1 @isFilterKBK = 1 from #filters
+
+	;----------
+
+	create table #estlines (
+		id int
+	)
+
+	if (@isFilterKBK = 1)
+	begin
+		select
+			@sql_text = 
+				'insert into #estlines ' + [dbo].[Concatenate](expression, ' union ')
+		from
+			(
+				select top 10000
+					idRule,
+					'select distinct ' +
+					'	l.id ' +
+					'from ' +
+					'	tp.BalancingIFDB_EstimatedLine as l ' +
+					'	inner join reg.EstimatedLine as el on el.id = l.idEstimatedLine '+
+					'where ' +
+					'	idOwner = ' + cast(@idTool as nvarchar(100)) + ' ' +
+					'	and (' + [dbo].[Concatenate](expression, ' and ') + ') ' as expression,
+					sum(cnt) as cnt
+				from
+					(
+						select top 10000
+							f.idRule,
+							count(f.idSpr) as cnt,
+							f.nameFld +
+								case
+									when count(f.idSpr) = 1 then
+										case f.idType when 2 then ' != ' else ' = '	end + cast(min(f.idSpr) as nvarchar(100))
+									else
+										case f.idType when 2 then ' not in ' else ' in ' end + '(' + [dbo].[Concatenate](cast(f.idSpr as nvarchar(100)),',') + ')'
+								end as expression
+						from
+							#filters as f
+						group by
+							f.idRule,
+							f.nameFld,
+							f.idType
+						having
+							count(f.idSpr) &gt; 0
+						order by
+							idRule,
+							cnt
+					) as x
+				group by
+					idRule
+				order by
+					cnt
+			) as z
+			
+		exec (@sql_text)
+	end
+
+	;----------
+
+	declare @change table (
+		id int,
+		idMaster int,
+		idRule int,
+		[year] int,
+		isAdditionalNeed bit,
+		OldValue numeric(22,2),
+		NewValue numeric(22,2)
+	)
+
+	insert into @change
+	select 
+		l.id,
+		l.idMaster,
+		@idRule as idRule,
+		year(hp.DateStart) as [year],
+		l.isAdditionalNeed,
+		l.NewValue as OldValue,
+		round(
+			case (year(hp.DateStart) - @budgetYear)
+				when 0 then l.NewValue * r.IndexOFG
+				when 1 then l.NewValue * r.IndexPFG1
+				when 2 then l.NewValue * r.IndexPFG2
+			end
+		,2) as NewValue
+	from
+		tp.BalancingIFDB_EstimatedLine as l
+		inner join ref.HierarchyPeriod as hp on hp.id = l.idHierarchyPeriod
+		inner join tp.BalancingIFDB_RuleIndex as r on r.id = @idRule
+		left join #estlines as f on f.id = l.id
+	where
+		l.idOwner = @idTool
+		and (
+			(year(hp.DateStart) = @budgetYear and isnull(r.IndexOFG,0) != 0)
+			or (year(hp.DateStart) = @budgetYear+1 and isnull(r.IndexPFG1,0) != 0)
+			or (year(hp.DateStart) = @budgetYear+2 and isnull(r.IndexPFG2,0) != 0)
+		)
+		and (@isIncludeAdditionalNeed = 1 or l.isAdditionalNeed = 0)
+		and (@isFilterKBK = 0 or f.id is not null)
+
+	;----------
+
+	declare @ChangeCount int
+	select @ChangeCount = count(*) from	@change where OldValue != NewValue
+
+	;----------
+
+	if (@ChangeCount &gt; 0)
+	begin
+		
+		update l set l.NewValue = c.NewValue
+		from
+			@change as c
+			inner join tp.BalancingIFDB_EstimatedLine as l on l.id = c.id
+		where
+			c.OldValue != c.NewValue
+			
+		insert into tp.BalancingIFDB_ChangeHistory (
+			idOwner,
+			idMaster,
+			idBalancingIFDB_RuleIndex,
+			OldValue
+		)
+		select
+			@idTool,
+			c.id,
+			c.idRule,
+			c.OldValue
+		from
+			@change as c
+		where
+			c.OldValue != c.NewValue
+			
+		update 
+			tp.BalancingIFDB_RuleIndex 
+		set 
+			isApplied = 1,
+			ChangeCount = @ChangeCount,
+			ChangeNumber = (select isnull(max(ChangeNumber),0)+1 from tp.BalancingIFDB_RuleIndex where idOwner = @idTool)
+		where 
+			id = @idRule
+
+		;----------
+
+		declare @hier table (
+			id int,
+			idParent int,
+			rn NVARCHAR(4000)
+		);
+
+		with cteEx as (
+			select
+				p.id,
+				p.idParent,
+				cast(row_number() over (partition by p.idParent order by p.id)+100000 as nvarchar(max)) AS rn
+			from
+				tp.BalancingIFDB_Program as p
+			where
+				p.idOwner = @idTool
+				and p.idParent is null
+				
+			union all
+			
+			select
+				c.id,
+				c.idParent,
+				p.rn + '.' + cast(row_number() over (partition by c.idParent order by p.id)+100000 as nvarchar(max)) AS rn
+			from
+				cteEx as p
+				inner join tp.BalancingIFDB_Program as c on c.idParent = p.id
+		)
+
+		insert into @hier select * from cteEx
+
+		;----------	
+
+		declare @delta table (
+			idPrg int,
+			idExp int,
+			DeltaOFG numeric(22,2),
+			DeltaPFG1 numeric(22,2),
+			DeltaPFG2 numeric(22,2),
+			DeltaAdditionalOFG numeric(22,2),
+			DeltaAdditionalPFG1 numeric(22,2),
+			DeltaAdditionalPFG2 numeric(22,2)
+		)	
+		insert into @delta
+		select
+			e.idMaster as idPrg,
+			c.idMaster as idExp,
+			sum(case when c.isAdditionalNeed = 0 and c.[year] = @budgetYear+0 then c.NewValue-c.OldValue else 0 end) as DeltaOFG,
+			sum(case when c.isAdditionalNeed = 0 and c.[year] = @budgetYear+1 then c.NewValue-c.OldValue else 0 end) as DeltaPFG1,
+			sum(case when c.isAdditionalNeed = 0 and c.[year] = @budgetYear+2 then c.NewValue-c.OldValue else 0 end) as DeltaPFG2,
+			sum(case when c.isAdditionalNeed = 1 and c.[year] = @budgetYear+0 then c.NewValue-c.OldValue else 0 end) as DeltaAdditionalOFG,
+			sum(case when c.isAdditionalNeed = 1 and c.[year] = @budgetYear+1 then c.NewValue-c.OldValue else 0 end) as DeltaAdditionalPFG1,
+			sum(case when c.isAdditionalNeed = 1 and c.[year] = @budgetYear+2 then c.NewValue-c.OldValue else 0 end) as DeltaAdditionalPFG2
+		from
+			@change as c
+			inner join tp.BalancingIFDB_Expense as e on e.id = c.idMaster
+		where
+			c.OldValue != c.NewValue
+		group by
+			c.idMaster,
+			e.idMaster
+		
+		;----------
+
+		update ex set
+			ex.ChangeOFG  = ex.ChangeOFG  + DeltaOFG,
+			ex.ChangePFG1 = ex.ChangePFG1 + DeltaPFG1,
+			ex.ChangePFG2 = ex.ChangePFG2 + DeltaPFG2,
+			ex.ChangeAdditionalOFG  = ex.ChangeAdditionalOFG  + DeltaAdditionalOFG,
+			ex.ChangeAdditionalPFG1 = ex.ChangeAdditionalPFG1 + DeltaAdditionalPFG1,
+			ex.ChangeAdditionalPFG2 = ex.ChangeAdditionalPFG2 + DeltaAdditionalPFG2
+		from
+			@delta as delta
+			inner join tp.BalancingIFDB_Expense as ex on ex.id = delta.idExp
+		
+		;----------
+
+		update prg set
+			prg.ChangeOFG  = prg.ChangeOFG  + DeltaOFG,
+			prg.ChangePFG1 = prg.ChangePFG1 + DeltaPFG1,
+			prg.ChangePFG2 = prg.ChangePFG2 + DeltaPFG2,
+			prg.ChangeAdditionalOFG  = prg.ChangeAdditionalOFG  + DeltaAdditionalOFG,
+			prg.ChangeAdditionalPFG1 = prg.ChangeAdditionalPFG1 + DeltaAdditionalPFG1,
+			prg.ChangeAdditionalPFG2 = prg.ChangeAdditionalPFG2 + DeltaAdditionalPFG2
+		from
+			tp.BalancingIFDB_Program as prg
+			inner join (
+				select
+					hier.id,
+					sum(data.DeltaOFG)  as DeltaOFG,
+					sum(data.DeltaPFG1) as DeltaPFG1,
+					sum(data.DeltaPFG2) as DeltaPFG2,
+					sum(data.DeltaAdditionalOFG)  as DeltaAdditionalOFG,
+					sum(data.DeltaAdditionalPFG1) as DeltaAdditionalPFG1,
+					sum(data.DeltaAdditionalPFG2) as DeltaAdditionalPFG2
+				from
+					(
+						select
+							h.rn,
+							c.idPrg,
+							sum(c.DeltaOFG)  as DeltaOFG,
+							sum(c.DeltaPFG1) as DeltaPFG1,
+							sum(c.DeltaPFG2) as DeltaPFG2,
+							sum(c.DeltaAdditionalOFG)  as DeltaAdditionalOFG,
+							sum(c.DeltaAdditionalPFG1) as DeltaAdditionalPFG1,
+							sum(c.DeltaAdditionalPFG2) as DeltaAdditionalPFG2
+						from
+							@delta as c
+							inner join @hier as h on h.id = c.idPrg
+						group by
+							h.rn,
+							c.idPrg
+					) as data
+					inner join @hier as hier on hier.rn = substring(data.rn,1,len(hier.rn))
+				group by
+					hier.id
+			) as x on x.id = prg.id
+		where
+			prg.idOwner = @idTool
+			
+	end -- (@ChangeCount &gt; 0)
+
+	;----------
+
+	drop table #filters
+	drop table #estlines
+END
+</CreateCommand>
+    <idProgrammabilityType>1</idProgrammabilityType>
+    <Order></Order>
+    <idProject>500</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

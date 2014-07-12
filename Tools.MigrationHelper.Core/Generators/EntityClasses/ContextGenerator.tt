@@ -1,0 +1,87 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Platform.PrimaryEntities.Reference" #>
+<#@ import namespace="Platform.PrimaryEntities.Common.DbEnums" #>
+<#@ import namespace="Platform.PrimaryEntities.DbEnums" #>
+<#@ import namespace="Tools.MigrationHelper.Helpers" #>
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using Microsoft.Practices.Unity;
+using System.Data.Common;
+using Platform.BusinessLogic.EntityFramework;
+
+
+<# foreach(var nm in _entityNameSpaces){ #><#= "using " + nm + ";" #><# } #>
+
+namespace <#=_namespace#>
+{
+	/// <summary>
+	/// Дата-контекст
+	/// </summary>
+	public partial class DataContext : <# if(_previosSolution == null) {#><#= "DbContext" #><# } else { #><#= SolutionHelper.GetProjectName(_previosSolution ?? 0) + ".DataContext" #><# } #>
+	{
+		static DataContext()
+		{
+			Database.SetInitializer<DataContext>(null);
+			OnStaticConstruct();
+		}
+		
+		/// <summary>
+		/// Конструктор по-умолчанию
+		/// </summary>
+		public DataContext()
+			: this("PlatformDBConnectionString")
+		{
+			((IObjectContextAdapter) this).ObjectContext.ContextOptions.UseCSharpNullComparisonBehavior = true;
+		}
+
+		/// <summary>
+		/// Конструктор, с возможностью указания строки соединения
+		/// </summary>
+		public DataContext([Dependency("ConnectionString")] string connectionString)
+			: base(DbContextInitializer.CreateConnection(connectionString), true)
+		{
+				DbContextInitializer.EnableTracing(this);
+
+		}
+		
+		/// <summary>
+		/// Конструктор, с возможностью указания существующего соединения
+		/// </summary>
+		public DataContext(DbConnection dbConnection, bool contextOwnsConnection) :
+			base(dbConnection, contextOwnsConnection)
+		{
+			
+		}
+
+		<# foreach(var entity in _entities){ #>
+/// <summary>
+		/// <#= entity.Caption #>
+		/// </summary>
+		public DbSet<<#=GeneratorHelper.GetFullClassName(entity)#>> <#=GeneratorHelper.GetEntityName(entity)#> { get; set; }
+		<#}#>
+
+		/// <summary>
+		/// Получение типизированного набора сущностей
+		/// </summary>
+		public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
+		{
+			return base.Set<TEntity>();
+		}
+
+		/// <summary>
+		/// Событие при создании моделей
+		/// </summary>
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+		{
+			<# foreach(var entity in _entities){ #>
+modelBuilder.Configurations.Add(new <#=entity.Name#>Map());
+			<#}#> 
+			CustomOnModelCreating(modelBuilder);
+			base.OnModelCreating(modelBuilder);
+		}
+
+		partial void CustomOnModelCreating(DbModelBuilder modelBuilder);
+		static partial void OnStaticConstruct();
+	}
+}
