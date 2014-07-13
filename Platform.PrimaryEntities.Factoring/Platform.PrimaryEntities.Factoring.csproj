@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00D4B56D-E285-4075-B829-01688F7882FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Platform.PrimaryEntities.Factoring</RootNamespace>
+    <AssemblyName>Platform.PrimaryEntities.Factoring</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutoClient|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AutoClient\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CashStub.cs" />
+    <Compile Include="DefaultFieldsStrategy.cs" />
+    <Compile Include="EntityFieldExtension.cs" />
+    <Compile Include="Extensions\DataReaderExtensions.cs" />
+    <Compile Include="Strategies\Base.cs" />
+    <Compile Include="Strategies\UseCache.cs" />
+    <Compile Include="Strategies\UseCacheWithSqlDependency.cs" />
+    <Compile Include="DependencyInjection.cs" />
+    <Compile Include="DefaultFactory.cs" />
+    <Compile Include="Mocks\Storage.cs" />
+    <Compile Include="PerTableSqlDependencySelect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlDependencySelect.cs" />
+    <Compile Include="Objects.cs" />
+    <Compile Include="Mocks\SelectDict.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Platform.Application.Common\Platform.Application.Common.csproj">
+      <Project>{B489597F-7C2F-4470-BA09-C31B8A0797C8}</Project>
+      <Name>Platform.Application.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Application\Platform.Application.csproj">
+      <Project>{f915d6f9-c7d8-4578-b888-e71fdb471502}</Project>
+      <Name>Platform.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Caching.Common\Platform.Caching.Common.csproj">
+      <Project>{64488B5D-2951-402E-AABF-52A478EE51ED}</Project>
+      <Name>Platform.Caching.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Common\Platform.Common.csproj">
+      <Project>{CB231957-03DE-4EFA-9B75-EF6B23E63070}</Project>
+      <Name>Platform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9ee403b9-8d79-40f6-96b4-a9f6e6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities\Platform.PrimaryEntities.csproj">
+      <Project>{da11e957-7534-4de0-af6a-60f8d04e9cb6}</Project>
+      <Name>Platform.PrimaryEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity.Comon\Platform.Unity.Common.csproj">
+      <Project>{169CC69C-7AD2-4FED-917A-302B9020FA64}</Project>
+      <Name>Platform.Unity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils.Common\Platform.Utils.Common.csproj">
+      <Project>{95B3D83C-FC10-4157-8364-52C513FD21F4}</Project>
+      <Name>Platform.Utils.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils\Platform.Utils.csproj">
+      <Project>{5A67CC4B-B52A-4D6E-8014-18816FE241FF}</Project>
+      <Name>Platform.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

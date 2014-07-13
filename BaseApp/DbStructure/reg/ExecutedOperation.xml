@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="reg.ExecutedOperation" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="reg.ExecutedOperation">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Date" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="idUser" type="xs:int" />
+                <xs:element name="idEntityOperation" type="xs:int" />
+                <xs:element name="idOriginalStatus" type="xs:int" />
+                <xs:element name="idFinalStatus" type="xs:int" />
+                <xs:element name="idRegistrator" type="xs:int" />
+                <xs:element name="idRegistratorEntity" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//reg.ExecutedOperation" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <reg.ExecutedOperation>
+    <id>-1946157027</id>
+    <Date>2013-07-05T10:22:18.453+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-1946157023</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1946157027</idRegistrator>
+    <idRegistratorEntity>-1946156914</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1946157026</id>
+    <Date>2013-07-05T10:36:28.687+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-1946157024</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1946157027</idRegistrator>
+    <idRegistratorEntity>-1946156914</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1811939300</id>
+    <Date>2013-07-21T13:54:14.867+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-1946157024</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1946157027</idRegistrator>
+    <idRegistratorEntity>-1946156914</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1811939299</id>
+    <Date>2013-07-21T13:56:08.41+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-1946157023</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1811939300</idRegistrator>
+    <idRegistratorEntity>-1946156914</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1811939298</id>
+    <Date>2013-07-21T13:56:09.11+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-1946157023</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1811939299</idRegistrator>
+    <idRegistratorEntity>-1946156914</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1811939296</id>
+    <Date>2013-09-05T11:06:48.13+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-2013265849</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1811939301</idRegistrator>
+    <idRegistratorEntity>-2013265304</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1811939295</id>
+    <Date>2013-09-05T11:07:21.393+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-2013265842</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1811939301</idRegistrator>
+    <idRegistratorEntity>-2013265304</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1811939294</id>
+    <Date>2013-09-05T11:07:27.367+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-2013265848</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483613</idFinalStatus>
+    <idRegistrator>-1811939301</idRegistrator>
+    <idRegistratorEntity>-2013265304</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1811939293</id>
+    <Date>2013-09-05T11:07:41.253+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-2013265840</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1811939301</idRegistrator>
+    <idRegistratorEntity>-2013265407</idRegistratorEntity>
+  </reg.ExecutedOperation>
+  <reg.ExecutedOperation>
+    <id>-1543503848</id>
+    <Date>2013-07-23T18:04:11.083+04:00</Date>
+    <idUser>-1744830436</idUser>
+    <idEntityOperation>-1543503794</idEntityOperation>
+    <idOriginalStatus>-2147483615</idOriginalStatus>
+    <idFinalStatus>-2147483615</idFinalStatus>
+    <idRegistrator>-1543503849</idRegistrator>
+    <idRegistratorEntity>-1543503797</idRegistratorEntity>
+  </reg.ExecutedOperation>
+</NewDataSet>

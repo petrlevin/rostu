@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Filter" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Filter">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Disabled" type="xs:boolean" minOccurs="0" />
+                <xs:element name="idEntityField" type="xs:int" />
+                <xs:element name="idLogicOperator" type="xs:unsignedByte" />
+                <xs:element name="Not" type="xs:boolean" />
+                <xs:element name="idLeftEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="idComparisionOperator" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="RightValue" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="256" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRightEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="RightSqlExpression" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="WithParents" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Filter" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Filter>
+    <id>-1543503810</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503243</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select [idEntity] from ref.TemplateImportXLS where id={idOwner}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503808</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503249</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select [idEntity] from ref.TemplateImportXLS where id={idOwner}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503806</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543503258</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483612</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>3, 4</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503794</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1543502097</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483606</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select id from ref.EntityField where [idEntity] = {idEntity} AND idEntityLink = {idEntity}</RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503790</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946156997</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2147482506</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+</NewDataSet>

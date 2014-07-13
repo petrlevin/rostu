@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.TableReport" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.TableReport">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idSolutionProject" type="xs:int" minOccurs="0" />
+                <xs:element name="Sql">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.TableReport" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.TableReport>
+    <id>-1811939300</id>
+    <Name></Name>
+    <Caption>Попытка изменить данные...</Caption>
+    <Description>...должна провалиться</Description>
+    <idSolutionProject>600</idSolutionProject>
+    <Sql>update doc.TestDocument set Zumma = 1 where Zumma = 12213123</Sql>
+  </ref.TableReport>
+  <ref.TableReport>
+    <id>1</id>
+    <Name></Name>
+    <Caption>Список полей сущности</Caption>
+    <Description></Description>
+    <idSolutionProject>200</idSolutionProject>
+    <Sql>select
+	ref.Entity.Name
+	,ref.EntityField.Name as FieldName
+       ,1 as Number
+from 
+	ref.EntityField 
+	inner join ref.Entity on ref.EntityField.[idEntity] = ref.Entity.id
+order by 
+	 ref.Entity.Name
+	,ref.EntityField.Name
+	</Sql>
+  </ref.TableReport>
+</NewDataSet>

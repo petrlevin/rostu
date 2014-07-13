@@ -31,7 +31,7 @@
     <RootNamespace>Platform.Web</RootNamespace>
     <AssemblyName>Platform.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -4913,7 +4913,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Class1.cs" />
     <Compile Include="Common\HttpRequestHelper.cs" />
     <Compile Include="Common\NameValueCollectionExtensions.cs" />
     <Compile Include="ExtDirectManagement\Listener.cs" />
@@ -5494,7 +5493,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>8045</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8045/</IISUrl>
+          <IISUrl>http://localhost/Platform3.Trunk/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.OrganizationRightExtension" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.OrganizationRightExtension">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idKind" type="xs:unsignedByte" />
+                <xs:element name="SqlTemplate">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.OrganizationRightExtension" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.OrganizationRightExtension>
+    <id>-1879048164</id>
+    <Description>Расширение организационных прав на регистр "Программы":
+1. Выводить записи регистра "Программы" которые являются вышестоящими для отфильтрованных по организационным правам (связь через поле "Вышестоящая программа" в актуальной записи регистра "Атрибуты программ").
+2. Выводить все вышестоящие программы для программ, отобранных по п.1. Связь такая же. </Description>
+    <idKind>1</idKind>
+    <SqlTemplate>select p.[id] as id,  (SELECT [id] FROM [ref].[Entity] WHERE name='Program') as [idEntity]
+from ( 
+	select a.[idProgram] as [id]
+	from reg.AttributeOfProgram a
+	where a.idParent = [{0}].[id]
+
+	union
+
+	select a.[idProgram] as [id]
+	from reg.AttributeOfProgram a
+	where a.[idParent] in (
+					select a.[idProgram] as [id]
+					from reg.AttributeOfProgram a
+					where a.idParent = [{0}].[id]
+					)
+	) as p</SqlTemplate>
+  </ref.OrganizationRightExtension>
+  <ref.OrganizationRightExtension>
+    <id>-1744830438</id>
+    <idKind>3</idKind>
+    <SqlTemplate>SELECT [dd1].[idOther] AS [id],-1744830423 AS [idEntity]
+                                                                                          FROM   [doc].[TestDocument] AS dd1
+                                                                                          WHERE  dd1.[id] = {0}.[id]
+                                                                                          UNION
+                                                                                          SELECT [dd2].[idThis] AS [id],
+                                                                                                 -1744830429 AS [idEntity]
+                                                                                          FROM   [doc].[TestDocument] AS dd2
+                                                                                          WHERE  dd2.[id] ={0}.[id]</SqlTemplate>
+  </ref.OrganizationRightExtension>
+  <ref.OrganizationRightExtension>
+    <id>-1744830435</id>
+    <idKind>3</idKind>
+    <SqlTemplate>SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+WHERE sp.[id]= {0}.idMasterDoc
+UNION 
+SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+WHERE sp.[id]= ( SELECT sp.idMasterDoc as [id] FROM [doc].[StateProgram] sp
+WHERE sp.[id]= {0}.idMasterDoc)</SqlTemplate>
+  </ref.OrganizationRightExtension>
+  <ref.OrganizationRightExtension>
+    <id>-1744830434</id>
+    <Description></Description>
+    <idKind>1</idKind>
+    <SqlTemplate>
+      SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+      WHERE sp.[id]= {0}.idMasterDoc
+      UNION
+      SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+      Inner Join  dbo.[GetDocumentVersionIds]({0}.id, (SELECT Top 1 [id] FROM [ref].[Entity] WHERE name='{0}')) cte  on cte.id = sp.idMasterDoc
+      UNION
+      SELECT lgtp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='LongTermGoalProgram') as [idEntity] FROM [doc].[LongTermGoalProgram] lgtp
+      Inner Join  dbo.[GetDocumentVersionIds]({0}.id, (SELECT Top 1 [id] FROM [ref].[Entity] WHERE name='{0}')) cte  on cte.id = lgtp.idMasterStateProgram
+      UNION
+      SELECT aspb.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='ActivityOfSBP') as [idEntity] FROM [doc].[ActivityOfSBP] aspb
+      Inner Join  dbo.[GetDocumentVersionIds]({0}.id, (SELECT Top 1 [id] FROM [ref].[Entity] WHERE name='{0}')) cte  on cte.id = aspb.idMasterDoc
+      UNION
+      SELECT aspb.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='ActivityOfSBP') as [idEntity] FROM [doc].[ActivityOfSBP] aspb
+      Inner Join [doc].[StateProgram] sp on aspb.idMasterDoc = sp.[id]
+      Inner Join  dbo.[GetDocumentVersionIds]([{0}].id, (SELECT Top 1 [id] FROM [ref].[Entity] WHERE name='{0}')) cte  on cte.id = sp.idMasterDoc
+      UNION
+      SELECT lgtp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='LongTermGoalProgram') as [idEntity] FROM [doc].[LongTermGoalProgram] lgtp
+      WHERE  lgtp.idMasterStateProgram IN (
+      SELECT lgtp.[id] as id  FROM [doc].[StateProgram] lgtp
+      Inner Join  dbo.[GetDocumentVersionIds]([{0}].id, (SELECT Top 1 [id] FROM [ref].[Entity] WHERE name='{0}')) cte  on cte.id = lgtp.idMasterDoc
+      )
+    </SqlTemplate>
+  </ref.OrganizationRightExtension>
+  <ref.OrganizationRightExtension>
+    <id>-1744830433</id>
+    <idKind>1</idKind>
+    <SqlTemplate>SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+WHERE sp.[id]= {0}.idMasterStateProgram
+UNION
+SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+WHERE sp.[id]= ( SELECT sp.[idMasterStateProgram] as [id] FROM [doc].[LongTermGoalProgram] sp
+WHERE sp.[id]= {0}.idMasterLongTermGoalProgram)
+UNION
+SELECT lgtp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='LongTermGoalProgram') as [idEntity] FROM [doc].[LongTermGoalProgram] lgtp
+WHERE  lgtp.idMasterLongTermGoalProgram={0}.[id]
+UNION
+SELECT lgtp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='LongTermGoalProgram') as [idEntity] FROM [doc].[LongTermGoalProgram] lgtp
+WHERE  lgtp.[id]={0}.idMasterLongTermGoalProgram</SqlTemplate>
+  </ref.OrganizationRightExtension>
+  <ref.OrganizationRightExtension>
+    <id>-1744830431</id>
+    <idKind>2</idKind>
+    <SqlTemplate>SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+WHERE sp.[id]= {0}.idMasterDoc
+</SqlTemplate>
+  </ref.OrganizationRightExtension>
+  <ref.OrganizationRightExtension>
+    <id>-1744830430</id>
+    <idKind>2</idKind>
+    <SqlTemplate>SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+WHERE sp.[id]= {0}.idMasterStateProgram
+UNION
+SELECT sp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='StateProgram') as [idEntity] FROM [doc].[StateProgram] sp
+WHERE sp.[id]= ( SELECT sp.[idMasterStateProgram] as [id] FROM [doc].[LongTermGoalProgram] sp
+WHERE sp.[id]= {0}.idMasterLongTermGoalProgram)
+UNION
+SELECT lgtp.[id] as id , (SELECT [id] FROM [ref].[Entity] WHERE name='LongTermGoalProgram') as [idEntity] FROM [doc].[LongTermGoalProgram] lgtp
+WHERE  lgtp.[id]={0}.idMasterLongTermGoalProgram</SqlTemplate>
+  </ref.OrganizationRightExtension>
+</NewDataSet>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Operation" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Operation">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Operation" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Operation>
+    <id>-2147483615</id>
+    <Name>Edit</Name>
+    <Caption>Редактировать</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483606</id>
+    <Name>Process</Name>
+    <Caption>Обработать</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483605</id>
+    <Name>UndoProcess</Name>
+    <Caption>Отменить обработку</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483604</id>
+    <Name>Confirm</Name>
+    <Caption>Утвердить</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483603</id>
+    <Name>UndoConfirm</Name>
+    <Caption>Отменить утверждение</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483602</id>
+    <Name>Terminate</Name>
+    <Caption>Прекратить</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483601</id>
+    <Name>UndoTerminate</Name>
+    <Caption>Отменить прекращение</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483600</id>
+    <Name>Change</Name>
+    <Caption>Изменить</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483599</id>
+    <Name>UndoChange</Name>
+    <Caption>Отменить изменение</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483598</id>
+    <Name>Deny</Name>
+    <Caption>Отказать</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483597</id>
+    <Name>ReturnToProject</Name>
+    <Caption>Отменить отказ</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483596</id>
+    <Name>Archive</Name>
+    <Caption>В архив</Caption>
+    <Description>Принятие изменений</Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483595</id>
+    <Name>UndoArchive</Name>
+    <Caption>Отменить принятие изменений</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483594</id>
+    <Name>CreateDocs</Name>
+    <Caption>Формирование документов</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2147483593</id>
+    <Name>BackToDraft</Name>
+    <Caption>Вернуть на черновик</Caption>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2013265889</id>
+    <Name>Create</Name>
+    <Caption>Создать</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2013265887</id>
+    <Name>IncludeInSetOf</Name>
+    <Caption>Включить в свод</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2013265886</id>
+    <Name>ExcludeFromTheSetOf</Name>
+    <Caption>Исключить из свода</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2013265884</id>
+    <Name>Finish</Name>
+    <Caption>Завершить</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-2013265883</id>
+    <Name>UndoFinish</Name>
+    <Caption>Отменить завершение</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-1879048164</id>
+    <Name>UndoCheck</Name>
+    <Caption>Отменить согласование</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-1879048163</id>
+    <Name>Check</Name>
+    <Caption>Согласование</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-1543503848</id>
+    <Name>ConfirmWithAddNeed</Name>
+    <Caption>Утвердить с доп. потребностями</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-1543503847</id>
+    <Name>CheckMRG</Name>
+    <Caption>Согласование МРГ</Caption>
+    <Description></Description>
+  </ref.Operation>
+  <ref.Operation>
+    <id>-1543503846</id>
+    <Name>UndoCheckMRG</Name>
+    <Caption>Отменить согласование МРГ</Caption>
+    <Description></Description>
+  </ref.Operation>
+</NewDataSet>

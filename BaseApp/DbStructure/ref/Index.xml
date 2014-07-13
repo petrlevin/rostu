@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Index" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Index">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idEntity" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idIndexType" type="xs:unsignedByte" />
+                <xs:element name="isClustered" type="xs:boolean" />
+                <xs:element name="Filter" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Index" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Index>
+    <id>-1879048161</id>
+    <idEntity>-1879048156</idEntity>
+    <Name>idPublicLegalFormation_UI</Name>
+    <Caption></Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1744830435</id>
+    <idEntity>-1744830435</idEntity>
+    <Name>idxToolEntityTool</Name>
+    <Caption>Уникальная пара IdTool и idToolEntity (общая ссылка)</Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1610612711</id>
+    <idEntity>-1879048154</idEntity>
+    <Name>unicue_year </Name>
+    <Caption>Проверка уникальности </Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1610612700</id>
+    <idEntity>-1610612493</idEntity>
+    <Name>uniq</Name>
+    <Caption></Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1543503840</id>
+    <idEntity>-2147483493</idEntity>
+    <Name>uniq_login</Name>
+    <Caption>Уникальность логина пользователя</Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1543503838</id>
+    <idEntity>-2147483492</idEntity>
+    <Name>unique name</Name>
+    <Caption>Уникальность наименования роли</Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1543503822</id>
+    <idEntity>-1879048140</idEntity>
+    <Name>uniq1</Name>
+    <Caption></Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1543503816</id>
+    <idEntity>-1879048138</idEntity>
+    <Name>uniq4</Name>
+    <Caption></Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1543503812</id>
+    <idEntity>-1879048141</idEntity>
+    <Name>uniqrole</Name>
+    <Caption></Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+  <ref.Index>
+    <id>-1543503811</id>
+    <idEntity>-1879048136</idEntity>
+    <Name>uniqrole</Name>
+    <Caption></Caption>
+    <idIndexType>1</idIndexType>
+    <isClustered>false</isClustered>
+    <Filter></Filter>
+    <idRefStatus>2</idRefStatus>
+  </ref.Index>
+</NewDataSet>

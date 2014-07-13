@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Filter" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Filter">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Disabled" type="xs:boolean" minOccurs="0" />
+                <xs:element name="idEntityField" type="xs:int" />
+                <xs:element name="idLogicOperator" type="xs:unsignedByte" />
+                <xs:element name="Not" type="xs:boolean" />
+                <xs:element name="idLeftEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="idComparisionOperator" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="RightValue" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="256" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idRightEntityField" type="xs:int" minOccurs="0" />
+                <xs:element name="RightSqlExpression" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="WithParents" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Filter" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Filter>
+    <id>-2013265854</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2013260452</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2147483564</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1946157026</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946157015</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2080374752</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue>1,2,3</RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048110</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2147483561</idEntityField>
+    <idLogicOperator>1</idLogicOperator>
+    <Not>false</Not>
+    <RightValue></RightValue>
+    <RightSqlExpression></RightSqlExpression>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1879048109</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2147483561</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>true</Not>
+    <idLeftEntityField>-2147483606</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>select
+	fe.idEntityField
+from
+	tp.FormElements fe
+where
+	fe.idOwner = {idOwner}
+        AND fe.idEntityField IS NOT NULL --fix ошибки работы NOT IN при наличии значений NULL в списке</RightSqlExpression>
+    <idParent>-1879048110</idParent>
+    <Description>Исключает поля сущности уже добавленные на форму</Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1811939300</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-2147483561</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483602</idLeftEntityField>
+    <idComparisionOperator>6</idComparisionOperator>
+    <RightValue></RightValue>
+    <RightSqlExpression>
+--Владелец поля: Сама сущность
+select top 1 
+	ref.Form.[idEntity]
+from 
+	ref.Form 
+	left join tp.FormElements on tp.FormElements.idOwner = ref.Form.id
+	left join tp.FormElements parent on parent.id = tp.FormElements.idParent
+	left join ref.EntityField on parent.idEntityField = ref.EntityField.id
+where 
+	ref.Form.id = {idOwner}
+	AND (
+		parent.id is null
+		OR ref.EntityField.idEntityFieldType is null
+	)
+
+union 
+
+--Владелец поля: Мультиссылка
+select top 1
+	opposite.idEntityLink
+from 
+	tp.FormElements 
+	inner join ref.Form on tp.FormElements.idOwner = ref.Form.id
+	inner join ref.EntityField on tp.FormElements.idEntityField = ref.EntityField.id -- поле-мультиссылка
+	inner join ref.EntityField opposite on ( -- ссылка на противоположную сущность
+		ref.EntityField.idEntityLink /* сущность мультиссылки */ = opposite.[idEntity] 
+		AND opposite.idEntityLink &lt;&gt; ref.Form.[idEntity]
+	)
+where 
+	tp.FormElements.id = {idParent}
+	and ref.EntityField.idEntityFieldType = 8 /* Мультиссылка */
+
+union 
+
+--Владелец поля: Табличная часть, Виртуальная ТЧ
+select top 1
+	ref.EntityField.idEntityLink
+from 
+	tp.FormElements 
+	inner join ref.EntityField on tp.FormElements.idEntityField = ref.EntityField.id
+where 
+	tp.FormElements.id = {idParent}
+	and ref.EntityField.idEntityFieldType in (9, 18) /* Табличная часть, Виртуальная ТЧ */
+
+union 
+
+--Владелец поля: Ссылка на сущность
+
+SELECT TOP 1 ref.EntityField.idEntityLink
+                                         FROM   tp.FormElements
+                                                INNER JOIN
+                                                ref.EntityField
+                                                ON tp.FormElements.idEntityField = ref.EntityField.id
+                                         WHERE  tp.FormElements.id = {idParent}
+                                                AND ref.EntityField.idEntityFieldType IN (7) /* Ссылка на сущность */</RightSqlExpression>
+    <idParent>-1879048110</idParent>
+    <Description></Description>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+  <ref.Filter>
+    <id>-1543503801</id>
+    <Disabled>false</Disabled>
+    <idEntityField>-1946157019</idEntityField>
+    <idLogicOperator>0</idLogicOperator>
+    <Not>false</Not>
+    <idLeftEntityField>-2147483562</idLeftEntityField>
+    <idComparisionOperator>0</idComparisionOperator>
+    <RightValue></RightValue>
+    <idRightEntityField>-2147483562</idRightEntityField>
+    <RightSqlExpression></RightSqlExpression>
+    <WithParents>false</WithParents>
+  </ref.Filter>
+</NewDataSet>

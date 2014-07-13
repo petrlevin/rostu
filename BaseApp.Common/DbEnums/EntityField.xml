@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.EntityField" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.EntityField">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntity" type="xs:int" />
+                <xs:element name="idEntityFieldType" type="xs:unsignedByte" />
+                <xs:element name="idCalculatedFieldType" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="Size" type="xs:short" minOccurs="0" />
+                <xs:element name="Precision" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="Expression" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntityLink" type="xs:int" minOccurs="0" />
+                <xs:element name="idOwnerField" type="xs:int" minOccurs="0" />
+                <xs:element name="idForeignKeyType" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="AllowNull" type="xs:boolean" />
+                <xs:element name="isCaption" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isDescription" type="xs:boolean" minOccurs="0" />
+                <xs:element name="DefaultValue" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idFieldDefaultValueType" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="isSystem" type="xs:boolean" minOccurs="0" />
+                <xs:element name="ReadOnly" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isHidden" type="xs:boolean" />
+                <xs:element name="RegExpValidator" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="600" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Tooltip" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.EntityField" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.EntityField>
+    <id>-2147482516</id>
+    <Name>id</Name>
+    <Caption>Идентификатор</Caption>
+    <idEntity>-2147483490</idEntity>
+    <idEntityFieldType>15</idEntityFieldType>
+    <Size>0</Size>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <ReadOnly>true</ReadOnly>
+    <isHidden>false</isHidden>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-2147482515</id>
+    <Name>Name</Name>
+    <Caption>Имя</Caption>
+    <idEntity>-2147483490</idEntity>
+    <idEntityFieldType>2</idEntityFieldType>
+    <Size>50</Size>
+    <AllowNull>false</AllowNull>
+    <isCaption>false</isCaption>
+    <isHidden>false</isHidden>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-2147482514</id>
+    <Name>Caption</Name>
+    <Caption>Наименование</Caption>
+    <idEntity>-2147483490</idEntity>
+    <idEntityFieldType>2</idEntityFieldType>
+    <Size>100</Size>
+    <AllowNull>true</AllowNull>
+    <isCaption>true</isCaption>
+    <isHidden>false</isHidden>
+  </ref.EntityField>
+  <ref.EntityField>
+    <id>-2147482513</id>
+    <Name>Description</Name>
+    <Caption>Описание</Caption>
+    <idEntity>-2147483490</idEntity>
+    <idEntityFieldType>2</idEntityFieldType>
+    <Size>200</Size>
+    <AllowNull>true</AllowNull>
+    <isCaption>false</isCaption>
+    <isHidden>false</isHidden>
+  </ref.EntityField>
+</NewDataSet>

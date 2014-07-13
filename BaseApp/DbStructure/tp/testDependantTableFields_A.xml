@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.testDependantTableFields_A" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.testDependantTableFields_A">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="Name" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.testDependantTableFields_A" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.testDependantTableFields_A>
+    <id>-1811939301</id>
+    <idOwner>1</idOwner>
+    <Name>wefewf</Name>
+  </tp.testDependantTableFields_A>
+  <tp.testDependantTableFields_A>
+    <id>-1811939300</id>
+    <idOwner>1</idOwner>
+    <Name>rfergeqweqw</Name>
+  </tp.testDependantTableFields_A>
+  <tp.testDependantTableFields_A>
+    <id>-1811939298</id>
+    <idOwner>-1811939300</idOwner>
+    <Name>jjj</Name>
+  </tp.testDependantTableFields_A>
+</NewDataSet>

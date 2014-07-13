@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53C2F0C2-1433-45AA-9BF0-170712874831}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseApp.Rights</RootNamespace>
+    <AssemblyName>BaseApp.Rights</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Schema.ScriptDom, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Platform.SqlObjectModel\bin\Debug\Microsoft.Data.Schema.ScriptDom.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Schema.ScriptDom.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Platform.SqlObjectModel\bin\Debug\Microsoft.Data.Schema.ScriptDom.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddFilterEnitiesByModule.cs" />
+    <Compile Include="AddFilterOnTablepartOwnerFieldForParentLink.cs" />
+    <Compile Include="AddSysDimensionsFilter.cs" />
+    <Compile Include="Functional\Decorators\AddFilterByDateForVersioning.cs" />
+    <Compile Include="Functional\Decorators\AddFilterByStatusForReference.cs" />
+    <Compile Include="Functional\Decorators\FunctionalRightsDecorator.cs" />
+    <Compile Include="Functional\DefaultStrategy.cs" />
+    <Compile Include="Functional\RightsHolder.cs" />
+    <Compile Include="Functional\RightsManager.cs" />
+    <Compile Include="Functional\RightsManagerExtension.cs" />
+    <Compile Include="Functional\StrategyBase.cs" />
+    <Compile Include="Functional\SuperUserStrategy.cs" />
+    <Compile Include="Organizational\Decorators\Implementation.cs" />
+    <Compile Include="Organizational\Decorators\ImplementationBase.cs" />
+    <Compile Include="Organizational\Decorators\ImplementationRevert.cs" />
+    <Compile Include="Organizational\Decorators\ImplementationRevertStrict.cs" />
+    <Compile Include="Organizational\Decorators\OrganizationRightsDecorator.cs" />
+    <Compile Include="Organizational\Decorators\OrganizationRightsDecorator`.cs" />
+    <Compile Include="Organizational\OrganizationRightInfo.cs" />
+    <Compile Include="Organizational\OrganizationRights.cs" />
+    <Compile Include="Organizational\RightsData.cs" />
+    <Compile Include="Organizational\SelectQueryBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApp.Common\BaseApp.Common.csproj">
+      <Project>{fc293e62-62f9-4dac-be86-2b2000bea40d}</Project>
+      <Name>BaseApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseApp.DbClr\BaseApp.DbClr.csproj">
+      <Project>{C5E88742-B13E-4BD1-80AE-E27F6D7DC54D}</Project>
+      <Name>BaseApp.DbClr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseApp\BaseApp.csproj">
+      <Project>{D16E12B1-8DC5-4EFD-A31E-2E80209746ED}</Project>
+      <Name>BaseApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic\Platform.BusinessLogic.csproj">
+      <Project>{7399BA19-E033-40E4-9EC7-34C8EB0B149C}</Project>
+      <Name>Platform.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Dal.Common\Platform.Dal.Common.csproj">
+      <Project>{32B6FA91-BA95-4733-9085-70C3395B0EFF}</Project>
+      <Name>Platform.Dal.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Dal\Platform.Dal.csproj">
+      <Project>{e59415a3-95fd-4def-a5d4-8cb771619781}</Project>
+      <Name>Platform.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Log\Platform.Log.csproj">
+      <Project>{a78b89ef-7a19-463d-afc8-4e4de77030cd}</Project>
+      <Name>Platform.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9EE403B9-8D79-40F6-96B4-A9F6E6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.SqlObjectModel.Tests\Platform.SqlObjectModel.Tests.csproj">
+      <Project>{8454133b-0657-4112-aab3-7e57de95e317}</Project>
+      <Name>Platform.SqlObjectModel.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.SqlObjectModel\Platform.SqlObjectModel.csproj">
+      <Project>{fc5db22e-8d43-468d-8fc4-2271bcf88214}</Project>
+      <Name>Platform.SqlObjectModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils.Common\Platform.Utils.Common.csproj">
+      <Project>{95B3D83C-FC10-4157-8364-52C513FD21F4}</Project>
+      <Name>Platform.Utils.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

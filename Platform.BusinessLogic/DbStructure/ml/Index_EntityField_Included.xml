@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ml.Index_EntityField_Included" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ml.Index_EntityField_Included">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="idIndex" type="xs:int" />
+                <xs:element name="idEntityField" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ml.Index_EntityField_Included" />
+        <xs:field xpath="idIndex" />
+        <xs:field xpath="idEntityField" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ml.Index_EntityField_Included>
+    <idIndex>-2080374750</idIndex>
+    <idEntityField>-2080374695</idEntityField>
+  </ml.Index_EntityField_Included>
+</NewDataSet>

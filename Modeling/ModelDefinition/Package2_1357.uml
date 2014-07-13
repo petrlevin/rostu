@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="01b5afb2-8e62-435f-8cdd-4cc0be4f506f"
+  name="BusinessLogic"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="03b101d7-5ae8-419e-b101-22bdc78b12e9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPlatform.BusinessLogic"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="159b47cb-2cbf-47c3-b2c9-4d58a3cd277f"
+        LastKnownName="Denormalizer"
+        LastKnownLocation="Package3_1357.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9f268ec2-50cc-4883-a4bb-6be1b0378ddd"
+        LastKnownName="Common"
+        LastKnownLocation="Package4_1357.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5bc66c80-5fc1-4a20-a49d-08e6c47b331a"
+        LastKnownName="EntityTypes"
+        LastKnownLocation="Package17_1357.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="298475b8-409b-4324-a96b-e467d56d5950"
+        LastKnownName="Reference"
+        LastKnownLocation="Package_1426.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="41d62690-518c-4fe3-86af-9587c3ba8ac2"
+        LastKnownName="Interfaces"
+        LastKnownLocation="Package_1451.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

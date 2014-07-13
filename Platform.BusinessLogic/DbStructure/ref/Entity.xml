@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Entity" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Entity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntityType" type="xs:unsignedByte" />
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isSystem" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Order" type="xs:int" minOccurs="0" />
+                <xs:element name="Ordered" type="xs:boolean" minOccurs="0" />
+                <xs:element name="AllowAttachments" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isVersioning" type="xs:boolean" />
+                <xs:element name="GenerateEntityClass" type="xs:boolean" />
+                <xs:element name="idEntityGroup" type="xs:int" minOccurs="0" />
+                <xs:element name="AllowGenericLinks" type="xs:boolean" />
+                <xs:element name="AllowLinks" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Entity" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Entity>
+    <id>-2147483488</id>
+    <Name>DocStatus</Name>
+    <Caption>Статусы документов</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>140</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2147483487</id>
+    <Name>EntityOperation</Name>
+    <Caption>Операции сущностей</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>100</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2147483483</id>
+    <Name>Operation</Name>
+    <Caption>Операции</Caption>
+    <Description>Справочник операций. 
+Справочник "Операции сущностей" связывает сущности и операции, т.е. определяет для каждого документа доступные операции, которые в свою очередь определяются в данном справочнике. Т.о. одна операция может быть реализована на нескольких документа. Ее реализация может отличаться, но семантически это будет одна и та же операция. Например: Провести, Аннулировать, Изменить и т.д.</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>90</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048161</id>
+    <Name>AccessGroup</Name>
+    <Caption>Группы доступа</Caption>
+    <Description>Справочник предназначен для хранения групп доступа, которые разграничивают доступ к пользователям и ролям по разным уровням администраторов. Справочник является системным измерением (но в параметрах входа не отображается).</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>30</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048152</id>
+    <Name>HierarchyPeriod</Name>
+    <Caption>Иерархия периодов</Caption>
+    <Description>Системный справочник, предназначенный для иерархии периодов. Используется в записях регистров и в некоторых документах системы. Справочник предзаполнен по умолчанию. </Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>40</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939300</id>
+    <Name>EntitySetting</Name>
+    <Caption>Настройки сущности</Caption>
+    <Description>Сопоставление сущностей и двух типов</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1811939300</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830437</id>
+    <Name>Control</Name>
+    <Caption>Контроли</Caption>
+    <Description>Контроли</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>80</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830431</id>
+    <Name>EntityFieldSetting</Name>
+    <Caption>Настройки полей сущности</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>80</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830416</id>
+    <Name>DistributiveData</Name>
+    <Caption>Эталонные данные</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830412</id>
+    <Name>DistributiveDataMultiLink</Name>
+    <Caption>Эталонные данные мультилинков</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>false</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830294</id>
+    <Name>TemplateImport</Name>
+    <Caption>Шаблон импорта</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830191</id>
+    <Name>TemplateExport</Name>
+    <Caption>Шаблон экспорта</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503748</id>
+    <Name>TemplateImportXLS</Name>
+    <Caption>Шаблоны импорта из Excel</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>90</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1342177259</id>
+    <Name>FileStore</Name>
+    <Caption>Хранилище файлов</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>190</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1342177258</id>
+    <Name>FileLink</Name>
+    <Caption>Файлы</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Order>178</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1275068280</id>
+    <Name>ItemsCaptionsForNavigationPanel</Name>
+    <Caption>Наименования сущностей для панели навигации</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830190</id>
+    <Name>TemplateExport_Entity</Name>
+    <Caption>Сущности выборки шаблона выгрузки</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503747</id>
+    <Name>TemplateImportXLS_FieldsMap</Name>
+    <Caption>Сопоставление полей</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503746</id>
+    <Name>TemplateImportXLS_KeyField</Name>
+    <Caption>Ключевые поля</Caption>
+    <Description></Description>
+    <idEntityType>4</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2147483486</id>
+    <Name>EntityOperation_DocStatus_OriginalStatus</Name>
+    <Caption>Исходные статусы</Caption>
+    <Description>Исходные статусы [МЛ Справочника Операции сущностей]</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2147483485</id>
+    <Name>EntityOperation_DocStatus_FinalStatus</Name>
+    <Caption>Конечные статусы</Caption>
+    <Description>Конечные статусы [МЛ Справочника Операции сущностей]</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>true</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1946157019</id>
+    <Name>EntityOperation_EntityField</Name>
+    <Caption>Редактируемые поля</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830189</id>
+    <Name>TemplateExport_LinkedEntity</Name>
+    <Caption>Связанные сущности шаблона экспорта</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2080374746</id>
+    <Name>SerializedEntityItem</Name>
+    <Caption>Сериализованный элемент сущности</Caption>
+    <Description>Сериализованный элемент сущности</Description>
+    <idEntityType>8</idEntityType>
+    <idProject>250</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+</NewDataSet>

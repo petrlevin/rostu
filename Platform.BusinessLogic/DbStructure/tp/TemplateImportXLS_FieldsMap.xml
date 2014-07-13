@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="tp.TemplateImportXLS_FieldsMap" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="tp.TemplateImportXLS_FieldsMap">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idOwner" type="xs:int" />
+                <xs:element name="idEntityField" type="xs:int" />
+                <xs:element name="NameColumn">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ValueColumn" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="MaskFinding" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="MaskReplacing" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tp.TemplateImportXLS_FieldsMap" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-2013265890</id>
+    <idOwner>-2013265890</idOwner>
+    <idEntityField>-2013265728</idEntityField>
+    <NameColumn>Номер строки</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-2013265889</id>
+    <idOwner>-2013265890</idOwner>
+    <idEntityField>-2013265729</idEntityField>
+    <NameColumn>Наименование</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-2013265888</id>
+    <idOwner>-2013265890</idOwner>
+    <idEntityField>-2013265736</idEntityField>
+    <NameColumn>Код</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-2013265887</id>
+    <idOwner>-2013265890</idOwner>
+    <idEntityField>-2013265730</idEntityField>
+    <NameColumn>Вид полномочия</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-2013265886</id>
+    <idOwner>-2013265890</idOwner>
+    <idEntityField>-2013265737</idEntityField>
+    <NameColumn>Вышестоящий</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157026</id>
+    <idOwner>-1946157026</idOwner>
+    <idEntityField>-1543503814</idEntityField>
+    <NameColumn>Наименование</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157025</id>
+    <idOwner>-1946157026</idOwner>
+    <idEntityField>-1543503813</idEntityField>
+    <NameColumn>Единица измерения</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157024</id>
+    <idOwner>-1946157026</idOwner>
+    <idEntityField>-1543503815</idEntityField>
+    <NameColumn>Тип показателя</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157023</id>
+    <idOwner>-1946157026</idOwner>
+    <idEntityField>-1543503790</idEntityField>
+    <NameColumn>Условия восприятия</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157022</id>
+    <idOwner>-1946157026</idOwner>
+    <idEntityField>-1543503770</idEntityField>
+    <NameColumn>Статус</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157021</id>
+    <idOwner>-1946157025</idOwner>
+    <idEntityField>-1543503825</idEntityField>
+    <NameColumn>Наименование</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157020</id>
+    <idOwner>-1946157025</idOwner>
+    <idEntityField>-1543503824</idEntityField>
+    <NameColumn>Полное наименование</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157019</id>
+    <idOwner>-1946157025</idOwner>
+    <idEntityField>-1543503826</idEntityField>
+    <NameColumn>Тип</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+  <tp.TemplateImportXLS_FieldsMap>
+    <id>-1946157018</id>
+    <idOwner>-1946157025</idOwner>
+    <idEntityField>-1543503773</idEntityField>
+    <NameColumn>Статус</NameColumn>
+    <ValueColumn></ValueColumn>
+    <MaskFinding></MaskFinding>
+    <MaskReplacing></MaskReplacing>
+  </tp.TemplateImportXLS_FieldsMap>
+</NewDataSet>

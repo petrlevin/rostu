@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.InterfaceControl" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.InterfaceControl">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="ComponentName" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Alias" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DefaultProperties" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LabelProperty" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.InterfaceControl" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.InterfaceControl>
+    <id>-2013265889</id>
+    <Caption>Объединение полей</Caption>
+    <Description></Description>
+    <ComponentName></ComponentName>
+    <Alias>fieldcontainer</Alias>
+    <DefaultProperties>{ 
+	layout: { 
+		type: 'hbox', 
+		defaultMargins: {top: 0, right: 5, bottom: 0, left: 0} 
+	}
+}</DefaultProperties>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939300</id>
+    <Caption>Ext.form.field.ComboBox</Caption>
+    <Description></Description>
+    <ComponentName>Ext.form.field.ComboBox</ComponentName>
+    <Alias>comboBox</Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939299</id>
+    <Caption>App.components.fields.TextArea</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.TextArea</ComponentName>
+    <Alias></Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939298</id>
+    <Caption>App.components.fields.Text</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.Text</ComponentName>
+    <Alias></Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939297</id>
+    <Caption>App.components.fields.Hidden</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.Hidden</ComponentName>
+    <Alias></Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939296</id>
+    <Caption>App.components.fields.Number</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.Number</ComponentName>
+    <Alias></Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939295</id>
+    <Caption>App.components.fields.DateTime</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.DateTime</ComponentName>
+    <Alias></Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939294</id>
+    <Caption>App.components.fields.Link</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.Link</ComponentName>
+    <Alias></Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939293</id>
+    <Caption>App.components.fields.TablePart</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.TablePart</ComponentName>
+    <Alias></Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939292</id>
+    <Caption>App.components.fields.Multilink</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.Multilink</ComponentName>
+    <Alias></Alias>
+    <LabelProperty>fieldLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939291</id>
+    <Caption>App.components.fields.Boolean</Caption>
+    <Description></Description>
+    <ComponentName>App.components.fields.Boolean</ComponentName>
+    <Alias></Alias>
+    <DefaultProperties></DefaultProperties>
+    <LabelProperty>boxLabel</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939290</id>
+    <Caption>Ext.tab.Panel</Caption>
+    <Description></Description>
+    <ComponentName>Ext.tab.Panel</ComponentName>
+    <Alias>tabpanel</Alias>
+    <DefaultProperties>{ border: 0 }</DefaultProperties>
+    <LabelProperty>title</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939289</id>
+    <Caption>Вкладка</Caption>
+    <Description></Description>
+    <ComponentName></ComponentName>
+    <Alias></Alias>
+    <DefaultProperties>{ layout: 'anchor', border: 0 }</DefaultProperties>
+    <LabelProperty>title</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939288</id>
+    <Caption>Панель</Caption>
+    <Description></Description>
+    <ComponentName>Ext.form.FieldContainer</ComponentName>
+    <Alias>fieldcontainer</Alias>
+    <DefaultProperties>{ layout: 'anchor', border: 0 }</DefaultProperties>
+    <LabelProperty>title</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939287</id>
+    <Caption>Ext.container.Container</Caption>
+    <Description></Description>
+    <ComponentName>Ext.container.Container</ComponentName>
+    <Alias>container</Alias>
+    <DefaultProperties></DefaultProperties>
+    <LabelProperty></LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939286</id>
+    <Caption>Колонка</Caption>
+    <Description></Description>
+    <ComponentName></ComponentName>
+    <Alias></Alias>
+    <DefaultProperties>{ layout: 'anchor', border: 0, margin: '5 5 5 5' }</DefaultProperties>
+    <LabelProperty>title</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939284</id>
+    <Caption>Группа колонок</Caption>
+    <Description></Description>
+    <ComponentName>Ext.form.FieldContainer</ComponentName>
+    <Alias>fieldcontainer</Alias>
+    <DefaultProperties>{ layout: 'column', border: 0 }</DefaultProperties>
+    <LabelProperty>title</LabelProperty>
+  </ref.InterfaceControl>
+  <ref.InterfaceControl>
+    <id>-1811939282</id>
+    <Caption>Группа полей</Caption>
+    <Description></Description>
+    <ComponentName></ComponentName>
+    <Alias>fieldset</Alias>
+    <DefaultProperties>{ collapsible: true }</DefaultProperties>
+    <LabelProperty>title</LabelProperty>
+  </ref.InterfaceControl>
+</NewDataSet>

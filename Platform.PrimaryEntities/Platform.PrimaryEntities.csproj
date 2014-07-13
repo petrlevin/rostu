@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA11E957-7534-4DE0-AF6A-60F8D04E9CB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Platform.PrimaryEntities</RootNamespace>
+    <AssemblyName>Platform.PrimaryEntities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Platform.PrimaryEntities.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutoClient|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AutoClient\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Platform.PrimaryEntities.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\MapAttribute.cs" />
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="DbEnums\ForeignKeyType.cs" />
+    <Compile Include="DbEnums\FormType.cs" />
+    <Compile Include="DbEnums\ProgrammabilityType.cs" />
+    <Compile Include="DbEnums\RefStatus.cs" />
+    <Compile Include="DbEnums\SolutionProject.cs" />
+    <Compile Include="EntityFieldExtension.cs" />
+    <Compile Include="Factoring\BaseFactoryStrategy.cs" />
+    <Compile Include="Factoring\DictFiller.cs" />
+    <Compile Include="Factoring\FactoryElements\BaseTests.cs" />
+    <Compile Include="Factoring\FactoryElements\OfChilds.cs" />
+    <Compile Include="Factoring\Filler.cs" />
+    <Compile Include="Factoring\SelectBase.cs" />
+    <Compile Include="Exceptions\ObjectException.cs" />
+    <Compile Include="Exceptions\ObjectNotFoundException.cs" />
+    <Compile Include="Factoring\Strategies\CloseConnection.cs" />
+    <Compile Include="Factoring\Strategies\Default.cs" />
+    <Compile Include="Interfaces\IDbConnectioned.cs" />
+    <Compile Include="Factoring\Factory.cs" />
+    <Compile Include="Interfaces\IBaseFactoryElement.cs" />
+    <Compile Include="Interfaces\IFactory.cs" />
+    <Compile Include="Interfaces\IFactoryElement.cs" />
+    <Compile Include="Interfaces\IFactoryStrategy.cs" />
+    <Compile Include="Factoring\FactoryElements\OfSingle.cs" />
+    <Compile Include="Factoring\BaseFactoryElement.cs" />
+    <Compile Include="Factoring\FactoryElements\OfItems.cs" />
+    <Compile Include="Exceptions\ObjectCreationException.cs" />
+    <Compile Include="Exceptions\DbFactoryException.cs" />
+    <Compile Include="Factoring\Select.cs" />
+    <Compile Include="Interfaces\ISelect.cs" />
+    <Compile Include="Interfaces\ISelectProvider.cs" />
+    <Compile Include="Metadata.cs" />
+    <Compile Include="MultilinkHelper.cs" />
+    <Compile Include="Multilink\HierarchicalLinkEntityFieldPathElements.cs" />
+    <Compile Include="Multilink\Index_EntityField_Indexable.cs" />
+    <Compile Include="Projects.cs" />
+    <Compile Include="Reference\Entity.cs" />
+    <Compile Include="Reference\EntityField.cs" />
+    <Compile Include="Reference\Filter.cs" />
+    <Compile Include="Reference\Form.cs" />
+    <Compile Include="Reference\FormElement.cs" />
+    <Compile Include="Reference\HierarchicalLink.cs" />
+    <Compile Include="Reference\InterfaceControl.cs" />
+    <Compile Include="Reference\Programmability.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Reference\Index.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schemas.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="!readme.wiki.txt" />
+    <Content Include="DbStructure\ml\EntityFieldType_InterfaceControl.xml" />
+    <Content Include="DbStructure\ref\Entity.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbEnums\Entity.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbEnums\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\Filter.xml" />
+    <Content Include="DbStructure\ref\InterfaceControl.xml" />
+    <Content Include="DbStructure\ref\Form.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\tp\FormElements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DbStructure\doc\" />
+    <Folder Include="DbStructure\reg\" />
+    <Folder Include="DbStructure\rep\" />
+    <Folder Include="DbStructure\tool\" />
+    <Folder Include="TablePart\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Platform.DbCmd\Platform.DbCmd.csproj">
+      <Project>{389f4c8f-6c9e-4822-8dc8-1c78a77caab2}</Project>
+      <Name>Platform.DbCmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9ee403b9-8d79-40f6-96b4-a9f6e6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils.Common\Platform.Utils.Common.csproj">
+      <Project>{95B3D83C-FC10-4157-8364-52C513FD21F4}</Project>
+      <Name>Platform.Utils.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

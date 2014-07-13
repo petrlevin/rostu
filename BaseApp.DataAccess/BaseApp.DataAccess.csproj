@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{598273EA-896C-419A-A134-D791D9C31DF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseApp.DataAccess</RootNamespace>
+    <AssemblyName>BaseApp.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\Platform.SqlObjectModel\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataManagerFactory.cs" />
+    <Compile Include="DecoratorsManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysDimensions.cs" />
+    <Compile Include="ToolsDataManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApp.Common\BaseApp.Common.csproj">
+      <Project>{FC293E62-62F9-4DAC-BE86-2B2000BEA40D}</Project>
+      <Name>BaseApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseApp.Environment\BaseApp.Environment.csproj">
+      <Project>{FEE47E1F-7E41-4910-9D51-E651324DE477}</Project>
+      <Name>BaseApp.Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseApp\BaseApp.csproj">
+      <Project>{d16e12b1-8dc5-4efd-a31e-2e80209746ed}</Project>
+      <Name>BaseApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic.Common\Platform.BusinessLogic.Common.csproj">
+      <Project>{e11d0ab2-a272-417f-8562-6fbc47033c6e}</Project>
+      <Name>Platform.BusinessLogic.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic\Platform.BusinessLogic.csproj">
+      <Project>{7399ba19-e033-40e4-9ec7-34c8eb0b149c}</Project>
+      <Name>Platform.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Client\Platform.Client.csproj">
+      <Project>{3feec57a-377e-4115-aa05-54ab70751421}</Project>
+      <Name>Platform.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Common\Platform.Common.csproj">
+      <Project>{cb231957-03de-4efa-9b75-ef6b23e63070}</Project>
+      <Name>Platform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Dal.Common\Platform.Dal.Common.csproj">
+      <Project>{32B6FA91-BA95-4733-9085-70C3395B0EFF}</Project>
+      <Name>Platform.Dal.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Dal\Platform.Dal.csproj">
+      <Project>{E59415A3-95FD-4DEF-A5D4-8CB771619781}</Project>
+      <Name>Platform.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.DbClr\Platform.DbClr.csproj">
+      <Project>{45B08F9C-CB0D-409E-9C3C-9B367236E4C9}</Project>
+      <Name>Platform.DbClr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.DbCmd\Platform.DbCmd.csproj">
+      <Project>{389F4C8F-6C9E-4822-8DC8-1C78A77CAAB2}</Project>
+      <Name>Platform.DbCmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Environment\Platform.Environment.csproj">
+      <Project>{3e289567-cd95-4349-8a3a-e8df81a7dc36}</Project>
+      <Name>Platform.Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9ee403b9-8d79-40f6-96b4-a9f6e6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Factoring\Platform.PrimaryEntities.Factoring.csproj">
+      <Project>{00d4b56d-e285-4075-b829-01688f7882fb}</Project>
+      <Name>Platform.PrimaryEntities.Factoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities\Platform.PrimaryEntities.csproj">
+      <Project>{da11e957-7534-4de0-af6a-60f8d04e9cb6}</Project>
+      <Name>Platform.PrimaryEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity.Comon\Platform.Unity.Common.csproj">
+      <Project>{169CC69C-7AD2-4FED-917A-302B9020FA64}</Project>
+      <Name>Platform.Unity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity\Platform.Unity.csproj">
+      <Project>{b8903988-41a8-48f0-b922-4a4d7c333110}</Project>
+      <Name>Platform.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils.Common\Platform.Utils.Common.csproj">
+      <Project>{95B3D83C-FC10-4157-8364-52C513FD21F4}</Project>
+      <Name>Platform.Utils.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils\Platform.Utils.csproj">
+      <Project>{5a67cc4b-b52a-4d6e-8014-18816fe241ff}</Project>
+      <Name>Platform.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="159b47cb-2cbf-47c3-b2c9-4d58a3cd277f"
+  name="Denormalizer"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="aa6fcda2-db82-4976-9f25-afe01fb7329f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPlatform.BusinessLogic.Denormalizer"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3a088fd8-6aef-4732-8043-6c906c3e918c"
+        name="PeriodIdCaption"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0bac4a20-6209-40da-8cd5-e9f6c10cf7f2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fsbor3%2FPlatform.BusinessLogic%2Fbin%2FDebug%2FPlatform.BusinessLogic.dll Namespace%3DPlatform.BusinessLogic.Denormalizer Type%3DPeriodIdCaption"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="92ee05a8-48ba-4395-8150-be092730a641"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="daddf395-df0b-41b4-91ed-e02f2b6e8199">
+                <propertyInstance
+                  Id="d928d421-9461-4b8a-855d-c34979ae97de"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="670a407f-607b-4552-ab69-359a2f8d4097">
+                <propertyInstance
+                  Id="73d2b15d-a515-4e59-9889-80997767780c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="97330aa9-0e07-4ff4-8b74-248bc720047d">
+                <propertyInstance
+                  Id="47928eaa-f481-460b-b484-f3189862dd90"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1ae63ad4-4975-4a35-9a31-8eac8f04485b">
+                <propertyInstance
+                  Id="c86f993f-c1a2-4538-bee7-b2a51d49485d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c25145e-de23-4ef6-b54e-6de6d7feb675">
+                <propertyInstance
+                  Id="b97a9758-2633-4da2-af0a-7989ee5ea09e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="badc2c11-8cca-46f3-a9f5-32d497bedb9e"
+        name="ColumnsInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="61e1813c-91cc-42e0-b61c-07e2ce2f4f29"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fsbor3%2FPlatform.BusinessLogic%2Fbin%2FDebug%2FPlatform.BusinessLogic.dll Namespace%3DPlatform.BusinessLogic.Denormalizer Type%3DColumnsInfo"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="91fecdd4-6103-4d98-b2c1-40a415b070d5"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="25999f34-95b2-482b-b06b-ad80f1d39223">
+                <propertyInstance
+                  Id="d153f2b2-584a-4b58-b148-e9526a1bb903"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab487fbd-9c16-4f31-aafb-67b1862e08cc">
+                <propertyInstance
+                  Id="7eaf2bc5-1c38-469a-b4fd-5679c3b37ac6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b494485a-3fe6-43a7-a1e7-742d8816c38b">
+                <propertyInstance
+                  Id="b4f5514b-7f37-4873-a09c-eb2f5b7326f9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c70cd8ca-8852-470b-860f-e9ffb8c02a06">
+                <propertyInstance
+                  Id="c9561c52-f6f5-444b-94dd-b52ceb54d4d9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="09f28933-4297-4f76-b9db-6498842a4c24">
+                <propertyInstance
+                  Id="b02764f9-0d27-4997-a56c-0497578f43da"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1a3d1acb-6ee8-4037-bef8-5fd64378a60b"
+        LastKnownName="Interfaces"
+        LastKnownLocation="Package15_1357.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

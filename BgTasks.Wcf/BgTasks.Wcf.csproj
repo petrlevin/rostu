@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15B3E0D2-6217-493A-A690-158C497F5318}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BgTasks.Wcf</RootNamespace>
+    <AssemblyName>BgTasks.Wcf</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <XsdCodeGenEnabled>True</XsdCodeGenEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BaseApp">
+      <HintPath>..\Platform.Web\bin\BaseApp.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseApp.Common">
+      <HintPath>..\Platform.Web\bin\BaseApp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseApp.Environment">
+      <HintPath>..\Platform.Web\bin\BaseApp.Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Application">
+      <HintPath>..\Platform.Web\bin\Platform.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.BusinessLogic">
+      <HintPath>..\Platform.Web\bin\Platform.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Caching">
+      <HintPath>..\Platform.Web\bin\Platform.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Caching.Common">
+      <HintPath>..\Platform.Web\bin\Platform.Caching.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.ClientInteraction">
+      <HintPath>..\Platform.Web\bin\Platform.ClientInteraction.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Environment">
+      <HintPath>..\Platform.Web\bin\Platform.Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.PrimaryEntities">
+      <HintPath>..\Platform.Web\bin\Platform.PrimaryEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.PrimaryEntities.Common">
+      <HintPath>..\Platform.Web\bin\Platform.PrimaryEntities.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Service">
+      <HintPath>..\Platform.Web\bin\Platform.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Unity">
+      <HintPath>..\Platform.Web\bin\Platform.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Unity.Common">
+      <HintPath>..\Platform.Web\bin\Platform.Unity.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Utils">
+      <HintPath>..\Platform.Web\bin\Platform.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Sbor">
+      <HintPath>..\Platform.Web\bin\Sbor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sbor.Reports">
+      <HintPath>..\Platform.Web\bin\Sbor.Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tests">
+      <HintPath>..\Platform.Web\bin\Tests.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackgroundTask.cs" />
+    <Compile Include="IBackgroundTask.cs" />
+    <Compile Include="IService1.cs" />
+    <Compile Include="OperationPhase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApp.Service\BaseApp.Service.csproj">
+      <Project>{AB8A9281-52FF-4B24-B7D8-E9DFB49F2361}</Project>
+      <Name>BaseApp.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BgTasks.Core\BgTasks.Core.csproj">
+      <Project>{ddc95238-b112-4acd-8623-a2e27880fae4}</Project>
+      <Name>BgTasks.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\WCF\Microsoft.VisualStudio.ServiceModel.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

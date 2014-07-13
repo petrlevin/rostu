@@ -1,0 +1,59 @@
+﻿<#@ include file="Platform.EF.Reverse.Core.ttinclude" #>
+using Platform.Common;
+<#
+	// v1.10.0
+    // Settings
+    //ConnectionStringName = "AuditDBConnectionString";  // Searches for this connection string in config files listed below
+    //ConfigFilenameSearchOrder = new[] { "app.config", "web.config", "app.config.transform", "web.config.transform" }; // Add more here if required
+    // The config files are searched for in the local project first, then the whole solution second.
+
+	ConnectionStringAudit = "Data Source=.;Initial Catalog=platform3_Audit;Integrated Security=true;Current Language=English";
+
+    Namespace = "Platform.BusinessLogic.Auditing.EfModel"; // Override the namespace if you want to
+    DbContextName = "AuditDataContext";
+    MakeClassesPartial = false;
+    GenerateSeparateFiles = false;
+    UseCamelCase = true;    // This will rename the tables & fields to use CamelCase. If false table & field names will be left alone.
+    
+    // WCF
+    AddWcfDataAttributes = false;
+    // This string is inserted into the  [DataContract] attribute, before the closing square bracket.
+    ExtraWcfDataContractAttributes = "";
+    // Example: "";                                           = [DataContract]
+    //          "(Namespace = \"http://www.contoso.com\")";   = [DataContract(Namespace = "http://www.contoso.com")]
+    //          "(Namespace = Constants.ServiceNamespace)";   = [DataContract(Namespace = Constants.ServiceNamespace)]
+    
+
+    // If there are multiple schema, then the table name is prefixed with the schema, except for dbo.
+    // Ie. dbo.hello will be Hello.
+    //     abc.hello will be AbcHello.
+    // To only include a single schema, specify it below.
+    SchemaName = null;
+    
+	IncludeViews = true;
+
+
+
+    // Use the following table/view name regex filters to include or exclude tables/views
+    // Exclude filters are checked first and tables matching filters are removed.
+    //  * If left null, none are excluded.
+    //  * If not null, any tables matching the regex are excluded.
+    // Include filters are checked second.
+    //  * If left null, all are included.
+    //  * If not null, only the tables matching the regex are included.
+    //  Example:    TableFilterExclude = new Regex(".*auto.*");
+    //              TableFilterInclude = new Regex("(.*_FR_.*)|(data_.*)");
+    //              TableFilterInclude = new Regex("^table_name1$|^table_name2$|etc");
+    TableFilterExclude = null;
+    TableFilterInclude = null;
+
+
+    // Read schema
+    var tables = LoadTables();
+    
+    // Generate output
+    if (tables.Count>0)
+    {
+#>
+<#@ include file="Platform.EF.Reverse.ttinclude" #>
+<# } #>

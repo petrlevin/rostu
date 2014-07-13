@@ -1,0 +1,4746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.HierarchyPeriod" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.HierarchyPeriod">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="20" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DateStart" type="xs:dateTime" />
+                <xs:element name="DateEnd" type="xs:dateTime" />
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+                <xs:element name="Year" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.HierarchyPeriod" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.HierarchyPeriod>
+    <id>-1879048164</id>
+    <Caption>2010</Caption>
+    <DateStart>2010-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048163</id>
+    <Caption>2011</Caption>
+    <DateStart>2011-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048162</id>
+    <Caption>2012</Caption>
+    <DateStart>2012-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048161</id>
+    <Caption>2013</Caption>
+    <DateStart>2013-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048160</id>
+    <Caption>2014</Caption>
+    <DateStart>2014-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048159</id>
+    <Caption>2015</Caption>
+    <DateStart>2015-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048158</id>
+    <Caption>2016</Caption>
+    <DateStart>2016-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048157</id>
+    <Caption>2017</Caption>
+    <DateStart>2017-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048156</id>
+    <Caption>2018</Caption>
+    <DateStart>2018-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048155</id>
+    <Caption>2019</Caption>
+    <DateStart>2019-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048154</id>
+    <Caption>2020</Caption>
+    <DateStart>2020-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048153</id>
+    <Caption>2021</Caption>
+    <DateStart>2021-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048152</id>
+    <Caption>2022</Caption>
+    <DateStart>2022-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048151</id>
+    <Caption>2023</Caption>
+    <DateStart>2023-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048150</id>
+    <Caption>2024</Caption>
+    <DateStart>2024-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048149</id>
+    <Caption>2025</Caption>
+    <DateStart>2025-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048148</id>
+    <Caption>2026</Caption>
+    <DateStart>2026-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048147</id>
+    <Caption>2027</Caption>
+    <DateStart>2027-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048146</id>
+    <Caption>2028</Caption>
+    <DateStart>2028-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048145</id>
+    <Caption>2029</Caption>
+    <DateStart>2029-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048144</id>
+    <Caption>2030</Caption>
+    <DateStart>2030-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048143</id>
+    <Caption>2031</Caption>
+    <DateStart>2031-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048142</id>
+    <Caption>2032</Caption>
+    <DateStart>2032-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048141</id>
+    <Caption>2033</Caption>
+    <DateStart>2033-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048140</id>
+    <Caption>2034</Caption>
+    <DateStart>2034-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048139</id>
+    <Caption>2035</Caption>
+    <DateStart>2035-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048138</id>
+    <Caption>2036</Caption>
+    <DateStart>2036-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048137</id>
+    <Caption>2037</Caption>
+    <DateStart>2037-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048136</id>
+    <Caption>2038</Caption>
+    <DateStart>2038-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048135</id>
+    <Caption>2039</Caption>
+    <DateStart>2039-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048134</id>
+    <Caption>2040</Caption>
+    <DateStart>2040-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048133</id>
+    <idParent>-1879048164</idParent>
+    <Caption>1 Квартал 2010</Caption>
+    <DateStart>2010-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048132</id>
+    <idParent>-1879048164</idParent>
+    <Caption>2 Квартал 2010</Caption>
+    <DateStart>2010-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048131</id>
+    <idParent>-1879048164</idParent>
+    <Caption>3 Квартал 2010</Caption>
+    <DateStart>2010-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048130</id>
+    <idParent>-1879048164</idParent>
+    <Caption>4 Квартал 2010</Caption>
+    <DateStart>2010-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048129</id>
+    <idParent>-1879048163</idParent>
+    <Caption>1 Квартал 2011</Caption>
+    <DateStart>2011-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048128</id>
+    <idParent>-1879048163</idParent>
+    <Caption>2 Квартал 2011</Caption>
+    <DateStart>2011-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048127</id>
+    <idParent>-1879048163</idParent>
+    <Caption>3 Квартал 2011</Caption>
+    <DateStart>2011-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048126</id>
+    <idParent>-1879048163</idParent>
+    <Caption>4 Квартал 2011</Caption>
+    <DateStart>2011-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048125</id>
+    <idParent>-1879048162</idParent>
+    <Caption>1 Квартал 2012</Caption>
+    <DateStart>2012-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048124</id>
+    <idParent>-1879048162</idParent>
+    <Caption>2 Квартал 2012</Caption>
+    <DateStart>2012-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048123</id>
+    <idParent>-1879048162</idParent>
+    <Caption>3 Квартал 2012</Caption>
+    <DateStart>2012-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048122</id>
+    <idParent>-1879048162</idParent>
+    <Caption>4 Квартал 2012</Caption>
+    <DateStart>2012-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048121</id>
+    <idParent>-1879048161</idParent>
+    <Caption>1 Квартал 2013</Caption>
+    <DateStart>2013-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048120</id>
+    <idParent>-1879048161</idParent>
+    <Caption>2 Квартал 2013</Caption>
+    <DateStart>2013-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048119</id>
+    <idParent>-1879048161</idParent>
+    <Caption>3 Квартал 2013</Caption>
+    <DateStart>2013-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048118</id>
+    <idParent>-1879048161</idParent>
+    <Caption>4 Квартал 2013</Caption>
+    <DateStart>2013-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048117</id>
+    <idParent>-1879048160</idParent>
+    <Caption>1 Квартал 2014</Caption>
+    <DateStart>2014-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048116</id>
+    <idParent>-1879048160</idParent>
+    <Caption>2 Квартал 2014</Caption>
+    <DateStart>2014-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048115</id>
+    <idParent>-1879048160</idParent>
+    <Caption>3 Квартал 2014</Caption>
+    <DateStart>2014-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048114</id>
+    <idParent>-1879048160</idParent>
+    <Caption>4 Квартал 2014</Caption>
+    <DateStart>2014-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048113</id>
+    <idParent>-1879048159</idParent>
+    <Caption>1 Квартал 2015</Caption>
+    <DateStart>2015-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048112</id>
+    <idParent>-1879048159</idParent>
+    <Caption>2 Квартал 2015</Caption>
+    <DateStart>2015-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048111</id>
+    <idParent>-1879048159</idParent>
+    <Caption>3 Квартал 2015</Caption>
+    <DateStart>2015-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048110</id>
+    <idParent>-1879048159</idParent>
+    <Caption>4 Квартал 2015</Caption>
+    <DateStart>2015-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048109</id>
+    <idParent>-1879048158</idParent>
+    <Caption>1 Квартал 2016</Caption>
+    <DateStart>2016-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048108</id>
+    <idParent>-1879048158</idParent>
+    <Caption>2 Квартал 2016</Caption>
+    <DateStart>2016-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048107</id>
+    <idParent>-1879048158</idParent>
+    <Caption>3 Квартал 2016</Caption>
+    <DateStart>2016-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048106</id>
+    <idParent>-1879048158</idParent>
+    <Caption>4 Квартал 2016</Caption>
+    <DateStart>2016-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048105</id>
+    <idParent>-1879048157</idParent>
+    <Caption>1 Квартал 2017</Caption>
+    <DateStart>2017-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048104</id>
+    <idParent>-1879048157</idParent>
+    <Caption>2 Квартал 2017</Caption>
+    <DateStart>2017-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048103</id>
+    <idParent>-1879048157</idParent>
+    <Caption>3 Квартал 2017</Caption>
+    <DateStart>2017-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048102</id>
+    <idParent>-1879048157</idParent>
+    <Caption>4 Квартал 2017</Caption>
+    <DateStart>2017-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048101</id>
+    <idParent>-1879048156</idParent>
+    <Caption>1 Квартал 2018</Caption>
+    <DateStart>2018-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048100</id>
+    <idParent>-1879048156</idParent>
+    <Caption>2 Квартал 2018</Caption>
+    <DateStart>2018-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048099</id>
+    <idParent>-1879048156</idParent>
+    <Caption>3 Квартал 2018</Caption>
+    <DateStart>2018-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048098</id>
+    <idParent>-1879048156</idParent>
+    <Caption>4 Квартал 2018</Caption>
+    <DateStart>2018-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048097</id>
+    <idParent>-1879048155</idParent>
+    <Caption>1 Квартал 2019</Caption>
+    <DateStart>2019-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048096</id>
+    <idParent>-1879048155</idParent>
+    <Caption>2 Квартал 2019</Caption>
+    <DateStart>2019-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048095</id>
+    <idParent>-1879048155</idParent>
+    <Caption>3 Квартал 2019</Caption>
+    <DateStart>2019-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048094</id>
+    <idParent>-1879048155</idParent>
+    <Caption>4 Квартал 2019</Caption>
+    <DateStart>2019-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048093</id>
+    <idParent>-1879048154</idParent>
+    <Caption>1 Квартал 2020</Caption>
+    <DateStart>2020-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048092</id>
+    <idParent>-1879048154</idParent>
+    <Caption>2 Квартал 2020</Caption>
+    <DateStart>2020-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048091</id>
+    <idParent>-1879048154</idParent>
+    <Caption>3 Квартал 2020</Caption>
+    <DateStart>2020-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048090</id>
+    <idParent>-1879048154</idParent>
+    <Caption>4 Квартал 2020</Caption>
+    <DateStart>2020-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048089</id>
+    <idParent>-1879048153</idParent>
+    <Caption>1 Квартал 2021</Caption>
+    <DateStart>2021-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048088</id>
+    <idParent>-1879048153</idParent>
+    <Caption>2 Квартал 2021</Caption>
+    <DateStart>2021-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048087</id>
+    <idParent>-1879048153</idParent>
+    <Caption>3 Квартал 2021</Caption>
+    <DateStart>2021-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048086</id>
+    <idParent>-1879048153</idParent>
+    <Caption>4 Квартал 2021</Caption>
+    <DateStart>2021-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048085</id>
+    <idParent>-1879048152</idParent>
+    <Caption>1 Квартал 2022</Caption>
+    <DateStart>2022-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048084</id>
+    <idParent>-1879048152</idParent>
+    <Caption>2 Квартал 2022</Caption>
+    <DateStart>2022-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048083</id>
+    <idParent>-1879048152</idParent>
+    <Caption>3 Квартал 2022</Caption>
+    <DateStart>2022-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048082</id>
+    <idParent>-1879048152</idParent>
+    <Caption>4 Квартал 2022</Caption>
+    <DateStart>2022-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048081</id>
+    <idParent>-1879048151</idParent>
+    <Caption>1 Квартал 2023</Caption>
+    <DateStart>2023-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048080</id>
+    <idParent>-1879048151</idParent>
+    <Caption>2 Квартал 2023</Caption>
+    <DateStart>2023-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048079</id>
+    <idParent>-1879048151</idParent>
+    <Caption>3 Квартал 2023</Caption>
+    <DateStart>2023-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048078</id>
+    <idParent>-1879048151</idParent>
+    <Caption>4 Квартал 2023</Caption>
+    <DateStart>2023-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048077</id>
+    <idParent>-1879048150</idParent>
+    <Caption>1 Квартал 2024</Caption>
+    <DateStart>2024-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048076</id>
+    <idParent>-1879048150</idParent>
+    <Caption>2 Квартал 2024</Caption>
+    <DateStart>2024-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048075</id>
+    <idParent>-1879048150</idParent>
+    <Caption>3 Квартал 2024</Caption>
+    <DateStart>2024-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048074</id>
+    <idParent>-1879048150</idParent>
+    <Caption>4 Квартал 2024</Caption>
+    <DateStart>2024-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048073</id>
+    <idParent>-1879048149</idParent>
+    <Caption>1 Квартал 2025</Caption>
+    <DateStart>2025-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048072</id>
+    <idParent>-1879048149</idParent>
+    <Caption>2 Квартал 2025</Caption>
+    <DateStart>2025-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048071</id>
+    <idParent>-1879048149</idParent>
+    <Caption>3 Квартал 2025</Caption>
+    <DateStart>2025-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048070</id>
+    <idParent>-1879048149</idParent>
+    <Caption>4 Квартал 2025</Caption>
+    <DateStart>2025-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048069</id>
+    <idParent>-1879048148</idParent>
+    <Caption>1 Квартал 2026</Caption>
+    <DateStart>2026-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048068</id>
+    <idParent>-1879048148</idParent>
+    <Caption>2 Квартал 2026</Caption>
+    <DateStart>2026-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048067</id>
+    <idParent>-1879048148</idParent>
+    <Caption>3 Квартал 2026</Caption>
+    <DateStart>2026-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048066</id>
+    <idParent>-1879048148</idParent>
+    <Caption>4 Квартал 2026</Caption>
+    <DateStart>2026-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048065</id>
+    <idParent>-1879048147</idParent>
+    <Caption>1 Квартал 2027</Caption>
+    <DateStart>2027-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048064</id>
+    <idParent>-1879048147</idParent>
+    <Caption>2 Квартал 2027</Caption>
+    <DateStart>2027-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048063</id>
+    <idParent>-1879048147</idParent>
+    <Caption>3 Квартал 2027</Caption>
+    <DateStart>2027-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048062</id>
+    <idParent>-1879048147</idParent>
+    <Caption>4 Квартал 2027</Caption>
+    <DateStart>2027-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048061</id>
+    <idParent>-1879048146</idParent>
+    <Caption>1 Квартал 2028</Caption>
+    <DateStart>2028-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048060</id>
+    <idParent>-1879048146</idParent>
+    <Caption>2 Квартал 2028</Caption>
+    <DateStart>2028-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048059</id>
+    <idParent>-1879048146</idParent>
+    <Caption>3 Квартал 2028</Caption>
+    <DateStart>2028-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048058</id>
+    <idParent>-1879048146</idParent>
+    <Caption>4 Квартал 2028</Caption>
+    <DateStart>2028-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048057</id>
+    <idParent>-1879048145</idParent>
+    <Caption>1 Квартал 2029</Caption>
+    <DateStart>2029-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048056</id>
+    <idParent>-1879048145</idParent>
+    <Caption>2 Квартал 2029</Caption>
+    <DateStart>2029-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048055</id>
+    <idParent>-1879048145</idParent>
+    <Caption>3 Квартал 2029</Caption>
+    <DateStart>2029-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048054</id>
+    <idParent>-1879048145</idParent>
+    <Caption>4 Квартал 2029</Caption>
+    <DateStart>2029-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048053</id>
+    <idParent>-1879048144</idParent>
+    <Caption>1 Квартал 2030</Caption>
+    <DateStart>2030-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048052</id>
+    <idParent>-1879048144</idParent>
+    <Caption>2 Квартал 2030</Caption>
+    <DateStart>2030-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048051</id>
+    <idParent>-1879048144</idParent>
+    <Caption>3 Квартал 2030</Caption>
+    <DateStart>2030-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048050</id>
+    <idParent>-1879048144</idParent>
+    <Caption>4 Квартал 2030</Caption>
+    <DateStart>2030-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048049</id>
+    <idParent>-1879048143</idParent>
+    <Caption>1 Квартал 2031</Caption>
+    <DateStart>2031-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048048</id>
+    <idParent>-1879048143</idParent>
+    <Caption>2 Квартал 2031</Caption>
+    <DateStart>2031-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048047</id>
+    <idParent>-1879048143</idParent>
+    <Caption>3 Квартал 2031</Caption>
+    <DateStart>2031-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048046</id>
+    <idParent>-1879048143</idParent>
+    <Caption>4 Квартал 2031</Caption>
+    <DateStart>2031-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048045</id>
+    <idParent>-1879048142</idParent>
+    <Caption>1 Квартал 2032</Caption>
+    <DateStart>2032-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048044</id>
+    <idParent>-1879048142</idParent>
+    <Caption>2 Квартал 2032</Caption>
+    <DateStart>2032-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048043</id>
+    <idParent>-1879048142</idParent>
+    <Caption>3 Квартал 2032</Caption>
+    <DateStart>2032-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048042</id>
+    <idParent>-1879048142</idParent>
+    <Caption>4 Квартал 2032</Caption>
+    <DateStart>2032-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048041</id>
+    <idParent>-1879048141</idParent>
+    <Caption>1 Квартал 2033</Caption>
+    <DateStart>2033-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048040</id>
+    <idParent>-1879048141</idParent>
+    <Caption>2 Квартал 2033</Caption>
+    <DateStart>2033-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048039</id>
+    <idParent>-1879048141</idParent>
+    <Caption>3 Квартал 2033</Caption>
+    <DateStart>2033-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048038</id>
+    <idParent>-1879048141</idParent>
+    <Caption>4 Квартал 2033</Caption>
+    <DateStart>2033-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048037</id>
+    <idParent>-1879048140</idParent>
+    <Caption>1 Квартал 2034</Caption>
+    <DateStart>2034-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048036</id>
+    <idParent>-1879048140</idParent>
+    <Caption>2 Квартал 2034</Caption>
+    <DateStart>2034-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048035</id>
+    <idParent>-1879048140</idParent>
+    <Caption>3 Квартал 2034</Caption>
+    <DateStart>2034-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048034</id>
+    <idParent>-1879048140</idParent>
+    <Caption>4 Квартал 2034</Caption>
+    <DateStart>2034-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048033</id>
+    <idParent>-1879048139</idParent>
+    <Caption>1 Квартал 2035</Caption>
+    <DateStart>2035-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048032</id>
+    <idParent>-1879048139</idParent>
+    <Caption>2 Квартал 2035</Caption>
+    <DateStart>2035-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048031</id>
+    <idParent>-1879048139</idParent>
+    <Caption>3 Квартал 2035</Caption>
+    <DateStart>2035-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048030</id>
+    <idParent>-1879048139</idParent>
+    <Caption>4 Квартал 2035</Caption>
+    <DateStart>2035-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048029</id>
+    <idParent>-1879048138</idParent>
+    <Caption>1 Квартал 2036</Caption>
+    <DateStart>2036-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048028</id>
+    <idParent>-1879048138</idParent>
+    <Caption>2 Квартал 2036</Caption>
+    <DateStart>2036-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048027</id>
+    <idParent>-1879048138</idParent>
+    <Caption>3 Квартал 2036</Caption>
+    <DateStart>2036-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048026</id>
+    <idParent>-1879048138</idParent>
+    <Caption>4 Квартал 2036</Caption>
+    <DateStart>2036-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048025</id>
+    <idParent>-1879048137</idParent>
+    <Caption>1 Квартал 2037</Caption>
+    <DateStart>2037-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048024</id>
+    <idParent>-1879048137</idParent>
+    <Caption>2 Квартал 2037</Caption>
+    <DateStart>2037-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048023</id>
+    <idParent>-1879048137</idParent>
+    <Caption>3 Квартал 2037</Caption>
+    <DateStart>2037-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048022</id>
+    <idParent>-1879048137</idParent>
+    <Caption>4 Квартал 2037</Caption>
+    <DateStart>2037-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048021</id>
+    <idParent>-1879048136</idParent>
+    <Caption>1 Квартал 2038</Caption>
+    <DateStart>2038-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048020</id>
+    <idParent>-1879048136</idParent>
+    <Caption>2 Квартал 2038</Caption>
+    <DateStart>2038-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048019</id>
+    <idParent>-1879048136</idParent>
+    <Caption>3 Квартал 2038</Caption>
+    <DateStart>2038-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048018</id>
+    <idParent>-1879048136</idParent>
+    <Caption>4 Квартал 2038</Caption>
+    <DateStart>2038-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048017</id>
+    <idParent>-1879048135</idParent>
+    <Caption>1 Квартал 2039</Caption>
+    <DateStart>2039-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048016</id>
+    <idParent>-1879048135</idParent>
+    <Caption>2 Квартал 2039</Caption>
+    <DateStart>2039-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048015</id>
+    <idParent>-1879048135</idParent>
+    <Caption>3 Квартал 2039</Caption>
+    <DateStart>2039-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048014</id>
+    <idParent>-1879048135</idParent>
+    <Caption>4 Квартал 2039</Caption>
+    <DateStart>2039-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048013</id>
+    <idParent>-1879048134</idParent>
+    <Caption>1 Квартал 2040</Caption>
+    <DateStart>2040-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048012</id>
+    <idParent>-1879048134</idParent>
+    <Caption>2 Квартал 2040</Caption>
+    <DateStart>2040-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048011</id>
+    <idParent>-1879048134</idParent>
+    <Caption>3 Квартал 2040</Caption>
+    <DateStart>2040-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048010</id>
+    <idParent>-1879048134</idParent>
+    <Caption>4 Квартал 2040</Caption>
+    <DateStart>2040-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048009</id>
+    <idParent>-1879048133</idParent>
+    <Caption>Январь 2010</Caption>
+    <DateStart>2010-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048008</id>
+    <idParent>-1879048132</idParent>
+    <Caption>Апрель 2010</Caption>
+    <DateStart>2010-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048007</id>
+    <idParent>-1879048131</idParent>
+    <Caption>Июль 2010</Caption>
+    <DateStart>2010-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048006</id>
+    <idParent>-1879048130</idParent>
+    <Caption>Октябрь 2010</Caption>
+    <DateStart>2010-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048005</id>
+    <idParent>-1879048129</idParent>
+    <Caption>Январь 2011</Caption>
+    <DateStart>2011-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048004</id>
+    <idParent>-1879048128</idParent>
+    <Caption>Апрель 2011</Caption>
+    <DateStart>2011-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048003</id>
+    <idParent>-1879048127</idParent>
+    <Caption>Июль 2011</Caption>
+    <DateStart>2011-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048002</id>
+    <idParent>-1879048126</idParent>
+    <Caption>Октябрь 2011</Caption>
+    <DateStart>2011-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048001</id>
+    <idParent>-1879048125</idParent>
+    <Caption>Январь 2012</Caption>
+    <DateStart>2012-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879048000</id>
+    <idParent>-1879048124</idParent>
+    <Caption>Апрель 2012</Caption>
+    <DateStart>2012-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047999</id>
+    <idParent>-1879048123</idParent>
+    <Caption>Июль 2012</Caption>
+    <DateStart>2012-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047998</id>
+    <idParent>-1879048122</idParent>
+    <Caption>Октябрь 2012</Caption>
+    <DateStart>2012-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047997</id>
+    <idParent>-1879048121</idParent>
+    <Caption>Январь 2013</Caption>
+    <DateStart>2013-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047996</id>
+    <idParent>-1879048120</idParent>
+    <Caption>Апрель 2013</Caption>
+    <DateStart>2013-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047995</id>
+    <idParent>-1879048119</idParent>
+    <Caption>Июль 2013</Caption>
+    <DateStart>2013-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047994</id>
+    <idParent>-1879048118</idParent>
+    <Caption>Октябрь 2013</Caption>
+    <DateStart>2013-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047993</id>
+    <idParent>-1879048117</idParent>
+    <Caption>Январь 2014</Caption>
+    <DateStart>2014-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047992</id>
+    <idParent>-1879048116</idParent>
+    <Caption>Апрель 2014</Caption>
+    <DateStart>2014-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047991</id>
+    <idParent>-1879048115</idParent>
+    <Caption>Июль 2014</Caption>
+    <DateStart>2014-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047990</id>
+    <idParent>-1879048114</idParent>
+    <Caption>Октябрь 2014</Caption>
+    <DateStart>2014-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047989</id>
+    <idParent>-1879048113</idParent>
+    <Caption>Январь 2015</Caption>
+    <DateStart>2015-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047988</id>
+    <idParent>-1879048112</idParent>
+    <Caption>Апрель 2015</Caption>
+    <DateStart>2015-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047987</id>
+    <idParent>-1879048111</idParent>
+    <Caption>Июль 2015</Caption>
+    <DateStart>2015-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047986</id>
+    <idParent>-1879048110</idParent>
+    <Caption>Октябрь 2015</Caption>
+    <DateStart>2015-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047985</id>
+    <idParent>-1879048109</idParent>
+    <Caption>Январь 2016</Caption>
+    <DateStart>2016-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047984</id>
+    <idParent>-1879048108</idParent>
+    <Caption>Апрель 2016</Caption>
+    <DateStart>2016-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047983</id>
+    <idParent>-1879048107</idParent>
+    <Caption>Июль 2016</Caption>
+    <DateStart>2016-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047982</id>
+    <idParent>-1879048106</idParent>
+    <Caption>Октябрь 2016</Caption>
+    <DateStart>2016-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047981</id>
+    <idParent>-1879048105</idParent>
+    <Caption>Январь 2017</Caption>
+    <DateStart>2017-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047980</id>
+    <idParent>-1879048104</idParent>
+    <Caption>Апрель 2017</Caption>
+    <DateStart>2017-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047979</id>
+    <idParent>-1879048103</idParent>
+    <Caption>Июль 2017</Caption>
+    <DateStart>2017-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047978</id>
+    <idParent>-1879048102</idParent>
+    <Caption>Октябрь 2017</Caption>
+    <DateStart>2017-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047977</id>
+    <idParent>-1879048101</idParent>
+    <Caption>Январь 2018</Caption>
+    <DateStart>2018-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047976</id>
+    <idParent>-1879048100</idParent>
+    <Caption>Апрель 2018</Caption>
+    <DateStart>2018-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047975</id>
+    <idParent>-1879048099</idParent>
+    <Caption>Июль 2018</Caption>
+    <DateStart>2018-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047974</id>
+    <idParent>-1879048098</idParent>
+    <Caption>Октябрь 2018</Caption>
+    <DateStart>2018-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047973</id>
+    <idParent>-1879048097</idParent>
+    <Caption>Январь 2019</Caption>
+    <DateStart>2019-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047972</id>
+    <idParent>-1879048096</idParent>
+    <Caption>Апрель 2019</Caption>
+    <DateStart>2019-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047971</id>
+    <idParent>-1879048095</idParent>
+    <Caption>Июль 2019</Caption>
+    <DateStart>2019-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047970</id>
+    <idParent>-1879048094</idParent>
+    <Caption>Октябрь 2019</Caption>
+    <DateStart>2019-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047969</id>
+    <idParent>-1879048093</idParent>
+    <Caption>Январь 2020</Caption>
+    <DateStart>2020-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047968</id>
+    <idParent>-1879048092</idParent>
+    <Caption>Апрель 2020</Caption>
+    <DateStart>2020-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047967</id>
+    <idParent>-1879048091</idParent>
+    <Caption>Июль 2020</Caption>
+    <DateStart>2020-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047966</id>
+    <idParent>-1879048090</idParent>
+    <Caption>Октябрь 2020</Caption>
+    <DateStart>2020-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047965</id>
+    <idParent>-1879048089</idParent>
+    <Caption>Январь 2021</Caption>
+    <DateStart>2021-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047964</id>
+    <idParent>-1879048088</idParent>
+    <Caption>Апрель 2021</Caption>
+    <DateStart>2021-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047963</id>
+    <idParent>-1879048087</idParent>
+    <Caption>Июль 2021</Caption>
+    <DateStart>2021-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047962</id>
+    <idParent>-1879048086</idParent>
+    <Caption>Октябрь 2021</Caption>
+    <DateStart>2021-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047961</id>
+    <idParent>-1879048085</idParent>
+    <Caption>Январь 2022</Caption>
+    <DateStart>2022-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047960</id>
+    <idParent>-1879048084</idParent>
+    <Caption>Апрель 2022</Caption>
+    <DateStart>2022-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047959</id>
+    <idParent>-1879048083</idParent>
+    <Caption>Июль 2022</Caption>
+    <DateStart>2022-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047958</id>
+    <idParent>-1879048082</idParent>
+    <Caption>Октябрь 2022</Caption>
+    <DateStart>2022-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047957</id>
+    <idParent>-1879048081</idParent>
+    <Caption>Январь 2023</Caption>
+    <DateStart>2023-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047956</id>
+    <idParent>-1879048080</idParent>
+    <Caption>Апрель 2023</Caption>
+    <DateStart>2023-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047955</id>
+    <idParent>-1879048079</idParent>
+    <Caption>Июль 2023</Caption>
+    <DateStart>2023-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047954</id>
+    <idParent>-1879048078</idParent>
+    <Caption>Октябрь 2023</Caption>
+    <DateStart>2023-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047953</id>
+    <idParent>-1879048077</idParent>
+    <Caption>Январь 2024</Caption>
+    <DateStart>2024-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047952</id>
+    <idParent>-1879048076</idParent>
+    <Caption>Апрель 2024</Caption>
+    <DateStart>2024-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047951</id>
+    <idParent>-1879048075</idParent>
+    <Caption>Июль 2024</Caption>
+    <DateStart>2024-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047950</id>
+    <idParent>-1879048074</idParent>
+    <Caption>Октябрь 2024</Caption>
+    <DateStart>2024-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047949</id>
+    <idParent>-1879048073</idParent>
+    <Caption>Январь 2025</Caption>
+    <DateStart>2025-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047948</id>
+    <idParent>-1879048072</idParent>
+    <Caption>Апрель 2025</Caption>
+    <DateStart>2025-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047947</id>
+    <idParent>-1879048071</idParent>
+    <Caption>Июль 2025</Caption>
+    <DateStart>2025-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047946</id>
+    <idParent>-1879048070</idParent>
+    <Caption>Октябрь 2025</Caption>
+    <DateStart>2025-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047945</id>
+    <idParent>-1879048069</idParent>
+    <Caption>Январь 2026</Caption>
+    <DateStart>2026-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047944</id>
+    <idParent>-1879048068</idParent>
+    <Caption>Апрель 2026</Caption>
+    <DateStart>2026-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047943</id>
+    <idParent>-1879048067</idParent>
+    <Caption>Июль 2026</Caption>
+    <DateStart>2026-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047942</id>
+    <idParent>-1879048066</idParent>
+    <Caption>Октябрь 2026</Caption>
+    <DateStart>2026-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047941</id>
+    <idParent>-1879048065</idParent>
+    <Caption>Январь 2027</Caption>
+    <DateStart>2027-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047940</id>
+    <idParent>-1879048064</idParent>
+    <Caption>Апрель 2027</Caption>
+    <DateStart>2027-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047939</id>
+    <idParent>-1879048063</idParent>
+    <Caption>Июль 2027</Caption>
+    <DateStart>2027-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047938</id>
+    <idParent>-1879048062</idParent>
+    <Caption>Октябрь 2027</Caption>
+    <DateStart>2027-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047937</id>
+    <idParent>-1879048061</idParent>
+    <Caption>Январь 2028</Caption>
+    <DateStart>2028-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047936</id>
+    <idParent>-1879048060</idParent>
+    <Caption>Апрель 2028</Caption>
+    <DateStart>2028-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047935</id>
+    <idParent>-1879048059</idParent>
+    <Caption>Июль 2028</Caption>
+    <DateStart>2028-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047934</id>
+    <idParent>-1879048058</idParent>
+    <Caption>Октябрь 2028</Caption>
+    <DateStart>2028-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047933</id>
+    <idParent>-1879048057</idParent>
+    <Caption>Январь 2029</Caption>
+    <DateStart>2029-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047932</id>
+    <idParent>-1879048056</idParent>
+    <Caption>Апрель 2029</Caption>
+    <DateStart>2029-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047931</id>
+    <idParent>-1879048055</idParent>
+    <Caption>Июль 2029</Caption>
+    <DateStart>2029-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047930</id>
+    <idParent>-1879048054</idParent>
+    <Caption>Октябрь 2029</Caption>
+    <DateStart>2029-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047929</id>
+    <idParent>-1879048053</idParent>
+    <Caption>Январь 2030</Caption>
+    <DateStart>2030-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047928</id>
+    <idParent>-1879048052</idParent>
+    <Caption>Апрель 2030</Caption>
+    <DateStart>2030-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047927</id>
+    <idParent>-1879048051</idParent>
+    <Caption>Июль 2030</Caption>
+    <DateStart>2030-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047926</id>
+    <idParent>-1879048050</idParent>
+    <Caption>Октябрь 2030</Caption>
+    <DateStart>2030-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047925</id>
+    <idParent>-1879048049</idParent>
+    <Caption>Январь 2031</Caption>
+    <DateStart>2031-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047924</id>
+    <idParent>-1879048048</idParent>
+    <Caption>Апрель 2031</Caption>
+    <DateStart>2031-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047923</id>
+    <idParent>-1879048047</idParent>
+    <Caption>Июль 2031</Caption>
+    <DateStart>2031-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047922</id>
+    <idParent>-1879048046</idParent>
+    <Caption>Октябрь 2031</Caption>
+    <DateStart>2031-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047921</id>
+    <idParent>-1879048045</idParent>
+    <Caption>Январь 2032</Caption>
+    <DateStart>2032-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047920</id>
+    <idParent>-1879048044</idParent>
+    <Caption>Апрель 2032</Caption>
+    <DateStart>2032-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047919</id>
+    <idParent>-1879048043</idParent>
+    <Caption>Июль 2032</Caption>
+    <DateStart>2032-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047918</id>
+    <idParent>-1879048042</idParent>
+    <Caption>Октябрь 2032</Caption>
+    <DateStart>2032-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047917</id>
+    <idParent>-1879048041</idParent>
+    <Caption>Январь 2033</Caption>
+    <DateStart>2033-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047916</id>
+    <idParent>-1879048040</idParent>
+    <Caption>Апрель 2033</Caption>
+    <DateStart>2033-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047915</id>
+    <idParent>-1879048039</idParent>
+    <Caption>Июль 2033</Caption>
+    <DateStart>2033-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047914</id>
+    <idParent>-1879048038</idParent>
+    <Caption>Октябрь 2033</Caption>
+    <DateStart>2033-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047913</id>
+    <idParent>-1879048037</idParent>
+    <Caption>Январь 2034</Caption>
+    <DateStart>2034-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047912</id>
+    <idParent>-1879048036</idParent>
+    <Caption>Апрель 2034</Caption>
+    <DateStart>2034-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047911</id>
+    <idParent>-1879048035</idParent>
+    <Caption>Июль 2034</Caption>
+    <DateStart>2034-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047910</id>
+    <idParent>-1879048034</idParent>
+    <Caption>Октябрь 2034</Caption>
+    <DateStart>2034-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047909</id>
+    <idParent>-1879048033</idParent>
+    <Caption>Январь 2035</Caption>
+    <DateStart>2035-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047908</id>
+    <idParent>-1879048032</idParent>
+    <Caption>Апрель 2035</Caption>
+    <DateStart>2035-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047907</id>
+    <idParent>-1879048031</idParent>
+    <Caption>Июль 2035</Caption>
+    <DateStart>2035-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047906</id>
+    <idParent>-1879048030</idParent>
+    <Caption>Октябрь 2035</Caption>
+    <DateStart>2035-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047905</id>
+    <idParent>-1879048029</idParent>
+    <Caption>Январь 2036</Caption>
+    <DateStart>2036-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047904</id>
+    <idParent>-1879048028</idParent>
+    <Caption>Апрель 2036</Caption>
+    <DateStart>2036-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047903</id>
+    <idParent>-1879048027</idParent>
+    <Caption>Июль 2036</Caption>
+    <DateStart>2036-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047902</id>
+    <idParent>-1879048026</idParent>
+    <Caption>Октябрь 2036</Caption>
+    <DateStart>2036-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047901</id>
+    <idParent>-1879048025</idParent>
+    <Caption>Январь 2037</Caption>
+    <DateStart>2037-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047900</id>
+    <idParent>-1879048024</idParent>
+    <Caption>Апрель 2037</Caption>
+    <DateStart>2037-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047899</id>
+    <idParent>-1879048023</idParent>
+    <Caption>Июль 2037</Caption>
+    <DateStart>2037-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047898</id>
+    <idParent>-1879048022</idParent>
+    <Caption>Октябрь 2037</Caption>
+    <DateStart>2037-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047897</id>
+    <idParent>-1879048021</idParent>
+    <Caption>Январь 2038</Caption>
+    <DateStart>2038-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047896</id>
+    <idParent>-1879048020</idParent>
+    <Caption>Апрель 2038</Caption>
+    <DateStart>2038-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047895</id>
+    <idParent>-1879048019</idParent>
+    <Caption>Июль 2038</Caption>
+    <DateStart>2038-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047894</id>
+    <idParent>-1879048018</idParent>
+    <Caption>Октябрь 2038</Caption>
+    <DateStart>2038-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047893</id>
+    <idParent>-1879048017</idParent>
+    <Caption>Январь 2039</Caption>
+    <DateStart>2039-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047892</id>
+    <idParent>-1879048016</idParent>
+    <Caption>Апрель 2039</Caption>
+    <DateStart>2039-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047891</id>
+    <idParent>-1879048015</idParent>
+    <Caption>Июль 2039</Caption>
+    <DateStart>2039-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047890</id>
+    <idParent>-1879048014</idParent>
+    <Caption>Октябрь 2039</Caption>
+    <DateStart>2039-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047889</id>
+    <idParent>-1879048013</idParent>
+    <Caption>Январь 2040</Caption>
+    <DateStart>2040-01-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-01-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047888</id>
+    <idParent>-1879048012</idParent>
+    <Caption>Апрель 2040</Caption>
+    <DateStart>2040-04-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-04-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047887</id>
+    <idParent>-1879048011</idParent>
+    <Caption>Июль 2040</Caption>
+    <DateStart>2040-07-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-07-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047886</id>
+    <idParent>-1879048010</idParent>
+    <Caption>Октябрь 2040</Caption>
+    <DateStart>2040-10-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-10-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047885</id>
+    <idParent>-1879048133</idParent>
+    <Caption>Февраль 2010</Caption>
+    <DateStart>2010-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047884</id>
+    <idParent>-1879048132</idParent>
+    <Caption>Май 2010</Caption>
+    <DateStart>2010-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047883</id>
+    <idParent>-1879048131</idParent>
+    <Caption>Август 2010</Caption>
+    <DateStart>2010-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047882</id>
+    <idParent>-1879048130</idParent>
+    <Caption>Ноябрь 2010</Caption>
+    <DateStart>2010-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047881</id>
+    <idParent>-1879048129</idParent>
+    <Caption>Февраль 2011</Caption>
+    <DateStart>2011-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047880</id>
+    <idParent>-1879048128</idParent>
+    <Caption>Май 2011</Caption>
+    <DateStart>2011-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047879</id>
+    <idParent>-1879048127</idParent>
+    <Caption>Август 2011</Caption>
+    <DateStart>2011-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047878</id>
+    <idParent>-1879048126</idParent>
+    <Caption>Ноябрь 2011</Caption>
+    <DateStart>2011-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047877</id>
+    <idParent>-1879048125</idParent>
+    <Caption>Февраль 2012</Caption>
+    <DateStart>2012-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-02-29T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047876</id>
+    <idParent>-1879048124</idParent>
+    <Caption>Май 2012</Caption>
+    <DateStart>2012-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047875</id>
+    <idParent>-1879048123</idParent>
+    <Caption>Август 2012</Caption>
+    <DateStart>2012-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047874</id>
+    <idParent>-1879048122</idParent>
+    <Caption>Ноябрь 2012</Caption>
+    <DateStart>2012-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047873</id>
+    <idParent>-1879048121</idParent>
+    <Caption>Февраль 2013</Caption>
+    <DateStart>2013-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047872</id>
+    <idParent>-1879048120</idParent>
+    <Caption>Май 2013</Caption>
+    <DateStart>2013-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047871</id>
+    <idParent>-1879048119</idParent>
+    <Caption>Август 2013</Caption>
+    <DateStart>2013-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047870</id>
+    <idParent>-1879048118</idParent>
+    <Caption>Ноябрь 2013</Caption>
+    <DateStart>2013-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047869</id>
+    <idParent>-1879048117</idParent>
+    <Caption>Февраль 2014</Caption>
+    <DateStart>2014-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047868</id>
+    <idParent>-1879048116</idParent>
+    <Caption>Май 2014</Caption>
+    <DateStart>2014-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047867</id>
+    <idParent>-1879048115</idParent>
+    <Caption>Август 2014</Caption>
+    <DateStart>2014-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047866</id>
+    <idParent>-1879048114</idParent>
+    <Caption>Ноябрь 2014</Caption>
+    <DateStart>2014-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047865</id>
+    <idParent>-1879048113</idParent>
+    <Caption>Февраль 2015</Caption>
+    <DateStart>2015-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047864</id>
+    <idParent>-1879048112</idParent>
+    <Caption>Май 2015</Caption>
+    <DateStart>2015-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047863</id>
+    <idParent>-1879048111</idParent>
+    <Caption>Август 2015</Caption>
+    <DateStart>2015-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047862</id>
+    <idParent>-1879048110</idParent>
+    <Caption>Ноябрь 2015</Caption>
+    <DateStart>2015-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047861</id>
+    <idParent>-1879048109</idParent>
+    <Caption>Февраль 2016</Caption>
+    <DateStart>2016-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-02-29T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047860</id>
+    <idParent>-1879048108</idParent>
+    <Caption>Май 2016</Caption>
+    <DateStart>2016-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047859</id>
+    <idParent>-1879048107</idParent>
+    <Caption>Август 2016</Caption>
+    <DateStart>2016-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047858</id>
+    <idParent>-1879048106</idParent>
+    <Caption>Ноябрь 2016</Caption>
+    <DateStart>2016-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047857</id>
+    <idParent>-1879048105</idParent>
+    <Caption>Февраль 2017</Caption>
+    <DateStart>2017-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047856</id>
+    <idParent>-1879048104</idParent>
+    <Caption>Май 2017</Caption>
+    <DateStart>2017-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047855</id>
+    <idParent>-1879048103</idParent>
+    <Caption>Август 2017</Caption>
+    <DateStart>2017-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047854</id>
+    <idParent>-1879048102</idParent>
+    <Caption>Ноябрь 2017</Caption>
+    <DateStart>2017-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047853</id>
+    <idParent>-1879048101</idParent>
+    <Caption>Февраль 2018</Caption>
+    <DateStart>2018-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047852</id>
+    <idParent>-1879048100</idParent>
+    <Caption>Май 2018</Caption>
+    <DateStart>2018-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047851</id>
+    <idParent>-1879048099</idParent>
+    <Caption>Август 2018</Caption>
+    <DateStart>2018-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047850</id>
+    <idParent>-1879048098</idParent>
+    <Caption>Ноябрь 2018</Caption>
+    <DateStart>2018-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047849</id>
+    <idParent>-1879048097</idParent>
+    <Caption>Февраль 2019</Caption>
+    <DateStart>2019-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047848</id>
+    <idParent>-1879048096</idParent>
+    <Caption>Май 2019</Caption>
+    <DateStart>2019-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047847</id>
+    <idParent>-1879048095</idParent>
+    <Caption>Август 2019</Caption>
+    <DateStart>2019-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047846</id>
+    <idParent>-1879048094</idParent>
+    <Caption>Ноябрь 2019</Caption>
+    <DateStart>2019-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047845</id>
+    <idParent>-1879048093</idParent>
+    <Caption>Февраль 2020</Caption>
+    <DateStart>2020-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-02-29T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047844</id>
+    <idParent>-1879048092</idParent>
+    <Caption>Май 2020</Caption>
+    <DateStart>2020-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047843</id>
+    <idParent>-1879048091</idParent>
+    <Caption>Август 2020</Caption>
+    <DateStart>2020-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047842</id>
+    <idParent>-1879048090</idParent>
+    <Caption>Ноябрь 2020</Caption>
+    <DateStart>2020-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047841</id>
+    <idParent>-1879048089</idParent>
+    <Caption>Февраль 2021</Caption>
+    <DateStart>2021-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047840</id>
+    <idParent>-1879048088</idParent>
+    <Caption>Май 2021</Caption>
+    <DateStart>2021-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047839</id>
+    <idParent>-1879048087</idParent>
+    <Caption>Август 2021</Caption>
+    <DateStart>2021-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047838</id>
+    <idParent>-1879048086</idParent>
+    <Caption>Ноябрь 2021</Caption>
+    <DateStart>2021-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047837</id>
+    <idParent>-1879048085</idParent>
+    <Caption>Февраль 2022</Caption>
+    <DateStart>2022-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047836</id>
+    <idParent>-1879048084</idParent>
+    <Caption>Май 2022</Caption>
+    <DateStart>2022-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047835</id>
+    <idParent>-1879048083</idParent>
+    <Caption>Август 2022</Caption>
+    <DateStart>2022-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047834</id>
+    <idParent>-1879048082</idParent>
+    <Caption>Ноябрь 2022</Caption>
+    <DateStart>2022-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047833</id>
+    <idParent>-1879048081</idParent>
+    <Caption>Февраль 2023</Caption>
+    <DateStart>2023-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047832</id>
+    <idParent>-1879048080</idParent>
+    <Caption>Май 2023</Caption>
+    <DateStart>2023-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047831</id>
+    <idParent>-1879048079</idParent>
+    <Caption>Август 2023</Caption>
+    <DateStart>2023-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047830</id>
+    <idParent>-1879048078</idParent>
+    <Caption>Ноябрь 2023</Caption>
+    <DateStart>2023-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047829</id>
+    <idParent>-1879048077</idParent>
+    <Caption>Февраль 2024</Caption>
+    <DateStart>2024-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-02-29T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047828</id>
+    <idParent>-1879048076</idParent>
+    <Caption>Май 2024</Caption>
+    <DateStart>2024-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047827</id>
+    <idParent>-1879048075</idParent>
+    <Caption>Август 2024</Caption>
+    <DateStart>2024-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047826</id>
+    <idParent>-1879048074</idParent>
+    <Caption>Ноябрь 2024</Caption>
+    <DateStart>2024-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047825</id>
+    <idParent>-1879048073</idParent>
+    <Caption>Февраль 2025</Caption>
+    <DateStart>2025-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047824</id>
+    <idParent>-1879048072</idParent>
+    <Caption>Май 2025</Caption>
+    <DateStart>2025-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047823</id>
+    <idParent>-1879048071</idParent>
+    <Caption>Август 2025</Caption>
+    <DateStart>2025-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047822</id>
+    <idParent>-1879048070</idParent>
+    <Caption>Ноябрь 2025</Caption>
+    <DateStart>2025-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047821</id>
+    <idParent>-1879048069</idParent>
+    <Caption>Февраль 2026</Caption>
+    <DateStart>2026-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047820</id>
+    <idParent>-1879048068</idParent>
+    <Caption>Май 2026</Caption>
+    <DateStart>2026-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047819</id>
+    <idParent>-1879048067</idParent>
+    <Caption>Август 2026</Caption>
+    <DateStart>2026-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047818</id>
+    <idParent>-1879048066</idParent>
+    <Caption>Ноябрь 2026</Caption>
+    <DateStart>2026-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047817</id>
+    <idParent>-1879048065</idParent>
+    <Caption>Февраль 2027</Caption>
+    <DateStart>2027-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047816</id>
+    <idParent>-1879048064</idParent>
+    <Caption>Май 2027</Caption>
+    <DateStart>2027-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047815</id>
+    <idParent>-1879048063</idParent>
+    <Caption>Август 2027</Caption>
+    <DateStart>2027-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047814</id>
+    <idParent>-1879048062</idParent>
+    <Caption>Ноябрь 2027</Caption>
+    <DateStart>2027-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047813</id>
+    <idParent>-1879048061</idParent>
+    <Caption>Февраль 2028</Caption>
+    <DateStart>2028-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-02-29T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047812</id>
+    <idParent>-1879048060</idParent>
+    <Caption>Май 2028</Caption>
+    <DateStart>2028-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047811</id>
+    <idParent>-1879048059</idParent>
+    <Caption>Август 2028</Caption>
+    <DateStart>2028-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047810</id>
+    <idParent>-1879048058</idParent>
+    <Caption>Ноябрь 2028</Caption>
+    <DateStart>2028-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047809</id>
+    <idParent>-1879048057</idParent>
+    <Caption>Февраль 2029</Caption>
+    <DateStart>2029-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047808</id>
+    <idParent>-1879048056</idParent>
+    <Caption>Май 2029</Caption>
+    <DateStart>2029-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047807</id>
+    <idParent>-1879048055</idParent>
+    <Caption>Август 2029</Caption>
+    <DateStart>2029-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047806</id>
+    <idParent>-1879048054</idParent>
+    <Caption>Ноябрь 2029</Caption>
+    <DateStart>2029-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047805</id>
+    <idParent>-1879048053</idParent>
+    <Caption>Февраль 2030</Caption>
+    <DateStart>2030-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047804</id>
+    <idParent>-1879048052</idParent>
+    <Caption>Май 2030</Caption>
+    <DateStart>2030-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047803</id>
+    <idParent>-1879048051</idParent>
+    <Caption>Август 2030</Caption>
+    <DateStart>2030-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047802</id>
+    <idParent>-1879048050</idParent>
+    <Caption>Ноябрь 2030</Caption>
+    <DateStart>2030-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047801</id>
+    <idParent>-1879048049</idParent>
+    <Caption>Февраль 2031</Caption>
+    <DateStart>2031-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047800</id>
+    <idParent>-1879048048</idParent>
+    <Caption>Май 2031</Caption>
+    <DateStart>2031-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047799</id>
+    <idParent>-1879048047</idParent>
+    <Caption>Август 2031</Caption>
+    <DateStart>2031-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047798</id>
+    <idParent>-1879048046</idParent>
+    <Caption>Ноябрь 2031</Caption>
+    <DateStart>2031-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047797</id>
+    <idParent>-1879048045</idParent>
+    <Caption>Февраль 2032</Caption>
+    <DateStart>2032-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-02-29T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047796</id>
+    <idParent>-1879048044</idParent>
+    <Caption>Май 2032</Caption>
+    <DateStart>2032-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047795</id>
+    <idParent>-1879048043</idParent>
+    <Caption>Август 2032</Caption>
+    <DateStart>2032-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047794</id>
+    <idParent>-1879048042</idParent>
+    <Caption>Ноябрь 2032</Caption>
+    <DateStart>2032-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047793</id>
+    <idParent>-1879048041</idParent>
+    <Caption>Февраль 2033</Caption>
+    <DateStart>2033-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047792</id>
+    <idParent>-1879048040</idParent>
+    <Caption>Май 2033</Caption>
+    <DateStart>2033-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047791</id>
+    <idParent>-1879048039</idParent>
+    <Caption>Август 2033</Caption>
+    <DateStart>2033-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047790</id>
+    <idParent>-1879048038</idParent>
+    <Caption>Ноябрь 2033</Caption>
+    <DateStart>2033-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047789</id>
+    <idParent>-1879048037</idParent>
+    <Caption>Февраль 2034</Caption>
+    <DateStart>2034-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047788</id>
+    <idParent>-1879048036</idParent>
+    <Caption>Май 2034</Caption>
+    <DateStart>2034-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047787</id>
+    <idParent>-1879048035</idParent>
+    <Caption>Август 2034</Caption>
+    <DateStart>2034-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047786</id>
+    <idParent>-1879048034</idParent>
+    <Caption>Ноябрь 2034</Caption>
+    <DateStart>2034-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047785</id>
+    <idParent>-1879048033</idParent>
+    <Caption>Февраль 2035</Caption>
+    <DateStart>2035-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047784</id>
+    <idParent>-1879048032</idParent>
+    <Caption>Май 2035</Caption>
+    <DateStart>2035-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047783</id>
+    <idParent>-1879048031</idParent>
+    <Caption>Август 2035</Caption>
+    <DateStart>2035-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047782</id>
+    <idParent>-1879048030</idParent>
+    <Caption>Ноябрь 2035</Caption>
+    <DateStart>2035-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047781</id>
+    <idParent>-1879048029</idParent>
+    <Caption>Февраль 2036</Caption>
+    <DateStart>2036-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-02-29T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047780</id>
+    <idParent>-1879048028</idParent>
+    <Caption>Май 2036</Caption>
+    <DateStart>2036-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047779</id>
+    <idParent>-1879048027</idParent>
+    <Caption>Август 2036</Caption>
+    <DateStart>2036-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047778</id>
+    <idParent>-1879048026</idParent>
+    <Caption>Ноябрь 2036</Caption>
+    <DateStart>2036-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047777</id>
+    <idParent>-1879048025</idParent>
+    <Caption>Февраль 2037</Caption>
+    <DateStart>2037-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047776</id>
+    <idParent>-1879048024</idParent>
+    <Caption>Май 2037</Caption>
+    <DateStart>2037-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047775</id>
+    <idParent>-1879048023</idParent>
+    <Caption>Август 2037</Caption>
+    <DateStart>2037-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047774</id>
+    <idParent>-1879048022</idParent>
+    <Caption>Ноябрь 2037</Caption>
+    <DateStart>2037-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047773</id>
+    <idParent>-1879048021</idParent>
+    <Caption>Февраль 2038</Caption>
+    <DateStart>2038-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047772</id>
+    <idParent>-1879048020</idParent>
+    <Caption>Май 2038</Caption>
+    <DateStart>2038-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047771</id>
+    <idParent>-1879048019</idParent>
+    <Caption>Август 2038</Caption>
+    <DateStart>2038-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047770</id>
+    <idParent>-1879048018</idParent>
+    <Caption>Ноябрь 2038</Caption>
+    <DateStart>2038-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047769</id>
+    <idParent>-1879048017</idParent>
+    <Caption>Февраль 2039</Caption>
+    <DateStart>2039-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-02-28T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047768</id>
+    <idParent>-1879048016</idParent>
+    <Caption>Май 2039</Caption>
+    <DateStart>2039-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047767</id>
+    <idParent>-1879048015</idParent>
+    <Caption>Август 2039</Caption>
+    <DateStart>2039-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047766</id>
+    <idParent>-1879048014</idParent>
+    <Caption>Ноябрь 2039</Caption>
+    <DateStart>2039-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047765</id>
+    <idParent>-1879048013</idParent>
+    <Caption>Февраль 2040</Caption>
+    <DateStart>2040-02-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-02-29T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047764</id>
+    <idParent>-1879048012</idParent>
+    <Caption>Май 2040</Caption>
+    <DateStart>2040-05-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-05-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047763</id>
+    <idParent>-1879048011</idParent>
+    <Caption>Август 2040</Caption>
+    <DateStart>2040-08-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-08-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047762</id>
+    <idParent>-1879048010</idParent>
+    <Caption>Ноябрь 2040</Caption>
+    <DateStart>2040-11-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-11-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047637</id>
+    <idParent>-1879048133</idParent>
+    <Caption>Март 2010</Caption>
+    <DateStart>2010-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047636</id>
+    <idParent>-1879048132</idParent>
+    <Caption>Июнь 2010</Caption>
+    <DateStart>2010-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047635</id>
+    <idParent>-1879048131</idParent>
+    <Caption>Сентябрь 2010</Caption>
+    <DateStart>2010-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047634</id>
+    <idParent>-1879048130</idParent>
+    <Caption>Декабрь 2010</Caption>
+    <DateStart>2010-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2010-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2010</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047633</id>
+    <idParent>-1879048129</idParent>
+    <Caption>Март 2011</Caption>
+    <DateStart>2011-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047632</id>
+    <idParent>-1879048128</idParent>
+    <Caption>Июнь 2011</Caption>
+    <DateStart>2011-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047631</id>
+    <idParent>-1879048127</idParent>
+    <Caption>Сентябрь 2011</Caption>
+    <DateStart>2011-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047630</id>
+    <idParent>-1879048126</idParent>
+    <Caption>Декабрь 2011</Caption>
+    <DateStart>2011-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2011-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2011</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047629</id>
+    <idParent>-1879048125</idParent>
+    <Caption>Март 2012</Caption>
+    <DateStart>2012-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047628</id>
+    <idParent>-1879048124</idParent>
+    <Caption>Июнь 2012</Caption>
+    <DateStart>2012-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047627</id>
+    <idParent>-1879048123</idParent>
+    <Caption>Сентябрь 2012</Caption>
+    <DateStart>2012-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047626</id>
+    <idParent>-1879048122</idParent>
+    <Caption>Декабрь 2012</Caption>
+    <DateStart>2012-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2012-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2012</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047625</id>
+    <idParent>-1879048121</idParent>
+    <Caption>Март 2013</Caption>
+    <DateStart>2013-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047624</id>
+    <idParent>-1879048120</idParent>
+    <Caption>Июнь 2013</Caption>
+    <DateStart>2013-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047623</id>
+    <idParent>-1879048119</idParent>
+    <Caption>Сентябрь 2013</Caption>
+    <DateStart>2013-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047622</id>
+    <idParent>-1879048118</idParent>
+    <Caption>Декабрь 2013</Caption>
+    <DateStart>2013-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2013-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2013</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047621</id>
+    <idParent>-1879048117</idParent>
+    <Caption>Март 2014</Caption>
+    <DateStart>2014-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047620</id>
+    <idParent>-1879048116</idParent>
+    <Caption>Июнь 2014</Caption>
+    <DateStart>2014-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047619</id>
+    <idParent>-1879048115</idParent>
+    <Caption>Сентябрь 2014</Caption>
+    <DateStart>2014-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047618</id>
+    <idParent>-1879048114</idParent>
+    <Caption>Декабрь 2014</Caption>
+    <DateStart>2014-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2014-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2014</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047617</id>
+    <idParent>-1879048113</idParent>
+    <Caption>Март 2015</Caption>
+    <DateStart>2015-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047616</id>
+    <idParent>-1879048112</idParent>
+    <Caption>Июнь 2015</Caption>
+    <DateStart>2015-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047615</id>
+    <idParent>-1879048111</idParent>
+    <Caption>Сентябрь 2015</Caption>
+    <DateStart>2015-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047614</id>
+    <idParent>-1879048110</idParent>
+    <Caption>Декабрь 2015</Caption>
+    <DateStart>2015-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2015-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2015</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047613</id>
+    <idParent>-1879048109</idParent>
+    <Caption>Март 2016</Caption>
+    <DateStart>2016-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047612</id>
+    <idParent>-1879048108</idParent>
+    <Caption>Июнь 2016</Caption>
+    <DateStart>2016-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047611</id>
+    <idParent>-1879048107</idParent>
+    <Caption>Сентябрь 2016</Caption>
+    <DateStart>2016-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047610</id>
+    <idParent>-1879048106</idParent>
+    <Caption>Декабрь 2016</Caption>
+    <DateStart>2016-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2016-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2016</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047609</id>
+    <idParent>-1879048105</idParent>
+    <Caption>Март 2017</Caption>
+    <DateStart>2017-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047608</id>
+    <idParent>-1879048104</idParent>
+    <Caption>Июнь 2017</Caption>
+    <DateStart>2017-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047607</id>
+    <idParent>-1879048103</idParent>
+    <Caption>Сентябрь 2017</Caption>
+    <DateStart>2017-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047606</id>
+    <idParent>-1879048102</idParent>
+    <Caption>Декабрь 2017</Caption>
+    <DateStart>2017-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2017-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2017</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047605</id>
+    <idParent>-1879048101</idParent>
+    <Caption>Март 2018</Caption>
+    <DateStart>2018-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047604</id>
+    <idParent>-1879048100</idParent>
+    <Caption>Июнь 2018</Caption>
+    <DateStart>2018-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047603</id>
+    <idParent>-1879048099</idParent>
+    <Caption>Сентябрь 2018</Caption>
+    <DateStart>2018-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047602</id>
+    <idParent>-1879048098</idParent>
+    <Caption>Декабрь 2018</Caption>
+    <DateStart>2018-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2018-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2018</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047601</id>
+    <idParent>-1879048097</idParent>
+    <Caption>Март 2019</Caption>
+    <DateStart>2019-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047600</id>
+    <idParent>-1879048096</idParent>
+    <Caption>Июнь 2019</Caption>
+    <DateStart>2019-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047599</id>
+    <idParent>-1879048095</idParent>
+    <Caption>Сентябрь 2019</Caption>
+    <DateStart>2019-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047598</id>
+    <idParent>-1879048094</idParent>
+    <Caption>Декабрь 2019</Caption>
+    <DateStart>2019-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2019-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2019</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047597</id>
+    <idParent>-1879048093</idParent>
+    <Caption>Март 2020</Caption>
+    <DateStart>2020-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047596</id>
+    <idParent>-1879048092</idParent>
+    <Caption>Июнь 2020</Caption>
+    <DateStart>2020-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047595</id>
+    <idParent>-1879048091</idParent>
+    <Caption>Сентябрь 2020</Caption>
+    <DateStart>2020-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047594</id>
+    <idParent>-1879048090</idParent>
+    <Caption>Декабрь 2020</Caption>
+    <DateStart>2020-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2020-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2020</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047593</id>
+    <idParent>-1879048089</idParent>
+    <Caption>Март 2021</Caption>
+    <DateStart>2021-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047592</id>
+    <idParent>-1879048088</idParent>
+    <Caption>Июнь 2021</Caption>
+    <DateStart>2021-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047591</id>
+    <idParent>-1879048087</idParent>
+    <Caption>Сентябрь 2021</Caption>
+    <DateStart>2021-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047590</id>
+    <idParent>-1879048086</idParent>
+    <Caption>Декабрь 2021</Caption>
+    <DateStart>2021-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2021-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2021</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047589</id>
+    <idParent>-1879048085</idParent>
+    <Caption>Март 2022</Caption>
+    <DateStart>2022-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047588</id>
+    <idParent>-1879048084</idParent>
+    <Caption>Июнь 2022</Caption>
+    <DateStart>2022-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047587</id>
+    <idParent>-1879048083</idParent>
+    <Caption>Сентябрь 2022</Caption>
+    <DateStart>2022-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047586</id>
+    <idParent>-1879048082</idParent>
+    <Caption>Декабрь 2022</Caption>
+    <DateStart>2022-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2022-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2022</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047585</id>
+    <idParent>-1879048081</idParent>
+    <Caption>Март 2023</Caption>
+    <DateStart>2023-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047584</id>
+    <idParent>-1879048080</idParent>
+    <Caption>Июнь 2023</Caption>
+    <DateStart>2023-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047583</id>
+    <idParent>-1879048079</idParent>
+    <Caption>Сентябрь 2023</Caption>
+    <DateStart>2023-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047582</id>
+    <idParent>-1879048078</idParent>
+    <Caption>Декабрь 2023</Caption>
+    <DateStart>2023-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2023-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2023</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047581</id>
+    <idParent>-1879048077</idParent>
+    <Caption>Март 2024</Caption>
+    <DateStart>2024-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047580</id>
+    <idParent>-1879048076</idParent>
+    <Caption>Июнь 2024</Caption>
+    <DateStart>2024-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047579</id>
+    <idParent>-1879048075</idParent>
+    <Caption>Сентябрь 2024</Caption>
+    <DateStart>2024-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047578</id>
+    <idParent>-1879048074</idParent>
+    <Caption>Декабрь 2024</Caption>
+    <DateStart>2024-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2024-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2024</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047577</id>
+    <idParent>-1879048073</idParent>
+    <Caption>Март 2025</Caption>
+    <DateStart>2025-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047576</id>
+    <idParent>-1879048072</idParent>
+    <Caption>Июнь 2025</Caption>
+    <DateStart>2025-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047575</id>
+    <idParent>-1879048071</idParent>
+    <Caption>Сентябрь 2025</Caption>
+    <DateStart>2025-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047574</id>
+    <idParent>-1879048070</idParent>
+    <Caption>Декабрь 2025</Caption>
+    <DateStart>2025-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2025-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2025</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047573</id>
+    <idParent>-1879048069</idParent>
+    <Caption>Март 2026</Caption>
+    <DateStart>2026-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047572</id>
+    <idParent>-1879048068</idParent>
+    <Caption>Июнь 2026</Caption>
+    <DateStart>2026-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047571</id>
+    <idParent>-1879048067</idParent>
+    <Caption>Сентябрь 2026</Caption>
+    <DateStart>2026-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047570</id>
+    <idParent>-1879048066</idParent>
+    <Caption>Декабрь 2026</Caption>
+    <DateStart>2026-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2026-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2026</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047569</id>
+    <idParent>-1879048065</idParent>
+    <Caption>Март 2027</Caption>
+    <DateStart>2027-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047568</id>
+    <idParent>-1879048064</idParent>
+    <Caption>Июнь 2027</Caption>
+    <DateStart>2027-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047567</id>
+    <idParent>-1879048063</idParent>
+    <Caption>Сентябрь 2027</Caption>
+    <DateStart>2027-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047566</id>
+    <idParent>-1879048062</idParent>
+    <Caption>Декабрь 2027</Caption>
+    <DateStart>2027-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2027-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2027</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047565</id>
+    <idParent>-1879048061</idParent>
+    <Caption>Март 2028</Caption>
+    <DateStart>2028-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047564</id>
+    <idParent>-1879048060</idParent>
+    <Caption>Июнь 2028</Caption>
+    <DateStart>2028-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047563</id>
+    <idParent>-1879048059</idParent>
+    <Caption>Сентябрь 2028</Caption>
+    <DateStart>2028-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047562</id>
+    <idParent>-1879048058</idParent>
+    <Caption>Декабрь 2028</Caption>
+    <DateStart>2028-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2028-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2028</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047561</id>
+    <idParent>-1879048057</idParent>
+    <Caption>Март 2029</Caption>
+    <DateStart>2029-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047560</id>
+    <idParent>-1879048056</idParent>
+    <Caption>Июнь 2029</Caption>
+    <DateStart>2029-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047559</id>
+    <idParent>-1879048055</idParent>
+    <Caption>Сентябрь 2029</Caption>
+    <DateStart>2029-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047558</id>
+    <idParent>-1879048054</idParent>
+    <Caption>Декабрь 2029</Caption>
+    <DateStart>2029-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2029-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2029</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047557</id>
+    <idParent>-1879048053</idParent>
+    <Caption>Март 2030</Caption>
+    <DateStart>2030-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047556</id>
+    <idParent>-1879048052</idParent>
+    <Caption>Июнь 2030</Caption>
+    <DateStart>2030-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047555</id>
+    <idParent>-1879048051</idParent>
+    <Caption>Сентябрь 2030</Caption>
+    <DateStart>2030-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047554</id>
+    <idParent>-1879048050</idParent>
+    <Caption>Декабрь 2030</Caption>
+    <DateStart>2030-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2030-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2030</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047553</id>
+    <idParent>-1879048049</idParent>
+    <Caption>Март 2031</Caption>
+    <DateStart>2031-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047552</id>
+    <idParent>-1879048048</idParent>
+    <Caption>Июнь 2031</Caption>
+    <DateStart>2031-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047551</id>
+    <idParent>-1879048047</idParent>
+    <Caption>Сентябрь 2031</Caption>
+    <DateStart>2031-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047550</id>
+    <idParent>-1879048046</idParent>
+    <Caption>Декабрь 2031</Caption>
+    <DateStart>2031-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2031-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2031</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047549</id>
+    <idParent>-1879048045</idParent>
+    <Caption>Март 2032</Caption>
+    <DateStart>2032-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047548</id>
+    <idParent>-1879048044</idParent>
+    <Caption>Июнь 2032</Caption>
+    <DateStart>2032-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047547</id>
+    <idParent>-1879048043</idParent>
+    <Caption>Сентябрь 2032</Caption>
+    <DateStart>2032-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047546</id>
+    <idParent>-1879048042</idParent>
+    <Caption>Декабрь 2032</Caption>
+    <DateStart>2032-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2032-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2032</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047545</id>
+    <idParent>-1879048041</idParent>
+    <Caption>Март 2033</Caption>
+    <DateStart>2033-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047544</id>
+    <idParent>-1879048040</idParent>
+    <Caption>Июнь 2033</Caption>
+    <DateStart>2033-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047543</id>
+    <idParent>-1879048039</idParent>
+    <Caption>Сентябрь 2033</Caption>
+    <DateStart>2033-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047542</id>
+    <idParent>-1879048038</idParent>
+    <Caption>Декабрь 2033</Caption>
+    <DateStart>2033-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2033-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2033</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047541</id>
+    <idParent>-1879048037</idParent>
+    <Caption>Март 2034</Caption>
+    <DateStart>2034-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047540</id>
+    <idParent>-1879048036</idParent>
+    <Caption>Июнь 2034</Caption>
+    <DateStart>2034-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047539</id>
+    <idParent>-1879048035</idParent>
+    <Caption>Сентябрь 2034</Caption>
+    <DateStart>2034-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047538</id>
+    <idParent>-1879048034</idParent>
+    <Caption>Декабрь 2034</Caption>
+    <DateStart>2034-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2034-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2034</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047537</id>
+    <idParent>-1879048033</idParent>
+    <Caption>Март 2035</Caption>
+    <DateStart>2035-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047536</id>
+    <idParent>-1879048032</idParent>
+    <Caption>Июнь 2035</Caption>
+    <DateStart>2035-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047535</id>
+    <idParent>-1879048031</idParent>
+    <Caption>Сентябрь 2035</Caption>
+    <DateStart>2035-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047534</id>
+    <idParent>-1879048030</idParent>
+    <Caption>Декабрь 2035</Caption>
+    <DateStart>2035-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2035-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2035</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047533</id>
+    <idParent>-1879048029</idParent>
+    <Caption>Март 2036</Caption>
+    <DateStart>2036-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047532</id>
+    <idParent>-1879048028</idParent>
+    <Caption>Июнь 2036</Caption>
+    <DateStart>2036-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047531</id>
+    <idParent>-1879048027</idParent>
+    <Caption>Сентябрь 2036</Caption>
+    <DateStart>2036-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047530</id>
+    <idParent>-1879048026</idParent>
+    <Caption>Декабрь 2036</Caption>
+    <DateStart>2036-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2036-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2036</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047529</id>
+    <idParent>-1879048025</idParent>
+    <Caption>Март 2037</Caption>
+    <DateStart>2037-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047528</id>
+    <idParent>-1879048024</idParent>
+    <Caption>Июнь 2037</Caption>
+    <DateStart>2037-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047527</id>
+    <idParent>-1879048023</idParent>
+    <Caption>Сентябрь 2037</Caption>
+    <DateStart>2037-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047526</id>
+    <idParent>-1879048022</idParent>
+    <Caption>Декабрь 2037</Caption>
+    <DateStart>2037-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2037-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2037</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047525</id>
+    <idParent>-1879048021</idParent>
+    <Caption>Март 2038</Caption>
+    <DateStart>2038-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047524</id>
+    <idParent>-1879048020</idParent>
+    <Caption>Июнь 2038</Caption>
+    <DateStart>2038-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047523</id>
+    <idParent>-1879048019</idParent>
+    <Caption>Сентябрь 2038</Caption>
+    <DateStart>2038-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047522</id>
+    <idParent>-1879048018</idParent>
+    <Caption>Декабрь 2038</Caption>
+    <DateStart>2038-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2038-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2038</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047521</id>
+    <idParent>-1879048017</idParent>
+    <Caption>Март 2039</Caption>
+    <DateStart>2039-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047520</id>
+    <idParent>-1879048016</idParent>
+    <Caption>Июнь 2039</Caption>
+    <DateStart>2039-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047519</id>
+    <idParent>-1879048015</idParent>
+    <Caption>Сентябрь 2039</Caption>
+    <DateStart>2039-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047518</id>
+    <idParent>-1879048014</idParent>
+    <Caption>Декабрь 2039</Caption>
+    <DateStart>2039-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2039-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2039</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047517</id>
+    <idParent>-1879048013</idParent>
+    <Caption>Март 2040</Caption>
+    <DateStart>2040-03-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-03-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047516</id>
+    <idParent>-1879048012</idParent>
+    <Caption>Июнь 2040</Caption>
+    <DateStart>2040-06-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-06-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047515</id>
+    <idParent>-1879048011</idParent>
+    <Caption>Сентябрь 2040</Caption>
+    <DateStart>2040-09-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-09-30T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+  <ref.HierarchyPeriod>
+    <id>-1879047514</id>
+    <idParent>-1879048010</idParent>
+    <Caption>Декабрь 2040</Caption>
+    <DateStart>2040-12-01T00:00:00+04:00</DateStart>
+    <DateEnd>2040-12-31T00:00:00+04:00</DateEnd>
+    <idRefStatus>2</idRefStatus>
+    <Year>2040</Year>
+  </ref.HierarchyPeriod>
+</NewDataSet>

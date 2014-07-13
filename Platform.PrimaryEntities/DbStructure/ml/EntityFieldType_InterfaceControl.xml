@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ml.EntityFieldType_InterfaceControl" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ml.EntityFieldType_InterfaceControl">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="idInterfaceControl" type="xs:int" />
+                <xs:element name="idEntityFieldType" type="xs:unsignedByte" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ml.EntityFieldType_InterfaceControl" />
+        <xs:field xpath="idInterfaceControl" />
+        <xs:field xpath="idEntityFieldType" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939300</idInterfaceControl>
+    <idEntityFieldType>7</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939298</idInterfaceControl>
+    <idEntityFieldType>2</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939296</idInterfaceControl>
+    <idEntityFieldType>3</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939296</idInterfaceControl>
+    <idEntityFieldType>4</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939296</idInterfaceControl>
+    <idEntityFieldType>15</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939296</idInterfaceControl>
+    <idEntityFieldType>16</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939295</idInterfaceControl>
+    <idEntityFieldType>6</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939294</idInterfaceControl>
+    <idEntityFieldType>7</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939293</idInterfaceControl>
+    <idEntityFieldType>9</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939292</idInterfaceControl>
+    <idEntityFieldType>8</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+  <ml.EntityFieldType_InterfaceControl>
+    <idInterfaceControl>-1811939291</idInterfaceControl>
+    <idEntityFieldType>1</idEntityFieldType>
+  </ml.EntityFieldType_InterfaceControl>
+</NewDataSet>

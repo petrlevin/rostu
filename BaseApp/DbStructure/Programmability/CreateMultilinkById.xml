@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Programmability" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Programmability">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Schema">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CreateCommand">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProgrammabilityType" type="xs:unsignedByte" />
+                <xs:element name="Order" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="5" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isDisabled" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Programmability" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Programmability>
+    <id>-1744830427</id>
+    <Schema>dbo</Schema>
+    <Name>CreateMultilinkById</Name>
+    <CreateCommand>CREATE PROCEDURE [dbo].[CreateMultilinkById]
+	-- Add the parameters for the stored procedure here
+	@leftEntityId int,
+	@rightEntityId int,
+	@multilinkName varchar(300),
+	@multilinkCaption varchar(300),
+	@inLeftFieldCaption varchar(300)=null,
+	@inRightFieldCaption varchar(300)=null,
+	@leftFieldCaption varchar(300) = null,
+	@rightFieldCaption varchar(300) = null ,
+	@idProject int = 500,
+	@isVersioning bit =0,
+	@GenerateEntityClass bit=0,
+	@idEntityGroup int = null,
+	@inLeftFieldName varchar(300) = '',
+	@inRightFieldName varchar(300) = '' ,
+	@leftFieldName varchar(300) = null,
+	@rightFieldName varchar(300) = null 
+	
+AS
+BEGIN
+SET NOCOUNT ON;
+
+IF (@inLeftFieldName ='')
+BEGIN
+	SET @inLeftFieldName = N'ml'+(SELECT name FROM [ref].[Entity] WHERE [id]=@leftEntityId)+'s'
+END
+
+IF (@inRightFieldName ='')
+BEGIN
+	SET @inRightFieldName = N'ml'+(SELECT name FROM [ref].[Entity] WHERE [id]=@rightEntityId)+'s'
+END
+
+IF (@inLeftFieldCaption IS NULL)
+BEGIN
+	SET @inLeftFieldCaption = @inLeftFieldName
+END
+
+IF (@inRightFieldCaption IS NULL)
+BEGIN
+	SET @inRightFieldCaption = @inRightFieldName
+END
+
+
+IF (@leftFieldName IS NULL)
+BEGIN
+	SET @leftFieldName = N'id'+(SELECT name FROM [ref].[Entity] WHERE [id]=@leftEntityId)
+END
+
+IF (@rightFieldName IS NULL)
+BEGIN
+	SET @rightFieldName = N'id'+(SELECT name FROM [ref].[Entity] WHERE [id]=@rightEntityId)
+END
+
+IF (@leftFieldCaption IS NULL)
+BEGIN
+    IF (@inLeftFieldCaption=@inLeftFieldName)
+    BEGIN
+		SET @leftFieldCaption = @leftFieldName
+	END
+	ELSE
+	BEGIN
+		SET @leftFieldCaption = SUBSTRING(@inLeftFieldCaption,0,LEN(@inLeftFieldCaption))
+	END
+END
+
+IF (@rightFieldCaption IS NULL)
+BEGIN
+    IF (@inRightFieldCaption=@inRightFieldName)
+    BEGIN
+		SET @rightFieldCaption = @rightFieldName
+	END
+	ELSE
+	BEGIN
+		SET @rightFieldCaption = SUBSTRING(@inRightFieldCaption,0,LEN(@inRightFieldCaption))
+	END
+
+
+END
+
+
+
+BEGIN TRAN T1;
+BEGIN TRY
+
+
+
+INSERT INTO [ref].[Entity]
+           ([Name]
+           ,[Caption]
+           ,[idEntityType]
+           ,[idProject]
+           ,[isVersioning]
+           ,[GenerateEntityClass]
+           ,[idEntityGroup]
+           ,[AllowLinks])
+     VALUES
+           (@multilinkName
+           ,@multilinkCaption
+           ,5
+           ,@idProject
+           ,@isVersioning
+           ,@GenerateEntityClass
+           ,@idEntityGroup
+           ,1)
+
+DECLARE @multilinkEntityId   int
+SET @multilinkEntityId = (SELECT SCOPE_IDENTITY() )       
+           
+           
+INSERT INTO [ref].[EntityField]
+           ([Name]
+           ,[Caption]
+           ,[idEntity]
+           ,[idEntityFieldType]
+           ,[idEntityLink]
+           ,[idForeignKeyType]
+           ,[AllowNull]
+           ,[isCaption]
+           ,[isDescription]
+           ,[ReadOnly]
+           ,[isHidden]
+           )
+     VALUES
+           (@leftFieldName
+           ,@leftFieldCaption
+           ,@multilinkEntityId
+           ,7
+           ,@leftEntityId
+           ,3
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           )
+
+INSERT INTO [ref].[EntityField]
+           ([Name]
+           ,[Caption]
+           ,[idEntity]
+           ,[idEntityFieldType]
+           ,[idEntityLink]
+           ,[idForeignKeyType]
+           ,[AllowNull]
+           ,[isCaption]
+           ,[isDescription]
+           ,[ReadOnly]
+           ,[isHidden]
+           )
+     VALUES
+           (@rightFieldName
+           ,@rightFieldCaption
+           ,@multilinkEntityId
+           ,7
+           ,@rightEntityId
+           ,3
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           )
+
+IF (@inLeftFieldName IS NOT NULL)
+BEGIN
+	INSERT INTO [ref].[EntityField]
+           ([Name]
+           ,[Caption]
+           ,[idEntity]
+           ,[idEntityFieldType]
+           ,[idEntityLink]
+           ,[AllowNull]
+           ,[isCaption]
+           ,[isDescription]
+           ,[ReadOnly]
+           ,[isHidden]
+           )
+		VALUES
+           (@inLeftFieldName
+           ,@inLeftFieldCaption
+           ,@leftEntityId
+           ,8
+           ,@multilinkEntityId
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           )
+
+END
+
+IF (@inRightFieldName IS NOT NULL)
+BEGIN
+	INSERT INTO [ref].[EntityField]
+           ([Name]
+           ,[Caption]
+           ,[idEntity]
+           ,[idEntityFieldType]
+           ,[idEntityLink]
+           ,[AllowNull]
+           ,[isCaption]
+           ,[isDescription]
+           ,[ReadOnly]
+           ,[isHidden]
+           )
+		VALUES
+           (@inRightFieldName
+           ,@inRightFieldCaption
+           ,@rightEntityId
+           ,8
+           ,@multilinkEntityId
+           ,0
+           ,0
+           ,0
+           ,0
+           ,0
+           )
+
+END
+
+COMMIT TRAN T1;
+END TRY
+BEGIN CATCH
+    -- Execute the error retrieval routine.
+    ROLLBACK TRAN T1
+	DECLARE @ErrorMessage NVARCHAR(4000);
+    DECLARE @ErrorSeverity INT;
+    DECLARE @ErrorState INT;
+
+    SELECT 
+        @ErrorMessage = ERROR_MESSAGE(),
+        @ErrorSeverity = ERROR_SEVERITY(),
+        @ErrorState = ERROR_STATE();
+
+    -- Use RAISERROR inside the CATCH block to return error
+    -- information about the original error that caused
+    -- execution to jump to the CATCH block.
+    RAISERROR (@ErrorMessage, -- Message text.
+               @ErrorSeverity, -- Severity.
+               @ErrorState -- State.
+               );
+END CATCH;
+
+END </CreateCommand>
+    <idProgrammabilityType>1</idProgrammabilityType>
+    <Order></Order>
+    <idProject>400</idProject>
+    <isDisabled>false</isDisabled>
+  </ref.Programmability>
+</NewDataSet>

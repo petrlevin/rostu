@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ml.OrganizationRightExtension_Target" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ml.OrganizationRightExtension_Target">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OrganizationRightExtension" type="xs:int" />
+                <xs:element name="Entity" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ml.OrganizationRightExtension_Target" />
+        <xs:field xpath="OrganizationRightExtension" />
+        <xs:field xpath="Entity" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ml.OrganizationRightExtension_Target>
+    <OrganizationRightExtension>-1879048164</OrganizationRightExtension>
+    <Entity>-1543503802</Entity>
+  </ml.OrganizationRightExtension_Target>
+  <ml.OrganizationRightExtension_Target>
+    <OrganizationRightExtension>-1744830438</OrganizationRightExtension>
+    <Entity>-1744830429</Entity>
+  </ml.OrganizationRightExtension_Target>
+  <ml.OrganizationRightExtension_Target>
+    <OrganizationRightExtension>-1744830435</OrganizationRightExtension>
+    <Entity>-1543503797</Entity>
+  </ml.OrganizationRightExtension_Target>
+  <ml.OrganizationRightExtension_Target>
+    <OrganizationRightExtension>-1744830434</OrganizationRightExtension>
+    <Entity>-1543503815</Entity>
+  </ml.OrganizationRightExtension_Target>
+  <ml.OrganizationRightExtension_Target>
+    <OrganizationRightExtension>-1744830433</OrganizationRightExtension>
+    <Entity>-1543503791</Entity>
+  </ml.OrganizationRightExtension_Target>
+  <ml.OrganizationRightExtension_Target>
+    <OrganizationRightExtension>-1744830431</OrganizationRightExtension>
+    <Entity>-1543503815</Entity>
+  </ml.OrganizationRightExtension_Target>
+  <ml.OrganizationRightExtension_Target>
+    <OrganizationRightExtension>-1744830430</OrganizationRightExtension>
+    <Entity>-1543503791</Entity>
+  </ml.OrganizationRightExtension_Target>
+</NewDataSet>

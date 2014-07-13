@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDC95238-B112-4ACD-8623-A2E27880FAE4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BgTasks.Core</RootNamespace>
+    <AssemblyName>BgTasks.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BaseApp">
+      <HintPath>..\Platform.Web\bin\BaseApp.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseApp.Common">
+      <HintPath>..\BaseApp.Common\obj\Debug\BaseApp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseApp.Environment">
+      <HintPath>..\BaseApp.Environment\obj\Debug\BaseApp.Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Application">
+      <HintPath>..\Platform.Web\bin\Platform.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.BusinessLogic">
+      <HintPath>..\Platform.BusinessLogic\obj\Debug\Platform.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.ClientInteraction">
+      <HintPath>..\Platform.Web\bin\Platform.ClientInteraction.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Environment">
+      <HintPath>..\Platform.Environment\obj\Debug\Platform.Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.PrimaryEntities">
+      <HintPath>..\Platform.Web\bin\Platform.PrimaryEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.PrimaryEntities.Common">
+      <HintPath>..\Platform.Web\bin\Platform.PrimaryEntities.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Unity">
+      <HintPath>..\Platform.Unity\obj\Debug\Platform.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Unity.Common">
+      <HintPath>..\Platform.Unity.Comon\obj\Debug\Platform.Unity.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sbor">
+      <HintPath>..\Platform.Web\bin\Sbor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sbor.Reports">
+      <HintPath>..\Platform.Web\bin\Sbor.Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tests">
+      <HintPath>..\Tests\obj\Debug\Tests.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy.cs" />
+    <Compile Include="SimpleEnvironment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApp.Service\BaseApp.Service.csproj">
+      <Project>{ab8a9281-52ff-4b24-b7d8-e9dfb49f2361}</Project>
+      <Name>BaseApp.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Cache\Platform.Caching.csproj">
+      <Project>{80d876d7-3f43-48e8-8250-225ec2f1e944}</Project>
+      <Name>Platform.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Caching.Common\Platform.Caching.Common.csproj">
+      <Project>{64488b5d-2951-402e-aabf-52a478ee51ed}</Project>
+      <Name>Platform.Caching.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

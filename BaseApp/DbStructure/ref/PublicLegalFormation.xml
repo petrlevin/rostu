@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.PublicLegalFormation" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.PublicLegalFormation">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idParent" type="xs:int" minOccurs="0" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idBudgetLevel" type="xs:int" />
+                <xs:element name="idAccessGroup" type="xs:int" />
+                <xs:element name="Subject" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idMethodofFormingCode_GoalSetting" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="idMethodofFormingCode_TargetIndicator" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="idMethodofFormingCode_Activity" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+                <xs:element name="UsedGMZ" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.PublicLegalFormation" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.PublicLegalFormation>
+    <id>-1879048163</id>
+    <Caption>ППО 71</Caption>
+    <idBudgetLevel>-1879048162</idBudgetLevel>
+    <idAccessGroup>-1543503849</idAccessGroup>
+    <Subject>71</Subject>
+    <idMethodofFormingCode_GoalSetting>1</idMethodofFormingCode_GoalSetting>
+    <idMethodofFormingCode_TargetIndicator>1</idMethodofFormingCode_TargetIndicator>
+    <idMethodofFormingCode_Activity>1</idMethodofFormingCode_Activity>
+    <idRefStatus>1</idRefStatus>
+  </ref.PublicLegalFormation>
+  <ref.PublicLegalFormation>
+    <id>-1744830437</id>
+    <Caption>ЙЦУКЕН</Caption>
+    <idBudgetLevel>-1879048164</idBudgetLevel>
+    <idAccessGroup>-1543503849</idAccessGroup>
+    <Subject></Subject>
+    <idMethodofFormingCode_GoalSetting>1</idMethodofFormingCode_GoalSetting>
+    <idMethodofFormingCode_TargetIndicator>1</idMethodofFormingCode_TargetIndicator>
+    <idMethodofFormingCode_Activity>1</idMethodofFormingCode_Activity>
+    <idRefStatus>2</idRefStatus>
+    <UsedGMZ>true</UsedGMZ>
+  </ref.PublicLegalFormation>
+  <ref.PublicLegalFormation>
+    <id>1</id>
+    <Caption>ППО по-умолчанию</Caption>
+    <idBudgetLevel>-1879048162</idBudgetLevel>
+    <idAccessGroup>-1543503849</idAccessGroup>
+    <Subject></Subject>
+    <idMethodofFormingCode_GoalSetting>1</idMethodofFormingCode_GoalSetting>
+    <idMethodofFormingCode_TargetIndicator>1</idMethodofFormingCode_TargetIndicator>
+    <idMethodofFormingCode_Activity>1</idMethodofFormingCode_Activity>
+    <idRefStatus>2</idRefStatus>
+    <UsedGMZ>true</UsedGMZ>
+  </ref.PublicLegalFormation>
+</NewDataSet>

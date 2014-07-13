@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9f268ec2-50cc-4883-a4bb-6be1b0378ddd"
+  name="Common"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ce687d90-ed01-4bfa-af08-43e83d0d6409"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPlatform.BusinessLogic.Common"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e0685d1c-43c4-4330-9b33-a45a46e76c8f"
+        LastKnownName="Enums"
+        LastKnownLocation="Package5_1357.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b93ca6d7-7685-4ab5-99f9-65dd3033c901"
+        LastKnownName="Interfaces"
+        LastKnownLocation="Package16_1357.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

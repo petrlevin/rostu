@@ -1,0 +1,1672 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>7zSharp</name>
+    </assembly>
+    <members>
+        <member name="T:SevenZSharp.Decoders.DelegationDecoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.CompressionDecoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.ICompressionDecoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.ICompressionMethod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.ICompressionDecoder.DecodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            Decodes a single file. <paramref name="inStream"/> is the
+            encoded file which will be decoded into <paramref name="outStream"/>.
+            If <paramref name="outStream"/> does not exist, it will be created.
+            </summary>
+            <param name="inStream">The in stream.</param>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="M:SevenZSharp.ICompressionDecoder.DecodeSingleFile(System.String,System.String)">
+            <summary>
+            Decodes a single file. <paramref name="inFile"/> is the
+            path of the encoded file which will be decoded into <paramref name="outFile"/>.
+            If <paramref name="outFile"/> does not exist, it will be created.
+            </summary>
+            <param name="inFile">The in file.</param>
+            <param name="outFile">The out file.</param>
+        </member>
+        <member name="M:SevenZSharp.ICompressionDecoder.DecodeIntoDirectory(System.String,System.String)">
+            <summary>
+            Recursively decodes the compressed file in <paramref name="inFile"/>
+            into the output directory specified by <paramref name="outDirectory"/>.
+            If <paramref name="outDirectory"/> does not exist, it will be created.
+            
+            Supports: 7z (.7z), ZIP (.zip), GZIP (.gz), BZIP2 (.bz2) and TAR (.tar),
+            RAR (.rar), CAB (.cab), ISO (.iso), ARJ (.arj), LZH (.lzh), CHM (.chm),
+            Z (.Z), CPIO (.cpio), RPM (.rpm), DEB (.deb), NSIS (.nsis)
+            </summary>
+            <param name="inFile">The in file.</param>
+            <param name="outDirectory">The out directory.</param>
+        </member>
+        <member name="M:SevenZSharp.CompressionDecoder.DecodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            Decodes a single file. <paramref name="inStream"/> is the
+            encoded file which will be decoded into <paramref name="outStream"/>.
+            If <paramref name="outStream"/> does not exist, it will be created.
+            </summary>
+            <param name="inStream">The in stream.</param>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="M:SevenZSharp.CompressionDecoder.DecodeSingleFile(System.String,System.String)">
+            <summary>
+            Decodes a single file. <paramref name="inFile"/> is the
+            path of the encoded file which will be decoded into <paramref name="outFile"/>.
+            If <paramref name="outFile"/> does not exist, it will be created.
+            </summary>
+            <param name="inFile">The in file.</param>
+            <param name="outFile">The out file.</param>
+        </member>
+        <member name="M:SevenZSharp.CompressionDecoder.DecodeIntoDirectory(System.String,System.String)">
+            <summary>
+            Recursively decodes the compressed file in <paramref name="inFile"/>
+            into the output directory specified by <paramref name="outDirectory"/>.
+            If <paramref name="outDirectory"/> does not exist, it will be created.
+            </summary>
+            <param name="inFile">The in file.</param>
+            <param name="outDirectory">The out directory.</param>
+        </member>
+        <member name="T:SevenZSharp.Engines.IDelegationMethod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SevenZSharp.Engines.IDelegationMethod.Engines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Decoders.DelegationDecoder.#ctor(System.Collections.Generic.Dictionary{SevenZSharp.CompressionFormat,SevenZSharp.ICompressionEngine})">
+            <summary>
+            
+            </summary>
+            <param name="engines"></param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.DelegationDecoder.DecodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            
+            </summary>
+            <param name="inStream"></param>
+            <param name="outStream"></param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.DelegationDecoder.DecodeIntoDirectory(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inFile"></param>
+            <param name="outDirectory"></param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.DelegationDecoder.DecodeSingleFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inFile"></param>
+            <param name="outFile"></param>
+        </member>
+        <member name="P:SevenZSharp.Decoders.DelegationDecoder.Engines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.Encoders.DelegationEncoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.CompressionEncoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.ICompressionEncoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.ICompressionEncoder.EncodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            Encodes a single file. <paramref name="inStream"/> is the non-encoded
+            file which will be encoded and placed into <paramref name="outStream"/>.
+            If <paramref name="outStream"/> does not exist, it will be created.
+            </summary>
+            <param name="inStream">The in stream.</param>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="M:SevenZSharp.ICompressionEncoder.EncodeSingleFile(System.String,System.String)">
+            <summary>
+            Encodes a single file. <paramref name="inFile"/> is the path to the non-encoded
+            file which will be encoded and placed into <paramref name="outFile"/>.
+            If <paramref name="outFile"/> does not exist, it will be created.
+            </summary>
+            <param name="inFile">The in file.</param>
+            <param name="outFile">The out file.</param>
+        </member>
+        <member name="M:SevenZSharp.ICompressionEncoder.EncodeFromDirectory(System.String,System.String)">
+            <summary>
+            Recursively encodes all files in the specified <paramref name="inDirectory"/> and
+            writes the archive into the specified <paramref name="outFile"/>. If <paramref name="outFile"/>
+            does not exist, it will be created.
+            
+            Supports: 7z (.7z), ZIP (.zip), GZIP (.gz), BZIP2 (.bz2) and TAR (.tar)
+            </summary>
+            <param name="inDirectory">The in directory.</param>
+            <param name="outFile">The out file.</param>
+        </member>
+        <member name="M:SevenZSharp.CompressionEncoder.EncodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            Encodes a single file. <paramref name="inStream"/> is the non-encoded
+            file which will be encoded and placed into <paramref name="outStream"/>.
+            If <paramref name="outStream"/> does not exist, it will be created.
+            </summary>
+            <param name="inStream">The in stream.</param>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="M:SevenZSharp.CompressionEncoder.EncodeSingleFile(System.String,System.String)">
+            <summary>
+            Encodes a single file. <paramref name="inFile"/> is the path to the non-encoded
+            file which will be encoded and placed into <paramref name="outFile"/>.
+            If <paramref name="outFile"/> does not exist, it will be created.
+            </summary>
+            <param name="inFile">The in file.</param>
+            <param name="outFile">The out file.</param>
+        </member>
+        <member name="M:SevenZSharp.CompressionEncoder.EncodeFromDirectory(System.String,System.String)">
+            <summary>
+            Recursively encodes all files in the specified <paramref name="inDirectory"/> and
+            writes the archive into the specified <paramref name="outFile"/>. If <paramref name="outFile"/>
+            does not exist, it will be created.
+            </summary>
+            <param name="inDirectory">The in directory.</param>
+            <param name="outFile">The out file.</param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.DelegationEncoder.#ctor(System.Collections.Generic.Dictionary{SevenZSharp.CompressionFormat,SevenZSharp.ICompressionEngine})">
+            <summary>
+            
+            </summary>
+            <param name="engines"></param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.DelegationEncoder.EncodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            
+            </summary>
+            <param name="inStream"></param>
+            <param name="outStream"></param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.DelegationEncoder.EncodeFromDirectory(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inDirectory"></param>
+            <param name="outFile"></param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.DelegationEncoder.EncodeSingleFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inFile"></param>
+            <param name="outFile"></param>
+        </member>
+        <member name="P:SevenZSharp.Encoders.DelegationEncoder.Engines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.Engines.DelegationEngine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.CompressionEngine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.ICompressionEngine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SevenZSharp.ICompressionEngine.Encoder">
+            <summary>
+            Gets the encoder.
+            </summary>
+            <value>The encoder.</value>
+        </member>
+        <member name="P:SevenZSharp.ICompressionEngine.Decoder">
+            <summary>
+            Gets the decoder.
+            </summary>
+            <value>The decoder.</value>
+        </member>
+        <member name="F:SevenZSharp.CompressionEngine.AssemblyVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.CompressionEngine.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.CompressionEngine.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.CompressionEngine.InferCompressionFormat(System.String)">
+            <summary>
+            Infers the compression format. If the format cannot be inferred,
+            an exception is thrown. The alternative method GetCompressionType
+            does not throw an exception.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZSharp.CompressionEngine.GetCompressionFormat(System.String)">
+            <summary>
+            Infers the compression format. If the format cannot be inferred,
+            null is returned.
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZSharp.CompressionEngine.GetCompressionExtension(SevenZSharp.CompressionFormat)">
+            <summary>
+            Gets the file extension for the specific compression <paramref name="format"/>.
+            The extension does not begin with a period.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZSharp.CompressionEngine.IsSupportedCompressedFile(System.String,SevenZSharp.EncodeAction)">
+            <summary>
+            Determines whether <paramref name="fileName"/> is a compressed file
+            and if this library supports executing the specified actions (as flags) on the file
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="action">The action.</param>
+            <returns>
+            	<c>true</c> if the file is compressed and this library supported the specified encode actions on the file; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:SevenZSharp.CompressionEngine.SetOptions(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sevenZExeLocation"></param>
+        </member>
+        <member name="P:SevenZSharp.CompressionEngine.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SevenZSharp.CompressionEngine.Encoder">
+            <summary>
+            Gets the encoder.
+            </summary>
+            <value>The encoder.</value>
+        </member>
+        <member name="P:SevenZSharp.CompressionEngine.Decoder">
+            <summary>
+            Gets the decoder.
+            </summary>
+            <value>The decoder.</value>
+        </member>
+        <member name="M:SevenZSharp.Engines.DelegationEngine.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Engines.DelegationEngine.#ctor(System.Collections.Generic.Dictionary{SevenZSharp.CompressionFormat,SevenZSharp.ICompressionEngine})">
+            <summary>
+            
+            </summary>
+            <param name="engines"></param>
+        </member>
+        <member name="M:SevenZSharp.Engines.DelegationEngine.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Engines.DelegationEngine.Initialize(System.Collections.Generic.Dictionary{SevenZSharp.CompressionFormat,SevenZSharp.ICompressionEngine})">
+            <summary>
+            
+            </summary>
+            <param name="engines"></param>
+        </member>
+        <member name="T:SevenZSharp.Engines.DelegationMethod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Engines.DelegationMethod.GetCompressionEngine(SevenZSharp.Engines.IDelegationMethod,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZSharp.Engines.DelegationMethod.GetCompressionEngine(SevenZSharp.Engines.IDelegationMethod,SevenZSharp.CompressionFormat)">
+            <summary>
+            
+            </summary>
+            <param name="method"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZSharp.Engines.DelegationMethod.ThrowImpossibleException(SevenZSharp.Engines.IDelegationMethod)">
+            <summary>
+            
+            </summary>
+            <param name="method"></param>
+        </member>
+        <member name="T:SevenZSharp.Exceptions.CompressionException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Exceptions.CompressionException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Exceptions.CompressionException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:SevenZSharp.Exceptions.CompressionException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="M:SevenZSharp.Exceptions.CompressionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:SevenZSharp.CommandLine.ArchiveTypes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.CommandLine.ArchiveTypes.GetArchiveType(SevenZSharp.CompressionFormat)">
+            <summary>
+            Gets the type of the archive (-t parameter).
+            Taken from 7zip\UI\Common\ArchiverInfo.cpp::ReadArchiverInfoList
+            </summary>
+            <param name="format">The format.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SevenZip.CommandLineParser.SwitchType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchType.Simple">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchType.PostMinus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchType.LimitedPostString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchType.UnLimitedPostString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchType.PostChar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZip.CommandLineParser.SwitchForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchForm.IDString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchForm.MaxLen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchForm.MinLen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchForm.Multi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchForm.PostCharSet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchForm.Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.SwitchForm.#ctor(System.String,SevenZip.CommandLineParser.SwitchType,System.Boolean,System.Int32,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.CommandLineParser.SwitchForm"/> class.
+            </summary>
+            <param name="idString">The id string.</param>
+            <param name="type">The type.</param>
+            <param name="multi">if set to <c>true</c> [multi].</param>
+            <param name="minLen">The min len.</param>
+            <param name="maxLen">The max len.</param>
+            <param name="postCharSet">The post char set.</param>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.SwitchForm.#ctor(System.String,SevenZip.CommandLineParser.SwitchType,System.Boolean,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.CommandLineParser.SwitchForm"/> class.
+            </summary>
+            <param name="idString">The id string.</param>
+            <param name="type">The type.</param>
+            <param name="multi">if set to <c>true</c> [multi].</param>
+            <param name="minLen">The min len.</param>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.SwitchForm.#ctor(System.String,SevenZip.CommandLineParser.SwitchType,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.CommandLineParser.SwitchForm"/> class.
+            </summary>
+            <param name="idString">The id string.</param>
+            <param name="type">The type.</param>
+            <param name="multi">if set to <c>true</c> [multi].</param>
+        </member>
+        <member name="T:SevenZip.CommandLineParser.SwitchResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchResult.PostCharIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchResult.PostStrings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchResult.ThereIs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.SwitchResult.WithMinus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.SwitchResult.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.CommandLineParser.SwitchResult"/> class.
+            </summary>
+        </member>
+        <member name="T:SevenZip.CommandLineParser.Parser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.Parser.NonSwitchStrings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.Parser.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.CommandLineParser.Parser"/> class.
+            </summary>
+            <param name="numSwitches">The num switches.</param>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.Parser.ParseString(System.String,SevenZip.CommandLineParser.SwitchForm[])">
+            <summary>
+            Parses the string.
+            </summary>
+            <param name="srcString">The SRC string.</param>
+            <param name="switchForms">The switch forms.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.Parser.ParseStrings(SevenZip.CommandLineParser.SwitchForm[],System.String[])">
+            <summary>
+            Parses the strings.
+            </summary>
+            <param name="switchForms">The switch forms.</param>
+            <param name="commandStrings">The command strings.</param>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.Parser.ParseCommand(SevenZip.CommandLineParser.CommandForm[],System.String,System.String@)">
+            <summary>
+            Parses the command.
+            </summary>
+            <param name="commandForms">The command forms.</param>
+            <param name="commandString">The command string.</param>
+            <param name="postString">The post string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.Parser.ParseSubCharsCommand(System.Int32,SevenZip.CommandLineParser.CommandSubCharsSet[],System.String,System.Collections.ArrayList)">
+            <summary>
+            Parses the sub chars command.
+            </summary>
+            <param name="numForms">The num forms.</param>
+            <param name="forms">The forms.</param>
+            <param name="commandString">The command string.</param>
+            <param name="indices">The indices.</param>
+            <returns></returns>
+        </member>
+        <member name="P:SevenZip.CommandLineParser.Parser.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:SevenZip.CommandLineParser.SwitchResult"/> at the specified index.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:SevenZip.CommandLineParser.CommandForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.CommandForm.IDString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.CommandLineParser.CommandForm.PostStringMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.CommandLineParser.CommandForm.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.CommandLineParser.CommandForm"/> class.
+            </summary>
+            <param name="idString">The id string.</param>
+            <param name="postStringMode">if set to <c>true</c> [post string mode].</param>
+        </member>
+        <member name="T:SevenZip.Buffer.InBuffer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.Buffer.InBuffer.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.Buffer.InBuffer"/> class.
+            </summary>
+            <param name="bufferSize">Size of the buffer.</param>
+        </member>
+        <member name="M:SevenZip.Buffer.InBuffer.Init(System.IO.Stream)">
+            <summary>
+            Inits the specified stream.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:SevenZip.Buffer.InBuffer.ReadBlock">
+            <summary>
+            Reads the block.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Buffer.InBuffer.ReleaseStream">
+            <summary>
+            Releases the stream.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Buffer.InBuffer.ReadByte(System.Byte)">
+            <summary>
+            Reads the byte.
+            </summary>
+            <param name="b">The b.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Buffer.InBuffer.ReadByte">
+            <summary>
+            Reads the byte.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Buffer.InBuffer.GetProcessedSize">
+            <summary>
+            Gets the processed size.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SevenZip.Buffer.OutBuffer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.Buffer.OutBuffer"/> class.
+            </summary>
+            <param name="bufferSize">Size of the buffer.</param>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.SetStream(System.IO.Stream)">
+            <summary>
+            Sets the stream.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.FlushStream">
+            <summary>
+            Flushes the stream.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.CloseStream">
+            <summary>
+            Closes the stream.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.ReleaseStream">
+            <summary>
+            Releases the stream.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.Init">
+            <summary>
+            Inits this instance.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.WriteByte(System.Byte)">
+            <summary>
+            Writes the byte.
+            </summary>
+            <param name="b">The b.</param>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.FlushData">
+            <summary>
+            Flushes the data.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Buffer.OutBuffer.GetProcessedSize">
+            <summary>
+            Gets the processed size.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SevenZSharp.EncodeAction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.EncodeAction.Encode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.EncodeAction.Decode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.CompressionFormat">
+            <summary>
+            Well-known compression extension (e.g. 7z, ZIP, RAR, etc.)
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Unknown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.SevenZ">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Zip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Cab">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Rar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Arj">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Lzh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Chm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Gzip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Bzip2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Z">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Tar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Cpio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Rpm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Deb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Split">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Iso">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZSharp.CompressionFormat.Nsis">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZip.LzmaBench">
+            <summary>
+            LZMA Benchmark
+            </summary>
+        </member>
+        <member name="T:SevenZip.ICodeProgress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.ICodeProgress.SetProgress(System.Int64,System.Int64)">
+            <summary>
+            Callback progress.
+            </summary>
+            <param name="inSize">
+            input size. -1 if unknown.
+            </param>
+            <param name="outSize">
+            output size. -1 if unknown.
+            </param>
+        </member>
+        <member name="T:SevenZip.Compression.LZMA.Decoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZip.ICoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.ICoder.Code(System.IO.Stream,System.IO.Stream,System.Int64,System.Int64,SevenZip.ICodeProgress)">
+            <summary>
+            Codes streams.
+            </summary>
+            <param name="inStream">
+            input Stream.
+            </param>
+            <param name="outStream">
+            output Stream.
+            </param>
+            <param name="inSize">
+            input Size. -1 if unknown.
+            </param>
+            <param name="outSize">
+            output Size. -1 if unknown.
+            </param>
+            <param name="progress">
+            callback progress reference.
+            </param>
+            <exception cref="T:SevenZip.DataErrorException">
+            if input stream is not valid
+            </exception>
+        </member>
+        <member name="T:SevenZip.ISetDecoderProperties">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.ISetDecoderProperties.SetDecoderProperties(System.Byte[])">
+            <summary>
+            Sets the decoder properties.
+            </summary>
+            <param name="properties">The properties.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZMA.Decoder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.Compression.LZMA.Decoder"/> class.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZMA.Decoder.Code(System.IO.Stream,System.IO.Stream,System.Int64,System.Int64,SevenZip.ICodeProgress)">
+            <summary>
+            Codes streams.
+            </summary>
+            <param name="inStream">input Stream.</param>
+            <param name="outStream">output Stream.</param>
+            <param name="inSize">input Size. -1 if unknown.</param>
+            <param name="outSize">output Size. -1 if unknown.</param>
+            <param name="progress">callback progress reference.</param>
+            <exception cref="T:SevenZip.DataErrorException">
+            if input stream is not valid
+            </exception>
+        </member>
+        <member name="M:SevenZip.Compression.LZMA.Decoder.SetDecoderProperties(System.Byte[])">
+            <summary>
+            Sets the decoder properties.
+            </summary>
+            <param name="properties">The properties.</param>
+        </member>
+        <member name="T:SevenZip.Compression.LZMA.Encoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZip.ISetCoderProperties">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.ISetCoderProperties.SetCoderProperties(SevenZip.CoderPropID[],System.Object[])">
+            <summary>
+            Sets the coder properties.
+            </summary>
+            <param name="propIDs">The prop I ds.</param>
+            <param name="properties">The properties.</param>
+        </member>
+        <member name="T:SevenZip.IWriteCoderProperties">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.IWriteCoderProperties.WriteCoderProperties(System.IO.Stream)">
+            <summary>
+            Writes the coder properties.
+            </summary>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZMA.Encoder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZip.Compression.LZMA.Encoder"/> class.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZMA.Encoder.Code(System.IO.Stream,System.IO.Stream,System.Int64,System.Int64,SevenZip.ICodeProgress)">
+            <summary>
+            Codes streams.
+            </summary>
+            <param name="inStream">input Stream.</param>
+            <param name="outStream">output Stream.</param>
+            <param name="inSize">input Size. -1 if unknown.</param>
+            <param name="outSize">output Size. -1 if unknown.</param>
+            <param name="progress">callback progress reference.</param>
+            <exception cref="T:SevenZip.DataErrorException">
+            if input stream is not valid
+            </exception>
+        </member>
+        <member name="M:SevenZip.Compression.LZMA.Encoder.SetCoderProperties(SevenZip.CoderPropID[],System.Object[])">
+            <summary>
+            Sets the coder properties.
+            </summary>
+            <param name="propIDs">The prop I ds.</param>
+            <param name="properties">The properties.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZMA.Encoder.WriteCoderProperties(System.IO.Stream)">
+            <summary>
+            Writes the coder properties.
+            </summary>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZMA.Encoder.CodeOneBlock(System.Int64@,System.Int64@,System.Boolean@)">
+            <summary>
+            Codes the one block.
+            </summary>
+            <param name="inSize">Size of the in.</param>
+            <param name="outSize">Size of the out.</param>
+            <param name="finished">if set to <c>true</c> [finished].</param>
+        </member>
+        <member name="T:SevenZip.Compression.LZ.BinTree">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZip.Compression.LZ.InWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.Compression.LZ.InWindow._blockSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.Compression.LZ.InWindow._bufferBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.Compression.LZ.InWindow._bufferOffset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.Compression.LZ.InWindow._pos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SevenZip.Compression.LZ.InWindow._streamPos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.MoveBlock">
+            <summary>
+            Moves the block.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.ReadBlock">
+            <summary>
+            Reads the block.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.Create(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Creates the specified keep size before.
+            </summary>
+            <param name="keepSizeBefore">The keep size before.</param>
+            <param name="keepSizeAfter">The keep size after.</param>
+            <param name="keepSizeReserv">The keep size reserv.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.SetStream(System.IO.Stream)">
+            <summary>
+            Sets the stream.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.ReleaseStream">
+            <summary>
+            Releases the stream.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.Init">
+            <summary>
+            Inits this instance.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.MovePos">
+            <summary>
+            Moves the pos.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.GetIndexByte(System.Int32)">
+            <summary>
+            Gets the index byte.
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.GetMatchLen(System.Int32,System.UInt32,System.UInt32)">
+            <summary>
+            Gets the match len.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="distance">The distance.</param>
+            <param name="limit">The limit.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.GetNumAvailableBytes">
+            <summary>
+            Gets the num available bytes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.InWindow.ReduceOffsets(System.Int32)">
+            <summary>
+            Reduces the offsets.
+            </summary>
+            <param name="subValue">The sub value.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.SetStream(System.IO.Stream)">
+            <summary>
+            Sets the stream.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.ReleaseStream">
+            <summary>
+            Releases the stream.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.Init">
+            <summary>
+            Inits this instance.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.GetIndexByte(System.Int32)">
+            <summary>
+            Gets the index byte.
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.GetMatchLen(System.Int32,System.UInt32,System.UInt32)">
+            <summary>
+            Gets the match len.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="distance">The distance.</param>
+            <param name="limit">The limit.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.GetNumAvailableBytes">
+            <summary>
+            Gets the num available bytes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.Create(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Creates the specified history size.
+            </summary>
+            <param name="historySize">Size of the history.</param>
+            <param name="keepAddBufferBefore">The keep add buffer before.</param>
+            <param name="matchMaxLen">The match max len.</param>
+            <param name="keepAddBufferAfter">The keep add buffer after.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.GetMatches(System.UInt32[])">
+            <summary>
+            Gets the matches.
+            </summary>
+            <param name="distances">The distances.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.Skip(System.UInt32)">
+            <summary>
+            Skips the specified num.
+            </summary>
+            <param name="num">The num.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.SetType(System.Int32)">
+            <summary>
+            Sets the type.
+            </summary>
+            <param name="numHashBytes">The num hash bytes.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.MovePos">
+            <summary>
+            Moves the pos.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.BinTree.SetCutValue(System.UInt32)">
+            <summary>
+            Sets the cut value.
+            </summary>
+            <param name="cutValue">The cut value.</param>
+        </member>
+        <member name="T:SevenZip.Compression.LZ.OutWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.OutWindow.Create(System.UInt32)">
+            <summary>
+            Creates the specified window size.
+            </summary>
+            <param name="windowSize">Size of the window.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.OutWindow.Init(System.IO.Stream,System.Boolean)">
+            <summary>
+            Inits the specified stream.
+            </summary>
+            <param name="stream">The stream.</param>
+            <param name="solid">if set to <c>true</c> [solid].</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.OutWindow.Init(System.IO.Stream)">
+            <summary>
+            Inits the specified stream.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.OutWindow.ReleaseStream">
+            <summary>
+            Releases the stream.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.OutWindow.Flush">
+            <summary>
+            Flushes this instance.
+            </summary>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.OutWindow.CopyBlock(System.UInt32,System.UInt32)">
+            <summary>
+            Copies the block.
+            </summary>
+            <param name="distance">The distance.</param>
+            <param name="len">The len.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.OutWindow.PutByte(System.Byte)">
+            <summary>
+            Puts the byte.
+            </summary>
+            <param name="b">The b.</param>
+        </member>
+        <member name="M:SevenZip.Compression.LZ.OutWindow.GetByte(System.UInt32)">
+            <summary>
+            Gets the byte.
+            </summary>
+            <param name="distance">The distance.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SevenZip.DataErrorException">
+            <summary>
+            The exception that is thrown when an error in input stream occurs during decoding.
+            </summary>
+        </member>
+        <member name="T:SevenZip.InvalidParamException">
+            <summary>
+            The exception that is thrown when the value of an argument is outside the allowable range.
+            </summary>
+        </member>
+        <member name="T:SevenZip.CoderPropID">
+            <summary>
+            Provides the fields that represent properties idenitifiers for compressing.
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.DictionarySize">
+            <summary>
+            Specifies size of dictionary.
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.UsedMemorySize">
+            <summary>
+            Specifies size of memory for PPM*.
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.Order">
+            <summary>
+            Specifies order for PPM methods.
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.PosStateBits">
+            <summary>
+            Specifies number of postion state bits for LZMA (0 &lt;= x &lt;= 4).
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.LitContextBits">
+            <summary>
+            Specifies number of literal context bits for LZMA (0 &lt;= x &lt;= 8).
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.LitPosBits">
+            <summary>
+            Specifies number of literal position bits for LZMA (0 &lt;= x &lt;= 4).
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.NumFastBytes">
+            <summary>
+            Specifies number of fast bytes for LZ*.
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.MatchFinder">
+            <summary>
+            Specifies match finder. LZMA: "BT2", "BT4" or "BT4B".
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.NumPasses">
+            <summary>
+            Specifies number of passes.
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.Algorithm">
+            <summary>
+            Specifies number of algorithm.
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.MultiThread">
+            <summary>
+            Specifies multithread mode.
+            </summary>
+        </member>
+        <member name="F:SevenZip.CoderPropID.EndMarker">
+            <summary>
+            Specifies mode with end marker.
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.Engines.LzmaEngine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.Engines.ShellEngine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Engines.ShellEngine.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Engines.ShellEngine.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Engines.ShellEngine.GetShellProcess">
+            <summary>
+            Gets the shell process.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZSharp.Engines.ShellEngine.GetDecodeShellProcess(System.String,System.String)">
+            <summary>
+            Gets the extract shell process.
+            </summary>
+            <param name="fileToExtract">The file to extract.</param>
+            <param name="destinationDir">The destination dir.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SevenZSharp.Engines.ShellEngine.GetEncodeShellProcess(System.String,System.String[])">
+            <summary>
+            Gets the encode shell process.
+            </summary>
+            <param name="destinationFile">The destination file.</param>
+            <param name="filesOrDirectoriesToAdd">The files or directories to add.</param>
+            <returns></returns>
+        </member>
+        <member name="P:SevenZSharp.Engines.ShellEngine.DefaultSevenZLocation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SevenZSharp.Engines.ShellEngine.SevenZLocation">
+            <summary>
+            Gets or sets the location of the 7z executable.
+            </summary>
+            <value>The seven7 location.</value>
+        </member>
+        <member name="M:SevenZSharp.Engines.LzmaEngine.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Engines.LzmaEngine.PrepareEncoder(SevenZip.CoderPropID[]@,System.Object[]@)">
+            <summary>
+            Prepares the encoder.
+            </summary>
+            <param name="propIDs">The prop I ds.</param>
+            <param name="properties">The properties.</param>
+        </member>
+        <member name="T:SevenZSharp.Decoders.LzmaDecoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.Decoders.ShellDecoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Decoders.ShellDecoder.#ctor(SevenZSharp.Engines.ShellEngine)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZSharp.Decoders.ShellDecoder"/> class.
+            </summary>
+            <param name="engine">The engine.</param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.ShellDecoder.DecodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            Decodes a single file. <paramref name="inStream"/> is the
+            encoded file which will be decoded into <paramref name="outStream"/>.
+            If <paramref name="outStream"/> does not exist, it will be created.
+            </summary>
+            <param name="inStream">The in stream.</param>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.ShellDecoder.DecodeSingleFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inFile"></param>
+            <param name="outFile"></param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.ShellDecoder.DecodeIntoDirectory(System.String,System.String)">
+            <summary>
+            Recursively decodes the compressed file in <paramref name="inFile"/>
+            into the output directory specified by <paramref name="outDirectory"/>.
+            If <paramref name="outDirectory"/> does not exist, it will be created.
+            </summary>
+            <param name="inFile">The in file.</param>
+            <param name="outDirectory">The out directory.</param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.LzmaDecoder.#ctor(SevenZSharp.Engines.ShellEngine)">
+            <summary>
+            
+            </summary>
+            <param name="engine"></param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.LzmaDecoder.DecodeSingleFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inFile"></param>
+            <param name="outFile"></param>
+        </member>
+        <member name="M:SevenZSharp.Decoders.LzmaDecoder.DecodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            Decodes a single file. <paramref name="inStream"/> is the
+            encoded file which will be decoded into <paramref name="outStream"/>.
+            If <paramref name="outStream"/> does not exist, it will be created.
+            </summary>
+            <param name="inStream">The in stream.</param>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="T:SevenZSharp.Encoders.LzmaEncoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SevenZSharp.Encoders.ShellEncoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SevenZSharp.Encoders.ShellEncoder.#ctor(SevenZSharp.Engines.ShellEngine)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SevenZSharp.Encoders.ShellEncoder"/> class.
+            </summary>
+            <param name="engine">The engine.</param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.ShellEncoder.EncodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            Encodes a single file. <paramref name="inStream"/> is the non-encoded
+            file which will be encoded and placed into <paramref name="outStream"/>.
+            If <paramref name="outStream"/> does not exist, it will be created.
+            </summary>
+            <param name="inStream">The in stream.</param>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.ShellEncoder.EncodeSingleFile(System.String,System.String)">
+            <summary>
+            Encodes a single file. <paramref name="inFile"/> is the path to the non-encoded
+            file which will be encoded and placed into <paramref name="outFile"/>.
+            If <paramref name="outFile"/> does not exist, it will be created.
+            </summary>
+            <param name="inFile">The in file.</param>
+            <param name="outFile">The out file.</param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.ShellEncoder.EncodeFromDirectory(System.String,System.String)">
+            <summary>
+            Recursively encodes all files in the specified <paramref name="inDirectory"/> and
+            writes the archive into the specified <paramref name="outFile"/>. If <paramref name="outFile"/>
+            does not exist, it will be created.
+            </summary>
+            <param name="inDirectory">The in directory.</param>
+            <param name="outFile">The out file.</param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.LzmaEncoder.#ctor(SevenZSharp.Engines.ShellEngine)">
+            <summary>
+            
+            </summary>
+            <param name="engine"></param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.LzmaEncoder.EncodeSingleFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inFile"></param>
+            <param name="outFile"></param>
+        </member>
+        <member name="M:SevenZSharp.Encoders.LzmaEncoder.EncodeSingleFile(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            Encodes a single file. <paramref name="inStream"/> is the non-encoded
+            file which will be encoded and placed into <paramref name="outStream"/>.
+            If <paramref name="outStream"/> does not exist, it will be created.
+            </summary>
+            <param name="inStream">The in stream.</param>
+            <param name="outStream">The out stream.</param>
+        </member>
+        <member name="T:PublicDomain.Copy.ProcessHelper">
+            <summary>
+            Wrapper around the Process class to add some convenience methods but
+            most importantly deal with the complex nature of getting both
+            StandardOutput and StandardError streams concurrently (this must be done with
+            callbacks). See http://msdn2.microsoft.com/en-us/library/system.diagnostics.process.standarderror.aspx
+            </summary>
+        </member>
+        <member name="F:PublicDomain.Copy.ProcessHelper.DefaultExecuteSmallProcessTimeout">
+            <summary>
+            A reasonable default timeout value, in milliseconds, for a
+            small process to timeout.
+            </summary>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PublicDomain.Copy.ProcessHelper"/> class.
+            </summary>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PublicDomain.Copy.ProcessHelper"/> class.
+            </summary>
+            <param name="sendStreamsToStrings">if set to <c>true</c> [send streams to strings].</param>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.SetArguments(System.String[])">
+            <summary>
+            Sets the arguments.
+            </summary>
+            <param name="args">The args.</param>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.GetMangledArguments(System.String[])">
+            <summary>
+            Gets the mangled arguments.
+            </summary>
+            <param name="args">The args.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.AddArguments(System.String[])">
+            <summary>
+            Adds the arguments.
+            </summary>
+            <param name="args">The args.</param>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.process_OutputDataReceived(System.Object,System.Diagnostics.DataReceivedEventArgs)">
+            <summary>
+            Handles the OutputDataReceived event of the process control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Diagnostics.DataReceivedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.process_ErrorDataReceived(System.Object,System.Diagnostics.DataReceivedEventArgs)">
+            <summary>
+            Handles the ErrorDataReceived event of the process control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Diagnostics.DataReceivedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.Start(System.Boolean)">
+            <summary>
+            Starts the process, begins asynchronous reads on
+            both standard output and standard error.
+            </summary>
+            <param name="useRedirect">if set to <c>true</c> [use redirect].</param>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.StartAndWaitForExit">
+            <summary>
+            Starts with a timeout of <see cref="F:PublicDomain.Copy.ProcessHelper.DefaultExecuteSmallProcessTimeout"/>
+            milliseconds and does not throw an exception when it sees an error, but returns
+            the standard error and output.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.StartAndWaitForExit(System.Int32)">
+            <summary>
+            Starts the and wait for exit.
+            </summary>
+            <param name="timeoutMs">The timeout ms.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.StartAndWaitForExit(System.Int32,System.Boolean)">
+            <summary>
+            Starts the process, begins asynchronous reads on
+            both standard output and standard error, and
+            waits for the process to exit. The return code
+            of the process is returned.
+            </summary>
+            <param name="timeoutMs">The timeout ms.</param>
+            <param name="throwOnError">if set to <c>true</c> [throw on error].</param>
+            <returns>Return code of completed process</returns>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.StartAndWaitForExit(System.Boolean)">
+            <summary>
+            Starts the process, begins asynchronous reads on
+            both standard output and standard error, and
+            waits for the process to exit. The return code
+            of the process is returned.
+            </summary>
+            <param name="throwOnError">if set to <c>true</c> [throw on error].</param>
+            <returns>Return code of completed process</returns>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"></see> that represents the current <see cref="T:System.Object"></see>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"></see> that represents the current <see cref="T:System.Object"></see>.
+            </returns>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.CheckForError">
+            <summary>
+            Checks for error.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PublicDomain.Copy.ProcessHelper.CheckForError(System.Boolean)">
+            <summary>
+            Checks for error.
+            </summary>
+            <param name="throwOnError">if set to <c>true</c> [throw on error].</param>
+            <returns></returns>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+            <value>The name of the file.</value>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.Arguments">
+            <summary>
+            Gets or sets the arguments.
+            </summary>
+            <value>The arguments.</value>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.Process">
+            <summary>
+            Gets or sets the process.
+            </summary>
+            <value>The process.</value>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.StartInfo">
+            <summary>
+            Gets the start info.
+            </summary>
+            <value>The start info.</value>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+            <value>The error.</value>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.Out">
+            <summary>
+            Gets or sets the out.
+            </summary>
+            <value>The out.</value>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.ExitCode">
+            <summary>
+            Gets the exit code.
+            </summary>
+            <value>The exit code.</value>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.StandardOutput">
+            <summary>
+            Gets the standard output.
+            </summary>
+            <value>The standard output.</value>
+        </member>
+        <member name="P:PublicDomain.Copy.ProcessHelper.StandardError">
+            <summary>
+            Gets the standard error.
+            </summary>
+            <value>The standard error.</value>
+        </member>
+    </members>
+</doc>

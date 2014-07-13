@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Entity" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Entity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2147483647" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntityType" type="xs:unsignedByte" />
+                <xs:element name="idProject" type="xs:int" minOccurs="0" />
+                <xs:element name="isSystem" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Order" type="xs:int" minOccurs="0" />
+                <xs:element name="Ordered" type="xs:boolean" minOccurs="0" />
+                <xs:element name="AllowAttachments" type="xs:boolean" minOccurs="0" />
+                <xs:element name="isVersioning" type="xs:boolean" />
+                <xs:element name="GenerateEntityClass" type="xs:boolean" />
+                <xs:element name="idEntityGroup" type="xs:int" minOccurs="0" />
+                <xs:element name="AllowGenericLinks" type="xs:boolean" />
+                <xs:element name="AllowLinks" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Entity" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Entity>
+    <id>-2147483493</id>
+    <Name>User</Name>
+    <Caption>Пользователи</Caption>
+    <Description>Справочник Пользователи</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>70</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2147483492</id>
+    <Name>Role</Name>
+    <Caption>Роли</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>60</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2080374741</id>
+    <Name>License</Name>
+    <Caption>Лицензии</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265881</id>
+    <Name>ResponsiblePerson</Name>
+    <Caption>Ответственные лица</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>30</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048161</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2013265880</id>
+    <Name>Organization</Name>
+    <Caption>Организации</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>10</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048161</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1946157026</id>
+    <Name>PublicLegalFormation</Name>
+    <Caption>Публично-правовые образования</Caption>
+    <Description>Публично-правовые образования</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>10</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1946157025</id>
+    <Name>OKATO</Name>
+    <Caption>ОКАТО</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>60</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048161</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1946157024</id>
+    <Name>OfficialCapacity</Name>
+    <Caption>Должности</Caption>
+    <Description>Справочник содержит перечень должностей</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>20</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048161</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048163</id>
+    <Name>BudgetLevel</Name>
+    <Caption>Уровни бюджета</Caption>
+    <Description>Справочник предназначен для хранения уровней бюджета</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>170</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>true</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048156</id>
+    <Name>PublicLegalFormationModule</Name>
+    <Caption>Модули ППО</Caption>
+    <Description>Справочник содержит список ППО, к каждому из которых указаны модули, доступные этому ППО</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>20</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048154</id>
+    <Name>Budget</Name>
+    <Caption>Бюджеты</Caption>
+    <Description>Справочник хранит бюджеты ППО. Бюджет является системным измерением.</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>40</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939293</id>
+    <Name>testDependantTableFields</Name>
+    <Caption>Тест связанных ТЧ</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1744830437</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939281</id>
+    <Name>TableReport</Name>
+    <Caption>Оперативные отчеты</Caption>
+    <Description>Данная сущность содержит список sql-запросов на выборку данных.</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>190</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>false</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830433</id>
+    <Name>Control_Exceptions</Name>
+    <Caption>Исключения Контролей</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>60</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830298</id>
+    <Name>OrganizationRightExtension</Name>
+    <Caption>Расширение организационных прав</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>125</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830187</id>
+    <Name>XmlExport</Name>
+    <Caption>Экспорт в Xml</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1677721573</id>
+    <Name>Version</Name>
+    <Caption>Версии</Caption>
+    <Description>Справочник хранит версии. Данные справочника являются системным измерением.</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>50</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612497</id>
+    <Name>ListRemovedFields</Name>
+    <Caption>Перечень выводимых полей</Caption>
+    <Description>Справочник предназначен для хранения перечня выводимых полей</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>200</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612493</id>
+    <Name>CopyTemplates</Name>
+    <Caption>Шаблоны копирования</Caption>
+    <Description>Шаблоны копирования</Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503795</id>
+    <Name>Module</Name>
+    <Caption>Модули</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>70</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048163</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1140850671</id>
+    <Name>ProjectSettings</Name>
+    <Caption>Настройки проекта</Caption>
+    <Description></Description>
+    <idEntityType>3</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Order>0</Order>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048141</id>
+    <Name>Role_FunctionalRight</Name>
+    <Caption>ТЧ Функциональные права</Caption>
+    <Description>ТЧ Функциональные права</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048140</id>
+    <Name>Role_DocumentOperation</Name>
+    <Caption>ТЧ Операции документов</Caption>
+    <Description>ТЧ Операции документов</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048138</id>
+    <Name>Role_RefStatus</Name>
+    <Caption>ТЧ Статусы справочников</Caption>
+    <Description>ТЧ Статусы справочников</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1879048136</id>
+    <Name>Role_OrganizationRight</Name>
+    <Caption>ТЧ Организационные права</Caption>
+    <Description>ТЧ Организационные права</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939292</id>
+    <Name>testDependantTableFields_A</Name>
+    <Caption>ТЧ А [ТЧ справочника "Тест связанных ТЧ"]</Caption>
+    <Description>ТЧ справочника "Тест связанных ТЧ"</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1744830437</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1811939291</id>
+    <Name>testDependantTableFields_B</Name>
+    <Caption>ТЧ B [ТЧ справочника "Тест связанных ТЧ"]</Caption>
+    <Description>ТЧ справочника "Тест связанных ТЧ"</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <idEntityGroup>-1744830437</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1207959506</id>
+    <Name>TableReport_ColumnType</Name>
+    <Caption>Типы колонок</Caption>
+    <Description>Возможность в оперативном отчете задать тип для колонок.</Description>
+    <idEntityType>4</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2147483491</id>
+    <Name>UserRole</Name>
+    <Caption>Связь пользователей и ролей</Caption>
+    <Description>Связь пользователей и ролей</Description>
+    <idEntityType>5</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2080374743</id>
+    <Name>PublicLegalFormationModule_Module</Name>
+    <Caption>Включенные в ППО модули</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2080374740</id>
+    <Name>License_User</Name>
+    <Caption>Лицензированные пользователи</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830297</id>
+    <Name>OrganizationRightExtension_Target</Name>
+    <Caption>Связь расширения орг. прав. и сущности (цели)</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830296</id>
+    <Name>OrganizationRightExtension_Result</Name>
+    <Caption>Связь расширения орг. прав. и сущности (результаты)</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612491</id>
+    <Name>CopyTemplatesKeyFieldsEntityField</Name>
+    <Caption>Связь Ключевых полей справочника Шаблоны копирования и Полей сущностей</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1610612490</id>
+    <Name>CopyTemplatesFieldMappingsEntityField</Name>
+    <Caption>Связь Сопоставления полей справочника Шаблоны копирования и Полей сущностей</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>false</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1543503793</id>
+    <Name>Module_Entity</Name>
+    <Caption>Сущности в модуле</Caption>
+    <Description></Description>
+    <idEntityType>5</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <idEntityGroup>-1879048162</idEntityGroup>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-2080374745</id>
+    <Name>ExecutedOperation</Name>
+    <Caption>Выполненные операции</Caption>
+    <Description></Description>
+    <idEntityType>8</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+  <ref.Entity>
+    <id>-1744830435</id>
+    <Name>StartedOperation</Name>
+    <Caption>Начатые операции</Caption>
+    <Description></Description>
+    <idEntityType>8</idEntityType>
+    <idProject>400</idProject>
+    <isSystem>false</isSystem>
+    <Ordered>false</Ordered>
+    <AllowAttachments>false</AllowAttachments>
+    <isVersioning>false</isVersioning>
+    <GenerateEntityClass>true</GenerateEntityClass>
+    <AllowGenericLinks>false</AllowGenericLinks>
+    <AllowLinks>true</AllowLinks>
+  </ref.Entity>
+</NewDataSet>

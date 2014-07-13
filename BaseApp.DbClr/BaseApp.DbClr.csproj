@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5E88742-B13E-4BD1-80AE-E27F6D7DC54D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseApp.DbClr</RootNamespace>
+    <AssemblyName>BaseApp.DbClr</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\BaseApp.DbClr.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutoClient|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AutoClient\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\BaseApp.DbClr.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aggregates\Concatenate .cs" />
+    <Compile Include="Aggregates\ExecuteSql.cs" />
+    <Compile Include="Functions\GetCaptions.cs" />
+    <Compile Include="Functions\GetDescription.cs" />
+    <Compile Include="Functions\GetCaption.cs" />
+    <Compile Include="Functions\GetChildrens.cs" />
+    <Compile Include="Functions\GetDependence.cs" />
+    <Compile Include="Functions\GetDocumentStatus.cs" />
+    <Compile Include="Functions\GetDocumentVersionIds.cs" />
+    <Compile Include="Functions\GetLastVersion.cs" />
+    <Compile Include="Functions\GetParents.cs" />
+    <Compile Include="Functions\MultilinkAsString.cs" />
+    <Compile Include="GetSelectByParam.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Procedures\CascadeDeleteForGenericLinks.cs" />
+    <Compile Include="Procedures\CreateOrAlterCheckCycleHierarchyTrigger.cs" />
+    <Compile Include="Procedures\CreateOrAlterReferencedGenericLinksTrigger.cs" />
+    <Compile Include="Procedures\CreateOrAlterReferencesGenericLinksTrigger.cs" />
+    <Compile Include="Procedures\CreateOrAlterIndex.cs" />
+    <Compile Include="Procedures\CreateOrAlterVersioningTrigger.cs" />
+    <Compile Include="Procedures\CreateOrAlterUserDefineTableType.cs" />
+    <Compile Include="Procedures\ReCreateView.cs" />
+    <Compile Include="Procedures\SetEntityDistributiveData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TriggerActions\Reference\EntityTrigger.cs" />
+    <Compile Include="TriggerActions\Reference\EntityFieldTrigger.cs" />
+    <Compile Include="TriggerActions\Reference\EntityFieldTrigger.SqlTpl.cs" />
+    <Compile Include="TriggerActions\Reference\EntityFieldLogicTrigger.cs" />
+    <Compile Include="TriggerActions\Reference\EntityLogicTrigger.cs" />
+    <Compile Include="TriggerActions\Reference\HierarchicalLinkTrigger.cs" />
+    <Compile Include="TriggerActions\Reference\ProgrammabilityTrigger.cs" />
+    <Compile Include="TriggerActions\Reference\IndexTrigger.cs" />
+    <Compile Include="Triggers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApp.DbClr.Common\BaseApp.DbClr.Common.csproj">
+      <Project>{e3ce9203-ff7f-4705-8603-4293b34e2fe0}</Project>
+      <Name>BaseApp.DbClr.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.DbClr\Platform.DbClr.csproj">
+      <Project>{45b08f9c-cb0d-409e-9c3c-9b367236e4c9}</Project>
+      <Name>Platform.DbClr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.DbCmd\Platform.DbCmd.csproj">
+      <Project>{389f4c8f-6c9e-4822-8dc8-1c78a77caab2}</Project>
+      <Name>Platform.DbCmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9ee403b9-8d79-40f6-96b4-a9f6e6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities\Platform.PrimaryEntities.csproj">
+      <Project>{da11e957-7534-4de0-af6a-60f8d04e9cb6}</Project>
+      <Name>Platform.PrimaryEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TriggerActions\Multilink\" />
+    <Folder Include="TriggerActions\TablePart\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

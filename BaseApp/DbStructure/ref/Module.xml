@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Module" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Module">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Code">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="On" type="xs:boolean" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Module" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Module>
+    <id>-1744830437</id>
+    <Caption>Тестовый модуль</Caption>
+    <Code>1000</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612711</id>
+    <Caption>В разработке</Caption>
+    <Code>RRR</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612710</id>
+    <Caption>Устаревшие сущности</Caption>
+    <Code>ZZZ</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612709</id>
+    <Caption>Базовый модуль</Caption>
+    <Code>001</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612708</id>
+    <Caption>Нормативно-справочная информация базовая</Caption>
+    <Code>002</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612707</id>
+    <Caption>Общие интеграционные механизмы</Caption>
+    <Code>003</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612706</id>
+    <Caption>Нормативно-справочная информация в части ПЦП</Caption>
+    <Code>004</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612705</id>
+    <Caption>Формирование системы целеполагания</Caption>
+    <Code>005</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612704</id>
+    <Caption>Формирование государственных программ</Caption>
+    <Code>006</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612703</id>
+    <Caption>Формирование целевых программ и непрограммной деятельности</Caption>
+    <Code>007</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612702</id>
+    <Caption>Формирование реестра услуг</Caption>
+    <Code>008</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612701</id>
+    <Caption>Нормативно-справочная информация в части формирования планов деятельности / государственных заданий</Caption>
+    <Code>009</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612700</id>
+    <Caption>Отчетные формы к блоку ПЦП</Caption>
+    <Code>010</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612699</id>
+    <Caption>Отчетные формы по государственным программам</Caption>
+    <Code>011</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612698</id>
+    <Caption>Формирование планов деятельности / государственных заданий</Caption>
+    <Code>012</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612697</id>
+    <Caption>Формирование отчетных форм в части формирования планов деятельности / государственных заданий</Caption>
+    <Code>013</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612696</id>
+    <Caption>Формирование предельных объемов бюджетных ассигнований</Caption>
+    <Code>014</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612695</id>
+    <Caption>Формирование смет учреждений</Caption>
+    <Code>015</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612694</id>
+    <Caption>Формирование отчетных форм по планированию расходов</Caption>
+    <Code>016</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612693</id>
+    <Caption>Отчетные формы по межбюджетным трансфертам</Caption>
+    <Code>017</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612692</id>
+    <Caption>Пакетная отчетность, включая шаблоны MS Word</Caption>
+    <Code>018</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612691</id>
+    <Caption>Формирование планов финансово-хозяйственной деятельности учреждений</Caption>
+    <Code>019</Code>
+    <On>true</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612690</id>
+    <Caption>Формирование РРО</Caption>
+    <Code>020</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612689</id>
+    <Caption>Взаимодействие с официальным сайтом РФ для размещения информации об учреждениях bus.gov.ru</Caption>
+    <Code>021</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612688</id>
+    <Caption>Взаимодействие с  АЦК-Финансы</Caption>
+    <Code>022</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612687</id>
+    <Caption>Сбалансированность проекта бюджета</Caption>
+    <Code>023</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612686</id>
+    <Caption>Формирование плана по доходам и источникам финансирования дефицита бюджета</Caption>
+    <Code>024</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612685</id>
+    <Caption>Формирование отчетных форм по доходам и источникам финансирования дефицита бюджета</Caption>
+    <Code>025</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1610612683</id>
+    <Caption>Свод расходов публично-правовых образований</Caption>
+    <Code>026</Code>
+    <On>false</On>
+  </ref.Module>
+  <ref.Module>
+    <id>-1543503849</id>
+    <Caption>Отчетные формы по своду проекта бюджета</Caption>
+    <Code>027</Code>
+    <On>false</On>
+  </ref.Module>
+</NewDataSet>

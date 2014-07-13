@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Role" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Role">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Caption">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="4000" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idAccessGroup" type="xs:int" minOccurs="0" />
+                <xs:element name="idRoleType" type="xs:unsignedByte" />
+                <xs:element name="idRoleKind" type="xs:unsignedByte" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Role" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Role>
+    <id>-1811939300</id>
+    <Caption>OperationAdmin</Caption>
+    <Description>Администратор операций</Description>
+    <idRoleType>0</idRoleType>
+    <idRoleKind>1</idRoleKind>
+  </ref.Role>
+  <ref.Role>
+    <id>-1744830436</id>
+    <Caption>СБП</Caption>
+    <Description>СБП</Description>
+    <idAccessGroup>-1543503849</idAccessGroup>
+    <idRoleType>2</idRoleType>
+    <idRoleKind>1</idRoleKind>
+  </ref.Role>
+  <ref.Role>
+    <id>-1744830434</id>
+    <Caption>Test</Caption>
+    <Description></Description>
+    <idAccessGroup>-1543503849</idAccessGroup>
+    <idRoleType>2</idRoleType>
+    <idRoleKind>2</idRoleKind>
+  </ref.Role>
+  <ref.Role>
+    <id>-1744830432</id>
+    <Caption>TestF</Caption>
+    <Description></Description>
+    <idAccessGroup>-1543503849</idAccessGroup>
+    <idRoleType>2</idRoleType>
+    <idRoleKind>1</idRoleKind>
+  </ref.Role>
+  <ref.Role>
+    <id>-1543503849</id>
+    <Caption>Базовая</Caption>
+    <Description></Description>
+    <idRoleType>0</idRoleType>
+    <idRoleKind>1</idRoleKind>
+  </ref.Role>
+  <ref.Role>
+    <id>-1543503848</id>
+    <Caption>Администратор</Caption>
+    <Description></Description>
+    <idRoleType>0</idRoleType>
+    <idRoleKind>1</idRoleKind>
+  </ref.Role>
+  <ref.Role>
+    <id>-1543503847</id>
+    <Caption>Базовая для профилей отчетов</Caption>
+    <Description></Description>
+    <idRoleType>0</idRoleType>
+    <idRoleKind>2</idRoleKind>
+  </ref.Role>
+  <ref.Role>
+    <id>-1543503846</id>
+    <Caption>Право на Общий профиль</Caption>
+    <Description></Description>
+    <idRoleType>0</idRoleType>
+    <idRoleKind>2</idRoleKind>
+  </ref.Role>
+</NewDataSet>

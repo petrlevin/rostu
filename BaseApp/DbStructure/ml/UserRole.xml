@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ml.UserRole" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ml.UserRole">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="idUser" type="xs:int" />
+                <xs:element name="idRole" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ml.UserRole" />
+        <xs:field xpath="idUser" />
+        <xs:field xpath="idRole" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ml.UserRole>
+    <idUser>-1744830436</idUser>
+    <idRole>-1543503849</idRole>
+  </ml.UserRole>
+  <ml.UserRole>
+    <idUser>-1744830432</idUser>
+    <idRole>-1744830436</idRole>
+  </ml.UserRole>
+  <ml.UserRole>
+    <idUser>-1744830432</idUser>
+    <idRole>-1744830434</idRole>
+  </ml.UserRole>
+  <ml.UserRole>
+    <idUser>-1744830432</idUser>
+    <idRole>-1744830432</idRole>
+  </ml.UserRole>
+  <ml.UserRole>
+    <idUser>-1744830432</idUser>
+    <idRole>-1543503849</idRole>
+  </ml.UserRole>
+</NewDataSet>

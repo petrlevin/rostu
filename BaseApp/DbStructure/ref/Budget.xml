@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Budget" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Budget">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="idPublicLegalFormation" type="xs:int" />
+                <xs:element name="Year" type="xs:int" />
+                <xs:element name="idRefStatus" type="xs:unsignedByte" />
+                <xs:element name="Caption" msdata:ReadOnly="true" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="23" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Budget" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Budget>
+    <id>-1879048163</id>
+    <idPublicLegalFormation>-1879048163</idPublicLegalFormation>
+    <Year>2012</Year>
+    <idRefStatus>2</idRefStatus>
+    <Caption>2012 - 2014 гг.</Caption>
+  </ref.Budget>
+  <ref.Budget>
+    <id>-1744830437</id>
+    <idPublicLegalFormation>-1744830437</idPublicLegalFormation>
+    <Year>2012</Year>
+    <idRefStatus>2</idRefStatus>
+    <Caption>2012 - 2014 гг.</Caption>
+  </ref.Budget>
+  <ref.Budget>
+    <id>1</id>
+    <idPublicLegalFormation>1</idPublicLegalFormation>
+    <Year>2013</Year>
+    <idRefStatus>2</idRefStatus>
+    <Caption>2013 - 2015 гг.</Caption>
+  </ref.Budget>
+</NewDataSet>

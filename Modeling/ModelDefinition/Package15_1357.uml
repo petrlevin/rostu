@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1a3d1acb-6ee8-4037-bef8-5fd64378a60b"
+  name="Interfaces"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d5e1a03d-b094-4d56-a6f8-3d6c3edfa117"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPlatform.BusinessLogic.Denormalizer.Interfaces"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="e734180a-0050-4678-ab89-2940bfb1455f"
+        name="IColumnFactoryForDenormalizedTablepart"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="52f9cb57-09e8-4b93-908d-ed2c52e3c57e"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fsbor3%2FPlatform.BusinessLogic%2Fbin%2FDebug%2FPlatform.BusinessLogic.dll Namespace%3DPlatform.BusinessLogic.Denormalizer.Interfaces Type%3DIColumnFactoryForDenormalizedTablepart"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0f301ec5-57e4-4ace-8d35-f19ee6856630"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="16b8ce87-05c1-4303-b34f-c7ed1f86bc87">
+                <propertyInstance
+                  Id="90ca5eae-f2c2-4c86-8aa1-b91b3e8664c9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3b463dc7-7d42-424d-adea-18efc0aa9014">
+                <propertyInstance
+                  Id="ddb646d3-3082-48b3-85fb-142cc97d5c94"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3f3c8f21-b074-4b8b-929c-f46ab01727f8">
+                <propertyInstance
+                  Id="fc0b86ad-841c-40b7-9a1e-f8dad4c721f5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e25bd755-65db-4c02-a9cb-e686ab8971eb">
+                <propertyInstance
+                  Id="9d008082-6098-4f9f-930f-6861a6122951"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="e2025a75-8f6b-46e0-8798-79365642457e"
+            name="GetColumns"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="df163f56-d676-456f-8d7a-1748bc6b3bf6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fsbor3%2FPlatform.BusinessLogic%2Fbin%2FDebug%2FPlatform.BusinessLogic.dll Namespace%3DPlatform.BusinessLogic.Denormalizer.Interfaces Type%3DIColumnFactoryForDenormalizedTablepart Member%3D(Name%3DGetColumns OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f0ede92b-8ba0-4718-8d13-d7f61f3b903d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3819b76-4938-4932-a16b-0b62964e9ca7">
+                    <propertyInstance
+                      Id="cb0b2b25-bdc7-4d9c-a8b7-47175d750505"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3fa1f69-d693-43c3-9d47-0781bb8220d6">
+                    <propertyInstance
+                      Id="0b5b12e4-6a5f-44a1-b670-f0dfcacc35cb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="479c457c-2d95-4da5-b8ab-ca71551fdaaa">
+                    <propertyInstance
+                      Id="4d41430f-b76f-4136-a48d-f6a8909a3174"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="939004dc-5993-4d37-a1a8-c2d56325b4da">
+                    <propertyInstance
+                      Id="15a2c97a-7761-4efa-b91c-711f32798a16"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44a72cfe-0575-4910-9f2e-818731ee511c">
+                    <propertyInstance
+                      Id="b303b2e8-1d42-4d96-81a4-8e47fafa61df"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9b23495-8d03-474c-9a60-a9048c879222">
+                    <propertyInstance
+                      Id="ef0e74b9-c2d2-454d-93ca-1daf3128c7c5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="71f03c06-8a73-4ead-818f-5d6c6ea9bf5c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="badc2c11-8cca-46f3-a9f5-32d497bedb9e"
+                      LastKnownName="ColumnsInfo"
+                      LastKnownLocation="Package3_1357.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eb6db126-c750-42d8-a52b-07f1e3c2e2ac"
+                  name="tablepartEntityName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f8bd5edd-ddf0-439c-81d0-c7686127be99"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FProjects%2Fsbor3%2FPlatform.BusinessLogic%2Fbin%2FDebug%2FPlatform.BusinessLogic.dll Namespace%3DPlatform.BusinessLogic.Denormalizer.Interfaces Type%3DIColumnFactoryForDenormalizedTablepart Member%3D(Name%3DGetColumns OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DtablepartEntityName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

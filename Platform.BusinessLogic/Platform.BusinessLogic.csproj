@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7399BA19-E033-40E4-9EC7-34C8EB0B149C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Platform.BusinessLogic</RootNamespace>
+    <AssemblyName>Platform.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Platform.BusinessLogic.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutoClient|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AutoClient\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Platform.BusinessLogic.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EFProviderWrapperToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=def642f226e0e59b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommunityEFProviderWrappers.EFProviderWrapperToolkit.1.0.0\lib\net40-Client\EFProviderWrapperToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EFTracingProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=def642f226e0e59b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommunityEFProviderWrappers.EFTracingProvider.1.0.0\lib\net40-Client\EFTracingProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.5.0.0.73\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Schema.ScriptDom, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\lib\Microsoft.Data.Schema.ScriptDom.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Schema.ScriptDom.Sql, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Data.Schema.ScriptDom.Sql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLog.2.0.1.2\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.JavascriptEvaluator">
+      <HintPath>..\lib\Platform.JavascriptEvaluator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity\Controls\CommonControlInfo.cs" />
+    <Compile Include="Activity\Controls\ControlContext.cs" />
+    <Compile Include="Activity\Controls\ConcreteControlLauncher.cs" />
+    <Compile Include="Activity\Controls\ControlDispatcher.cs" />
+    <Compile Include="Activity\Controls\ControlInfo.cs" />
+    <Compile Include="Activity\Controls\ControlInvocation.cs" />
+    <Compile Include="Activity\Controls\ControlAttributeHelper.cs" />
+    <Compile Include="Activity\Controls\Controls.cs" />
+    <Compile Include="Activity\Controls\ControlInvoker.cs" />
+    <Compile Include="Activity\Controls\ControlDispatcherBase.cs" />
+    <Compile Include="Activity\Controls\ControlScope.cs" />
+    <Compile Include="Activity\Controls\ControlScope`.cs" />
+    <Compile Include="Activity\Controls\DispatcherStrategies\DefaultStrategy.cs" />
+    <Compile Include="Activity\Controls\DispatcherStrategies\NoControlsStrategy.cs" />
+    <Compile Include="Activity\Controls\DispatcherStrategies\SkipSkippableStrategy.cs" />
+    <Compile Include="Activity\Controls\Interfaces\IControlInvocation.cs" />
+    <Compile Include="Activity\Controls\Interfaces\IControlInvocationsProvider.cs" />
+    <Compile Include="Activity\Controls\InvocationsProviders\Base.cs" />
+    <Compile Include="Activity\Controls\InvocationsProviders\ByClass.cs" />
+    <Compile Include="Activity\Controls\InvocationsProviders\Common.cs" />
+    <Compile Include="Activity\Controls\InvocationsProviders\CommonControls.cs" />
+    <Compile Include="Activity\Controls\ControlOrderForAttribute.cs" />
+    <Compile Include="Activity\Controls\InitialControlInfo.cs" />
+    <Compile Include="Activity\Controls\SpecificControlLauncher.cs" />
+    <Compile Include="Activity\Controls\Striker.cs" />
+    <Compile Include="Activity\Locks.cs" />
+    <Compile Include="Activity\Operations\ExecuteOperationExtension.cs" />
+    <Compile Include="Activity\Operations\OperationContext.cs" />
+    <Compile Include="Activity\Operations\OperationDispatcher.cs" />
+    <Compile Include="Activity\Operations\OperationDispatcherBase.cs" />
+    <Compile Include="Activity\Operations\OperationDispatcherExtension.cs" />
+    <Compile Include="Activity\Operations\OperationInvoker.cs" />
+    <Compile Include="Activity\Operations\Operations.cs" />
+    <Compile Include="Activity\Operations\OperationsHandler.cs" />
+    <Compile Include="Activity\Operations\OperationWideContext.cs" />
+    <Compile Include="Activity\Operations\Serialization\Columns.cs" />
+    <Compile Include="Activity\Operations\Serialization\InsertBuilder.cs" />
+    <Compile Include="Activity\Operations\Serialization\RestoreBuilder.cs" />
+    <Compile Include="Activity\Operations\Serialization\RestoreCommands.cs" />
+    <Compile Include="Activity\Operations\Serialization\XmlDbSerializer.cs" />
+    <Compile Include="Activity\TypeLocator.cs" />
+    <Compile Include="Activity\Values\SqlEvaluator.cs" />
+    <Compile Include="Activity\Values\Evaluator.cs" />
+    <Compile Include="Activity\Operations\OperationLaunhcer.cs" />
+    <Compile Include="AppServices\ListFormActionAttribute.cs" />
+    <Compile Include="AppServices\ListFormActionsInfo.cs" />
+    <Compile Include="Auditing\AuditDbFactory.cs" />
+    <Compile Include="Auditing\AuditConfiguration.Registrator.cs" />
+    <Compile Include="Auditing\AuditConnectionString.cs" />
+    <Compile Include="Auditing\AuditConfiguration.cs" />
+    <Compile Include="Auditing\AuditDbFactory.SqlTpl.cs" />
+    <Compile Include="Auditing\Auditors\Abstract\CompletableAuditor.cs" />
+    <Compile Include="Auditing\Auditors\LoginAuditor.cs" />
+    <Compile Include="Auditing\Auditors\ReferenceAuditor.cs" />
+    <Compile Include="Auditing\Auditors\ReportExecutionsAuditor.cs" />
+    <Compile Include="Auditing\Auditors\SessionAuditor.cs" />
+    <Compile Include="Auditing\Audit.cs" />
+    <Compile Include="Auditing\Auditors\Abstract\AuditorBase.cs" />
+    <Compile Include="Auditing\Auditors\OperationAuditor.cs" />
+    <Compile Include="Auditing\Auditors\RequestAuditor.cs" />
+    <Compile Include="Auditing\AuditTime.cs" />
+    <Compile Include="Auditing\EfModel\AuditDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auditing\Interfaces\IAuditLogger.cs" />
+    <Compile Include="Auditing\Interfaces\IAuditor.cs" />
+    <Compile Include="Auditing\Interfaces\ICompletableAuditor.cs" />
+    <Compile Include="Auditing\Interfaces\ISingleactionAuditor.cs" />
+    <Compile Include="Auditing\Interfaces\ISqlLogData.cs" />
+    <Compile Include="Auditing\Interfaces\IStartEndAuditor.cs" />
+    <Compile Include="Auditing\Auditors\MultilinkAuditor.cs" />
+    <Compile Include="CaptionExpressions\CaptionEvaluator.cs" />
+    <Compile Include="CaptionExpressions\Extensions\EntityFieldExtensions.cs" />
+    <Compile Include="CommandFactoryExtension.cs" />
+    <Compile Include="DataAccess\ClientFilters\ClientFilterConditionsFactory.cs" />
+    <Compile Include="DataAccess\ClientFilters\ClientFiltersForExtendedFieldsDecorator.cs" />
+    <Compile Include="DbConnectionString.cs" />
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="DataAccess\GetEntityFieldSettingForSysDimensionFilter.cs" />
+    <Compile Include="DataAccess\SqlExceptionHandler.cs" />
+    <Compile Include="DataAccess\TransactionDeadlocked.cs" />
+    <Compile Include="DataAccess\TransactionScope.cs" />
+    <Compile Include="DbEnums\AggregateFunction.cs" />
+    <Compile Include="DbEnums\SelectionType.cs" />
+    <Compile Include="Decorators\AddFilterEntitiesForGenericLink.cs" />
+    <Compile Include="Decorators\AddFilterNoParentForHierarchyReference.cs" />
+    <Compile Include="Denormalizer\Analyzers\DenormalizedTablepartAnalyzer.cs" />
+    <Compile Include="Denormalizer\Analyzers\EntityAnalyzer.cs" />
+    <Compile Include="Denormalizer\ColumnsInfo.cs" />
+    <Compile Include="Dependence.cs" />
+    <Compile Include="EditionsComparision\Extensions\DataRowExtensions.cs" />
+    <Compile Include="EditionsComparision\Extensions\TreeExtensions.cs" />
+    <Compile Include="EditionsComparision\ITableInfo.cs" />
+    <Compile Include="EditionsComparision\MainDataHolder.cs" />
+    <Compile Include="EditionsComparision\ResultItem.cs" />
+    <Compile Include="EditionsComparision\EditionsComparator.cs" />
+    <Compile Include="EditionsComparision\ResultItemType.cs" />
+    <Compile Include="EditionsComparision\RowListsComparator.cs" />
+    <Compile Include="EditionsComparision\RowsComparator.cs" />
+    <Compile Include="EditionsComparision\TableInfo.cs" />
+    <Compile Include="EditionsComparision\TpDataHolder.cs" />
+    <Compile Include="EditionsComparision\TablefieldDependenciesResolver.cs" />
+    <Compile Include="EditionsComparision\TablepartInfo.cs" />
+    <Compile Include="Entities\Reference\TemplateExport.cs" />
+    <Compile Include="Entities\Tablepart\TemplateExport_Entity.cs" />
+    <Compile Include="EntityIds.cs" />
+    <Compile Include="Exceptions\CommonUserFrendlyException.cs" />
+    <Compile Include="GeneratedCode\Reference\ItemsCaptionsForNavigationPanel.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ItemsCaptionsForNavigationPanelMap.cs" />
+    <Compile Include="Interfaces\IExportSettings.cs" />
+    <Compile Include="Interfaces\ISelectItem.cs" />
+    <Compile Include="NavigationPanel\INavigationPanelItemCaptionSelector.cs" />
+    <Compile Include="Queries\InterfaceQueryableDbSet.cs" />
+    <Compile Include="Auditing\Section.cs" />
+    <Compile Include="ReportProfiles\TemporaryItemsRemover.cs" />
+    <Compile Include="StartupScripts\EnableBroker.cs" />
+    <Compile Include="StartupScripts\OverrideTransactionScopeMaximumTimeout.cs" />
+    <Compile Include="SummaryAggregates\AddAggregateDecorator.cs" />
+    <Compile Include="SummaryAggregates\AggregateInfo.cs" />
+    <Compile Include="SummaryAggregates\AggregatesAnalyzer.cs" />
+    <Compile Include="SummaryAggregates\IAggregateInfo.cs" />
+    <Compile Include="SummaryAggregates\AggregateQueryBuilder.cs" />
+    <Compile Include="AppServices\AppServiceAttribute.cs" />
+    <Compile Include="BaseEntityExtension.cs" />
+    <Compile Include="Clone.cs" />
+    <Compile Include="Crypto\Cripter.cs" />
+    <Compile Include="Crypto\StringExtensioncs.cs" />
+    <Compile Include="DataAccess\CUDHandler.cs" />
+    <Compile Include="DataAccess\CUDListener.cs" />
+    <Compile Include="DataAccess\CreateUpdateOperation.cs" />
+    <Compile Include="DataAccess\DataManagerFactory.cs" />
+    <Compile Include="DataAccess\DbContextHelper.cs" />
+    <Compile Include="DataAccess\EntityManager.cs" />
+    <Compile Include="DataAccess\GridResult.cs" />
+    <Compile Include="DataAccess\InitialItemState.cs" />
+    <Compile Include="DataAccess\MultilinkHelper.cs" />
+    <Compile Include="DataAccess\ModelAppResponce.cs" />
+    <Compile Include="DataAccess\CustomFilterGridParams.cs" />
+    <Compile Include="DataAccess\SqlHelper.cs" />
+    <Compile Include="DataAccess\ToolAppResponse.cs" />
+    <Compile Include="DataAccess\ToolsDataManager.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="DbEnums\ExecImportMode.cs" />
+    <Compile Include="DbEnums\ExportFormat.cs" />
+    <Compile Include="DbEnums\ImportType.cs" />
+    <Compile Include="Denormalizer\Analyzers\DenornalizedEntitiesInfo.cs" />
+    <Compile Include="Denormalizer\Interfaces\IColumnFactoryForDenormalizedTablepart.cs" />
+    <Compile Include="Denormalizer\Crud\DenormalizedCrud.cs" />
+    <Compile Include="Denormalizer\Crud\DenormalizedDefaults.cs" />
+    <Compile Include="Denormalizer\Crud\DenormalizedDeleter.cs" />
+    <Compile Include="Denormalizer\Crud\DenormalizedSaver.cs" />
+    <Compile Include="Denormalizer\Decorator\DenormalizerDecoratorFactory.cs" />
+    <Compile Include="Denormalizer\Decorator\DenormalizerDecorator.cs" />
+    <Compile Include="Denormalizer\DenormalizerService.cs" />
+    <Compile Include="Denormalizer\Interfaces\IChildDenormalized.cs" />
+    <Compile Include="Denormalizer\ModelTransformers\ModelAnalyzer.cs" />
+    <Compile Include="Denormalizer\PeriodsProviderBase.cs" />
+    <Compile Include="Denormalizer\PeriodIdCaption.cs" />
+    <Compile Include="Denormalizer\PeriodsProvider.cs" />
+    <Compile Include="Entities\Reference\EntityFieldSetting.cs" />
+    <Compile Include="Entities\Reference\EntityOperation.cs" />
+    <Compile Include="Entities\Reference\HierarchyPeriod.cs" />
+    <Compile Include="Entities\Reference\Operation.cs" />
+    <Compile Include="EntityExtension.cs" />
+    <Compile Include="EntityOperationExtension.cs" />
+    <Compile Include="EntityFramework\DbContextInitializer.cs" />
+    <Compile Include="EntityTypes\Interfaces\IToolEntity.cs" />
+    <Compile Include="Exceptions\ToolStateException.cs" />
+    <Compile Include="Exceptions\ToolStatusException.cs" />
+    <Compile Include="FormsLogic\FormBuilderBase.cs" />
+    <Compile Include="FormsLogic\FormConfig.cs" />
+    <Compile Include="FormsLogic\FormItem.cs" />
+    <Compile Include="FormsLogic\FormItemBuilder.cs" />
+    <Compile Include="FormsLogic\FormListBuilder.cs" />
+    <Compile Include="GeneratedCode\Multilink\Mappings\Index_EntityField_IndexableMap.cs" />
+    <Compile Include="Entities\Reference\Mappings\EntityFieldMap.cs" />
+    <Compile Include="Entities\Reference\Mappings\EntityMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\FilterMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\FormElementMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\FormMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\IndexMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\InterfaceControlMap.cs" />
+    <Compile Include="GetterExtension.cs" />
+    <Compile Include="Activity\Values\Helper.cs" />
+    <Compile Include="Activity\Values\Parser.cs" />
+    <Compile Include="Activity\Values\Options.cs" />
+    <Compile Include="Activity\Values\Setter.cs" />
+    <Compile Include="Interfaces\ICreateUpdateObservable.cs" />
+    <Compile Include="Interfaces\IDataManagerFactory.cs" />
+    <Compile Include="Interfaces\IHasRefStatus.cs" />
+    <Compile Include="Interfaces\IInitNew.cs" />
+    <Compile Include="Queries\InterfaceQuerable.cs" />
+    <Compile Include="Registry\FilterDecorator.cs" />
+    <Compile Include="Registry\RecordsInfo.cs" />
+    <Compile Include="Registry\RegistryManager.cs" />
+    <Compile Include="ReportingServices\InfoBase.cs" />
+    <Compile Include="ReportingServices\PrintForms\PrintFormAttribute.cs" />
+    <Compile Include="ReportingServices\PrintForms\PrintFormBase.cs" />
+    <Compile Include="ReportingServices\Reports\ReportsInfo.cs" />
+    <Compile Include="ReportingServices\Reports\ReportAttribute.cs" />
+    <Compile Include="ReportingServices\PrintForms\PrintFormsInfo.cs" />
+    <Compile Include="SetterExtension.cs" />
+    <Compile Include="DataAccess\DalDataManager.cs" />
+    <Compile Include="DataAccess\EFDataManager.cs" />
+    <Compile Include="DataAccess\FormedEntity.cs" />
+    <Compile Include="DataAccess\GetFilter.cs" />
+    <Compile Include="DataAccess\GridParams.cs" />
+    <Compile Include="DataAccess\ManagerBase.cs" />
+    <Compile Include="DataAccess\ModelManager.cs" />
+    <Compile Include="DataAccess\ResponseOperation.cs" />
+    <Compile Include="DataAccess\ResponseOperations.cs" />
+    <Compile Include="Activity\Values\Getter.cs" />
+    <Compile Include="Entities\Reference\DocStatus.cs" />
+    <Compile Include="Activity\Controls\ControlLauncher.cs" />
+    <Compile Include="DbContextExtension.cs" />
+    <Compile Include="Activity\DbSetLocator.cs" />
+    <Compile Include="DataAccess\AppResponse.cs" />
+    <Compile Include="DataAccess\DataManager.cs" />
+    <Compile Include="EntityTypes\DocumentEntity.cs" />
+    <Compile Include="EntityTypes\Interfaces\IDocumentEntity.cs" />
+    <Compile Include="EntityTypes\Interfaces\IMultilinkEntity.cs" />
+    <Compile Include="EntityTypes\Interfaces\IReferenceEntity.cs" />
+    <Compile Include="EntityTypes\Interfaces\IRegistryEntity.cs" />
+    <Compile Include="EntityTypes\Interfaces\IReportEntity.cs" />
+    <Compile Include="EntityTypes\Interfaces\ITablePartEntity.cs" />
+    <Compile Include="EntityTypes\MultilinkEntity.cs" />
+    <Compile Include="EntityTypes\ReferenceEntity.cs" />
+    <Compile Include="EntityTypes\RegistryEntity.cs" />
+    <Compile Include="EntityTypes\ReportEntity.cs" />
+    <Compile Include="EntityTypes\TablePartEntity.cs" />
+    <Compile Include="EntityTypes\ToolEntity.cs" />
+    <Compile Include="GeneratedCode\Reference\EntityOperation.cs" />
+    <Compile Include="GeneratedCode\Reference\Operation.cs" />
+    <Compile Include="Interfaces\IControlDispatcher.cs" />
+    <Compile Include="Interfaces\IExecutedOperation.cs" />
+    <Compile Include="Interfaces\IOperationDispatcher.cs" />
+    <Compile Include="Interfaces\IOperationLauncher.cs" />
+    <Compile Include="Interfaces\IControlLauncher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneratedCode\Reference\DocStatus.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\DocStatusMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\EntityOperationMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\OperationMap.cs" />
+    <Compile Include="GeneratedCode\DataContext.cs" />
+    <Compile Include="ServerFilters\ServerFiltersDecorator.cs" />
+    <Compile Include="ServerFilters\FieldValues.cs" />
+    <Compile Include="Entities\Reference\Control.cs" />
+    <Compile Include="Entities\Reference\Mappings\ControlMap.cs" />
+    <Compile Include="GeneratedCode\Registry\SerializedEntityItem.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\SerializedEntityItemMap.cs" />
+    <Compile Include="TypeExtension.cs" />
+    <Compile Include="Xml\Serializer.cs" />
+    <Compile Include="GeneratedCode\Reference\TemplateImportXLS.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TemplateImportXLSMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\TemplateImportXLS_FieldsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\TemplateImportXLS_FieldsMapMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\TemplateImportXLS_KeyField.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\TemplateImportXLS_KeyFieldMap.cs" />
+    <Compile Include="GeneratedCode\Reference\AccessGroup.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\AccessGroupMap.cs" />
+    <Compile Include="GeneratedCode\Reference\EntitySetting.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\EntitySettingMap.cs" />
+    <Compile Include="GeneratedCode\Reference\HierarchyPeriod.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\HierarchyPeriodMap.cs" />
+    <Compile Include="GeneratedCode\Reference\EntityFieldSetting.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\EntityFieldSettingMap.cs" />
+    <Compile Include="GeneratedCode\Reference\TamplateImport.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TamplateImportMap.cs" />
+    <Compile Include="GeneratedCode\Reference\TemplateImport.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TemplateImportMap.cs" />
+    <Compile Include="GeneratedCode\Reference\TemplateExport.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TemplateExportMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\TemplateExport_Entity.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\TemplateExport_EntityMap.cs" />
+    <Compile Include="GeneratedCode\Reference\FileLink.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\FileLinkMap.cs" />
+    <Compile Include="GeneratedCode\Reference\FileStore.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\FileStoreMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capricorn.Core\Capricorn.Core.csproj">
+      <Project>{d54db724-de6d-4b4e-942a-8a9036b7a44e}</Project>
+      <Name>Capricorn.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Application.Common\Platform.Application.Common.csproj">
+      <Project>{b489597f-7c2f-4470-ba09-c31b8a0797c8}</Project>
+      <Name>Platform.Application.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Application\Platform.Application.csproj">
+      <Project>{f915d6f9-c7d8-4578-b888-e71fdb471502}</Project>
+      <Name>Platform.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic.Client\Platform.BusinessLogic.Client.csproj">
+      <Project>{705b8e7b-79ef-40ce-93de-925230e28a60}</Project>
+      <Name>Platform.BusinessLogic.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic.Common\Platform.BusinessLogic.Common.csproj">
+      <Project>{E11D0AB2-A272-417F-8562-6FBC47033C6E}</Project>
+      <Name>Platform.BusinessLogic.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Cache\Platform.Caching.csproj">
+      <Project>{80D876D7-3F43-48E8-8250-225EC2F1E944}</Project>
+      <Name>Platform.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Caching.Common\Platform.Caching.Common.csproj">
+      <Project>{64488B5D-2951-402E-AABF-52A478EE51ED}</Project>
+      <Name>Platform.Caching.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.ClientInteraction\Platform.ClientInteraction.csproj">
+      <Project>{D875C08C-2DAD-4E39-84A8-646F93ADB836}</Project>
+      <Name>Platform.ClientInteraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Client\Platform.Client.csproj">
+      <Project>{3feec57a-377e-4115-aa05-54ab70751421}</Project>
+      <Name>Platform.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Common\Platform.Common.csproj">
+      <Project>{cb231957-03de-4efa-9b75-ef6b23e63070}</Project>
+      <Name>Platform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Dal.Common\Platform.Dal.Common.csproj">
+      <Project>{32b6fa91-ba95-4733-9085-70c3395b0eff}</Project>
+      <Name>Platform.Dal.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Dal\Platform.Dal.csproj">
+      <Project>{e59415a3-95fd-4def-a5d4-8cb771619781}</Project>
+      <Name>Platform.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.DbCmd\Platform.DbCmd.csproj">
+      <Project>{389f4c8f-6c9e-4822-8dc8-1c78a77caab2}</Project>
+      <Name>Platform.DbCmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Log\Platform.Log.csproj">
+      <Project>{a78b89ef-7a19-463d-afc8-4e4de77030cd}</Project>
+      <Name>Platform.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9ee403b9-8d79-40f6-96b4-a9f6e6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Factoring\Platform.PrimaryEntities.Factoring.csproj">
+      <Project>{00D4B56D-E285-4075-B829-01688F7882FB}</Project>
+      <Name>Platform.PrimaryEntities.Factoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities\Platform.PrimaryEntities.csproj">
+      <Project>{da11e957-7534-4de0-af6a-60f8d04e9cb6}</Project>
+      <Name>Platform.PrimaryEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.SqlObjectModel\Platform.SqlObjectModel.csproj">
+      <Project>{fc5db22e-8d43-468d-8fc4-2271bcf88214}</Project>
+      <Name>Platform.SqlObjectModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity.Comon\Platform.Unity.Common.csproj">
+      <Project>{169CC69C-7AD2-4FED-917A-302B9020FA64}</Project>
+      <Name>Platform.Unity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity\Platform.Unity.csproj">
+      <Project>{B8903988-41A8-48F0-B922-4A4D7C333110}</Project>
+      <Name>Platform.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils.Common\Platform.Utils.Common.csproj">
+      <Project>{95B3D83C-FC10-4157-8364-52C513FD21F4}</Project>
+      <Name>Platform.Utils.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils\Platform.Utils.csproj">
+      <Project>{5a67cc4b-b52a-4d6e-8014-18816fe241ff}</Project>
+      <Name>Platform.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DbStructure\doc\" />
+    <Folder Include="DbStructure\rep\" />
+    <Folder Include="DbStructure\tool\" />
+    <Folder Include="Fakes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Content Include="Auditing\Auditors\readme.txt" />
+    <Content Include="Auditing\EfModel\readme.txt" />
+    <Content Include="DbStructure\ref\Entity.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\DocStatus.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\EntityOperation.xml" />
+    <Content Include="DbStructure\ref\Operation.xml" />
+    <Content Include="DbStructure\ml\EntityOperation_DocStatus_OriginalStatus.xml" />
+    <Content Include="DbStructure\ml\EntityOperation_DocStatus_FinalStatus.xml" />
+    <Content Include="DbStructure\ref\Control.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ml\EntityOperation_EntityField.xml" />
+    <Content Include="DbEnums\Entity.xml" />
+    <Content Include="DbEnums\EntityField.xml" />
+    <Content Include="DbStructure\ref\EntitySetting.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\Filter.xml" />
+    <Content Include="DbStructure\ref\AccessGroup.xml" />
+    <Content Include="DbStructure\ref\TemplateImportXLS.xml" />
+    <Content Include="DbStructure\tp\TemplateImportXLS_FieldsMap.xml" />
+    <Content Include="DbStructure\tp\TemplateImportXLS_KeyField.xml" />
+    <Content Include="DbStructure\ref\HierarchyPeriod.xml" />
+    <Content Include="DbStructure\ref\Index.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ml\Index_EntityField_Indexable.xml" />
+    <Content Include="DbStructure\ref\EntityFieldSetting.xml" />
+    <Content Include="DbStructure\reg\SerializedEntityItem.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\DistributiveData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\DistributiveDataMultiLink.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\TemplateExport.xml" />
+    <Content Include="DbStructure\ml\TemplateExport_LinkedEntity.xml" />
+    <Content Include="DbStructure\ref\TemplateImport.xml" />
+    <Content Include="DbStructure\Programmability\DelTempReports.xml" />
+    <Content Include="DbStructure\Programmability\GetEntity_Owner.xml" />
+    <Content Include="DbStructure\ref\FileStore.xml" />
+    <Content Include="DbStructure\ref\FileLink.xml" />
+    <Content Include="DbStructure\ml\Index_EntityField_Included.xml" />
+    <Content Include="DbStructure\ref\ItemsCaptionsForNavigationPanel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Auditing\EfModel\AuditDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AuditDatabase.cs</LastGenOutput>
+    </None>
+    <None Include="Auditing\EfModel\Platform.EF.Reverse.Core.ttinclude" />
+    <None Include="Auditing\EfModel\Platform.EF.Reverse.ttinclude" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

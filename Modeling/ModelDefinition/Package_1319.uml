@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="69bc0fa0-d64f-4b02-a5bf-de092bb0c81b"
+  name="Platform"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="71cc55e8-fc28-4a65-a1a0-7a1dbfc44e46"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DPlatform"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="04398ffb-d7cf-4895-a894-769081814ec8"
+        LastKnownName="DbStructure"
+        LastKnownLocation="Package1_1319.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="01b5afb2-8e62-435f-8cdd-4cc0be4f506f"
+        LastKnownName="BusinessLogic"
+        LastKnownLocation="Package2_1357.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="637ed3bd-e841-4141-afdc-7bc098d0944f"
+        LastKnownName="PrimaryEntities"
+        LastKnownLocation="Package11_1357.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7eb0c45c-fcb6-4598-9eaf-6814269344e0"
+        LastKnownName="ClientInteraction"
+        LastKnownLocation="Package_1448.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

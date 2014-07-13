@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ml.PublicLegalFormationModule_Module" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ml.PublicLegalFormationModule_Module">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="idPublicLegalFormationModule" type="xs:int" />
+                <xs:element name="idModule" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ml.PublicLegalFormationModule_Module" />
+        <xs:field xpath="idPublicLegalFormationModule" />
+        <xs:field xpath="idModule" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ml.PublicLegalFormationModule_Module>
+    <idPublicLegalFormationModule>-1879048164</idPublicLegalFormationModule>
+    <idModule>-1744830437</idModule>
+  </ml.PublicLegalFormationModule_Module>
+  <ml.PublicLegalFormationModule_Module>
+    <idPublicLegalFormationModule>-1879048164</idPublicLegalFormationModule>
+    <idModule>-1610612709</idModule>
+  </ml.PublicLegalFormationModule_Module>
+  <ml.PublicLegalFormationModule_Module>
+    <idPublicLegalFormationModule>-1879048164</idPublicLegalFormationModule>
+    <idModule>-1610612708</idModule>
+  </ml.PublicLegalFormationModule_Module>
+</NewDataSet>

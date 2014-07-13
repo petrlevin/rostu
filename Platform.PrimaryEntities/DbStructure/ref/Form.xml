@@ -1,0 +1,1021 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ref.Form" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ref.Form">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Caption" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="400" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="idEntity" type="xs:int" />
+                <xs:element name="idHierarchyViewField" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ref.Form" />
+        <xs:field xpath="id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ref.Form>
+    <id>-2013265889</id>
+    <Name>ResponsiblePersonForm</Name>
+    <Caption>Ответственное лицо (элемент)</Caption>
+    <idEntity>-2013265881</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265887</id>
+    <Name>OrganizationForm</Name>
+    <Caption>Организация (элемент)</Caption>
+    <idEntity>-2013265880</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265886</id>
+    <Name>RegulatoryAct</Name>
+    <Caption>Нормативно-правовой акт</Caption>
+    <idEntity>-2013265886</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265884</id>
+    <Name>KVSR</Name>
+    <Caption>КВСР/КАДБ/КАИФ</Caption>
+    <idEntity>-2013265885</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265883</id>
+    <Name>SBPForm</Name>
+    <Caption>Субъект бюджетного планирования (элемент)</Caption>
+    <idEntity>-2013265882</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265882</id>
+    <Name>AuthorityOfExpenseObligation</Name>
+    <Caption>Полномочие расходных обязательств</Caption>
+    <idEntity>-2013265876</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265881</id>
+    <Name>ModelSystemGoalForm</Name>
+    <Caption>Модель СЦ (элемент)</Caption>
+    <idEntity>-2013265867</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265880</id>
+    <Name>GoalIndicatorForm</Name>
+    <Caption>Целевой показатель (элемент)</Caption>
+    <idEntity>-2013265864</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265879</id>
+    <Name>SystemGoalForm</Name>
+    <Caption>Система целеполагания (элемент)</Caption>
+    <idEntity>-2013265862</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265877</id>
+    <Name>ElementTypeSystemGoalForm</Name>
+    <Caption>Тип элемента СЦ (элемент)</Caption>
+    <idEntity>-2013265870</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265875</id>
+    <Name>DocumentsOfSEDList</Name>
+    <Caption>Документы СЭР (список)</Caption>
+    <idEntity>-1677721568</idEntity>
+    <idHierarchyViewField>-2013265647</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265874</id>
+    <Name>DocumentsOfSED</Name>
+    <Caption>Документ СЭР</Caption>
+    <idEntity>-1677721568</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265872</id>
+    <Name>SystemGoalSelect</Name>
+    <Caption>Система целеполагания (выбор)</Caption>
+    <idEntity>-2013265862</idEntity>
+    <idHierarchyViewField>-2013265678</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265870</id>
+    <Name>ValuesGoalTargetList</Name>
+    <Caption>Значения целевых показателей (список)</Caption>
+    <idEntity>-2013265854</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265868</id>
+    <Name>GoalTargetList</Name>
+    <Caption>Целевые показатели (список)</Caption>
+    <idEntity>-2013265855</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265866</id>
+    <Name>AttributeOfSystemGoalElementList</Name>
+    <Caption>Атрибуты элементов СЦ (список)</Caption>
+    <idEntity>-1677721571</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265864</id>
+    <Name>SystemGoalElementList</Name>
+    <Caption>Элементы СЦ (список)</Caption>
+    <idEntity>-1677721574</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265860</id>
+    <Name>PlanActivityForm</Name>
+    <Caption>План деятельности (элемент)</Caption>
+    <idEntity>-2013265436</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265859</id>
+    <Name>PlanActivityList</Name>
+    <Caption>План деятельности (список)</Caption>
+    <idEntity>-2013265436</idEntity>
+    <idHierarchyViewField>-2013260382</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265857</id>
+    <Name>ResourceMaintenanceOfTheStateProgram</Name>
+    <Caption>Ресурсное обеспечение реализации государственной программы()</Caption>
+    <idEntity>-2013265420</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265855</id>
+    <Name>DirectionAndFundingOfDepartmentFrom</Name>
+    <Caption>Направления и объемы финансирования деятельности ведомства (форма)</Caption>
+    <idEntity>-2013265417</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265853</id>
+    <Name>BalancingIFDBForm</Name>
+    <Caption>Балансировка доходов, расходов и ИФДБ (форма)</Caption>
+    <idEntity>-2013265407</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265851</id>
+    <Name>BalancingIFDB_ProgramForm</Name>
+    <Caption>Программы/мероприятия (форма)</Caption>
+    <idEntity>-2013265411</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265849</id>
+    <Name>BalanceConfigForm</Name>
+    <Caption>Настройка балансировки (форма)</Caption>
+    <idEntity>-2013265304</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265847</id>
+    <Name>BalancingIFDB_ExpenseForm</Name>
+    <Caption>Расходы(форма)</Caption>
+    <idEntity>-2013265409</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265846</id>
+    <Name>BalanceConfig_FilterKBKForm</Name>
+    <Caption>Фильтры КБК(форма)</Caption>
+    <idEntity>-2013265301</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265845</id>
+    <Name>BalancingIFDB_RuleFilterKBKForm</Name>
+    <Caption>Набор КБК для правила(форма)</Caption>
+    <idEntity>-2013265294</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265842</id>
+    <Name>BalancingIFDB_RuleIndexForm</Name>
+    <Caption>Примененные правила индексации(форма)</Caption>
+    <idEntity>-2013265298</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265840</id>
+    <Name>ApprovalBalancingIFDBForm</Name>
+    <Caption>Утверждение балансировки расходов, доходов и ИФДБ(форма)</Caption>
+    <idEntity>-2013265063</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-2013265838</id>
+    <Name>AnalysisBAofDirectAndIndirectCost</Name>
+    <Caption>Анализ объема бюджетных ассигнований в разрезе прямых и косвенных расходов (форма)</Caption>
+    <idEntity>-2013264951</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1946157026</id>
+    <Name>FinancialAndBusinessActivitiesList</Name>
+    <Caption>План финансово-хозяйственной деятельности (Список)</Caption>
+    <idEntity>-1946156914</idEntity>
+    <idHierarchyViewField>-1946155977</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-1946157025</id>
+    <Name>FinancialAndBusinessActivitiesForm</Name>
+    <Caption>План финансово-хозяйственной деятельности Форма()</Caption>
+    <idEntity>-1946156914</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048163</id>
+    <Name>KVRForm</Name>
+    <Caption>КВР (элемент)</Caption>
+    <idEntity>-1879048131</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048161</id>
+    <Name>ModelSystemGoalList</Name>
+    <Caption>Модель СЦ (список)</Caption>
+    <idEntity>-2013265867</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048159</id>
+    <Name>ElementTypeSystemGoalList</Name>
+    <Caption>Тип элемента СЦ (список)</Caption>
+    <idEntity>-2013265870</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048158</id>
+    <Name>GoalIndicatorList</Name>
+    <Caption>Целевые показатели (список)</Caption>
+    <idEntity>-2013265864</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048157</id>
+    <Name>SystemGoalList</Name>
+    <Caption>Система целеполагания (список)</Caption>
+    <idEntity>-2013265862</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048156</id>
+    <Name>OrganizationList</Name>
+    <Caption>Организация (список)</Caption>
+    <idEntity>-2013265880</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048155</id>
+    <Name>OfficialCapacityList</Name>
+    <Caption>Должности (список)</Caption>
+    <idEntity>-1946157024</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048154</id>
+    <Name>ResponsiblePersonList</Name>
+    <Caption>Ответственные лица (список)</Caption>
+    <idEntity>-2013265881</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048153</id>
+    <Name>SBPList</Name>
+    <Caption>Субъекты бюджетного планирования (список)</Caption>
+    <idEntity>-2013265882</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048152</id>
+    <Name>UnitDimensionList</Name>
+    <Caption>Единицы измерения (список)</Caption>
+    <idEntity>-1879048158</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048151</id>
+    <Name>OKATOList</Name>
+    <Caption>ОКАТО (список)</Caption>
+    <idEntity>-1946157025</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048150</id>
+    <Name>ResponsibleExecutantTypeList</Name>
+    <Caption>Типы ответственных исполнителей (список)</Caption>
+    <idEntity>-1543503814</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048148</id>
+    <Name>KVRList</Name>
+    <Caption>КВР (список)</Caption>
+    <idEntity>-1879048131</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048146</id>
+    <Name>AnalyticalCodeStateProgramList</Name>
+    <Caption>Аналитические коды государственных программ (список)</Caption>
+    <idEntity>-1879048133</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048144</id>
+    <Name>ProgramList</Name>
+    <Caption>Программы (список)</Caption>
+    <idEntity>-1543503802</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048143</id>
+    <Name>AttributeOfProgramList</Name>
+    <Caption>Атрибуты программы (список)</Caption>
+    <idEntity>-1543503801</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048142</id>
+    <Name>Program_ResourceMaintenanceList</Name>
+    <Caption>Ресурсное обеспечение программ (список)</Caption>
+    <idEntity>-1543503800</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048140</id>
+    <Name>LongTermGoalProgramList</Name>
+    <Caption>Долгосрочная целевая программа (список)</Caption>
+    <idEntity>-1543503791</idEntity>
+    <idHierarchyViewField>-1543503564</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048138</id>
+    <Name>PlanActivity_ActivityForm</Name>
+    <Caption>Мероприятия (элемент)</Caption>
+    <idEntity>-2013265433</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048136</id>
+    <Name>PlanActivity_ActivityAUBUForm</Name>
+    <Caption>Мероприятия АУ/БУ (элемент)</Caption>
+    <idEntity>-2013265428</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048134</id>
+    <Name>PlanActivity_IndicatorQualityActivity</Name>
+    <Caption>Показатели качества мероприятий (элемент)</Caption>
+    <idEntity>-2013265430</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048132</id>
+    <Name>EntityFieldList</Name>
+    <Caption>Поля сущности (список)</Caption>
+    <idEntity>-2147483614</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048130</id>
+    <Name>TemplateJustificationElement</Name>
+    <Caption>Шаблоны обоснований (элемент)</Caption>
+    <idEntity>-1879048024</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048129</id>
+    <Name>TemplateJustificationList</Name>
+    <Caption>Шаблоны обоснований (список)</Caption>
+    <idEntity>-1879048024</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048127</id>
+    <Name>ExpenditureObligationsList</Name>
+    <Caption>Расходные обязательства (список)</Caption>
+    <idEntity>-1879048021</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048125</id>
+    <Name>ForecastConsolidatedIndicatorsForm</Name>
+    <Caption>Прогноз сводных показателей государственных заданий на оказание государственных услуг (выполнение работ) государственными учреждениями в рамках государственной программы (элемент)</Caption>
+    <idEntity>-1879048026</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048123</id>
+    <Name>StateProgramGoalIndicatorValueForm</Name>
+    <Caption>Сведения о составе и значениях целевых показателей государственной программы (элемент)</Caption>
+    <idEntity>-1879048028</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048120</id>
+    <Name>ExpenditureObligationsForm</Name>
+    <Caption>Расходные обязательства (элемент)</Caption>
+    <idEntity>-1879048021</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048118</id>
+    <Name>ExpenditureObligations_RegulatoryAct_StructuralUnitForm</Name>
+    <Caption>ТЧ Структурные единицы НПА (Расходные обязательства) (элемент)</Caption>
+    <idEntity>-1879048019</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048116</id>
+    <Name>FilterForm</Name>
+    <Caption>Фильтры (элемент)</Caption>
+    <idEntity>-2080374748</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048115</id>
+    <Name>EditionsComparisionForm</Name>
+    <Caption>Сравнение редакций (элемент)</Caption>
+    <idEntity>-1879048017</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1879048114</id>
+    <Name>EntitySelect</Name>
+    <Caption>Сущности (выбор)</Caption>
+    <idEntity>-2147483615</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1811939301</id>
+    <Name>EntityForm</Name>
+    <Caption>Форма сущности</Caption>
+    <idEntity>-2147483615</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1811939299</id>
+    <Name>ItemsCaptionsForNavigationPanelItem</Name>
+    <Caption>Наименования сущностей для панели навигации (элемент)</Caption>
+    <idEntity>-1275068280</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1744830437</id>
+    <Name>ForStateProgram</Name>
+    <Caption>Для выбора в документе Государственная программа</Caption>
+    <idEntity>-1543503801</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612711</id>
+    <Name>BudgetForm</Name>
+    <Caption>Бюджет (элемент)</Caption>
+    <idEntity>-1879048154</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612709</id>
+    <Name>EstimatedLineList</Name>
+    <Caption>Сметные строки</Caption>
+    <idEntity>-1610612609</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612707</id>
+    <Name>LimitVolumeAppropriationsForm</Name>
+    <Caption>Объемы финансовых средств</Caption>
+    <idEntity>-1610612607</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612705</id>
+    <Name>RegisterActivityForm</Name>
+    <Caption>Реестр мероприятий (форма)</Caption>
+    <idEntity>-1543503828</idEntity>
+    <idHierarchyViewField>-1543503741</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612703</id>
+    <Name>RegisterActivityList</Name>
+    <Caption>Реестр мероприятий(список)</Caption>
+    <idEntity>-1543503828</idEntity>
+    <idHierarchyViewField>-1543503741</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612701</id>
+    <Name>BranchCodeForm</Name>
+    <Caption>Отраслевые коды (Form)</Caption>
+    <idEntity>-1610612501</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612700</id>
+    <Name>BranchCodeList</Name>
+    <Caption>Отраслевые коды (List)</Caption>
+    <idEntity>-1610612501</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612698</id>
+    <Name>RegisterActivity_Activity</Name>
+    <Caption>Реестр мероприятий ТЧ Мероприятия(список)</Caption>
+    <idEntity>-1543503820</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612697</id>
+    <Name>RegisterActivity_Activity</Name>
+    <Caption>Реестр мероприятий ТЧ Мероприятия(форма)</Caption>
+    <idEntity>-1543503820</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612695</id>
+    <Name>ConsolidatedExpenditure</Name>
+    <Caption>Консолидированные расходы (Форма)</Caption>
+    <idEntity>-1610612488</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1610612693</id>
+    <Name>ConsolidatedExpenditure_BaseFilter</Name>
+    <Caption>Правила фильтрации(Форма)</Caption>
+    <idEntity>-1610612484</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503848</id>
+    <Name>EntityFieldForm</Name>
+    <Caption>Поля сущности (элемент)</Caption>
+    <idEntity>-2147483614</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503846</id>
+    <Name>ActivityForm</Name>
+    <Caption>Перечень мероприятий - форма элемента</Caption>
+    <idEntity>-1543503842</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503844</id>
+    <Name>ActivityOfSBPForm</Name>
+    <Caption>Деятельность ведомства - форма элемента</Caption>
+    <idEntity>-1543503797</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503843</id>
+    <Name>FormElementForm</Name>
+    <Caption>Элементы формы - форма элемента</Caption>
+    <idEntity>-2147483602</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503841</id>
+    <Name>IndicatorActivityForm</Name>
+    <Caption>Показатели мероприятий (элемент)</Caption>
+    <idEntity>-1543503839</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503839</id>
+    <Name>LongTermGoalProgramForm</Name>
+    <Caption>Долгосрочная целевая программа (элемент)</Caption>
+    <idEntity>-1543503791</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503837</id>
+    <Name>StateProgramForm</Name>
+    <Caption>Государственная программа - форма элемента</Caption>
+    <idEntity>-1543503815</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503835</id>
+    <Name>TemplateImportXLSForm</Name>
+    <Caption>Шаблоны импорта из Excel - форма элемента</Caption>
+    <idEntity>-1543503748</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503833</id>
+    <Name>RZPRForm</Name>
+    <Caption>РзПР</Caption>
+    <idEntity>-1543503737</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503832</id>
+    <Name>DFKForm</Name>
+    <Caption>ДФК</Caption>
+    <idEntity>-1543503742</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503831</id>
+    <Name>DEKForm</Name>
+    <Caption>ДЕК</Caption>
+    <idEntity>-1543503741</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503830</id>
+    <Name>DKRForm</Name>
+    <Caption>ДКР</Caption>
+    <idEntity>-1543503740</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503829</id>
+    <Name>KOSGUForm</Name>
+    <Caption>КОСГУ</Caption>
+    <idEntity>-1543503739</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503828</id>
+    <Name>KCSRForm</Name>
+    <Caption>КЦСР</Caption>
+    <idEntity>-1543503738</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503826</id>
+    <Name>UnitDimensionForm</Name>
+    <Caption>Единицы измерения (элемент)</Caption>
+    <idEntity>-1879048158</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503825</id>
+    <Name>UserForm</Name>
+    <Caption>Пользователи (элемент)</Caption>
+    <idEntity>-2147483493</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503823</id>
+    <Name>RoleForm</Name>
+    <Caption>Роли (элемент)</Caption>
+    <idEntity>-2147483492</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503821</id>
+    <Name>AnalyticalCodeStateProgramForm</Name>
+    <Caption>Аналитические коды государственных программ (элемент)</Caption>
+    <idEntity>-1879048133</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503819</id>
+    <Name>KFOForm</Name>
+    <Caption>КФО - форма элемента</Caption>
+    <idEntity>-1543503744</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503818</id>
+    <Name>CodeSubsidyForm</Name>
+    <Caption>Коды субсидий - форма элемента</Caption>
+    <idEntity>-1543503743</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503816</id>
+    <Name>Activity_CodeAuthorityForm</Name>
+    <Caption>Коды РО</Caption>
+    <idEntity>-1543503824</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503814</id>
+    <Name>FormElementList</Name>
+    <Caption>Элементы формы - форма списка</Caption>
+    <idEntity>-2147483602</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503813</id>
+    <Name>FormForm</Name>
+    <Caption>Формы (элемент)</Caption>
+    <idEntity>-2147483603</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503811</id>
+    <Name>ActivityOfSBP_ActivityForm</Name>
+    <Caption>Деятельность ведомства - ТЧ Мероприятия</Caption>
+    <idEntity>-1543503775</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503809</id>
+    <Name>ActivityOfSBPList</Name>
+    <Caption>Деятельность ведомства - список</Caption>
+    <idEntity>-1543503797</idEntity>
+    <idHierarchyViewField>-1543503590</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503808</id>
+    <Name>StateProgramList</Name>
+    <Caption>Государственная программа - список</Caption>
+    <idEntity>-1543503815</idEntity>
+    <idHierarchyViewField>-1543503706</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503806</id>
+    <Name>LongTermGoalProgram_ActivityForm</Name>
+    <Caption>Долгосрочная целевая программа - Мероприятия</Caption>
+    <idEntity>-1543503781</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503804</id>
+    <Name>ActivityOfSBP_Activity</Name>
+    <Caption>Деятельность ведомства - ТЧ Мероприятия - форма выбора</Caption>
+    <idEntity>-1543503775</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503802</id>
+    <Name>SystemOfActivitySBPForm</Name>
+    <Caption>Система мероприятий деятельности ведомства</Caption>
+    <idEntity>-1543503631</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503800</id>
+    <Name>ProgramChoise</Name>
+    <Caption>Программы (выбор)</Caption>
+    <idEntity>-1543503802</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503798</id>
+    <Name>GoalTargetsOfProgramSbp</Name>
+    <Caption>Целевые показатели ведомственной целевой программы</Caption>
+    <idEntity>-1543503629</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503796</id>
+    <Name>CalculationFormulaList</Name>
+    <Caption>Формулы расчета (список)</Caption>
+    <idEntity>-1543503627</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503795</id>
+    <Name>IndicatorCalculationList</Name>
+    <Caption>Показатели расчета (список)</Caption>
+    <idEntity>-1543503626</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503794</id>
+    <Name>IndicatorCalculationForm</Name>
+    <Caption>Показатели расчета (элемент)</Caption>
+    <idEntity>-1543503626</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503792</id>
+    <Name>NeedForTheProvisionOfActivitySbpWithinTheStateProgramForm</Name>
+    <Caption>Потребность в оказании услуг (выполнении работ) учреждениями в рамках государственной программы (форма)</Caption>
+    <idEntity>-1543503522</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503790</id>
+    <Name>JustificationOfBudgetForm</Name>
+    <Caption>Обоснование бюджетных ассигнований (форма)</Caption>
+    <idEntity>-1543503520</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503788</id>
+    <Name>CostGoalsForm</Name>
+    <Caption>Стоимость целей (форма)</Caption>
+    <idEntity>-1543503512</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503787</id>
+    <Name>InterBudgetaryTransfers</Name>
+    <Caption>Межбюджетные трансферты (форма настройки отчета)</Caption>
+    <idEntity>-1543503504</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503786</id>
+    <Name>InterBudgetaryTransfers_RuleFilterKBKForm</Name>
+    <Caption>Межбюджетные трансферты ТЧ Правила фильтрации колонок (форма)</Caption>
+    <idEntity>-1543503500</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1543503785</id>
+    <Name>SummaryReportOfSelectedIndicators</Name>
+    <Caption>Сводный отчет отдельных показателей</Caption>
+    <idEntity>-1543503483</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394985</id>
+    <Name>ListCategoryContingent</Name>
+    <Caption>Категории контингента</Caption>
+    <idEntity>-1543503836</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394984</id>
+    <Name>ListContingent</Name>
+    <Caption>Контингент</Caption>
+    <idEntity>-1543503835</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394983</id>
+    <Name>ListIndicatorActivity</Name>
+    <Caption>Показатели мероприятий</Caption>
+    <idEntity>-1543503839</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394982</id>
+    <Name>ListActivity</Name>
+    <Caption>Перечень мероприятий</Caption>
+    <idEntity>-1543503842</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394981</id>
+    <Name>ListTypeRegulatoryAct</Name>
+    <Caption>Виды НПА</Caption>
+    <idEntity>-2013265887</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394980</id>
+    <Name>ListRegulatoryAct</Name>
+    <Caption>Нормативно-правовые акты</Caption>
+    <idEntity>-2013265886</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394979</id>
+    <Name>ListAuthorityOfExpenseObligation</Name>
+    <Caption>Полномочия расходных обязательств</Caption>
+    <idEntity>-2013265876</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394977</id>
+    <Name>ListPublicLegalFormation</Name>
+    <Caption>Публично-правовые образования</Caption>
+    <idEntity>-1946157026</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394976</id>
+    <Name>PublicLegalFormationModuleList</Name>
+    <Caption>Модули ППО (список)</Caption>
+    <idEntity>-1879048156</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394975</id>
+    <Name>ListAccessGroup</Name>
+    <Caption>Группы доступа</Caption>
+    <idEntity>-1879048161</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394974</id>
+    <Name>BudgetList</Name>
+    <Caption>Бюджет (список)</Caption>
+    <idEntity>-1879048154</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394973</id>
+    <Name>ListVersion</Name>
+    <Caption>Версии</Caption>
+    <idEntity>-1677721573</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394972</id>
+    <Name>RoleList</Name>
+    <Caption>Роли (список)</Caption>
+    <idEntity>-2147483492</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394971</id>
+    <Name>UserList</Name>
+    <Caption>Пользователи (список)</Caption>
+    <idEntity>-2147483493</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394970</id>
+    <Name>ListControl</Name>
+    <Caption>Контроли</Caption>
+    <idEntity>-1744830437</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1476394969</id>
+    <Name>ListTemplateImportXLS</Name>
+    <Caption>Шаблоны импорта из Excel</Caption>
+    <idEntity>-1543503748</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1342177259</id>
+    <Name>WordCommonReportParamsForm</Name>
+    <Caption>Переменные отчетов(Форма)</Caption>
+    <idEntity>-1342177253</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1342177258</id>
+    <Name>WordCommonReportForm</Name>
+    <Caption>Универсальный отчет по шаблонам в WORD(Форма)</Caption>
+    <idEntity>-1342177255</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068396</id>
+    <Name>FinancialIndicatorList</Name>
+    <Caption>Показатели финансового состояния учреждений (список)</Caption>
+    <idEntity>-1275068396</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068395</id>
+    <Name>FinancialIndicator</Name>
+    <Caption>Показатели финансового состояния учреждений</Caption>
+    <idEntity>-1275068396</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068394</id>
+    <Name>TaskVolumeList</Name>
+    <Caption>Объемы задач (список)</Caption>
+    <idEntity>-1543503770</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068393</id>
+    <Name>TaskIndicatorQualityList</Name>
+    <Caption>Показатели качества задач (список)</Caption>
+    <idEntity>-1543503769</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068391</id>
+    <Name>RegistryGoal</Name>
+    <Caption>Реестр целей (элемент)</Caption>
+    <idEntity>-1275068394</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068389</id>
+    <Name>CodeSubsidyList</Name>
+    <Caption>Коды субсидий - форма список</Caption>
+    <idEntity>-1543503743</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068387</id>
+    <Name>KVSRList</Name>
+    <Caption>КВСР/КАДБ/КАИФ()</Caption>
+    <idEntity>-2013265885</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068385</id>
+    <Name>PassportStateProgramForm</Name>
+    <Caption>Паспорт программы()</Caption>
+    <idEntity>-1275068387</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068383</id>
+    <Name>VcpOmStatePrgForm</Name>
+    <Caption>Перечень ведомственных целевых программ  и основных мероприятий государственной программы()</Caption>
+    <idEntity>-1275068389</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1275068381</id>
+    <Name>ListProgramForm</Name>
+    <Caption>Перечень целевых программ ()</Caption>
+    <idEntity>-1275068383</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959533</id>
+    <Name>LimitBudgetAllocationsList</Name>
+    <Caption>Предельные объемы бюджетных ассигнований (список)</Caption>
+    <idEntity>-1207959532</idEntity>
+    <idHierarchyViewField>-1207959517</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959531</id>
+    <Name>LimitBudgetAllocationsForm</Name>
+    <Caption>Предельные объемы бюджетных ассигнований (форма)</Caption>
+    <idEntity>-1207959532</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959529</id>
+    <Name>LimitBudgetAllocations_LimitAllocationsList</Name>
+    <Caption>ТЧ Предельные объемы бюджетных ассигнований Список</Caption>
+    <idEntity>-1207959529</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959528</id>
+    <Name>LimitBudgetAllocations_LimitAllocationsForm</Name>
+    <Caption>ТЧ Предельные объемы бюджетных ассигнований (список)</Caption>
+    <idEntity>-1207959529</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959526</id>
+    <Name>ExpenseObligationTypeSelect</Name>
+    <Caption>Тип РО Форма выбора</Caption>
+    <idEntity>-2013265547</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959524</id>
+    <Name>PublicInstitutionEstimateList</Name>
+    <Caption>Смета казенного учреждения (список)</Caption>
+    <idEntity>-1207959525</idEntity>
+    <idHierarchyViewField>-1207959406</idHierarchyViewField>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959523</id>
+    <Name>PublicInstitutionEstimateForm</Name>
+    <Caption>Смета казенного учреждения (форма)</Caption>
+    <idEntity>-1207959525</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959521</id>
+    <Name>PublicInstitutionEstimate_ExpenseForm</Name>
+    <Caption>ТЧ «Расходы»(Форма)</Caption>
+    <idEntity>-1207959521</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959519</id>
+    <Name>PublicInstitutionEstimate_FounderAUBUExpenseForm</Name>
+    <Caption>ТЧ «Расходы учредителя по мероприятиям АУ/БУ»(Форма)</Caption>
+    <idEntity>-1207959515</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959518</id>
+    <Name>PublicInstitutionEstimate_ActivityAUBUForm</Name>
+    <Caption>ТЧ «Мероприятия АУ/БУ»(Форма)</Caption>
+    <idEntity>-1207959516</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959516</id>
+    <Name>TableReport</Name>
+    <Caption>Оперативные отчеты(Форма)</Caption>
+    <idEntity>-1811939281</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959514</id>
+    <Name>EntityList</Name>
+    <Caption>Сущности (список)</Caption>
+    <idEntity>-2147483615</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959512</id>
+    <Name>TableReportList</Name>
+    <Caption>Оперативные отчеты(Список)</Caption>
+    <idEntity>-1811939281</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959510</id>
+    <Name>BudgetExpenseStructureForm</Name>
+    <Caption>Структура расходов бюджета(Форма)</Caption>
+    <idEntity>-1207959403</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959508</id>
+    <Name>BudgetExpenseStructure_BaseFilterForm</Name>
+    <Caption>Правила фильтрации(Форма)</Caption>
+    <idEntity>-1207959400</idEntity>
+  </ref.Form>
+  <ref.Form>
+    <id>-1207959506</id>
+    <Name>BudgetExpenseStructure_CustomFilterForm</Name>
+    <Caption>Правила фильтрации колонок(Форма)</Caption>
+    <idEntity>-1207959382</idEntity>
+  </ref.Form>
+</NewDataSet>

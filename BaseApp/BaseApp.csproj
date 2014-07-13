@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D16E12B1-8DC5-4EFD-A31E-2E80209746ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseApp</RootNamespace>
+    <AssemblyName>BaseApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\BaseApp.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AutoClient|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AutoClient\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\BaseApp.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.5.0.0.70\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\packages\2.1.beta.binary\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Schema.ScriptDom">
+      <HintPath>..\lib\Microsoft.Data.Schema.ScriptDom.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Schema.ScriptDom.Sql">
+      <HintPath>..\lib\Microsoft.Data.Schema.ScriptDom.Sql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLog.2.0.1.2\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity\Controls\ControlDispatcher.cs" />
+    <Compile Include="Activity\Operations\OperationContext.cs" />
+    <Compile Include="Activity\Operations\OperationDispatcher.cs" />
+    <Compile Include="Audit\Logger.cs" />
+    <Compile Include="Audit\LoginSqlLog.cs" />
+    <Compile Include="Audit\RequestSqlLogData.cs" />
+    <Compile Include="Audit\MultilinkSqlLogData.cs" />
+    <Compile Include="Audit\SqlLogData.cs" />
+    <Compile Include="Audit\UserlessLogger.cs" />
+    <Compile Include="Audit\OperationSqlLogData.cs" />
+    <Compile Include="Audit\SessionSqlLog.cs" />
+    <Compile Include="DataAccess\CheckLicenseUser.cs" />
+    <Compile Include="DataAccess\DataManagerFactory.cs" />
+    <Compile Include="DataAccess\ToolsDataManager.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="DbEnums\OrganizationRightExtensionKind.cs" />
+    <Compile Include="DbEnums\ReportProfileType.cs" />
+    <Compile Include="DbEnums\RoleKind.cs" />
+    <Compile Include="DbEnums\MethodofFormingCode.cs" />
+    <Compile Include="DbEnums\RoleResponsiblePerson.cs" />
+    <Compile Include="DbEnums\RoleType.cs" />
+    <Compile Include="DbSetExtensions.cs" />
+    <Compile Include="DependencyInjection.cs" />
+    <Compile Include="Entities\Reference\Budget.cs" />
+    <Compile Include="Entities\Reference\BudgetLevel.cs" />
+    <Compile Include="Entities\Reference\OrganizationRightExtension.cs" />
+    <Compile Include="Entities\Reference\ProjectSettings.cs" />
+    <Compile Include="Entities\Reference\PublicLegalFormationModule.cs" />
+    <Compile Include="Entities\Reference\OKATO.cs" />
+    <Compile Include="Entities\Reference\Organization.cs" />
+    <Compile Include="Entities\Reference\PublicLegalFormation.cs" />
+    <Compile Include="Entities\Reference\ResponsiblePerson.cs" />
+    <Compile Include="Entities\Reference\Role.cs" />
+    <Compile Include="Entities\Reference\User.cs" />
+    <Compile Include="Entities\Reference\Version.cs" />
+    <Compile Include="Entities\Registry\ExecutedOperation.cs" />
+    <Compile Include="Entities\Tablepart\Role_FunctionalRight.cs" />
+    <Compile Include="Entities\Tablepart\Role_OrganizationRight.cs" />
+    <Compile Include="Entities\Reference\Mappings\LicenseMap.cs" />
+    <Compile Include="Export\EntitiesListExport.cs" />
+    <Compile Include="Export\TableReportExport.cs" />
+    <Compile Include="GeneratedCode\Reference\PublicLegalFormation.cs" />
+    <Compile Include="GeneratedCode\Reference\User.cs" />
+    <Compile Include="GeneratedCode\Reference\Version.cs" />
+    <Compile Include="ExpressionExtensions.cs" />
+    <Compile Include="Import\DataSetFiller.cs" />
+    <Compile Include="Export\ExcelTableWriter.cs" />
+    <Compile Include="Import\Import.cs" />
+    <Compile Include="Interfaces\IRegistryWithTermOperation.cs" />
+    <Compile Include="Interfaces\IRegistryWithOperation.cs" />
+    <Compile Include="Numerators\BaseAppNumerators.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\UserMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Role.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\RoleMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\PublicLegalFormationMap.cs" />
+    <Compile Include="GeneratedCode\Reference\BudgetLevel.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\BudgetLevelMap.cs" />
+    <Compile Include="GeneratedCode\Reference\PublicLegalFormationModule.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\PublicLegalFormationModuleMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Budget.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\BudgetMap.cs" />
+    <Compile Include="GeneratedCode\DataContext.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\VersionMap.cs" />
+    <Compile Include="GeneratedCode\Reference\ResponsiblePerson.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ResponsiblePersonMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Organization.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\OrganizationMap.cs" />
+    <Compile Include="GeneratedCode\Reference\OKATO.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\OKATOMap.cs" />
+    <Compile Include="GeneratedCode\Reference\OfficialCapacity.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\OfficialCapacityMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Role_FunctionalRight.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Role_FunctionalRightMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Role_DocumentOperation.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Role_DocumentOperationMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Role_RefStatus.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Role_RefStatusMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Role_OrganizationRight.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\Role_OrganizationRightMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Module.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ModuleMap.cs" />
+    <Compile Include="GeneratedCode\Registry\ExecutedOperation.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\ExecutedOperationMap.cs" />
+    <Compile Include="ReportProfile\ReportProfileDecorator.cs" />
+    <Compile Include="Entities\Reference\License.cs" />
+    <Compile Include="Rights\AddFilterEnitiesByModule.cs" />
+    <Compile Include="Rights\AddFilterOnTablepartOwnerFieldForParentLink.cs" />
+    <Compile Include="Rights\AddSysDimensionsFilter.cs" />
+    <Compile Include="Rights\Functional\Decorators\AddFilterByDateForVersioning.cs" />
+    <Compile Include="Rights\Functional\Decorators\AddFilterByStatusForReference.cs" />
+    <Compile Include="Rights\Functional\Decorators\FunctionalRightsDecorator.cs" />
+    <Compile Include="Rights\Functional\DefaultStrategy.cs" />
+    <Compile Include="Rights\Functional\RightsHolder.cs" />
+    <Compile Include="Rights\Functional\RightsManager.cs" />
+    <Compile Include="Rights\Functional\RightsManagerExtension.cs" />
+    <Compile Include="Rights\Functional\StrategyBase.cs" />
+    <Compile Include="Rights\Functional\SuperUserStrategy.cs" />
+    <Compile Include="Rights\Organizational\Decorators\Implementation.cs" />
+    <Compile Include="Rights\Organizational\Decorators\ImplementationBase.cs" />
+    <Compile Include="Rights\Organizational\Decorators\ImplementationRevert.cs" />
+    <Compile Include="Rights\Organizational\Decorators\ImplementationRevertStrict.cs" />
+    <Compile Include="Rights\Organizational\Decorators\OrganizationRightsDecorator.cs" />
+    <Compile Include="Rights\Organizational\Decorators\OrganizationRightsDecorator`.cs" />
+    <Compile Include="Rights\Organizational\OrganizationRightInfo.cs" />
+    <Compile Include="Rights\Organizational\OrganizationRights.cs" />
+    <Compile Include="Rights\Organizational\RightsData.cs" />
+    <Compile Include="Rights\Organizational\OrganizationRightsSelectQueryBuilder.cs" />
+    <Compile Include="StartedOperationsExtensions.cs" />
+    <Compile Include="GeneratedCode\Registry\StartedOperation.cs" />
+    <Compile Include="GeneratedCode\Registry\Mappings\StartedOperationMap.cs" />
+    <Compile Include="Entities\Reference\Control_Exceptions.cs" />
+    <Compile Include="Entities\Reference\Mappings\Control_ExceptionsMap.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\OrganizationRightMap.cs" />
+    <Compile Include="GeneratedCode\Reference\OrganizationRightExtension.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\OrganizationRightExtensionMap.cs" />
+    <Compile Include="SysDimensionHelper.cs" />
+    <Compile Include="XmlExchange\Export\BuilderBase.cs" />
+    <Compile Include="XmlExchange\Export\CreateRefQueryBuilder.cs" />
+    <Compile Include="XmlExchange\Export\HasEntitiesExtension.cs" />
+    <Compile Include="XmlExchange\Export\Helper.cs" />
+    <Compile Include="XmlExchange\Export\IHasEntities.cs" />
+    <Compile Include="XmlExchange\Export\RefFillQueryBuilder.cs" />
+    <Compile Include="XmlExchange\Export\Exporter.cs" />
+    <Compile Include="XmlExchange\Export\ReferencesQueryBuilder.cs" />
+    <Compile Include="XmlExchange\Export\ResultQueryBuilder.cs" />
+    <Compile Include="XmlExchange\Export\SimpleExporter.cs" />
+    <Compile Include="XmlExchange\Export\SourceQueryBuilder.cs" />
+    <Compile Include="XmlExchange\Import\Importer.cs" />
+    <Compile Include="GeneratedCode\Reference\TableReport.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\TableReportMap.cs" />
+    <Compile Include="XmlExchange\Import\SimpleImporter.cs" />
+    <Compile Include="GeneratedCode\Reference\ListRemovedFields.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ListRemovedFieldsMap.cs" />
+    <Compile Include="GeneratedCode\Tablepart\TableReport_ColumnType.cs" />
+    <Compile Include="GeneratedCode\Tablepart\Mappings\TableReport_ColumnTypeMap.cs" />
+    <Compile Include="GeneratedCode\Reference\ProjectSettings.cs" />
+    <Compile Include="GeneratedCode\Reference\Mappings\ProjectSettingsMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CommonControls\" />
+    <Folder Include="Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseApp.Common\BaseApp.Common.csproj">
+      <Project>{FC293E62-62F9-4DAC-BE86-2B2000BEA40D}</Project>
+      <Name>BaseApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseApp.DbClr.Common\BaseApp.DbClr.Common.csproj">
+      <Project>{E3CE9203-FF7F-4705-8603-4293B34E2FE0}</Project>
+      <Name>BaseApp.DbClr.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseApp.Environment\BaseApp.Environment.csproj">
+      <Project>{fee47e1f-7e41-4910-9d51-e651324de477}</Project>
+      <Name>BaseApp.Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Application.Common\Platform.Application.Common.csproj">
+      <Project>{b489597f-7c2f-4470-ba09-c31b8a0797c8}</Project>
+      <Name>Platform.Application.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic.Common\Platform.BusinessLogic.Common.csproj">
+      <Project>{e11d0ab2-a272-417f-8562-6fbc47033c6e}</Project>
+      <Name>Platform.BusinessLogic.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.BusinessLogic\Platform.BusinessLogic.csproj">
+      <Project>{7399ba19-e033-40e4-9ec7-34c8eb0b149c}</Project>
+      <Name>Platform.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Cache\Platform.Caching.csproj">
+      <Project>{80D876D7-3F43-48E8-8250-225EC2F1E944}</Project>
+      <Name>Platform.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Caching.Common\Platform.Caching.Common.csproj">
+      <Project>{64488B5D-2951-402E-AABF-52A478EE51ED}</Project>
+      <Name>Platform.Caching.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.ClientInteraction\Platform.ClientInteraction.csproj">
+      <Project>{D875C08C-2DAD-4E39-84A8-646F93ADB836}</Project>
+      <Name>Platform.ClientInteraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Common\Platform.Common.csproj">
+      <Project>{cb231957-03de-4efa-9b75-ef6b23e63070}</Project>
+      <Name>Platform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Dal.Common\Platform.Dal.Common.csproj">
+      <Project>{32b6fa91-ba95-4733-9085-70c3395b0eff}</Project>
+      <Name>Platform.Dal.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Dal\Platform.Dal.csproj">
+      <Project>{e59415a3-95fd-4def-a5d4-8cb771619781}</Project>
+      <Name>Platform.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.DbCmd\Platform.DbCmd.csproj">
+      <Project>{389F4C8F-6C9E-4822-8DC8-1C78A77CAAB2}</Project>
+      <Name>Platform.DbCmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Environment\Platform.Environment.csproj">
+      <Project>{3E289567-CD95-4349-8A3A-E8DF81A7DC36}</Project>
+      <Name>Platform.Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Log\Platform.Log.csproj">
+      <Project>{A78B89EF-7A19-463D-AFC8-4E4DE77030CD}</Project>
+      <Name>Platform.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Common\Platform.PrimaryEntities.Common.csproj">
+      <Project>{9EE403B9-8D79-40F6-96B4-A9F6E6622808}</Project>
+      <Name>Platform.PrimaryEntities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities.Factoring\Platform.PrimaryEntities.Factoring.csproj">
+      <Project>{00D4B56D-E285-4075-B829-01688F7882FB}</Project>
+      <Name>Platform.PrimaryEntities.Factoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.PrimaryEntities\Platform.PrimaryEntities.csproj">
+      <Project>{da11e957-7534-4de0-af6a-60f8d04e9cb6}</Project>
+      <Name>Platform.PrimaryEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.SqlObjectModel\Platform.SqlObjectModel.csproj">
+      <Project>{FC5DB22E-8D43-468D-8FC4-2271BCF88214}</Project>
+      <Name>Platform.SqlObjectModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity.Comon\Platform.Unity.Common.csproj">
+      <Project>{169CC69C-7AD2-4FED-917A-302B9020FA64}</Project>
+      <Name>Platform.Unity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Unity\Platform.Unity.csproj">
+      <Project>{B8903988-41A8-48F0-B922-4A4D7C333110}</Project>
+      <Name>Platform.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils.Common\Platform.Utils.Common.csproj">
+      <Project>{95B3D83C-FC10-4157-8364-52C513FD21F4}</Project>
+      <Name>Platform.Utils.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Utils\Platform.Utils.csproj">
+      <Project>{5a67cc4b-b52a-4d6e-8014-18816fe241ff}</Project>
+      <Name>Platform.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DbStructure\!readme.wiki.txt" />
+    <Content Include="DbStructure\ref\Entity.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbEnums\Entity.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbEnums\EntityField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\BudgetLevel.xml" />
+    <Content Include="DbStructure\ref\Filter.xml" />
+    <Content Include="DbStructure\ref\User.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\Module.xml" />
+    <Content Include="DbStructure\ref\Index.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ml\Index_EntityField_Indexable.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ref\Role.xml" />
+    <Content Include="DbStructure\tp\Role_FunctionalRight.xml" />
+    <Content Include="DbStructure\tp\Role_RefStatus.xml" />
+    <Content Include="DbStructure\ml\UserRole.xml" />
+    <Content Include="DbStructure\ref\PublicLegalFormation.xml" />
+    <Content Include="DbStructure\ref\Budget.xml" />
+    <Content Include="DbStructure\ref\Version.xml" />
+    <Content Include="DbStructure\ref\Organization.xml" />
+    <Content Include="DbStructure\reg\StartedOperation.xml" />
+    <Content Include="DbStructure\ref\PublicLegalFormationModule.xml" />
+    <Content Include="DbStructure\Programmability\CreateMultilinkById.xml" />
+    <Content Include="DbStructure\Programmability\CreateMultilink.xml" />
+    <Content Include="DbStructure\ref\testDependantTableFields.xml" />
+    <Content Include="DbStructure\ml\Module_Entity.xml" />
+    <Content Include="DbStructure\tp\Role_OrganizationRight.xml" />
+    <Content Include="DbStructure\ml\PublicLegalFormationModule_Module.xml" />
+    <Content Include="DbStructure\tp\Role_DocumentOperation.xml" />
+    <Content Include="DbStructure\Programmability\SetEntityDistributiveData.xml" />
+    <Content Include="DbStructure\ref\OrganizationRightExtension.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DbStructure\ml\OrganizationRightExtension_Target.xml" />
+    <Content Include="DbStructure\ml\OrganizationRightExtension_Result.xml" />
+    <Content Include="DbStructure\Programmability\Concatenate.xml" />
+    <Content Include="DbStructure\Programmability\MultilinkAsString.xml" />
+    <Content Include="DbStructure\Programmability\CascadeDeleteForGenericLinks.xml" />
+    <Content Include="DbStructure\reg\ExecutedOperation.xml" />
+    <Content Include="DbStructure\ref\XmlExport.xml" />
+    <Content Include="DbStructure\ref\TableReport.xml" />
+    <Content Include="DbStructure\tp\testDependantTableFields_A.xml" />
+    <Content Include="DbStructure\tp\testDependantTableFields_B.xml" />
+    <Content Include="DbStructure\ref\ListRemovedFields.xml" />
+    <Content Include="DbStructure\tp\TableReport_ColumnType.xml" />
+    <Content Include="DbStructure\ref\CopyTemplates.xml" />
+    <Content Include="DbStructure\ref\ProjectSettings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
